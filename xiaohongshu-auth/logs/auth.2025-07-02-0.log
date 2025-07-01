@@ -1,0 +1,15 @@
+2025-07-02 00:50:43.912 [main] INFO  com.zry.xiaohongshu.auth.DruidTests - Starting DruidTests using Java 17.0.12 with PID 49512 (started by Rey in D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-auth)
+2025-07-02 00:50:43.913 [main] INFO  com.zry.xiaohongshu.auth.DruidTests - The following 1 profile is active: "dev"
+2025-07-02 00:50:45.687 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-07-02 00:50:46.193 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-07-02 00:50:46.694 [main] INFO  com.zry.xiaohongshu.auth.DruidTests - Started DruidTests in 3.224 seconds (process running for 4.726)
+2025-07-02 00:50:47.437 [main] INFO  com.zry.xiaohongshu.auth.DruidTests - privateKey: MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEA2gKBRP5QZUWUJ0G/YHvp1KomJ+FoXG4MwvtCsKhum0FaS7lXsD7NsDtFH3b6oimvKh4xs9uj4tSD726rckiM2QIDAQABAkAM3q+8r9I1bkp5GE6ozpve2fYTbeE8LqN6ebyFwwW3jMPWa1d9NDjlmCgVDa4ai7nNOxXwraStPM8owrKBYw/xAiEA8YYWOCUnWFXOYEmY255BbXnmczlCMgXZm+TCfPru2kkCIQDnE59GYa48Dfz9gKp1HpFxze9ks/qhySnTv3sbmBueEQIhAL12I+PzMUQYO4ZI9YICSOzqHR7yIb0/3Y5vCyojZk8RAiEAkwlzYi+p1OD5yL1kud3XotjtqeC0bNo6WVkQlwB1ImECIGVET3D9/TDZg9Ip13TUrrh8c5QhtFO98o8VPPsn5rc2
+2025-07-02 00:50:47.442 [main] INFO  com.zry.xiaohongshu.auth.DruidTests - publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANoCgUT+UGVFlCdBv2B76dSqJifhaFxuDML7QrCobptBWku5V7A+zbA7RR92+qIpryoeMbPbo+LUg+9uq3JIjNkCAwEAAQ==
+2025-07-02 00:50:47.445 [main] INFO  com.zry.xiaohongshu.auth.DruidTests - password: pMepzLeH/88etWKoHKpqgEKyEuollafKWshvcZeB3lUEPw6qUQt3rGV7FjFDdBoJ4oUGuLbyTP7tH1dHOSBOpA==
+2025-07-02 00:50:47.474 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.zry.xiaohongshu.auth.XiaohongshuAuthApplicationTests]: XiaohongshuAuthApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-02 00:50:47.476 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.zry.xiaohongshu.auth.XiaohongshuAuthApplication for test class com.zry.xiaohongshu.auth.XiaohongshuAuthApplicationTests
+2025-07-02 00:50:47.544 [main] DEBUG c.z.x.auth.domain.mapper.UserDOMapper.insert - ==>  Preparing: insert into t_user (id, username, create_time, update_time) values (?, ?, ?, ?)
+2025-07-02 00:50:47.872 [main] DEBUG c.z.x.auth.domain.mapper.UserDOMapper.insert - ==> Parameters: null, 稚生(String), 2025-07-02T00:50:47.499687100(LocalDateTime), 2025-07-02T00:50:47.499687100(LocalDateTime)
+2025-07-02 00:50:47.890 [main] DEBUG c.z.x.auth.domain.mapper.UserDOMapper.insert - <==    Updates: 1
+2025-07-02 00:50:47.907 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-07-02 00:50:47.915 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

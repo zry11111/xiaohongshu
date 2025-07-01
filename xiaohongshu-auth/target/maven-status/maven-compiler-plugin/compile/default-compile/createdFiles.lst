@@ -1,0 +1,7 @@
+com\zry\xiaohongshu\auth\domain\mapper\UserDOMapper.class
+com\zry\xiaohongshu\auth\domain\dataobject\UserDO.class
+com\zry\xiaohongshu\auth\controller\TestController.class
+com\zry\xiaohongshu\auth\XiaohongshuAuthApplication.class
+com\zry\xiaohongshu\auth\controller\User.class
+com\zry\xiaohongshu\auth\domain\dataobject\UserDO$UserDOBuilder.class
+com\zry\xiaohongshu\auth\controller\User$UserBuilder.class
