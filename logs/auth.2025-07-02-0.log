@@ -13,3 +13,228 @@
 2025-07-02 10:03:42.214 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Started XiaohongshuAuthApplication in 3.622 seconds (process running for 4.843)
 2025-07-02 10:03:48.237 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
 2025-07-02 10:03:48.247 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-07-02 20:01:43.951 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Starting XiaohongshuAuthApplication using Java 17.0.12 with PID 35672 (D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-auth\target\classes started by Rey in D:\subject\JAVA\SpringCloud\xiaohongshu)
+2025-07-02 20:01:43.952 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - The following 1 profile is active: "dev"
+2025-07-02 20:01:44.507 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-02 20:01:44.510 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-02 20:01:44.540 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2025-07-02 20:01:45.209 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-02 20:01:45.210 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-07-02 20:01:45.225 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-07-02 20:01:45.236 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-02 20:01:45.236 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-07-02 20:01:45.329 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-02 20:01:45.329 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1334 ms
+2025-07-02 20:01:45.945 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-07-02 20:01:46.184 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-07-02 20:01:46.540 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-02 20:01:46.548 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Started XiaohongshuAuthApplication in 3.066 seconds (process running for 3.517)
+2025-07-02 20:02:12.068 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02 20:02:12.068 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-02 20:02:12.068 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-02 20:02:12.116 [http-nio-8080-exec-2] ERROR c.z.x.auth.exception.GlobalExceptionHandler - /verification/code/send request error, 
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:126)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:504)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1274)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at cn.dev33.satoken.filter.SaPathCheckFilterForJakartaServlet.doFilter(SaPathCheckFilterForJakartaServlet.java:55)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-02 20:04:58.664 [http-nio-8080-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"18644669264"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:04:59.648 [http-nio-8080-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [发送验证码], 耗时: 988ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-07-02 20:05:42.881 [http-nio-8080-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"18644669264"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:05:42.937 [http-nio-8080-exec-7] WARN  c.z.x.auth.exception.GlobalExceptionHandler - /verification/code/send request fail, errorCode: AUTH-20000, errorMessage: 请求太频繁，请3分钟后再试
+2025-07-02 20:30:31.287 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-07-02 20:30:31.288 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-07-02 20:45:06.696 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Starting XiaohongshuAuthApplication using Java 17.0.12 with PID 40244 (D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-auth\target\classes started by Rey in D:\subject\JAVA\SpringCloud\xiaohongshu)
+2025-07-02 20:45:06.698 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - The following 1 profile is active: "dev"
+2025-07-02 20:45:07.400 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-02 20:45:07.403 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-02 20:45:07.441 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-07-02 20:45:08.284 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-02 20:45:08.284 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-07-02 20:45:08.296 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-07-02 20:45:08.308 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-02 20:45:08.309 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-07-02 20:45:08.413 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-02 20:45:08.414 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1671 ms
+2025-07-02 20:45:09.244 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-07-02 20:45:09.533 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-07-02 20:45:09.983 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-02 20:45:09.991 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Started XiaohongshuAuthApplication in 3.845 seconds (process running for 4.373)
+2025-07-02 20:45:41.494 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02 20:45:41.495 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-02 20:45:41.495 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-02 20:45:41.619 [http-nio-8080-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"18644669264"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:45:42.133 [AuthExecutor-1] INFO  com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 开始短信发送, phone: 18644669264, signName: 短信测试, templateCode: SMS_123456789, templateParam: {"code":"889383"}
+2025-07-02 20:45:42.186 [http-nio-8080-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [发送验证码], 耗时: 574ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-07-02 20:45:42.976 [AuthExecutor-1] ERROR com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 短信发送错误: 
+com.aliyun.tea.TeaException: code: 400, AccessKeyId is mandatory for this action. request id: A91B856A-1F46-5D40-8135-CA24176520D4
+	at com.aliyun.teaopenapi.Client.doRequest(Client.java:799)
+	at com.aliyun.teaopenapi.Client.callApi(Client.java:1022)
+	at com.aliyun.dysmsapi20170525.Client.sendSmsWithOptions(Client.java:1596)
+	at com.zry.xiaohongshu.auth.sms.AliyunSmsHelper.sendMessage(AliyunSmsHelper.java:39)
+	at com.zry.xiaohongshu.auth.service.impl.VerificationCodeServiceImpl.lambda$send$0(VerificationCodeServiceImpl.java:45)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-02 20:45:52.810 [http-nio-8080-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"13068920712"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:45:52.857 [AuthExecutor-2] INFO  com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 开始短信发送, phone: 13068920712, signName: 短信测试, templateCode: SMS_123456789, templateParam: {"code":"490825"}
+2025-07-02 20:45:52.906 [http-nio-8080-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [发送验证码], 耗时: 95ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-07-02 20:45:52.906 [AuthExecutor-2] ERROR com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 短信发送错误: 
+com.aliyun.tea.TeaException: code: 400, AccessKeyId is mandatory for this action. request id: 5342D19F-ED21-5458-9F95-3B1CDEEA9470
+	at com.aliyun.teaopenapi.Client.doRequest(Client.java:799)
+	at com.aliyun.teaopenapi.Client.callApi(Client.java:1022)
+	at com.aliyun.dysmsapi20170525.Client.sendSmsWithOptions(Client.java:1596)
+	at com.zry.xiaohongshu.auth.sms.AliyunSmsHelper.sendMessage(AliyunSmsHelper.java:39)
+	at com.zry.xiaohongshu.auth.service.impl.VerificationCodeServiceImpl.lambda$send$0(VerificationCodeServiceImpl.java:45)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-02 20:48:01.035 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-07-02 20:48:01.060 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-07-02 20:48:06.248 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Starting XiaohongshuAuthApplication using Java 17.0.12 with PID 3144 (D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-auth\target\classes started by Rey in D:\subject\JAVA\SpringCloud\xiaohongshu)
+2025-07-02 20:48:06.255 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - The following 1 profile is active: "dev"
+2025-07-02 20:48:06.813 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-02 20:48:06.815 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-02 20:48:06.844 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-07-02 20:48:07.463 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-02 20:48:07.464 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-07-02 20:48:07.468 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-07-02 20:48:07.478 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-02 20:48:07.478 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-07-02 20:48:07.572 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-02 20:48:07.572 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1287 ms
+2025-07-02 20:48:08.235 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-07-02 20:48:08.455 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-07-02 20:48:08.851 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-02 20:48:08.855 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Started XiaohongshuAuthApplication in 3.06 seconds (process running for 3.514)
+2025-07-02 20:48:13.771 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02 20:48:13.771 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-02 20:48:13.771 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-02 20:48:13.909 [http-nio-8080-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"13068920712"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:48:14.376 [http-nio-8080-exec-1] WARN  c.z.x.auth.exception.GlobalExceptionHandler - /verification/code/send request fail, errorCode: AUTH-20000, errorMessage: 请求太频繁，请3分钟后再试
+2025-07-02 20:48:32.217 [http-nio-8080-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"13068920712"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:48:32.262 [http-nio-8080-exec-3] WARN  c.z.x.auth.exception.GlobalExceptionHandler - /verification/code/send request fail, errorCode: AUTH-20000, errorMessage: 请求太频繁，请3分钟后再试
+2025-07-02 20:48:35.020 [http-nio-8080-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"13068920712"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:48:35.068 [http-nio-8080-exec-5] WARN  c.z.x.auth.exception.GlobalExceptionHandler - /verification/code/send request fail, errorCode: AUTH-20000, errorMessage: 请求太频繁，请3分钟后再试
+2025-07-02 20:49:06.753 [http-nio-8080-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"13068920712"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:49:06.807 [http-nio-8080-exec-4] INFO  c.z.x.a.service.impl.VerificationCodeServiceImpl - ==> 手机号: 13068920712, 已生成验证码：【288329】
+2025-07-02 20:49:06.809 [AuthExecutor-1] INFO  com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 开始短信发送, phone: 13068920712, signName: 阿里云短信测试, templateCode: SMS_154950909, templateParam: {"code":"288329"}
+2025-07-02 20:49:06.860 [http-nio-8080-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [发送验证码], 耗时: 107ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-07-02 20:49:07.632 [AuthExecutor-1] ERROR com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 短信发送错误: 
+com.aliyun.tea.TeaException: code: 400, AccessKeyId is mandatory for this action. request id: 02AD1DB5-A410-5B13-8669-7280465AC05A
+	at com.aliyun.teaopenapi.Client.doRequest(Client.java:799)
+	at com.aliyun.teaopenapi.Client.callApi(Client.java:1022)
+	at com.aliyun.dysmsapi20170525.Client.sendSmsWithOptions(Client.java:1596)
+	at com.zry.xiaohongshu.auth.sms.AliyunSmsHelper.sendMessage(AliyunSmsHelper.java:39)
+	at com.zry.xiaohongshu.auth.service.impl.VerificationCodeServiceImpl.lambda$send$0(VerificationCodeServiceImpl.java:47)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-02 20:51:48.336 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-07-02 20:51:48.343 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-07-02 20:51:52.413 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Starting XiaohongshuAuthApplication using Java 17.0.12 with PID 26524 (D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-auth\target\classes started by Rey in D:\subject\JAVA\SpringCloud\xiaohongshu)
+2025-07-02 20:51:52.416 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - The following 1 profile is active: "dev"
+2025-07-02 20:51:53.043 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-02 20:51:53.046 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-02 20:51:53.079 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-07-02 20:51:53.725 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-02 20:51:53.726 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-07-02 20:51:53.729 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-07-02 20:51:53.736 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-02 20:51:53.736 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-07-02 20:51:53.830 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-02 20:51:53.831 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1376 ms
+2025-07-02 20:51:54.560 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-07-02 20:51:54.793 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-07-02 20:51:55.173 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-02 20:51:55.178 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Started XiaohongshuAuthApplication in 3.271 seconds (process running for 3.759)
+2025-07-02 20:52:08.018 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02 20:52:08.018 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-02 20:52:08.019 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-02 20:52:08.154 [http-nio-8080-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"13068920712"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:52:08.609 [http-nio-8080-exec-1] INFO  c.z.x.a.service.impl.VerificationCodeServiceImpl - ==> 手机号: 13068920712, 已生成验证码：【295065】
+2025-07-02 20:52:08.610 [AuthExecutor-1] INFO  com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 开始短信发送, phone: 13068920712, signName: 阿里云短信测试, templateCode: SMS_154950909, templateParam: {"code":"295065"}
+2025-07-02 20:52:08.662 [http-nio-8080-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [发送验证码], 耗时: 516ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-07-02 20:52:09.733 [AuthExecutor-1] INFO  com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 短信发送成功, response: {"headers":{"access-control-allow-origin":"*","date":"Wed, 02 Jul 2025 12:52:09 GMT","content-length":"114","keep-alive":"timeout=25","x-acs-request-id":"F76868ED-E2B1-5F9B-8731-221E045AF20D","connection":"keep-alive","content-type":"application/json;charset=utf-8","etag":"1uZKMSUU3/ft2sJ1/Qpt+qQ2","access-control-expose-headers":"*","x-acs-trace-id":"753028aa203ce2134f1cae6037db8cfa"},"statusCode":200,"body":{"bizId":null,"code":"isv.AMOUNT_NOT_ENOUGH","message":"账户余额不足","requestId":"F76868ED-E2B1-5F9B-8731-221E045AF20D"}}
+2025-07-02 20:54:10.745 [http-nio-8080-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"13068920712"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:54:10.795 [http-nio-8080-exec-4] WARN  c.z.x.auth.exception.GlobalExceptionHandler - /verification/code/send request fail, errorCode: AUTH-20000, errorMessage: 请求太频繁，请3分钟后再试
+2025-07-02 20:54:24.309 [http-nio-8080-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [发送验证码], 入参: {"phone":"13068920712"}, 请求类: VerificationCodeController, 请求方法: send =================================== 
+2025-07-02 20:54:24.357 [http-nio-8080-exec-6] INFO  c.z.x.a.service.impl.VerificationCodeServiceImpl - ==> 手机号: 13068920712, 已生成验证码：【169051】
+2025-07-02 20:54:24.358 [AuthExecutor-2] INFO  com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 开始短信发送, phone: 13068920712, signName: 阿里云短信测试, templateCode: SMS_154950909, templateParam: {"code":"169051"}
+2025-07-02 20:54:24.405 [http-nio-8080-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [发送验证码], 耗时: 96ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-07-02 20:54:24.945 [AuthExecutor-2] INFO  com.zry.xiaohongshu.auth.sms.AliyunSmsHelper - ==> 短信发送成功, response: {"headers":{"access-control-allow-origin":"*","date":"Wed, 02 Jul 2025 12:54:25 GMT","content-length":"114","keep-alive":"timeout=25","x-acs-request-id":"DB9E02B5-9925-5DE7-89BD-073D9B62A12D","connection":"keep-alive","content-type":"application/json;charset=utf-8","etag":"1O9rLoy/rQpTQtvzk+QTekg2","access-control-expose-headers":"*","x-acs-trace-id":"49fe3b713c53a213555e26fc5424a4a4"},"statusCode":200,"body":{"bizId":null,"code":"isv.AMOUNT_NOT_ENOUGH","message":"账户余额不足","requestId":"DB9E02B5-9925-5DE7-89BD-073D9B62A12D"}}
+2025-07-02 20:55:17.537 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-07-02 20:55:17.546 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-07-02 20:55:20.293 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Starting XiaohongshuAuthApplication using Java 17.0.12 with PID 12024 (D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-auth\target\classes started by Rey in D:\subject\JAVA\SpringCloud\xiaohongshu)
+2025-07-02 20:55:20.297 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - The following 1 profile is active: "dev"
+2025-07-02 20:55:20.880 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-02 20:55:20.882 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-02 20:55:20.905 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-07-02 20:55:21.548 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-02 20:55:21.549 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-07-02 20:55:21.553 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-07-02 20:55:21.571 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-02 20:55:21.571 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-07-02 20:55:21.654 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-02 20:55:21.654 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1312 ms
+2025-07-02 20:55:22.275 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-07-02 20:55:22.489 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-07-02 20:55:22.896 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-02 20:55:22.903 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Started XiaohongshuAuthApplication in 3.114 seconds (process running for 3.582)
+2025-07-02 21:03:31.041 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-07-02 21:03:31.060 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
