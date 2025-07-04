@@ -3,6 +3,7 @@ package com.zry.xiaohongshu.auth.domain.mapper;
 import com.zry.xiaohongshu.auth.domain.dataobject.UserDO;
 
 public interface UserDOMapper {
+    UserDO selectByPhone(String phone);
     int deleteByPrimaryKey(Long id);
 
     int insert(UserDO record);

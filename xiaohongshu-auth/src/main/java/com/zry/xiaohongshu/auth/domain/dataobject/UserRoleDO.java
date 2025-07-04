@@ -1,19 +1,25 @@
-package com.zry.xiaohongshu.auth.controller;
+package com.zry.xiaohongshu.auth.domain.dataobject;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
-    @NotBlank(message = "用户名不能为空")
-    private String nickName;
+public class UserRoleDO {
+    private Long id;
+
+    private Long userId;
+
+    private Long roleId;
+
     private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
+
+    private Boolean isDeleted;
 }

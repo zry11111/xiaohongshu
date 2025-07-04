@@ -1,0 +1,27 @@
+2025-07-03 01:35:26.383 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-07-03 01:35:26.390 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-07-03 10:10:54.191 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Starting XiaohongshuAuthApplication using Java 17.0.12 with PID 25624 (D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-auth\target\classes started by Rey in D:\subject\JAVA\SpringCloud\xiaohongshu)
+2025-07-03 10:10:54.194 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - The following 1 profile is active: "dev"
+2025-07-03 10:10:55.226 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-03 10:10:55.231 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-03 10:10:55.278 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2025-07-03 10:10:56.448 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-07-03 10:10:56.456 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-07-03 10:10:56.478 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-07-03 10:10:56.491 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-03 10:10:56.492 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-07-03 10:10:56.616 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-03 10:10:56.616 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2363 ms
+2025-07-03 10:10:57.144 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-07-03 10:10:57.648 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-07-03 10:10:58.731 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-03 10:10:58.739 [main] INFO  c.zry.xiaohongshu.auth.XiaohongshuAuthApplication - Started XiaohongshuAuthApplication in 5.288 seconds (process running for 6.619)
+2025-07-03 10:11:52.417 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-03 10:11:52.418 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-03 10:11:52.419 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-03 10:11:52.624 [http-nio-8080-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [用户登录], 入参: {"phone":"18118871144","code":"","password":null,"type":90}, 请求类: UserController, 请求方法: loginAndRegister =================================== 
+2025-07-03 10:11:52.630 [http-nio-8080-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [用户登录], 耗时: 15ms, 出参: {"success":false,"message":"登录方式不正确","errorCode":"AUTH-10001","data":null} =================================== 
+2025-07-03 10:11:59.613 [http-nio-8080-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [用户登录], 入参: {"phone":"18118871144","code":"","password":null,"type":1}, 请求类: UserController, 请求方法: loginAndRegister =================================== 
+2025-07-03 10:11:59.626 [http-nio-8080-exec-3] WARN  c.z.x.auth.exception.GlobalExceptionHandler - /user/login request error, errorCode: AUTH-10001, errorMessage: 验证码不能为空
+2025-07-03 12:59:17.888 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-07-03 12:59:17.912 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
