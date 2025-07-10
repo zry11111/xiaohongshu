@@ -12,6 +12,7 @@
   <modules>
     <module>xiaohongshu-auth</module>
     <module>xiaohongshu-framework</module>
+    <module>xiaohongshu-gateway</module>
   </modules>
   <properties>
     <java.version>17</java.version>

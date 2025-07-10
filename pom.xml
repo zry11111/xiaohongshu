@@ -15,6 +15,7 @@
         <module>xiaohongshu-auth</module>
         <!--    平台基础框架-->
         <module>xiaohongshu-framework</module>
+
         <module>xiaohongshu-gateway</module>
     </modules>
 
