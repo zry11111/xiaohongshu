@@ -16,6 +16,7 @@
         </processorPath>
         <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
         <module name="xiaohongshu-common" />
+        <module name="xiaohongshu-gateway" />
         <module name="xiaohongshu-spring-boot-starter-jackson" />
         <module name="xiaohongshu-auth" />
       </profile>

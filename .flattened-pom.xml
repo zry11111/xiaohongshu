@@ -34,6 +34,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <commons-lang3.version>3.12.0</commons-lang3.version>
     <druid.version>1.2.23</druid.version>
+    <nacos-config.version>0.3.0-RC</nacos-config.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -51,6 +52,11 @@
         <groupId>com.zry</groupId>
         <artifactId>xiaohongshu-spring-boot-starter-jackson</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba.boot</groupId>
+        <artifactId>nacos-config-spring-boot-starter</artifactId>
+        <version>${nacos-config.version}</version>
       </dependency>
       <dependency>
         <groupId>cn.dev33</groupId>

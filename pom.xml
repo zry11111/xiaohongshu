@@ -15,6 +15,7 @@
         <module>xiaohongshu-auth</module>
         <!--    平台基础框架-->
         <module>xiaohongshu-framework</module>
+        <module>xiaohongshu-gateway</module>
     </modules>
 
     <properties>
@@ -46,6 +47,7 @@
         <commons-lang3.version>3.12.0</commons-lang3.version>
 
         <dysmsapi.version>2.0.24</dysmsapi.version>
+        <nacos-config.version>0.3.0-RC</nacos-config.version>
     </properties>
 
     <dependencyManagement>
@@ -64,6 +66,12 @@
                 <groupId>com.zry</groupId>
                 <artifactId>xiaohongshu-spring-boot-starter-jackson</artifactId>
                 <version>${revision}</version>
+            </dependency>
+            <!-- Nacos 配置中心 -->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-config-spring-boot-starter</artifactId>
+                <version>${nacos-config.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.dev33</groupId>

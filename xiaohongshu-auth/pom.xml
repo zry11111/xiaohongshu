@@ -31,6 +31,23 @@
             <groupId>com.zry</groupId>
             <artifactId>xiaohongshu-spring-boot-starter-biz-operationlog</artifactId>
         </dependency>
+        <!-- 服务注册发现 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!-- Nacos 配置中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.zry</groupId>
             <artifactId>xiaohongshu-spring-boot-starter-jackson</artifactId>
