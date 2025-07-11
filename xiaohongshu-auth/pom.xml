@@ -52,6 +52,10 @@
             <groupId>com.zry</groupId>
             <artifactId>xiaohongshu-spring-boot-starter-jackson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.zry</groupId>
+            <artifactId>xiaohongshu-spring-boot-starter-biz-context</artifactId>
+        </dependency>
         <!-- Redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -101,6 +105,12 @@
             <groupId>com.aliyun</groupId>
             <artifactId>dysmsapi20170525</artifactId>
         </dependency>
+        <!-- 密码加密 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

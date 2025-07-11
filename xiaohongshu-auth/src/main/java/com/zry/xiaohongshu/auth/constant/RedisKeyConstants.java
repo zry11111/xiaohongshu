@@ -23,15 +23,15 @@ public class RedisKeyConstants {
      */
     private static final String USER_ROLES_KEY_PREFIX = "user:roles:";
 
-    public static String buildUserRoleKey(String phone) {
-        return USER_ROLES_KEY_PREFIX + phone;
+    public static String buildUserRoleKey(Long userId) {
+        return USER_ROLES_KEY_PREFIX + userId;
     }
 
     /**
      * 角色对应权限集合
      */
     private static final String ROLE_PERMISSIONS_KEY_PREFIX = "role:permissions:";
-    public static String buildRolePermissionsKey(Long roleId) {
+    public static String buildRolePermissionsKey(String roleId) {
         return ROLE_PERMISSIONS_KEY_PREFIX + roleId;
     }
 }

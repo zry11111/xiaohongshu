@@ -49,6 +49,7 @@
 
         <dysmsapi.version>2.0.24</dysmsapi.version>
         <nacos-config.version>0.3.0-RC</nacos-config.version>
+        <transmittable-thread-local.version>2.14.2</transmittable-thread-local.version>
     </properties>
 
     <dependencyManagement>
@@ -68,6 +69,11 @@
                 <artifactId>xiaohongshu-spring-boot-starter-jackson</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>com.zry</groupId>
+                <artifactId>xiaohongshu-spring-boot-starter-biz-context</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <!-- Nacos 配置中心 -->
             <dependency>
                 <groupId>com.alibaba.boot</groupId>
@@ -83,6 +89,11 @@
             <dependency>
                 <groupId>cn.dev33</groupId>
                 <artifactId>sa-token-redis-jackson</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-reactor-spring-boot3-starter</artifactId>
                 <version>${sa-token.version}</version>
             </dependency>
             <!-- Druid 数据库连接池 -->
@@ -169,6 +180,11 @@
                 <groupId>com.aliyun</groupId>
                 <artifactId>dysmsapi20170525</artifactId>
                 <version>${dysmsapi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
