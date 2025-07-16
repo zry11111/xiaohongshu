@@ -14,12 +14,14 @@
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../../maven-repository-new/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
-        <module name="xiaohongshu-spring-boot-starter-biz-context" />
-        <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
         <module name="xiaohongshu-common" />
         <module name="xiaohongshu-gateway" />
-        <module name="xiaohongshu-spring-boot-starter-jackson" />
+        <module name="xiaohongshu-oss-biz" />
         <module name="xiaohongshu-auth" />
+        <module name="xiaohongshu-spring-boot-starter-biz-context" />
+        <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
+        <module name="xiaohongshu-spring-boot-starter-jackson" />
+        <module name="xiaohongshu-oss-api" />
       </profile>
     </annotationProcessing>
   </component>

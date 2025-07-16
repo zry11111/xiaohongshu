@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: xiaohongshu-oss
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        group: DEFAULT_GROUP
+        namespace: xiaohongshu
+        server-addr: http://47.236.36.111:8848/
+      config:
+        server-addr: http://47.236.36.111:8848/
+        prefix: ${spring.application.name}
+        group: DEFAULT_GROUP
+        namespace: xiaohongshu
+        file-extension: yaml
+        refresh-enabled: true
