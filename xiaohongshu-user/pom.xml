@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.zry</groupId>
+        <artifactId>xiaohongshu</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>xiaohongshu-user</artifactId>
+    <packaging>pom</packaging>
+    <description>用户服务</description>
+    <name>${project.artifactId}</name>
+
+    <modules>
+
+        <module>xiaohongshu-user-api</module>
+        <module>xiaohongshu-user-biz</module>
+    </modules>
+</project>

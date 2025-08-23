@@ -1,0 +1,5 @@
+com\zry\framework\biz\context\config\FeignContextAutoConfiguration.class
+com\zry\framework\biz\context\holder\LoginUserContextHolder.class
+com\zry\framework\biz\context\filter\HeaderUserId2ContextFilter.class
+com\zry\framework\biz\context\interceptor\FeignRequestInterceptor.class
+com\zry\framework\biz\context\config\ContextAutoConfiguration.class

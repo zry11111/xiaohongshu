@@ -1,6 +1,6 @@
 package com.zry.xiaohongshu.auth.model.vo.verificationcode;
 
-import com.zry.xiaohongshu.auth.validator.PhoneNumber;
+import com.zry.framework.common.validator.PhoneNumber;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

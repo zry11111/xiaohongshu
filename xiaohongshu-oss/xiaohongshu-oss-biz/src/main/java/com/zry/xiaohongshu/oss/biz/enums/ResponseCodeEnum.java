@@ -11,7 +11,8 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
     SYSTEM_ERROR("OSS-10000", "出错啦，后台小哥正在努力修复中..."),
     PARAM_NOT_VALID("OSS-10001", "参数错误"),
 
-    // ----------- 业务异常状态码 -----------
+
+    // ----------- 业务异常状态码  -----------
     ;
 
     // 异常码
