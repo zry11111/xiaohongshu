@@ -3,6 +3,7 @@ package com.zry.xiaohongshu.kv.api;
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.kv.constant.ApiConstants;
 import com.zry.xiaohongshu.kv.dto.req.AddNoteContentReqDTO;
+import com.zry.xiaohongshu.kv.dto.req.DeleteNoteContentReqDTO;
 import com.zry.xiaohongshu.kv.dto.req.FindNoteContentReqDTO;
 import com.zry.xiaohongshu.kv.dto.rsp.FindNoteContentRspDTO;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -17,4 +18,6 @@ public interface KeyValueFeignApi {
     Response<?> addNoteContent(@RequestBody AddNoteContentReqDTO addNoteContentReqDTO);
     @PostMapping(value = PREFIX + "/note/content/find")
     Response<FindNoteContentRspDTO> findNoteContent(@RequestBody FindNoteContentReqDTO findNoteContentReqDTO);
+    @PostMapping(value = PREFIX + "/note/content/delete")
+    Response<?> deleteNoteContent(@RequestBody DeleteNoteContentReqDTO deleteNoteContentReqDTO);
 }
