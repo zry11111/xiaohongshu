@@ -1,8 +1,5 @@
 server:
-  port: 8083
+  port: 8084
 spring:
   profiles:
     active: dev
-
-storage:
-  type: minio

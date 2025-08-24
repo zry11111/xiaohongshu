@@ -19,6 +19,7 @@
         <module>xiaohongshu-gateway</module>
         <module>xiaohongshu-oss</module>
         <module>xiaohongshu-user</module>
+        <module>xiaohongshu-kv</module>
     </modules>
 
     <properties>

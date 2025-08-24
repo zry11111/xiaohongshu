@@ -19,12 +19,18 @@
         <module name="xiaohongshu-oss-biz" />
         <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-auth" />
+        <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-spring-boot-starter-biz-context" />
         <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
         <module name="xiaohongshu-spring-boot-starter-jackson" />
+        <module name="xiaohongshu-kv-biz" />
         <module name="xiaohongshu-oss-api" />
         <module name="xiaohongshu-user-biz" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xiaohashu-kv-api" target="17" />
+      <module name="xiaohashu-kv-biz" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
