@@ -20,6 +20,7 @@
         <module>xiaohongshu-oss</module>
         <module>xiaohongshu-user</module>
         <module>xiaohongshu-kv</module>
+        <module>xiaohongshu-distributed-id-generator</module>
     </modules>
 
     <properties>

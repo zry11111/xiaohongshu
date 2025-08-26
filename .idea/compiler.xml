@@ -14,21 +14,25 @@
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../../maven-repository-new/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
+        <module name="xiaohongshu-oss-biz" />
+        <module name="xiaohongshu-distributed-id-generator-biz" />
+        <module name="xiaohongshu-kv-biz" />
+        <module name="xiaohongshu-user-biz" />
         <module name="xiaohongshu-common" />
         <module name="xiaohongshu-gateway" />
-        <module name="xiaohongshu-oss-biz" />
         <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-spring-boot-starter-biz-context" />
         <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
         <module name="xiaohongshu-spring-boot-starter-jackson" />
-        <module name="xiaohongshu-kv-biz" />
         <module name="xiaohongshu-oss-api" />
-        <module name="xiaohongshu-user-biz" />
+        <module name="xiaohongshu-distributed-id-generator-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="xiaohashu-distributed-id-generator-api" target="17" />
+      <module name="xiaohashu-distributed-id-generator-biz" target="17" />
       <module name="xiaohashu-kv-api" target="17" />
       <module name="xiaohashu-kv-biz" target="17" />
     </bytecodeTargetLevel>
