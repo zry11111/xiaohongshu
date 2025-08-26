@@ -20,6 +20,7 @@ import com.zry.xiaohongshu.user.biz.domain.mapper.UserRoleDOMapper;
 import com.zry.xiaohongshu.user.biz.enums.ResponseCodeEnum;
 import com.zry.xiaohongshu.user.biz.enums.SexEnum;
 import com.zry.xiaohongshu.user.biz.model.vo.UpdateUserInfoReqVO;
+import com.zry.xiaohongshu.user.biz.rpc.DistributedIdGeneratorRpcService;
 import com.zry.xiaohongshu.user.biz.rpc.OssRpcService;
 import com.zry.xiaohongshu.user.biz.service.UserService;
 import com.zry.xiaohongshu.user.dto.req.FindUserByPhoneReqDTO;
@@ -53,6 +54,8 @@ public class UserServiceImpl implements UserService {
     private RoleDOMapper roleDOMapper;
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
+    @Resource
+    private DistributedIdGeneratorRpcService distributedIdGeneratorRpcService;
     @Override
     public Response<?> updateUserInfo(UpdateUserInfoReqVO updateUserInfoReqVO) {
         UserDO userDO = new UserDO();
@@ -160,12 +163,15 @@ public class UserServiceImpl implements UserService {
 
         // 否则注册新用户
         // 获取全局自增的小哈书 ID
-        Long xiaohashuId = redisTemplate.opsForValue().increment(RedisKeyConstants.XIAOHONGSHU_ID_GENERATOR_KEY);
-
+//        Long xiaohongshuId = redisTemplate.opsForValue().increment(RedisKeyConstants.XIAOHONGSHU_ID_GENERATOR_KEY);
+        String xiaohongshuId = distributedIdGeneratorRpcService.generateId();
+        String userIdStr = distributedIdGeneratorRpcService.getUserId();
+        Long userId = Long.valueOf(userIdStr);
         UserDO userDO = UserDO.builder()
+                .id(userId)
                 .phone(phone)
-                .xiaohongshuId(String.valueOf(xiaohashuId)) // 自动生成小红书号 ID
-                .nickname("小红薯" + xiaohashuId) // 自动生成昵称, 如：小红薯10000
+                .xiaohongshuId(xiaohongshuId) // 自动生成小红书号 ID
+                .nickname("小红薯" + xiaohongshuId) // 自动生成昵称, 如：小红薯10000
                 .status(StatusEnum.ENABLED.getValue()) // 状态为启用
                 .createTime(LocalDateTime.now())
                 .updateTime(LocalDateTime.now())
@@ -176,7 +182,7 @@ public class UserServiceImpl implements UserService {
         userDOMapper.insert(userDO);
 
         // 获取刚刚添加入库的用户 ID
-        Long userId = userDO.getId();
+//        Long userId = userDO.getId();
 
         // 给该用户分配一个默认角色
         UserRoleDO userRoleDO = UserRoleDO.builder()
