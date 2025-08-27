@@ -1,5 +1,6 @@
 package com.zry.xiaohongshu.user.biz.service.impl;
 
+import cn.hutool.core.util.RandomUtil;
 import com.google.common.base.Preconditions;
 import com.zry.framework.biz.context.holder.LoginUserContextHolder;
 import com.zry.framework.common.enums.DeletedEnum;
@@ -23,14 +24,18 @@ import com.zry.xiaohongshu.user.biz.model.vo.UpdateUserInfoReqVO;
 import com.zry.xiaohongshu.user.biz.rpc.DistributedIdGeneratorRpcService;
 import com.zry.xiaohongshu.user.biz.rpc.OssRpcService;
 import com.zry.xiaohongshu.user.biz.service.UserService;
+import com.zry.xiaohongshu.user.dto.req.FindUserByIdReqDTO;
 import com.zry.xiaohongshu.user.dto.req.FindUserByPhoneReqDTO;
 import com.zry.xiaohongshu.user.dto.req.RegisterUserReqDTO;
 import com.zry.xiaohongshu.user.dto.req.UpdateUserPasswordReqDTO;
+import com.zry.xiaohongshu.user.dto.resp.FindUserByIdRspDTO;
 import com.zry.xiaohongshu.user.dto.resp.FindUserByPhoneRspDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -40,10 +45,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService {
+    @Resource(name = "taskExecutor")
+    private ThreadPoolTaskExecutor threadPoolTaskExecutor;
     @Resource
     private UserDOMapper userDOMapper;
     @Resource
@@ -232,5 +240,42 @@ public class UserServiceImpl implements UserService {
                 .build();
         userDOMapper.updateByPrimaryKey(userDO);
         return Response.success();
+    }
+
+    @Override
+    public Response<FindUserByIdRspDTO> findById(FindUserByIdReqDTO findUserByIdReqDTO) {
+        Long id = findUserByIdReqDTO.getId();
+        String userInfoRedisKey = RedisKeyConstants.buildUserInfoKey(id);
+        String userInfoRedisValue = (String) redisTemplate.opsForValue().get(userInfoRedisKey);
+        if(StringUtils.isNotBlank(userInfoRedisValue)){
+            FindUserByIdRspDTO findUserByIdRspDTO = JsonUtils.parseObject(userInfoRedisValue, FindUserByIdRspDTO.class);
+            return Response.success(findUserByIdRspDTO);
+        }
+        //如果为空，则从数据库中去查询数据
+
+        UserDO userDO = userDOMapper.selectByPrimaryKey(id);
+        if(Objects.isNull(userDO)) {
+            //防止缓存穿透，在Redis中存储空数据
+            threadPoolTaskExecutor.execute(()->{
+                long expireSeconds =  60 + RandomUtil.randomInt(60);
+                redisTemplate.opsForValue().set(userInfoRedisKey, "null", expireSeconds, TimeUnit.SECONDS);
+            });
+            throw new BizException(ResponseCodeEnum.USER_NOT_FOUND);
+        }
+        FindUserByIdRspDTO findUserByIdRspDTO = FindUserByIdRspDTO.builder()
+                .id(userDO.getId())
+                .avatar(userDO.getAvatar())
+                .nickName(userDO.getNickname())
+                .build();
+
+        //异步写入Redis缓存
+        threadPoolTaskExecutor.submit(()->{
+            // 过期时间（保底1天 + 随机秒数，将缓存过期时间打散，防止同一时间大量缓存失效，导致数据库压力太大）
+            long expireSeconds = 60*60*24 + RandomUtil.randomInt(60*60*24);
+            redisTemplate.opsForValue()
+                    .set(userInfoRedisKey, JsonUtils.toJsonString(findUserByIdRspDTO), expireSeconds, TimeUnit.SECONDS);
+        });
+
+        return Response.success(findUserByIdRspDTO);
     }
 }

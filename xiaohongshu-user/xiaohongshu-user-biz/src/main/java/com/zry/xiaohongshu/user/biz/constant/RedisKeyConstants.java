@@ -11,6 +11,7 @@ public class RedisKeyConstants {
      */
     private static final String USER_ROLES_KEY_PREFIX = "user:roles:";
 
+    private static final String USER_INFO_KEY_PREFIX = "user:info:";
     public static String buildUserRoleKey(Long userId) {
         return USER_ROLES_KEY_PREFIX + userId;
     }
@@ -21,5 +22,8 @@ public class RedisKeyConstants {
     private static final String ROLE_PERMISSIONS_KEY_PREFIX = "role:permissions:";
     public static String buildRolePermissionsKey(String roleId) {
         return ROLE_PERMISSIONS_KEY_PREFIX + roleId;
+    }
+    public static String buildUserInfoKey(Long userId) {
+        return USER_INFO_KEY_PREFIX + userId;
     }
 }

@@ -5,8 +5,10 @@ import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.user.biz.model.vo.UpdateUserInfoReqVO;
 import com.zry.xiaohongshu.user.biz.service.UserService;
 import com.zry.xiaohongshu.user.biz.service.impl.UserServiceImpl;
+import com.zry.xiaohongshu.user.dto.req.FindUserByIdReqDTO;
 import com.zry.xiaohongshu.user.dto.req.RegisterUserReqDTO;
 import com.zry.xiaohongshu.user.dto.req.UpdateUserPasswordReqDTO;
+import com.zry.xiaohongshu.user.dto.resp.FindUserByIdRspDTO;
 import com.zry.xiaohongshu.user.dto.resp.FindUserByPhoneRspDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.security.PublicKey;
 
 @RestController
 @RequestMapping("/user")
@@ -41,5 +45,10 @@ public class UserController {
     @ApiOperationLog(description = "修改密码")
     public Response<?> updatePassword(@Validated @RequestBody UpdateUserPasswordReqDTO updateUserPasswordReqDTO) {
         return userService.updatePassword(updateUserPasswordReqDTO);
+    }
+    @PostMapping("/findById")
+    @ApiOperationLog(description = "根据用户 ID 查询用户信息")
+    public Response<FindUserByIdRspDTO> findById(@Validated @RequestBody FindUserByIdReqDTO findUserByIdReqDTO) {
+        return userService.findById(findUserByIdReqDTO);
     }
 }

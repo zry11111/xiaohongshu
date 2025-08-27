@@ -4,13 +4,10 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import com.zry.framework.common.constant.DateConstants;
-import lombok.SneakyThrows;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import lombok.SneakyThrows;
+import org.apache.commons.lang3.StringUtils;
+
 
 public class JsonUtils {
 
@@ -32,6 +29,21 @@ public class JsonUtils {
     @SneakyThrows//简化异常处理
     public static String toJsonString(Object obj) {
         return OBJECT_MAPPER.writeValueAsString(obj);
+    }
+    /**
+     * 将 JSON 字符串转换为对象
+     * @param jsonStr
+     * @param clazz
+     * @param <T>
+     * @return
+     */
+    @SneakyThrows
+    public static <T> T parseObject(String jsonStr, Class<T> clazz) {
+        if (StringUtils.isBlank(jsonStr)) {
+            return null;
+        }
+
+        return OBJECT_MAPPER.readValue(jsonStr, clazz);
     }
 
 }
