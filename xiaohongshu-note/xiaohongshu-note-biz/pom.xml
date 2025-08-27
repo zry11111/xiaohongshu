@@ -89,6 +89,14 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.zry</groupId>
+            <artifactId>xiaohongshu-distributed-id-generator-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zry</groupId>
+            <artifactId>xiaohongshu-kv-api</artifactId>
+        </dependency>
 
     </dependencies>
 

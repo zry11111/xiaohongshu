@@ -26,18 +26,19 @@ public class NoteDO {
 
     private Boolean isTop;
 
-    private Byte type;
+    private Integer type;
 
     private String imgUris;
 
     private String videoUri;
 
-    private Byte visible;
+    private Integer visible;
 
     private LocalDateTime createTime;
 
     private LocalDateTime updateTime;
 
-    private Byte status;
+    private Integer status;
 
+    private String contentUuid;
 }
