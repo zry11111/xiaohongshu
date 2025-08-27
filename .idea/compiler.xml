@@ -20,8 +20,8 @@
         <module name="xiaohongshu-user-biz" />
         <module name="xiaohongshu-common" />
         <module name="xiaohongshu-gateway" />
-        <module name="xiaohongshu-note-biz" />
         <module name="xiaohongshu-user-api" />
+        <module name="xiaohongshu-note-biz" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-spring-boot-starter-biz-context" />
