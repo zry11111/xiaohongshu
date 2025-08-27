@@ -24,10 +24,10 @@ public class NoteContentServiceImpl implements NoteContentService {
     private NoteContentRepository noteContentRepository;
     @Override
     public Response<?> addNoteContent(AddNoteContentReqDTO addNoteContentReqDTO) {
-        Long noteId = addNoteContentReqDTO.getNoteId();
+        String uuid = addNoteContentReqDTO.getUuid();
         String content = addNoteContentReqDTO.getContent();
         NoteContentDO contentDO = NoteContentDO.builder()
-                .id(UUID.randomUUID())
+                .id(UUID.fromString(uuid))
                 .content(content)
                 .build();
         noteContentRepository.save(contentDO);
@@ -36,14 +36,14 @@ public class NoteContentServiceImpl implements NoteContentService {
 
     @Override
     public Response<FindNoteContentRspDTO> findNoteContent(FindNoteContentReqDTO findNoteContentReqDTO) {
-        String noteId = findNoteContentReqDTO.getNoteId();
+        String noteId = findNoteContentReqDTO.getUuid();
         Optional<NoteContentDO> optional = noteContentRepository.findById(UUID.fromString(noteId));
         if(!optional.isPresent()){
             throw new BizException(ResponseCodeEnum.NOTE_CONTENT_NOT_FOUND);
         }
         NoteContentDO noteContentDO = optional.get();
         FindNoteContentRspDTO findNoteContentRspDTO = FindNoteContentRspDTO.builder()
-                .noteId(noteContentDO.getId())
+                .uuid(noteContentDO.getId())
                 .content(noteContentDO.getContent())
                 .build();
         return Response.success(findNoteContentRspDTO);
@@ -51,9 +51,9 @@ public class NoteContentServiceImpl implements NoteContentService {
     @Override
     public Response<?> deleteNoteContent(DeleteNoteContentReqDTO deleteNoteContentReqDTO) {
         // 笔记 ID
-        String noteId = deleteNoteContentReqDTO.getNoteId();
+        String uuid = deleteNoteContentReqDTO.getUuid();
         // 删除笔记内容
-        noteContentRepository.deleteById(UUID.fromString(noteId));
+        noteContentRepository.deleteById(UUID.fromString(uuid));
 
         return Response.success();
     }

@@ -12,6 +12,6 @@ import java.util.UUID;
 @Builder
 @Data
 public class FindNoteContentRspDTO {
-    private UUID noteId;
+    private UUID uuid;
     private String content;
 }

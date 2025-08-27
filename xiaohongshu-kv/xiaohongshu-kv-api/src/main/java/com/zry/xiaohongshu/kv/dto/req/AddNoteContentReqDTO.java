@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class AddNoteContentReqDTO {
-    @NotNull(message = "笔记ID不能为空")
-    private Long noteId;
+    @NotBlank(message = "笔记ID不能为空")
+    private String uuid;
     @NotBlank(message = "笔记内容不能为空")
     //空格也是不为null，同时不允许发送空白的笔记内容
     private String content;
