@@ -251,3 +251,27 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-08-26 22:45:12.041 [http-nio-8082-exec-8] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-26 22:45:12.042 [http-nio-8082-exec-8] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-26 22:45:12.043 [http-nio-8082-exec-8] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-26 22:45:12.054 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-08-26 22:45:12.264 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [用户注册], 入参: {"phone":"13068920712"}, 请求类: UserController, 请求方法: register =================================== 
+2025-08-26 22:45:12.327 [http-nio-8082-exec-8] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - ==>  Preparing: select id,password from t_user where phone = ?
+2025-08-26 22:45:12.631 [http-nio-8082-exec-8] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - ==> Parameters: 13068920712(String)
+2025-08-26 22:45:12.655 [http-nio-8082-exec-8] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - <==      Total: 0
+2025-08-26 22:45:12.659 [http-nio-8082-exec-8] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 用户是否注册, phone: 13068920712, userDO: null
+2025-08-26 22:45:12.795 [http-nio-8082-exec-8] INFO  com.alibaba.nacos.client.naming - [SUBSCRIBE-SERVICE] service:xiaohongshu-distributed-id-generator, group:DEFAULT_GROUP, clusters: 
+2025-08-26 22:45:12.896 [http-nio-8082-exec-8] INFO  com.alibaba.nacos.client.naming - init new ips(1) service: DEFAULT_GROUP@@xiaohongshu-distributed-id-generator -> [{"ip":"10.2.66.3","port":8085,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-distributed-id-generator","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-08-26 22:45:12.919 [http-nio-8082-exec-8] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: DEFAULT_GROUP@@xiaohongshu-distributed-id-generator -> [{"ip":"10.2.66.3","port":8085,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-distributed-id-generator","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2025-08-26 22:45:13.114 [http-nio-8082-exec-8] DEBUG c.z.x.user.biz.domain.mapper.UserDOMapper.insert - ==>  Preparing: insert into t_user (id, xiaohongshu_id, `password`, nickname, avatar, birthday, background_img, phone, sex, `status`, introduction, create_time, update_time, is_deleted) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-08-26 22:45:13.337 [http-nio-8082-exec-8] DEBUG c.z.x.user.biz.domain.mapper.UserDOMapper.insert - ==> Parameters: 100(Long), 10100(String), null, 小红薯10100(String), null, null, null, 13068920712(String), null, 0(Integer), null, 2025-08-26T22:45:13.109477900(LocalDateTime), 2025-08-26T22:45:13.109477900(LocalDateTime), false(Boolean)
+2025-08-26 22:45:13.346 [http-nio-8082-exec-8] DEBUG c.z.x.user.biz.domain.mapper.UserDOMapper.insert - <==    Updates: 1
+2025-08-26 22:45:13.348 [http-nio-8082-exec-8] DEBUG c.z.x.u.biz.domain.mapper.UserRoleDOMapper.insert - ==>  Preparing: insert into t_user_role_rel (id, user_id, role_id, create_time, update_time, is_deleted ) values (?, ?, ?, ?, ?, ? )
+2025-08-26 22:45:13.351 [http-nio-8082-exec-8] DEBUG c.z.x.u.biz.domain.mapper.UserRoleDOMapper.insert - ==> Parameters: null, 100(Long), 1(Long), 2025-08-26T22:45:13.348929(LocalDateTime), 2025-08-26T22:45:13.348929(LocalDateTime), false(Boolean)
+2025-08-26 22:45:13.368 [http-nio-8082-exec-8] DEBUG c.z.x.u.biz.domain.mapper.UserRoleDOMapper.insert - <==    Updates: 1
+2025-08-26 22:45:13.368 [http-nio-8082-exec-8] DEBUG c.z.x.u.b.d.mapper.RoleDOMapper.selectByPrimaryKey - ==>  Preparing: select id, role_name, role_key, `status`, sort, remark, create_time, update_time, is_deleted from t_role where id = ?
+2025-08-26 22:45:13.369 [http-nio-8082-exec-8] DEBUG c.z.x.u.b.d.mapper.RoleDOMapper.selectByPrimaryKey - ==> Parameters: 1(Long)
+2025-08-26 22:45:13.389 [http-nio-8082-exec-8] DEBUG c.z.x.u.b.d.mapper.RoleDOMapper.selectByPrimaryKey - <==      Total: 1
+2025-08-26 22:45:13.514 [nacos-grpc-client-executor-47.236.36.111-90] INFO  com.alibaba.nacos.common.remote.client - [11dea260-b735-4095-a9c6-a67bc56d59bb] Receive server push request, request = NotifySubscriberRequest, requestId = 556
+2025-08-26 22:45:13.516 [nacos-grpc-client-executor-47.236.36.111-90] INFO  com.alibaba.nacos.common.remote.client - [11dea260-b735-4095-a9c6-a67bc56d59bb] Ack server push request, request = NotifySubscriberRequest, requestId = 556
+2025-08-26 22:45:13.647 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [用户注册], 耗时: 1384ms, 出参: {"success":true,"message":null,"errorCode":null,"data":100} =================================== 

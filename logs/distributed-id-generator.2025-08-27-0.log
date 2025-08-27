@@ -1,0 +1,117 @@
+2025-08-27 00:00:46.787 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:00:46.792 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224046787] time[5] tag[updateCacheFromDb]
+2025-08-27 00:01:46.814 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:01:46.818 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224106814] time[4] tag[updateCacheFromDb]
+2025-08-27 00:02:46.833 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:02:46.838 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224166833] time[4] tag[updateCacheFromDb]
+2025-08-27 00:03:46.840 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:03:46.846 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224226840] time[5] tag[updateCacheFromDb]
+2025-08-27 00:04:46.847 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:04:46.855 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224286849] time[6] tag[updateCacheFromDb]
+2025-08-27 00:05:46.860 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:05:46.865 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224346860] time[4] tag[updateCacheFromDb]
+2025-08-27 00:06:46.881 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:06:46.885 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224406881] time[3] tag[updateCacheFromDb]
+2025-08-27 00:07:46.894 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:07:46.896 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224466894] time[4] tag[updateCacheFromDb]
+2025-08-27 00:08:46.910 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:08:46.917 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224526911] time[6] tag[updateCacheFromDb]
+2025-08-27 00:09:46.926 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:09:46.930 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224586927] time[3] tag[updateCacheFromDb]
+2025-08-27 00:10:46.941 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:10:46.944 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224646942] time[2] tag[updateCacheFromDb]
+2025-08-27 00:11:46.957 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:11:46.962 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224706957] time[5] tag[updateCacheFromDb]
+2025-08-27 00:12:46.970 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:12:46.971 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224766970] time[2] tag[updateCacheFromDb]
+2025-08-27 00:13:46.974 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:13:46.980 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224826974] time[5] tag[updateCacheFromDb]
+2025-08-27 00:14:46.984 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:14:46.987 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224886984] time[3] tag[updateCacheFromDb]
+2025-08-27 00:15:47.000 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:15:47.002 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756224947000] time[2] tag[updateCacheFromDb]
+2025-08-27 00:16:47.018 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:16:47.024 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225007018] time[5] tag[updateCacheFromDb]
+2025-08-27 00:17:47.034 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:17:47.039 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225067034] time[4] tag[updateCacheFromDb]
+2025-08-27 00:18:47.045 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:18:47.057 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225127046] time[14] tag[updateCacheFromDb]
+2025-08-27 00:19:47.062 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:19:47.064 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225187062] time[2] tag[updateCacheFromDb]
+2025-08-27 00:20:47.077 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:20:47.082 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225247078] time[5] tag[updateCacheFromDb]
+2025-08-27 00:21:47.091 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:21:47.094 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225307091] time[3] tag[updateCacheFromDb]
+2025-08-27 00:22:47.108 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:22:47.113 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225367108] time[5] tag[updateCacheFromDb]
+2025-08-27 00:23:47.122 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:23:47.127 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225427123] time[4] tag[updateCacheFromDb]
+2025-08-27 00:24:47.144 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:24:47.145 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225487144] time[2] tag[updateCacheFromDb]
+2025-08-27 00:25:47.147 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:25:47.150 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225547147] time[3] tag[updateCacheFromDb]
+2025-08-27 00:26:47.164 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:26:47.167 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225607165] time[3] tag[updateCacheFromDb]
+2025-08-27 00:27:47.180 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:27:47.185 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225667181] time[3] tag[updateCacheFromDb]
+2025-08-27 00:28:47.191 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:28:47.195 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225727191] time[3] tag[updateCacheFromDb]
+2025-08-27 00:29:47.202 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:29:47.205 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225787202] time[3] tag[updateCacheFromDb]
+2025-08-27 00:30:47.215 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:30:47.229 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225847215] time[13] tag[updateCacheFromDb]
+2025-08-27 00:31:47.235 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:31:47.247 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225907235] time[12] tag[updateCacheFromDb]
+2025-08-27 00:32:47.263 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:32:47.270 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756225967264] time[6] tag[updateCacheFromDb]
+2025-08-27 00:33:47.282 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:33:47.287 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226027283] time[4] tag[updateCacheFromDb]
+2025-08-27 00:34:47.301 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:34:47.304 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226087301] time[2] tag[updateCacheFromDb]
+2025-08-27 00:35:47.313 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:35:47.319 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226147313] time[5] tag[updateCacheFromDb]
+2025-08-27 00:36:47.328 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:36:47.340 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226207337] time[3] tag[updateCacheFromDb]
+2025-08-27 00:37:47.347 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:37:47.350 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226267347] time[2] tag[updateCacheFromDb]
+2025-08-27 00:38:47.359 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:38:47.361 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226327359] time[2] tag[updateCacheFromDb]
+2025-08-27 00:39:47.365 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:39:47.377 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226387365] time[12] tag[updateCacheFromDb]
+2025-08-27 00:40:47.386 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:40:47.390 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226447386] time[3] tag[updateCacheFromDb]
+2025-08-27 00:41:47.400 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:41:47.404 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226507400] time[4] tag[updateCacheFromDb]
+2025-08-27 00:42:47.418 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-27 00:42:47.420 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756226567418] time[1] tag[updateCacheFromDb]
+2025-08-27 00:43:24.626 [Thread-8] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-08-27 00:43:24.627 [Thread-11] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-08-27 00:43:24.630 [Thread-8] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-08-27 00:43:24.638 [Thread-11] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-08-27 00:43:24.900 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-08-27 00:43:24.902 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] xiaohongshu deregistering service xiaohongshu-distributed-id-generator with instance: Instance{instanceId='null', ip='10.2.66.3', port=8085, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2025-08-27 00:43:24.963 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2025-08-27 00:43:24.964 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2025-08-27 00:43:24.964 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2025-08-27 00:43:24.964 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2025-08-27 00:43:24.964 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown rpc client, set status to shutdown
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@30372796[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2025-08-27 00:43:24.965 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756208625669_112.94.129.71_1458
+2025-08-27 00:43:24.972 [nacos-grpc-client-executor-47.236.36.111-3592] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756208625669_112.94.129.71_1458]Ignore error event,isRunning:false,isAbandon=false
+2025-08-27 00:43:24.974 [SpringApplicationShutdownHook] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@7758d171[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 3593]
+2025-08-27 00:43:24.974 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@5de778ae[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 5978]
+2025-08-27 00:43:24.975 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - [null] CredentialWatcher is stopped
+2025-08-27 00:43:24.975 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialService - [null] CredentialService is freed
+2025-08-27 00:43:24.975 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop

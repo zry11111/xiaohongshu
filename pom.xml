@@ -21,6 +21,7 @@
         <module>xiaohongshu-user</module>
         <module>xiaohongshu-kv</module>
         <module>xiaohongshu-distributed-id-generator</module>
+        <module>xiaohongshu-note</module>
     </modules>
 
     <properties>

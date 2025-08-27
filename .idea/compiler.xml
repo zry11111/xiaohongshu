@@ -21,10 +21,12 @@
         <module name="xiaohongshu-common" />
         <module name="xiaohongshu-gateway" />
         <module name="xiaohongshu-user-api" />
+        <module name="xiaohongshu-note-biz" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-spring-boot-starter-biz-context" />
         <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
+        <module name="xiaohongshu-note-api" />
         <module name="xiaohongshu-spring-boot-starter-jackson" />
         <module name="xiaohongshu-oss-api" />
         <module name="xiaohongshu-distributed-id-generator-api" />
