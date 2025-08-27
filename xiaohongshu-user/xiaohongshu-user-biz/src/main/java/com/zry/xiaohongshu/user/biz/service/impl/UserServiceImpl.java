@@ -1,6 +1,8 @@
 package com.zry.xiaohongshu.user.biz.service.impl;
 
 import cn.hutool.core.util.RandomUtil;
+import com.github.benmanes.caffeine.cache.Cache;
+import com.github.benmanes.caffeine.cache.Caffeine;
 import com.google.common.base.Preconditions;
 import com.zry.framework.biz.context.holder.LoginUserContextHolder;
 import com.zry.framework.common.enums.DeletedEnum;
@@ -64,6 +66,15 @@ public class UserServiceImpl implements UserService {
     private RedisTemplate<String, Object> redisTemplate;
     @Resource
     private DistributedIdGeneratorRpcService distributedIdGeneratorRpcService;
+    /**
+     * 用户信息本地缓存
+     */
+    private static final Cache<Long, FindUserByIdRspDTO> LOCAL_CACHE = Caffeine.newBuilder()
+            .initialCapacity(10000) // 设置初始容量为 10000 个条目
+            .maximumSize(10000) // 设置缓存的最大容量为 10000 个条目
+            .expireAfterWrite(1, TimeUnit.HOURS) // 设置缓存条目在写入后 1 小时过期
+            .build();
+
     @Override
     public Response<?> updateUserInfo(UpdateUserInfoReqVO updateUserInfoReqVO) {
         UserDO userDO = new UserDO();
@@ -245,10 +256,22 @@ public class UserServiceImpl implements UserService {
     @Override
     public Response<FindUserByIdRspDTO> findById(FindUserByIdReqDTO findUserByIdReqDTO) {
         Long id = findUserByIdReqDTO.getId();
+        FindUserByIdRspDTO findUserByIdRspDTOLocalCache = LOCAL_CACHE.getIfPresent(id);
+        if(Objects.nonNull(findUserByIdRspDTOLocalCache)){
+            log.info("==> 从本地缓存中获取用户信息，id: {}, userInfo: {}", id, JsonUtils.toJsonString(findUserByIdRspDTOLocalCache));
+            return Response.success(findUserByIdRspDTOLocalCache);
+        }
         String userInfoRedisKey = RedisKeyConstants.buildUserInfoKey(id);
         String userInfoRedisValue = (String) redisTemplate.opsForValue().get(userInfoRedisKey);
         if(StringUtils.isNotBlank(userInfoRedisValue)){
             FindUserByIdRspDTO findUserByIdRspDTO = JsonUtils.parseObject(userInfoRedisValue, FindUserByIdRspDTO.class);
+            // 放入本地缓存
+            threadPoolTaskExecutor.submit(()->{
+                if (Objects.nonNull(findUserByIdRspDTO)) {
+                    // 写入本地缓存
+                    LOCAL_CACHE.put(id, findUserByIdRspDTO);
+                }
+            });
             return Response.success(findUserByIdRspDTO);
         }
         //如果为空，则从数据库中去查询数据
