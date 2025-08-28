@@ -18,12 +18,14 @@
         <module name="xiaohongshu-distributed-id-generator-biz" />
         <module name="xiaohongshu-kv-biz" />
         <module name="xiaohongshu-user-biz" />
+        <module name="xiaohongshu-user-relation-api" />
         <module name="xiaohongshu-common" />
         <module name="xiaohongshu-gateway" />
         <module name="xiaohongshu-note-biz" />
         <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
+        <module name="xiaohongshu-user-relation-biz" />
         <module name="xiaohongshu-spring-boot-starter-biz-context" />
         <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
         <module name="xiaohongshu-note-api" />
