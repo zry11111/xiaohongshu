@@ -10,4 +10,5 @@ public interface NoteService {
     void deleteNoteLocalCache(Long noteId);
     Response<?> deleteNote(DeleteNoteReqVO deleteNoteReqVO);
     Response<?> visibleOnlyMe(UpdateNoteVisibleOnlyMeReqVO updateNoteVisibleOnlyMeReqVO);
+    Response<?> topNote(TopNoteReqVO topNoteReqVO);
 }
