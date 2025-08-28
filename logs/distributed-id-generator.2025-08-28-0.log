@@ -1,0 +1,606 @@
+2025-08-28 00:00:13.465 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:00:13.477 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310413465] time[11] tag[updateCacheFromDb]
+2025-08-28 00:01:13.489 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:01:13.490 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310473489] time[2] tag[updateCacheFromDb]
+2025-08-28 00:02:13.507 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:02:13.510 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310533507] time[2] tag[updateCacheFromDb]
+2025-08-28 00:03:13.518 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:03:13.531 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310593518] time[12] tag[updateCacheFromDb]
+2025-08-28 00:04:13.538 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:04:13.541 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310653538] time[2] tag[updateCacheFromDb]
+2025-08-28 00:05:13.546 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:05:13.549 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310713546] time[2] tag[updateCacheFromDb]
+2025-08-28 00:06:13.554 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:06:13.566 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310773554] time[12] tag[updateCacheFromDb]
+2025-08-28 00:07:13.581 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:07:13.583 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310833581] time[2] tag[updateCacheFromDb]
+2025-08-28 00:08:13.587 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:08:13.599 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310893587] time[12] tag[updateCacheFromDb]
+2025-08-28 00:09:13.605 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:09:13.617 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756310953605] time[12] tag[updateCacheFromDb]
+2025-08-28 00:10:13.621 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:10:13.625 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311013621] time[3] tag[updateCacheFromDb]
+2025-08-28 00:11:13.627 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:11:13.630 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311073627] time[2] tag[updateCacheFromDb]
+2025-08-28 00:12:13.638 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:12:13.641 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311133639] time[2] tag[updateCacheFromDb]
+2025-08-28 00:13:13.644 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:13:13.646 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311193644] time[2] tag[updateCacheFromDb]
+2025-08-28 00:14:13.659 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:14:13.661 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311253659] time[2] tag[updateCacheFromDb]
+2025-08-28 00:15:13.673 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:15:13.677 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311313674] time[2] tag[updateCacheFromDb]
+2025-08-28 00:16:13.686 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:16:13.690 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311373686] time[4] tag[updateCacheFromDb]
+2025-08-28 00:17:13.699 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:17:13.702 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311433699] time[2] tag[updateCacheFromDb]
+2025-08-28 00:18:13.710 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:18:13.715 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311493710] time[4] tag[updateCacheFromDb]
+2025-08-28 00:19:13.731 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:19:13.744 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311553731] time[12] tag[updateCacheFromDb]
+2025-08-28 00:20:13.750 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:20:13.753 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311613750] time[2] tag[updateCacheFromDb]
+2025-08-28 00:21:13.754 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:21:13.767 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311673754] time[13] tag[updateCacheFromDb]
+2025-08-28 00:22:13.783 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:22:13.789 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311733784] time[5] tag[updateCacheFromDb]
+2025-08-28 00:23:13.794 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:23:13.798 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311793795] time[3] tag[updateCacheFromDb]
+2025-08-28 00:24:13.809 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:24:13.814 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311853809] time[5] tag[updateCacheFromDb]
+2025-08-28 00:25:13.829 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:25:13.832 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311913829] time[3] tag[updateCacheFromDb]
+2025-08-28 00:26:13.846 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:26:13.850 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756311973846] time[3] tag[updateCacheFromDb]
+2025-08-28 00:27:13.866 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:27:13.868 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312033866] time[2] tag[updateCacheFromDb]
+2025-08-28 00:28:13.870 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:28:13.883 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312093871] time[12] tag[updateCacheFromDb]
+2025-08-28 00:29:13.892 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:29:13.907 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312153902] time[4] tag[updateCacheFromDb]
+2025-08-28 00:30:13.916 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:30:13.919 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312213916] time[3] tag[updateCacheFromDb]
+2025-08-28 00:31:13.933 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:31:13.946 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312273943] time[3] tag[updateCacheFromDb]
+2025-08-28 00:32:13.951 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:32:13.956 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312333951] time[3] tag[updateCacheFromDb]
+2025-08-28 00:33:13.968 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:33:13.972 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312393968] time[3] tag[updateCacheFromDb]
+2025-08-28 00:34:13.986 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:34:13.991 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312453986] time[4] tag[updateCacheFromDb]
+2025-08-28 00:35:14.007 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:35:14.019 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312514007] time[11] tag[updateCacheFromDb]
+2025-08-28 00:36:14.033 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:36:14.038 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312574034] time[4] tag[updateCacheFromDb]
+2025-08-28 00:37:14.055 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:37:14.061 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312634056] time[4] tag[updateCacheFromDb]
+2025-08-28 00:38:14.075 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:38:14.079 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312694075] time[4] tag[updateCacheFromDb]
+2025-08-28 00:39:14.084 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:39:14.091 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312754085] time[6] tag[updateCacheFromDb]
+2025-08-28 00:40:14.096 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:40:14.102 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312814097] time[4] tag[updateCacheFromDb]
+2025-08-28 00:41:14.113 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:41:14.116 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312874113] time[3] tag[updateCacheFromDb]
+2025-08-28 00:42:14.127 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:42:14.130 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312934127] time[3] tag[updateCacheFromDb]
+2025-08-28 00:43:14.143 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:43:14.146 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756312994143] time[2] tag[updateCacheFromDb]
+2025-08-28 00:43:52.729 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Server healthy check fail, currentConnection = 1756281069311_112.94.129.138_1065
+2025-08-28 00:43:52.749 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 00:43:52.757 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 00:43:55.792 [com.alibaba.nacos.client.remote.worker] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - Server check fail, please check server 47.236.36.111 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 2 milliseconds, 710900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@66c17e51[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:502)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:343)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-08-28 00:43:55.973 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 00:43:58.993 [com.alibaba.nacos.client.remote.worker] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - Server check fail, please check server 47.236.36.111 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 7 milliseconds, 868600 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@3eb41039[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:502)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:343)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-08-28 00:43:58.995 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Fail to connect server, after trying 1 times, last try server is {serverIp = '47.236.36.111', server main port = 8848}, error = unknown
+2025-08-28 00:43:59.207 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 00:44:02.225 [com.alibaba.nacos.client.remote.worker] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - Server check fail, please check server 47.236.36.111 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 14 milliseconds, 734800 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@2a56a9a7[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:502)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:343)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-08-28 00:44:02.226 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Fail to connect server, after trying 2 times, last try server is {serverIp = '47.236.36.111', server main port = 8848}, error = unknown
+2025-08-28 00:44:02.538 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 00:44:05.550 [com.alibaba.nacos.client.remote.worker] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - Server check fail, please check server 47.236.36.111 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 7 milliseconds, 637800 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@3c7231c7[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:502)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:343)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-08-28 00:44:05.552 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Fail to connect server, after trying 3 times, last try server is {serverIp = '47.236.36.111', server main port = 8848}, error = unknown
+2025-08-28 00:44:05.956 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 00:44:08.841 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756313048647_112.94.129.138_1411
+2025-08-28 00:44:08.841 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756281069311_112.94.129.138_1065
+2025-08-28 00:44:08.842 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756281069311_112.94.129.138_1065
+2025-08-28 00:44:08.844 [nacos-grpc-client-executor-47.236.36.111-6380] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756281069311_112.94.129.138_1065]Ignore error event,isRunning:true,isAbandon=true
+2025-08-28 00:44:08.845 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 00:44:08.846 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 00:44:08.854 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 00:44:08.854 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 00:44:08.854 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 00:44:09.340 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 00:44:14.148 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:44:14.152 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313054148] time[3] tag[updateCacheFromDb]
+2025-08-28 00:45:14.162 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:45:14.179 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313114162] time[16] tag[updateCacheFromDb]
+2025-08-28 00:46:14.182 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:46:14.185 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313174182] time[3] tag[updateCacheFromDb]
+2025-08-28 00:47:14.195 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:47:14.199 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313234196] time[3] tag[updateCacheFromDb]
+2025-08-28 00:48:14.213 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:48:14.217 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313294213] time[3] tag[updateCacheFromDb]
+2025-08-28 00:49:14.222 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:49:14.224 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313354222] time[2] tag[updateCacheFromDb]
+2025-08-28 00:50:14.229 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:50:14.233 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313414229] time[3] tag[updateCacheFromDb]
+2025-08-28 00:51:14.234 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:51:14.238 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313474234] time[3] tag[updateCacheFromDb]
+2025-08-28 00:52:14.249 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:52:14.252 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313534249] time[2] tag[updateCacheFromDb]
+2025-08-28 00:53:14.258 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:53:14.262 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313594258] time[3] tag[updateCacheFromDb]
+2025-08-28 00:54:14.268 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:54:14.270 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313654268] time[2] tag[updateCacheFromDb]
+2025-08-28 00:55:14.277 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:55:14.280 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313714277] time[2] tag[updateCacheFromDb]
+2025-08-28 00:56:14.295 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:56:14.299 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313774295] time[4] tag[updateCacheFromDb]
+2025-08-28 00:57:14.305 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:57:14.309 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313834305] time[3] tag[updateCacheFromDb]
+2025-08-28 00:58:14.323 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:58:14.327 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313894323] time[3] tag[updateCacheFromDb]
+2025-08-28 00:59:14.342 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 00:59:14.347 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756313954343] time[3] tag[updateCacheFromDb]
+2025-08-28 01:00:14.355 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:00:14.357 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314014355] time[2] tag[updateCacheFromDb]
+2025-08-28 01:01:14.368 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:01:14.372 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314074368] time[4] tag[updateCacheFromDb]
+2025-08-28 01:02:14.387 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:02:14.391 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314134387] time[3] tag[updateCacheFromDb]
+2025-08-28 01:03:14.412 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:03:14.415 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314194413] time[2] tag[updateCacheFromDb]
+2025-08-28 01:04:14.419 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:04:14.423 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314254419] time[4] tag[updateCacheFromDb]
+2025-08-28 01:05:14.430 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:05:14.433 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314314430] time[2] tag[updateCacheFromDb]
+2025-08-28 01:06:14.447 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:06:14.450 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314374447] time[2] tag[updateCacheFromDb]
+2025-08-28 01:07:14.465 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:07:14.467 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314434465] time[2] tag[updateCacheFromDb]
+2025-08-28 01:08:14.477 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:08:14.480 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314494477] time[2] tag[updateCacheFromDb]
+2025-08-28 01:09:14.482 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:09:14.486 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314554482] time[3] tag[updateCacheFromDb]
+2025-08-28 01:10:14.490 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:10:14.503 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314614490] time[11] tag[updateCacheFromDb]
+2025-08-28 01:11:14.505 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:11:14.508 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314674505] time[3] tag[updateCacheFromDb]
+2025-08-28 01:12:14.511 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:12:14.514 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314734511] time[3] tag[updateCacheFromDb]
+2025-08-28 01:13:14.530 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:13:14.534 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314794530] time[4] tag[updateCacheFromDb]
+2025-08-28 01:14:14.535 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:14:14.538 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314854536] time[2] tag[updateCacheFromDb]
+2025-08-28 01:15:14.550 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:15:14.552 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314914550] time[1] tag[updateCacheFromDb]
+2025-08-28 01:16:14.561 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:16:14.565 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756314974561] time[3] tag[updateCacheFromDb]
+2025-08-28 01:17:14.567 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:17:14.571 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315034567] time[3] tag[updateCacheFromDb]
+2025-08-28 01:18:14.576 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:18:14.579 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315094576] time[1] tag[updateCacheFromDb]
+2025-08-28 01:19:14.594 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:19:14.596 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315154594] time[1] tag[updateCacheFromDb]
+2025-08-28 01:20:14.604 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:20:14.607 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315214604] time[2] tag[updateCacheFromDb]
+2025-08-28 01:21:14.619 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:21:14.624 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315274619] time[3] tag[updateCacheFromDb]
+2025-08-28 01:22:14.639 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:22:14.641 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315334639] time[1] tag[updateCacheFromDb]
+2025-08-28 01:23:14.650 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:23:14.653 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315394650] time[2] tag[updateCacheFromDb]
+2025-08-28 01:24:14.667 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:24:14.670 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315454667] time[2] tag[updateCacheFromDb]
+2025-08-28 01:25:14.678 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:25:14.684 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315514679] time[4] tag[updateCacheFromDb]
+2025-08-28 01:26:14.687 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:26:14.687 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315574687] time[1] tag[updateCacheFromDb]
+2025-08-28 01:27:14.693 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:27:14.698 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315634693] time[4] tag[updateCacheFromDb]
+2025-08-28 01:28:14.707 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:28:14.710 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315694707] time[3] tag[updateCacheFromDb]
+2025-08-28 01:29:14.720 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:29:14.721 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315754720] time[2] tag[updateCacheFromDb]
+2025-08-28 01:30:14.733 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 01:30:14.736 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756315814733] time[3] tag[updateCacheFromDb]
+2025-08-28 03:22:24.312 [main-SendThread(127.0.0.1:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 6687578ms for session id 0x1000b4c74c80008
+2025-08-28 03:22:24.325 [main-SendThread(127.0.0.1:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x1000b4c74c80008 for sever kubernetes.docker.internal/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 6687578ms for session id 0x1000b4c74c80008
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1230)
+2025-08-28 03:22:24.426 [nacos-grpc-client-executor-47.236.36.111-6933] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - [1756313048647_112.94.129.138_1411]Request stream error, switch server,error={}
+com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at com.alibaba.nacos.shaded.io.grpc.Status.asRuntimeException(Status.java:539)
+	at com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:487)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:563)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl.access$300(ClientCallImpl.java:70)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:744)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:723)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at com.alibaba.nacos.shaded.io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+2025-08-28 03:22:24.437 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 03:22:24.439 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 03:22:24.481 [main-EventThread] INFO  o.a.curator.framework.state.ConnectionStateManager - State change: SUSPENDED
+2025-08-28 03:22:25.004 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756322544652_112.94.129.138_1820
+2025-08-28 03:22:25.004 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756313048647_112.94.129.138_1411
+2025-08-28 03:22:25.004 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756313048647_112.94.129.138_1411
+2025-08-28 03:22:25.005 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 03:22:25.005 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 03:22:25.005 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 03:22:25.005 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 03:22:25.005 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 03:22:26.439 [main-SendThread(127.0.0.1:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server kubernetes.docker.internal/127.0.0.1:2181.
+2025-08-28 03:22:26.440 [main-SendThread(127.0.0.1:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-08-28 03:22:26.443 [main-SendThread(127.0.0.1:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:61802, server: kubernetes.docker.internal/127.0.0.1:2181
+2025-08-28 03:22:26.914 [main-SendThread(127.0.0.1:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server kubernetes.docker.internal/127.0.0.1:2181, session id = 0x1000b4c74c80008, negotiated timeout = 6000
+2025-08-28 03:22:26.915 [main-EventThread] INFO  o.a.curator.framework.state.ConnectionStateManager - State change: RECONNECTED
+2025-08-28 03:22:27.028 [main-EventThread] INFO  org.apache.curator.framework.imps.EnsembleTracker - New config event received: {}
+2025-08-28 03:22:27.493 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:34:01.426 [nacos-grpc-client-executor-47.236.36.111-6941] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - [1756322544652_112.94.129.138_1820]Request stream error, switch server,error={}
+com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at com.alibaba.nacos.shaded.io.grpc.Status.asRuntimeException(Status.java:539)
+	at com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:487)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:563)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl.access$300(ClientCallImpl.java:70)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:744)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:723)
+	at com.alibaba.nacos.shaded.io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at com.alibaba.nacos.shaded.io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+2025-08-28 07:34:01.427 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 07:34:01.428 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:34:01.872 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:34:01.956 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756337641872] time[84] tag[updateCacheFromDb]
+2025-08-28 07:34:01.963 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756337641354_112.94.129.138_1171
+2025-08-28 07:34:01.963 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756322544652_112.94.129.138_1820
+2025-08-28 07:34:01.963 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756322544652_112.94.129.138_1820
+2025-08-28 07:34:01.963 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 07:34:01.964 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 07:34:01.964 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 07:34:01.964 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 07:34:01.964 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 07:34:02.729 [main-SendThread(127.0.0.1:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 15083598ms for session id 0x1000b4c74c80008
+2025-08-28 07:34:02.729 [main-SendThread(127.0.0.1:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x1000b4c74c80008 for sever kubernetes.docker.internal/127.0.0.1:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 15083598ms for session id 0x1000b4c74c80008
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1230)
+2025-08-28 07:34:02.832 [main-EventThread] INFO  o.a.curator.framework.state.ConnectionStateManager - State change: SUSPENDED
+2025-08-28 07:34:03.923 [main-SendThread(127.0.0.1:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server kubernetes.docker.internal/127.0.0.1:2181.
+2025-08-28 07:34:03.923 [main-SendThread(127.0.0.1:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-08-28 07:34:03.924 [main-SendThread(127.0.0.1:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:62192, server: kubernetes.docker.internal/127.0.0.1:2181
+2025-08-28 07:34:03.940 [main-SendThread(127.0.0.1:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server kubernetes.docker.internal/127.0.0.1:2181, session id = 0x1000b4c74c80008, negotiated timeout = 6000
+2025-08-28 07:34:03.941 [main-EventThread] INFO  o.a.curator.framework.state.ConnectionStateManager - State change: RECONNECTED
+2025-08-28 07:34:03.951 [main-EventThread] INFO  org.apache.curator.framework.imps.EnsembleTracker - New config event received: {}
+2025-08-28 07:34:04.278 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:35:01.965 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:35:01.969 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756337701966] time[3] tag[updateCacheFromDb]
+2025-08-28 07:36:01.973 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:36:01.977 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756337761973] time[4] tag[updateCacheFromDb]
+2025-08-28 07:37:01.982 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:37:01.985 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756337821982] time[2] tag[updateCacheFromDb]
+2025-08-28 07:38:01.988 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:38:01.993 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756337881989] time[4] tag[updateCacheFromDb]
+2025-08-28 07:39:02.004 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:39:02.010 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756337942006] time[4] tag[updateCacheFromDb]
+2025-08-28 07:40:02.022 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:40:02.027 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338002022] time[4] tag[updateCacheFromDb]
+2025-08-28 07:41:02.040 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:41:02.042 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338062040] time[2] tag[updateCacheFromDb]
+2025-08-28 07:42:02.045 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:42:02.049 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338122047] time[2] tag[updateCacheFromDb]
+2025-08-28 07:43:02.058 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:43:02.061 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338182059] time[2] tag[updateCacheFromDb]
+2025-08-28 07:44:00.878 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Server healthy check fail, currentConnection = 1756337641354_112.94.129.138_1171
+2025-08-28 07:44:00.878 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 07:44:00.878 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:44:01.809 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756338241453_112.94.129.138_1973
+2025-08-28 07:44:01.809 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756337641354_112.94.129.138_1171
+2025-08-28 07:44:01.810 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756337641354_112.94.129.138_1171
+2025-08-28 07:44:01.814 [nacos-grpc-client-executor-47.236.36.111-7071] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756337641354_112.94.129.138_1171]Ignore error event,isRunning:true,isAbandon=true
+2025-08-28 07:44:01.814 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 07:44:01.814 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 07:44:01.814 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 07:44:01.814 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 07:44:01.814 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 07:44:02.062 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:44:02.065 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338242062] time[2] tag[updateCacheFromDb]
+2025-08-28 07:44:02.823 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:44:23.863 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Server healthy check fail, currentConnection = 1756338241453_112.94.129.138_1973
+2025-08-28 07:44:23.863 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 07:44:23.864 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:44:24.189 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756338263774_112.94.129.138_1995
+2025-08-28 07:44:24.189 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756338241453_112.94.129.138_1973
+2025-08-28 07:44:24.189 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756338241453_112.94.129.138_1973
+2025-08-28 07:44:24.191 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 07:44:24.191 [nacos-grpc-client-executor-47.236.36.111-7080] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756338241453_112.94.129.138_1973]Ignore error event,isRunning:true,isAbandon=true
+2025-08-28 07:44:24.191 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 07:44:24.192 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 07:44:24.192 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 07:44:24.192 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 07:44:24.251 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:44:26.568 [com.alibaba.nacos.client.naming.grpc.redo.0] ERROR com.alibaba.nacos.common.remote.client - Connection is unregistered, switch server, connectionId = 1756338263774_112.94.129.138_1995, request = InstanceRequest
+2025-08-28 07:44:26.568 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 07:44:26.568 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:44:26.678 [com.alibaba.nacos.client.naming.grpc.redo.0] ERROR com.alibaba.nacos.common.remote.client - Send request fail, request = InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes = 0, errorMessage = Connection is unregistered.
+2025-08-28 07:44:26.782 [com.alibaba.nacos.client.naming.grpc.redo.0] ERROR com.alibaba.nacos.common.remote.client - Send request fail, request = InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes = 1, errorMessage = Client not connected, current status:UNHEALTHY
+2025-08-28 07:44:26.892 [com.alibaba.nacos.client.naming.grpc.redo.0] ERROR com.alibaba.nacos.common.remote.client - Send request fail, request = InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes = 2, errorMessage = Client not connected, current status:UNHEALTHY
+2025-08-28 07:44:26.894 [com.alibaba.nacos.client.naming.grpc.redo.0] ERROR com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator failed. 
+com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:UNHEALTHY
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:643)
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:623)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:357)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:210)
+	at com.alibaba.nacos.client.naming.remote.gprc.redo.RedoScheduledTask.processRegisterRedoType(RedoScheduledTask.java:102)
+	at com.alibaba.nacos.client.naming.remote.gprc.redo.RedoScheduledTask.redoForInstance(RedoScheduledTask.java:79)
+	at com.alibaba.nacos.client.naming.remote.gprc.redo.RedoScheduledTask.redoForInstances(RedoScheduledTask.java:61)
+	at com.alibaba.nacos.client.naming.remote.gprc.redo.RedoScheduledTask.run(RedoScheduledTask.java:51)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-08-28 07:44:29.578 [com.alibaba.nacos.client.remote.worker] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - Server check fail, please check server 47.236.36.111 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 6 milliseconds, 432300 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@2aac2716[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:502)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:343)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-08-28 07:44:29.696 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:44:29.908 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:44:29.965 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756338269596_112.94.129.138_2006
+2025-08-28 07:44:29.966 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756338263774_112.94.129.138_1995
+2025-08-28 07:44:29.966 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756338263774_112.94.129.138_1995
+2025-08-28 07:44:29.966 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 07:44:29.968 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 07:44:29.968 [nacos-grpc-client-executor-47.236.36.111-7094] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756338263774_112.94.129.138_1995]Ignore error event,isRunning:true,isAbandon=true
+2025-08-28 07:44:29.968 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 07:44:29.968 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 07:44:29.968 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 07:44:32.914 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:45:02.076 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:45:02.081 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338302076] time[4] tag[updateCacheFromDb]
+2025-08-28 07:46:02.094 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:46:02.096 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338362094] time[1] tag[updateCacheFromDb]
+2025-08-28 07:46:08.414 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Server healthy check fail, currentConnection = 1756338269596_112.94.129.138_2006
+2025-08-28 07:46:08.414 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 07:46:08.414 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:46:08.683 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756338368324_112.94.129.138_1130
+2025-08-28 07:46:08.683 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756338269596_112.94.129.138_2006
+2025-08-28 07:46:08.683 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756338269596_112.94.129.138_2006
+2025-08-28 07:46:08.685 [nacos-grpc-client-executor-47.236.36.111-7118] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756338269596_112.94.129.138_2006]Ignore error event,isRunning:true,isAbandon=true
+2025-08-28 07:46:08.685 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 07:46:08.686 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 07:46:08.686 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 07:46:08.686 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 07:46:08.686 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 07:46:09.244 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:47:02.110 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:47:02.115 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338422111] time[3] tag[updateCacheFromDb]
+2025-08-28 07:48:02.123 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:48:02.135 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338482123] time[11] tag[updateCacheFromDb]
+2025-08-28 07:49:02.142 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:49:02.144 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338542142] time[2] tag[updateCacheFromDb]
+2025-08-28 07:49:54.409 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Server healthy check fail, currentConnection = 1756338368324_112.94.129.138_1130
+2025-08-28 07:49:54.409 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 07:49:54.409 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:49:57.417 [com.alibaba.nacos.client.remote.worker] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - Server check fail, please check server 47.236.36.111 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 4 milliseconds, 641400 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@1ecff3a3[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:502)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:343)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-08-28 07:49:57.532 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:49:58.150 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756338597446_112.94.129.138_1430
+2025-08-28 07:49:58.151 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756338368324_112.94.129.138_1130
+2025-08-28 07:49:58.151 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756338368324_112.94.129.138_1130
+2025-08-28 07:49:58.152 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 07:49:58.152 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 07:49:58.152 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 07:49:58.152 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 07:49:58.153 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 07:49:58.153 [nacos-grpc-client-executor-47.236.36.111-7167] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756338368324_112.94.129.138_1130]Ignore error event,isRunning:true,isAbandon=true
+2025-08-28 07:50:01.159 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:50:02.145 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:50:02.159 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338602145] time[3] tag[updateCacheFromDb]
+2025-08-28 07:51:02.175 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:51:02.188 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338662175] time[12] tag[updateCacheFromDb]
+2025-08-28 07:51:09.224 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Server healthy check fail, currentConnection = 1756338597446_112.94.129.138_1430
+2025-08-28 07:51:09.233 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-08-28 07:51:09.246 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-28 07:51:09.871 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Success to connect a server [47.236.36.111:8848], connectionId = 1756338669178_112.94.129.138_1515
+2025-08-28 07:51:09.871 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Abandon prev connection, server is 47.236.36.111:8848, connectionId is 1756338597446_112.94.129.138_1430
+2025-08-28 07:51:09.871 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756338597446_112.94.129.138_1430
+2025-08-28 07:51:09.872 [nacos-grpc-client-executor-47.236.36.111-7189] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756338597446_112.94.129.138_1430]Ignore error event,isRunning:true,isAbandon=true
+2025-08-28 07:51:09.872 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify disconnected event to listeners
+2025-08-28 07:51:09.873 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-08-28 07:51:09.873 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-08-28 07:51:09.874 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Notify connected event to listeners.
+2025-08-28 07:51:09.874 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-28 07:51:10.656 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:51:13.662 [com.alibaba.nacos.client.naming.grpc.redo.0] ERROR com.alibaba.nacos.common.remote.client - Send request fail, request = InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes = 0, errorMessage = java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 4 milliseconds, 559700 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@68460b8c[status=PENDING, info=[GrpcFuture{clientCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}]]
+2025-08-28 07:51:13.662 [com.alibaba.nacos.client.naming.grpc.redo.0] ERROR com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator failed. 
+com.alibaba.nacos.api.exception.NacosException: java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 4 milliseconds, 559700 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@68460b8c[status=PENDING, info=[GrpcFuture{clientCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}]]
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcConnection.request(GrpcConnection.java:78)
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:645)
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:623)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:357)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.doRegisterService(NamingGrpcClientProxy.java:210)
+	at com.alibaba.nacos.client.naming.remote.gprc.redo.RedoScheduledTask.processRegisterRedoType(RedoScheduledTask.java:102)
+	at com.alibaba.nacos.client.naming.remote.gprc.redo.RedoScheduledTask.redoForInstance(RedoScheduledTask.java:79)
+	at com.alibaba.nacos.client.naming.remote.gprc.redo.RedoScheduledTask.redoForInstances(RedoScheduledTask.java:61)
+	at com.alibaba.nacos.client.naming.remote.gprc.redo.RedoScheduledTask.run(RedoScheduledTask.java:51)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 4 milliseconds, 559700 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@68460b8c[status=PENDING, info=[GrpcFuture{clientCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@130e43fc, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2e774623, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6b2efee4}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcConnection.request(GrpcConnection.java:76)
+	... 14 common frames omitted
+2025-08-28 07:51:14.727 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2f0f3b96-b8c1-4f44-839d-2f47665b646c] Server check success, currentServer is 47.236.36.111:8848 
+2025-08-28 07:51:16.678 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-distributed-id-generator
+2025-08-28 07:52:02.200 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:52:02.202 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338722200] time[2] tag[updateCacheFromDb]
+2025-08-28 07:53:02.209 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:53:02.212 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338782209] time[3] tag[updateCacheFromDb]
+2025-08-28 07:54:02.224 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:54:02.226 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338842224] time[2] tag[updateCacheFromDb]
+2025-08-28 07:55:02.229 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:55:02.234 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338902229] time[4] tag[updateCacheFromDb]
+2025-08-28 07:56:02.246 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:56:02.251 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756338962246] time[4] tag[updateCacheFromDb]
+2025-08-28 07:57:02.265 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:57:02.268 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339022265] time[2] tag[updateCacheFromDb]
+2025-08-28 07:58:02.271 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:58:02.283 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339082280] time[2] tag[updateCacheFromDb]
+2025-08-28 07:59:02.287 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 07:59:02.289 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339142287] time[3] tag[updateCacheFromDb]
+2025-08-28 08:00:02.298 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:00:02.301 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339202299] time[2] tag[updateCacheFromDb]
+2025-08-28 08:01:02.311 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:01:02.315 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339262311] time[4] tag[updateCacheFromDb]
+2025-08-28 08:02:02.329 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:02:02.334 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339322330] time[4] tag[updateCacheFromDb]
+2025-08-28 08:03:02.339 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:03:02.342 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339382339] time[2] tag[updateCacheFromDb]
+2025-08-28 08:04:02.345 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:04:02.349 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339442346] time[3] tag[updateCacheFromDb]
+2025-08-28 08:05:02.356 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:05:02.360 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339502357] time[3] tag[updateCacheFromDb]
+2025-08-28 08:06:02.375 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:06:02.378 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339562376] time[2] tag[updateCacheFromDb]
+2025-08-28 08:07:02.391 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:07:02.397 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339622391] time[4] tag[updateCacheFromDb]
+2025-08-28 08:08:02.402 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:08:02.405 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339682402] time[2] tag[updateCacheFromDb]
+2025-08-28 08:09:02.409 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:09:02.411 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339742409] time[2] tag[updateCacheFromDb]
+2025-08-28 08:10:02.415 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:10:02.419 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339802416] time[3] tag[updateCacheFromDb]
+2025-08-28 08:11:02.427 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:11:02.429 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339862427] time[3] tag[updateCacheFromDb]
+2025-08-28 08:12:02.441 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:12:02.443 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339922441] time[2] tag[updateCacheFromDb]
+2025-08-28 08:13:02.452 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:13:02.457 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756339982452] time[5] tag[updateCacheFromDb]
+2025-08-28 08:14:02.463 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:14:02.468 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340042464] time[3] tag[updateCacheFromDb]
+2025-08-28 08:15:02.481 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:15:02.495 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340102481] time[13] tag[updateCacheFromDb]
+2025-08-28 08:16:02.507 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:16:02.510 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340162507] time[2] tag[updateCacheFromDb]
+2025-08-28 08:17:02.513 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:17:02.515 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340222513] time[2] tag[updateCacheFromDb]
+2025-08-28 08:18:02.528 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:18:02.533 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340282528] time[4] tag[updateCacheFromDb]
+2025-08-28 08:19:02.544 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:19:02.548 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340342545] time[3] tag[updateCacheFromDb]
+2025-08-28 08:20:02.547 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:20:02.555 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340402548] time[7] tag[updateCacheFromDb]
+2025-08-28 08:21:02.565 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:21:02.568 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340462565] time[2] tag[updateCacheFromDb]
+2025-08-28 08:22:02.571 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:22:02.577 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340522573] time[3] tag[updateCacheFromDb]
+2025-08-28 08:23:02.576 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:23:02.582 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340582577] time[5] tag[updateCacheFromDb]
+2025-08-28 08:24:02.581 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-08-28 08:24:02.584 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1756340642581] time[2] tag[updateCacheFromDb]
