@@ -10,5 +10,6 @@ public interface NoteService {
     Response<?> publishNote(PublishNoteReqVO publishNoteReqVO);
     Response<FindNoteDetailRspVO> findNoteDetail(FindNoteDetailReqVO findNoteDetailReqVO);
     Response<?> updateNote(UpdateNoteReqVO updateNoteReqVO);
+    void deleteNoteLocalCache(Long noteId);
 
 }
