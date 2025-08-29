@@ -6,19 +6,27 @@ import com.zry.framework.biz.context.holder.LoginUserContextHolder;
 import com.zry.framework.common.exception.BizException;
 import com.zry.framework.common.reponse.Response;
 import com.zry.framework.common.util.DateUtils;
+import com.zry.framework.common.util.JsonUtils;
 import com.zry.xiaohongshu.user.dto.resp.FindUserByIdRspDTO;
+import com.zry.xiaohongshu.user.relation.biz.constant.MQConstants;
 import com.zry.xiaohongshu.user.relation.biz.constant.RedisKeyConstants;
 import com.zry.xiaohongshu.user.relation.biz.domain.dataobject.FollowingDO;
 import com.zry.xiaohongshu.user.relation.biz.domain.mapper.FollowingDOMapper;
 import com.zry.xiaohongshu.user.relation.biz.enums.LuaResultEnum;
 import com.zry.xiaohongshu.user.relation.biz.enums.ResponseCodeEnum;
+import com.zry.xiaohongshu.user.relation.biz.model.dto.FollowUserMqDTO;
 import com.zry.xiaohongshu.user.relation.biz.model.vo.FollowUserReqVO;
 import com.zry.xiaohongshu.user.relation.biz.rpc.UserRpcService;
 import com.zry.xiaohongshu.user.relation.biz.service.RelationService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.rocketmq.client.producer.SendCallback;
+import org.apache.rocketmq.client.producer.SendResult;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.stereotype.Service;
 import org.springframework.core.io.ClassPathResource;
@@ -36,6 +44,8 @@ public class RelationServiceImpl implements RelationService {
     private RedisTemplate<String, Object> redisTemplate;
     @Resource
     private FollowingDOMapper followingDOMapper;
+    @Resource
+    private RocketMQTemplate rocketMQTemplate;
     /**
      * 关注用户
      * @param followUserReqVO
@@ -114,7 +124,29 @@ public class RelationServiceImpl implements RelationService {
             }
         }
 
-        // TODO: 发送 MQ
+        // 发送 MQ
+        // 构建消息体 DTO
+        FollowUserMqDTO followUserMqDTO = FollowUserMqDTO.builder()
+                .userId(userId)
+                .followUserId(followUserId)
+                .createTime(now)
+                .build();
+        // 构建消息对象，并将 DTO 转成 Json 字符串设置到消息体中
+        MessageBuilder<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(followUserMqDTO));
+        // 通过冒号连接, 可让 MQ 发送给主题 Topic 时，携带上标签 Tag
+        String destination = MQConstants.TOPIC_FOLLOW_OR_UNFOLLOW + ":" + MQConstants.TAG_FOLLOW;
+        log.info("关注用户，发送 MQ 消息. destination={}, followUserMqDTO={}", destination, followUserMqDTO);
+        rocketMQTemplate.asyncSend(destination, message, new SendCallback() {
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("==> MQ 发送成功，SendResult: {}", sendResult);
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.error("==> MQ 发送异常: ", throwable);
+            }
+        });
 
         return Response.success();
     }
