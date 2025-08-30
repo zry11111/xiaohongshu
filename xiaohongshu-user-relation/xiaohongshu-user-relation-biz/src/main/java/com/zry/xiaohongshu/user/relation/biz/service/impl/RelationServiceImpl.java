@@ -131,11 +131,17 @@ public class RelationServiceImpl implements RelationService {
                 .followUserId(followUserId)
                 .createTime(now)
                 .build();
+
         // 构建消息对象，并将 DTO 转成 Json 字符串设置到消息体中
-        MessageBuilder<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(followUserMqDTO));
+        Message<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(followUserMqDTO))
+                .build();
+
         // 通过冒号连接, 可让 MQ 发送给主题 Topic 时，携带上标签 Tag
         String destination = MQConstants.TOPIC_FOLLOW_OR_UNFOLLOW + ":" + MQConstants.TAG_FOLLOW;
-        log.info("关注用户，发送 MQ 消息. destination={}, followUserMqDTO={}", destination, followUserMqDTO);
+
+        log.info("==> 开始发送关注操作 MQ, 消息体: {}", followUserMqDTO);
+
+        // 异步发送 MQ 消息，提升接口响应速度
         rocketMQTemplate.asyncSend(destination, message, new SendCallback() {
             @Override
             public void onSuccess(SendResult sendResult) {
