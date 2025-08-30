@@ -872,3 +872,9 @@ Identify and stop the process that's listening on port 8081 or configure this ap
 2025-08-30 09:14:07.316 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohongshu-47.236.36.111_8848_] [subscribe] xiaohongshu-auth+DEFAULT_GROUP+xiaohongshu
 2025-08-30 09:14:07.316 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohongshu-47.236.36.111_8848_] [add-listener] ok, tenant=xiaohongshu, dataId=xiaohongshu-auth, group=DEFAULT_GROUP, cnt=1
 2025-08-30 09:14:07.316 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohongshu-auth, group=DEFAULT_GROUP
+2025-08-30 10:47:02.084 [http-nio-8089-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-30 10:47:02.091 [http-nio-8089-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-30 10:47:02.113 [http-nio-8089-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 22 ms
+2025-08-30 10:47:02.128 [http-nio-8089-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-08-30 10:47:02.322 [http-nio-8089-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-08-30 10:47:03.847 [http-nio-8089-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
