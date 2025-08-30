@@ -1018,3 +1018,456 @@ Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after
 2025-08-30 11:57:19.642 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
 2025-08-30 11:57:19.684 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 44ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
 2025-08-30 11:57:19.685 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:09:33.274 [http-nio-8082-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:09:33.346 [http-nio-8082-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:09:38.376 [http-nio-8082-exec-3] ERROR c.z.x.user.biz.exception.GlobalExceptionHandler - /user/findById request error, 
+org.springframework.dao.QueryTimeoutException: Redis command timed out
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:68)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:248)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:961)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$4(LettuceConnection.java:818)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:665)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker.just(LettuceInvoker.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettuceStringCommands.get(LettuceStringCommands.java:52)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.get(DefaultedRedisConnection.java:284)
+	at org.springframework.data.redis.core.DefaultValueOperations$1.inRedis(DefaultValueOperations.java:54)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:61)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:406)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:373)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:50)
+	at com.zry.xiaohongshu.user.biz.service.impl.UserServiceImpl.findById(UserServiceImpl.java:265)
+	at jdk.internal.reflect.GeneratedMethodAccessor31.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699)
+	at com.zry.xiaohongshu.user.biz.service.impl.UserServiceImpl$$SpringCGLIB$$0.findById(<generated>)
+	at com.zry.xiaohongshu.user.biz.controller.UserController.findById(UserController.java:52)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.zry.framework.biz.operationlog.aspect.ApiOperationLogAspect.doAround(ApiOperationLogAspect.java:50)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:623)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.zry.xiaohongshu.user.biz.controller.UserController$$SpringCGLIB$$0.findById(<generated>)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.zry.framework.biz.context.filter.HeaderUserId2ContextFilter.doFilterInternal(HeaderUserId2ContextFilter.java:33)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after 5 second(s)
+	at io.lettuce.core.internal.ExceptionFactory.createTimeoutException(ExceptionFactory.java:59)
+	at io.lettuce.core.internal.Futures.awaitOrCancel(Futures.java:246)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:959)
+	... 97 common frames omitted
+2025-08-30 16:09:38.404 [http-nio-8082-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:09:52.630 [lettuce-eventExecutorLoop-1-15] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /47.236.36.111:6379
+2025-08-30 16:09:52.740 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 47.236.36.111/<unresolved>:6379
+2025-08-30 16:11:20.533 [http-nio-8082-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:11:20.535 [http-nio-8082-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:11:20.587 [http-nio-8082-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 52ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:11:20.607 [http-nio-8082-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:11:31.795 [http-nio-8082-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:11:31.796 [http-nio-8082-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:11:31.796 [http-nio-8082-exec-10] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:11:31.796 [http-nio-8082-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 0ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:11:31.796 [http-nio-8082-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:12:47.570 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:12:47.572 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:12:47.572 [http-nio-8082-exec-6] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:12:47.572 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 1ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:12:47.573 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:14:24.809 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:14:24.811 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:14:24.811 [http-nio-8082-exec-1] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:14:24.811 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 1ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:14:24.812 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:14:26.365 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:14:26.367 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:14:26.367 [http-nio-8082-exec-8] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:14:26.367 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 0ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:14:26.368 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:14:51.573 [http-nio-8082-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:14:51.573 [http-nio-8082-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:14:51.573 [http-nio-8082-exec-9] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:14:51.573 [http-nio-8082-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 0ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:14:51.573 [http-nio-8082-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:16:06.840 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:16:06.850 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:16:06.850 [http-nio-8082-exec-2] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:16:06.850 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 0ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:16:06.850 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:17:31.406 [http-nio-8082-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:17:31.407 [http-nio-8082-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:17:31.408 [http-nio-8082-exec-10] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:17:31.409 [http-nio-8082-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:17:31.410 [http-nio-8082-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:19:55.372 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:19:55.374 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:19:55.375 [http-nio-8082-exec-6] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:19:55.376 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:19:55.378 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:21:48.082 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:21:48.084 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:21:48.084 [http-nio-8082-exec-1] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:21:48.084 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 0ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:21:48.085 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:22:09.197 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:22:09.198 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:22:09.198 [http-nio-8082-exec-8] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:22:09.198 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 0ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:22:09.199 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:57:28.191 [http-nio-8082-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:57:28.211 [http-nio-8082-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":1001}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:57:32.651 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:57:32.652 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":1001}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:57:33.247 [http-nio-8082-exec-3] ERROR c.z.x.user.biz.exception.GlobalExceptionHandler - /user/findById request error, 
+org.springframework.dao.QueryTimeoutException: Redis command timed out
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:68)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:248)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:961)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$4(LettuceConnection.java:818)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:665)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker.just(LettuceInvoker.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettuceStringCommands.get(LettuceStringCommands.java:52)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.get(DefaultedRedisConnection.java:284)
+	at org.springframework.data.redis.core.DefaultValueOperations$1.inRedis(DefaultValueOperations.java:54)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:61)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:406)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:373)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:50)
+	at com.zry.xiaohongshu.user.biz.service.impl.UserServiceImpl.findById(UserServiceImpl.java:265)
+	at jdk.internal.reflect.GeneratedMethodAccessor31.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699)
+	at com.zry.xiaohongshu.user.biz.service.impl.UserServiceImpl$$SpringCGLIB$$0.findById(<generated>)
+	at com.zry.xiaohongshu.user.biz.controller.UserController.findById(UserController.java:52)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.zry.framework.biz.operationlog.aspect.ApiOperationLogAspect.doAround(ApiOperationLogAspect.java:50)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:623)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.zry.xiaohongshu.user.biz.controller.UserController$$SpringCGLIB$$0.findById(<generated>)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.zry.framework.biz.context.filter.HeaderUserId2ContextFilter.doFilterInternal(HeaderUserId2ContextFilter.java:33)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after 5 second(s)
+	at io.lettuce.core.internal.ExceptionFactory.createTimeoutException(ExceptionFactory.java:59)
+	at io.lettuce.core.internal.Futures.awaitOrCancel(Futures.java:246)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:959)
+	... 97 common frames omitted
+2025-08-30 16:57:33.259 [http-nio-8082-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:57:37.663 [http-nio-8082-exec-2] ERROR c.z.x.user.biz.exception.GlobalExceptionHandler - /user/findById request error, 
+org.springframework.dao.QueryTimeoutException: Redis command timed out
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:68)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:248)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:961)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$4(LettuceConnection.java:818)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:665)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker.just(LettuceInvoker.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettuceStringCommands.get(LettuceStringCommands.java:52)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.get(DefaultedRedisConnection.java:284)
+	at org.springframework.data.redis.core.DefaultValueOperations$1.inRedis(DefaultValueOperations.java:54)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:61)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:406)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:373)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:50)
+	at com.zry.xiaohongshu.user.biz.service.impl.UserServiceImpl.findById(UserServiceImpl.java:265)
+	at jdk.internal.reflect.GeneratedMethodAccessor31.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699)
+	at com.zry.xiaohongshu.user.biz.service.impl.UserServiceImpl$$SpringCGLIB$$0.findById(<generated>)
+	at com.zry.xiaohongshu.user.biz.controller.UserController.findById(UserController.java:52)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.zry.framework.biz.operationlog.aspect.ApiOperationLogAspect.doAround(ApiOperationLogAspect.java:50)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:623)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.zry.xiaohongshu.user.biz.controller.UserController$$SpringCGLIB$$0.findById(<generated>)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.zry.framework.biz.context.filter.HeaderUserId2ContextFilter.doFilterInternal(HeaderUserId2ContextFilter.java:33)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after 5 second(s)
+	at io.lettuce.core.internal.ExceptionFactory.createTimeoutException(ExceptionFactory.java:59)
+	at io.lettuce.core.internal.Futures.awaitOrCancel(Futures.java:246)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:959)
+	... 97 common frames omitted
+2025-08-30 16:57:37.664 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:57:47.523 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /47.236.36.111:6379
+2025-08-30 16:57:47.643 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 47.236.36.111/<unresolved>:6379
+2025-08-30 16:57:49.093 [http-nio-8082-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:57:49.094 [http-nio-8082-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":1001}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:57:49.214 [http-nio-8082-exec-5] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - ==>  Preparing: select id, xiaohongshu_id, `password`, nickname, avatar, birthday, background_img, phone, sex, `status`, introduction, create_time, update_time, is_deleted from t_user where id = ?
+2025-08-30 16:57:49.227 [http-nio-8082-exec-5] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - ==> Parameters: 1001(Long)
+2025-08-30 16:57:49.242 [http-nio-8082-exec-5] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - <==      Total: 0
+2025-08-30 16:57:49.285 [http-nio-8082-exec-5] WARN  c.z.x.user.biz.exception.GlobalExceptionHandler - /user/findById request fail, errorCode: USER-20007, errorMessage: 该用户不存在
+2025-08-30 16:57:49.288 [http-nio-8082-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:57:50.924 [http-nio-8082-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:57:50.925 [http-nio-8082-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":1001}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:57:50.976 [http-nio-8082-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 51ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-08-30 16:57:50.978 [http-nio-8082-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:57:52.369 [http-nio-8082-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:57:52.370 [http-nio-8082-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":1001}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:57:52.419 [http-nio-8082-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 49ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-08-30 16:57:52.419 [http-nio-8082-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 16:58:15.629 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 16:58:15.632 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":2}, 请求类: UserController, 请求方法: findById =================================== 
+2025-08-30 16:58:15.634 [http-nio-8082-exec-6] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 2, userInfo: {"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}
+2025-08-30 16:58:15.634 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":2,"nickName":"姜磊","avatar":"http://47.236.36.111:9000/xiaohongshu/ba2db4edf4b64aa2b076861490d2460d.jpg"}} =================================== 
+2025-08-30 16:58:15.635 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 22:01:53.543 [Thread-7] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-08-30 22:01:53.543 [Thread-10] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-08-30 22:01:53.544 [Thread-7] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-08-30 22:01:53.547 [Thread-10] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-08-30 22:01:53.675 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-08-30 22:01:53.675 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] xiaohongshu deregistering service xiaohongshu-user with instance: Instance{instanceId='null', ip='10.2.66.3', port=8082, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2025-08-30 22:01:53.726 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2025-08-30 22:01:53.726 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2025-08-30 22:01:53.726 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-08-30 22:01:53.727 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2025-08-30 22:01:53.728 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown rpc client, set status to shutdown
+2025-08-30 22:01:53.728 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@748e2c5a[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2025-08-30 22:01:53.728 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756514463426_112.94.129.138_1563
+2025-08-30 22:01:53.739 [nacos-grpc-client-executor-47.236.36.111-9585] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1756514463426_112.94.129.138_1563]Ignore error event,isRunning:false,isAbandon=false
+2025-08-30 22:01:53.743 [SpringApplicationShutdownHook] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@546f741[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 9586]
+2025-08-30 22:01:53.743 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@49191181[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 15977]
+2025-08-30 22:01:53.743 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - [null] CredentialWatcher is stopped
+2025-08-30 22:01:53.743 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialService - [null] CredentialService is freed
+2025-08-30 22:01:53.743 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2025-08-30 22:01:53.903 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-08-30 22:01:53.905 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

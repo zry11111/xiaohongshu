@@ -539,3 +539,41 @@ Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after
 2025-08-30 15:10:01.449 [http-nio-8086-exec-6] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - <==      Total: 1
 2025-08-30 15:10:01.452 [http-nio-8086-exec-6] WARN  c.z.x.note.biz.exception.GlobalExceptionHandler - /note/update request fail, errorCode: NOTE-20007, errorMessage: 您无法操作该笔记
 2025-08-30 15:10:01.453 [http-nio-8086-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 22:01:52.292 [Thread-12] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-08-30 22:01:52.292 [Thread-15] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-08-30 22:01:52.303 [Thread-12] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-08-30 22:01:52.307 [Thread-15] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-08-30 22:01:54.951 [nacos-grpc-client-executor-47.236.36.111-5010] INFO  com.alibaba.nacos.common.remote.client - [29300764-5e75-42ca-bbd4-b3f373749abf] Receive server push request, request = NotifySubscriberRequest, requestId = 699
+2025-08-30 22:01:54.965 [nacos-grpc-client-executor-47.236.36.111-5010] INFO  com.alibaba.nacos.client.naming - removed ips(1) service: DEFAULT_GROUP@@xiaohongshu-kv -> [{"ip":"10.2.66.3","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-kv","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2025-08-30 22:01:54.967 [nacos-grpc-client-executor-47.236.36.111-5010] INFO  com.alibaba.nacos.client.naming - current ips:(0) service: DEFAULT_GROUP@@xiaohongshu-kv -> []
+2025-08-30 22:01:54.973 [nacos-grpc-client-executor-47.236.36.111-5010] INFO  com.alibaba.nacos.common.remote.client - [29300764-5e75-42ca-bbd4-b3f373749abf] Ack server push request, request = NotifySubscriberRequest, requestId = 699
+2025-08-30 22:02:03.087 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-08-30 22:02:03.089 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] xiaohongshu deregistering service xiaohongshu-note with instance: Instance{instanceId='null', ip='10.2.66.3', port=8086, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2025-08-30 22:02:03.339 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2025-08-30 22:02:03.340 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2025-08-30 22:02:03.341 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2025-08-30 22:02:03.341 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2025-08-30 22:02:03.341 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2025-08-30 22:02:03.341 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2025-08-30 22:02:03.341 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2025-08-30 22:02:03.341 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown rpc client, set status to shutdown
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@4e947fef[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2025-08-30 22:02:03.342 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1756537281432_112.94.129.138_2040
+2025-08-30 22:02:03.363 [SpringApplicationShutdownHook] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@58167b0f[Running, pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 5013]
+2025-08-30 22:02:03.363 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@3a972c78[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 8399]
+2025-08-30 22:02:03.364 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - [null] CredentialWatcher is stopped
+2025-08-30 22:02:03.364 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialService - [null] CredentialService is freed
+2025-08-30 22:02:03.364 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2025-08-30 22:02:03.378 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group', namespace='', nameServer='127.0.0.1:9876', topic='DeleteNoteLocalCacheTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=BROADCASTING', tlsEnable=false, instanceName=DEFAULT}
+2025-08-30 22:02:03.398 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-08-30 22:02:03.403 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-08-30 22:02:09.429 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_DelayDeleteNoteRedisCacheTopic', namespace='', nameServer='127.0.0.1:9876', topic='DelayDeleteNoteRedisCacheTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}

@@ -6,6 +6,7 @@ import com.zry.xiaohongshu.user.biz.model.vo.UpdateUserInfoReqVO;
 import com.zry.xiaohongshu.user.biz.service.UserService;
 import com.zry.xiaohongshu.user.biz.service.impl.UserServiceImpl;
 import com.zry.xiaohongshu.user.dto.req.FindUserByIdReqDTO;
+import com.zry.xiaohongshu.user.dto.req.FindUsersByIdsReqDTO;
 import com.zry.xiaohongshu.user.dto.req.RegisterUserReqDTO;
 import com.zry.xiaohongshu.user.dto.req.UpdateUserPasswordReqDTO;
 import com.zry.xiaohongshu.user.dto.resp.FindUserByIdRspDTO;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.PublicKey;
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -51,4 +53,10 @@ public class UserController {
     public Response<FindUserByIdRspDTO> findById(@Validated @RequestBody FindUserByIdReqDTO findUserByIdReqDTO) {
         return userService.findById(findUserByIdReqDTO);
     }
+    @PostMapping("/findByIds")
+    @ApiOperationLog(description = "批量查询用户信息")
+    public Response<List<FindUserByIdRspDTO>> findByIds(@Validated @RequestBody FindUsersByIdsReqDTO findUsersByIdsReqDTO) {
+        return userService.findByIds(findUsersByIdsReqDTO);
+    }
+
 }
