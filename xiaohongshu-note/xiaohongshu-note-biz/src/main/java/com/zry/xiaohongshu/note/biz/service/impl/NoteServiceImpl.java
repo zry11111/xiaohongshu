@@ -298,6 +298,23 @@ public class NoteServiceImpl implements NoteService {
     public Response<?> updateNote(UpdateNoteReqVO updateNoteReqVO) {
         // 笔记 ID
         Long noteId = updateNoteReqVO.getId();
+
+        // 应该先查是否有权限修改笔记
+
+        NoteDO selectNoteDO = noteDOMapper.selectByPrimaryKey(noteId);
+
+        // 笔记不存在
+        if (Objects.isNull(selectNoteDO)) {
+            throw new BizException(ResponseCodeEnum.NOTE_NOT_FOUND);
+        }
+        Long userId = LoginUserContextHolder.getUserId();
+
+        // 判断权限：非笔记发布者不允许更新笔记
+        if (!Objects.equals(userId, selectNoteDO.getCreatorId())) {
+            throw new BizException(ResponseCodeEnum.NOTE_CANT_OPERATE);
+        }
+
+
         // 笔记类型
         Integer type = updateNoteReqVO.getType();
 
@@ -423,6 +440,19 @@ public class NoteServiceImpl implements NoteService {
         // 笔记 ID
         Long noteId = deleteNoteReqVO.getId();
 
+        NoteDO selectNoteDO = noteDOMapper.selectByPrimaryKey(noteId);
+        // 笔记不存在
+        if (Objects.isNull(selectNoteDO)) {
+            throw new BizException(ResponseCodeEnum.NOTE_NOT_FOUND);
+        }
+
+        Long userId = LoginUserContextHolder.getUserId();
+
+        // 判断权限：非笔记发布者不允许删除笔记
+        if (!Objects.equals(userId, selectNoteDO.getCreatorId())) {
+            throw new BizException(ResponseCodeEnum.NOTE_CANT_OPERATE);
+        }
+
         // 逻辑删除
         NoteDO noteDO = NoteDO.builder()
                 .id(noteId)
@@ -451,6 +481,17 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public Response<?> visibleOnlyMe(UpdateNoteVisibleOnlyMeReqVO updateNoteVisibleOnlyMeReqVO) {
         Long noteId = updateNoteVisibleOnlyMeReqVO.getId();
+
+        NoteDO selectNoteDO = noteDOMapper.selectByPrimaryKey(noteId);
+        if(Objects.isNull(selectNoteDO)){
+            throw new BizException(ResponseCodeEnum.NOTE_NOT_FOUND);
+        }
+        Long userId = LoginUserContextHolder.getUserId();
+        // 判断权限：非笔记发布者不允许设置仅自己可见
+        if (!Objects.equals(userId, selectNoteDO.getCreatorId())) {
+            throw new BizException(ResponseCodeEnum.NOTE_CANT_OPERATE);
+        }
+
         NoteDO noteDO = NoteDO.builder()
                 .id(noteId)
                 .visible(NoteVisibleEnum.PRIVATE.getCode())
