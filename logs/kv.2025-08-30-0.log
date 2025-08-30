@@ -1285,3 +1285,6 @@ Caused by: com.datastax.oss.driver.api.core.AllNodesFailedException: Could not r
 2025-08-30 15:07:42.827 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohongshu registering service xiaohongshu-kv with instance Instance{instanceId='null', ip='10.2.66.3', port=8084, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
 2025-08-30 15:07:43.029 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohongshu-kv 10.2.66.3:8084 register finished
 2025-08-30 15:07:43.281 [main] INFO  c.z.xiaohongshu.kv.biz.XiaohongshuKVBizApplication - Started XiaohongshuKVBizApplication in 6.997 seconds (process running for 7.712)
+2025-08-30 15:09:00.695 [http-nio-8084-exec-5] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-30 15:09:00.696 [http-nio-8084-exec-5] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-30 15:09:00.697 [http-nio-8084-exec-5] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms

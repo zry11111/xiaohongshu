@@ -360,3 +360,182 @@ feign.FeignException$ServiceUnavailable: [503] during [POST] to [http://xiaohong
 2025-08-30 15:01:28.334 [ConsumeMessageThread_xiaohongshu_group_DelayDeleteNoteRedisCacheTopic_1] INFO  c.z.x.n.b.c.DelayDeleteNoteRedisCacheConsumer - ## 延迟删除笔记 Redis 缓存, noteId: 1960629739609653259
 2025-08-30 15:01:50.346 [ConsumeMessageThread_xiaohongshu_group_1] INFO  c.z.x.n.biz.consumer.DeleteNoteLocalCacheConsumer - ## 消费者消费成功, noteId: 1960629739609653259
 2025-08-30 15:01:50.350 [ConsumeMessageThread_xiaohongshu_group_1] INFO  c.z.x.note.biz.service.impl.NoteServiceImpl - ==> 删除本地缓存成功, noteId: 1960629739609653259
+2025-08-30 15:07:01.826 [nacos-grpc-client-executor-47.236.36.111-90] INFO  com.alibaba.nacos.common.remote.client - [29300764-5e75-42ca-bbd4-b3f373749abf] Receive server push request, request = NotifySubscriberRequest, requestId = 680
+2025-08-30 15:07:01.838 [nacos-grpc-client-executor-47.236.36.111-90] INFO  com.alibaba.nacos.client.naming - new ips(1) service: DEFAULT_GROUP@@xiaohongshu-kv -> [{"ip":"10.2.66.3","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-kv","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2025-08-30 15:07:01.838 [nacos-grpc-client-executor-47.236.36.111-90] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: DEFAULT_GROUP@@xiaohongshu-kv -> [{"ip":"10.2.66.3","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-kv","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2025-08-30 15:07:01.841 [nacos-grpc-client-executor-47.236.36.111-90] INFO  com.alibaba.nacos.common.remote.client - [29300764-5e75-42ca-bbd4-b3f373749abf] Ack server push request, request = NotifySubscriberRequest, requestId = 680
+2025-08-30 15:07:32.494 [nacos-grpc-client-executor-47.236.36.111-96] INFO  com.alibaba.nacos.common.remote.client - [29300764-5e75-42ca-bbd4-b3f373749abf] Receive server push request, request = NotifySubscriberRequest, requestId = 681
+2025-08-30 15:07:32.495 [nacos-grpc-client-executor-47.236.36.111-96] INFO  com.alibaba.nacos.client.naming - removed ips(1) service: DEFAULT_GROUP@@xiaohongshu-kv -> [{"ip":"10.2.66.3","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-kv","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2025-08-30 15:07:32.495 [nacos-grpc-client-executor-47.236.36.111-96] INFO  com.alibaba.nacos.client.naming - current ips:(0) service: DEFAULT_GROUP@@xiaohongshu-kv -> []
+2025-08-30 15:07:32.499 [nacos-grpc-client-executor-47.236.36.111-96] INFO  com.alibaba.nacos.common.remote.client - [29300764-5e75-42ca-bbd4-b3f373749abf] Ack server push request, request = NotifySubscriberRequest, requestId = 681
+2025-08-30 15:07:43.549 [nacos-grpc-client-executor-47.236.36.111-98] INFO  com.alibaba.nacos.common.remote.client - [29300764-5e75-42ca-bbd4-b3f373749abf] Receive server push request, request = NotifySubscriberRequest, requestId = 682
+2025-08-30 15:07:43.549 [nacos-grpc-client-executor-47.236.36.111-98] INFO  com.alibaba.nacos.client.naming - new ips(1) service: DEFAULT_GROUP@@xiaohongshu-kv -> [{"ip":"10.2.66.3","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-kv","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2025-08-30 15:07:43.549 [nacos-grpc-client-executor-47.236.36.111-98] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: DEFAULT_GROUP@@xiaohongshu-kv -> [{"ip":"10.2.66.3","port":8084,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-kv","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2025-08-30 15:07:43.551 [nacos-grpc-client-executor-47.236.36.111-98] INFO  com.alibaba.nacos.common.remote.client - [29300764-5e75-42ca-bbd4-b3f373749abf] Ack server push request, request = NotifySubscriberRequest, requestId = 682
+2025-08-30 15:08:20.383 [http-nio-8086-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 15:08:20.393 [http-nio-8086-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [笔记修改], 入参: {"id":1960629739609653259,"type":1,"imgUris":["http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg"],"videoUri":"http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg","title":"测试标题测试标题测试标题测试标题1111","content":"更新啦更新啦111","topicId":2}, 请求类: NoteController, 请求方法: updateNote =================================== 
+2025-08-30 15:08:20.411 [http-nio-8086-exec-4] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==>  Preparing: select id, title, is_content_empty, creator_id, topic_id, topic_name, is_top, `type`, img_uris, video_uri, visible, create_time, update_time, `status`, content_uuid from t_note where id = ? and status = 1
+2025-08-30 15:08:20.415 [http-nio-8086-exec-4] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==> Parameters: 1960629739609653259(Long)
+2025-08-30 15:08:20.432 [http-nio-8086-exec-4] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - <==      Total: 1
+2025-08-30 15:08:20.433 [http-nio-8086-exec-4] DEBUG c.z.x.n.b.d.m.TopicDOMapper.selectNameByPrimaryKey - ==>  Preparing: select name from t_topic where id = ?;
+2025-08-30 15:08:20.434 [http-nio-8086-exec-4] DEBUG c.z.x.n.b.d.m.TopicDOMapper.selectNameByPrimaryKey - ==> Parameters: 2(Long)
+2025-08-30 15:08:20.435 [http-nio-8086-exec-4] DEBUG c.z.x.n.b.d.m.TopicDOMapper.selectNameByPrimaryKey - <==      Total: 1
+2025-08-30 15:08:25.453 [http-nio-8086-exec-4] ERROR c.z.x.note.biz.exception.GlobalExceptionHandler - /note/update request error, 
+org.springframework.dao.QueryTimeoutException: Redis command timed out
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:68)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:248)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:961)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$4(LettuceConnection.java:818)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:665)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker.just(LettuceInvoker.java:94)
+	at org.springframework.data.redis.connection.lettuce.LettuceKeyCommands.del(LettuceKeyCommands.java:91)
+	at org.springframework.data.redis.core.RedisTemplate.lambda$delete$5(RedisTemplate.java:588)
+	at org.springframework.data.redis.core.RedisTemplate.lambda$doWithKeys$22(RedisTemplate.java:785)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:406)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:373)
+	at org.springframework.data.redis.core.RedisTemplate.doWithKeys(RedisTemplate.java:785)
+	at org.springframework.data.redis.core.RedisTemplate.delete(RedisTemplate.java:588)
+	at com.zry.xiaohongshu.note.biz.service.impl.NoteServiceImpl.updateNote(NoteServiceImpl.java:362)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.zry.xiaohongshu.note.biz.service.impl.NoteServiceImpl$$SpringCGLIB$$0.updateNote(<generated>)
+	at com.zry.xiaohongshu.note.biz.controller.NoteController.updateNote(NoteController.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.zry.framework.biz.operationlog.aspect.ApiOperationLogAspect.doAround(ApiOperationLogAspect.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:623)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.zry.xiaohongshu.note.biz.controller.NoteController$$SpringCGLIB$$0.updateNote(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:547)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.zry.framework.biz.context.filter.HeaderUserId2ContextFilter.doFilterInternal(HeaderUserId2ContextFilter.java:33)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after 5 second(s)
+	at io.lettuce.core.internal.ExceptionFactory.createTimeoutException(ExceptionFactory.java:59)
+	at io.lettuce.core.internal.Futures.awaitOrCancel(Futures.java:246)
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:74)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:959)
+	... 108 common frames omitted
+2025-08-30 15:08:25.457 [http-nio-8086-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 15:09:00.501 [http-nio-8086-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 15:09:00.502 [http-nio-8086-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [笔记修改], 入参: {"id":1960629739609653259,"type":1,"imgUris":["http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg"],"videoUri":"http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg","title":"测试标题测试标题测试标题测试标题1111","content":"更新啦更新啦111","topicId":2}, 请求类: NoteController, 请求方法: updateNote =================================== 
+2025-08-30 15:09:00.504 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==>  Preparing: select id, title, is_content_empty, creator_id, topic_id, topic_name, is_top, `type`, img_uris, video_uri, visible, create_time, update_time, `status`, content_uuid from t_note where id = ? and status = 1
+2025-08-30 15:09:00.505 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==> Parameters: 1960629739609653259(Long)
+2025-08-30 15:09:00.507 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - <==      Total: 1
+2025-08-30 15:09:00.508 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.m.TopicDOMapper.selectNameByPrimaryKey - ==>  Preparing: select name from t_topic where id = ?;
+2025-08-30 15:09:00.508 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.m.TopicDOMapper.selectNameByPrimaryKey - ==> Parameters: 2(Long)
+2025-08-30 15:09:00.509 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.m.TopicDOMapper.selectNameByPrimaryKey - <==      Total: 1
+2025-08-30 15:09:00.558 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.updateByPrimaryKey - ==>  Preparing: update t_note set title = ?, is_content_empty = ?, topic_id = ?, topic_name = ?, `type` = ?, img_uris = ?, video_uri = ?, update_time = ? where id = ?
+2025-08-30 15:09:00.560 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.updateByPrimaryKey - ==> Parameters: 测试标题测试标题测试标题测试标题1111(String), false(Boolean), 2(Long), 下饭综艺推荐(String), 1(Integer), null, http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg(String), 2025-08-30T15:09:00.557322700(LocalDateTime), 1960629739609653259(Long)
+2025-08-30 15:09:00.572 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.updateByPrimaryKey - <==    Updates: 1
+2025-08-30 15:09:00.587 [http-nio-8086-exec-3] INFO  c.z.x.note.biz.service.impl.NoteServiceImpl - ====> MQ：删除笔记本地缓存发送成功...
+2025-08-30 15:09:00.587 [NettyClientPublicExecutor_2] INFO  c.z.x.note.biz.service.impl.NoteServiceImpl - ## 延时删除 Redis 笔记缓存消息发送成功...
+2025-08-30 15:09:00.588 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==>  Preparing: select id, title, is_content_empty, creator_id, topic_id, topic_name, is_top, `type`, img_uris, video_uri, visible, create_time, update_time, `status`, content_uuid from t_note where id = ? and status = 1
+2025-08-30 15:09:00.588 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==> Parameters: 1960629739609653259(Long)
+2025-08-30 15:09:00.592 [http-nio-8086-exec-3] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - <==      Total: 1
+2025-08-30 15:09:00.598 [http-nio-8086-exec-3] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-08-30 15:09:00.963 [http-nio-8086-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [笔记修改], 耗时: 461ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-08-30 15:09:00.967 [http-nio-8086-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 15:09:01.677 [ConsumeMessageThread_xiaohongshu_group_DelayDeleteNoteRedisCacheTopic_2] INFO  c.z.x.n.b.c.DelayDeleteNoteRedisCacheConsumer - ## 延迟删除笔记 Redis 缓存, noteId: 1960629739609653259
+2025-08-30 15:09:20.724 [ConsumeMessageThread_xiaohongshu_group_2] INFO  c.z.x.n.biz.consumer.DeleteNoteLocalCacheConsumer - ## 消费者消费成功, noteId: 1960629739609653259
+2025-08-30 15:09:20.724 [ConsumeMessageThread_xiaohongshu_group_2] INFO  c.z.x.note.biz.service.impl.NoteServiceImpl - ==> 删除本地缓存成功, noteId: 1960629739609653259
+2025-08-30 15:09:25.983 [http-nio-8086-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 15:09:25.985 [http-nio-8086-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [笔记修改], 入参: {"id":1960629739609653251,"type":1,"imgUris":["http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg"],"videoUri":"http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg","title":"测试标题测试标题测试标题测试标题1111","content":"更新啦更新啦111","topicId":2}, 请求类: NoteController, 请求方法: updateNote =================================== 
+2025-08-30 15:09:25.986 [http-nio-8086-exec-5] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==>  Preparing: select id, title, is_content_empty, creator_id, topic_id, topic_name, is_top, `type`, img_uris, video_uri, visible, create_time, update_time, `status`, content_uuid from t_note where id = ? and status = 1
+2025-08-30 15:09:25.987 [http-nio-8086-exec-5] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==> Parameters: 1960629739609653251(Long)
+2025-08-30 15:09:25.989 [http-nio-8086-exec-5] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - <==      Total: 0
+2025-08-30 15:09:25.993 [http-nio-8086-exec-5] WARN  c.z.x.note.biz.exception.GlobalExceptionHandler - /note/update request fail, errorCode: NOTE-20002, errorMessage: 笔记不存在
+2025-08-30 15:09:25.994 [http-nio-8086-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-08-30 15:10:01.428 [http-nio-8086-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-08-30 15:10:01.431 [http-nio-8086-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [笔记修改], 入参: {"id":1960629739609653259,"type":1,"imgUris":["http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg"],"videoUri":"http://116.62.199.48:9000/weblog/c89cc6b66f0341c0b7854771ae063eac.jpg","title":"测试标题测试标题测试标题测试标题1111","content":"更新啦更新啦111","topicId":2}, 请求类: NoteController, 请求方法: updateNote =================================== 
+2025-08-30 15:10:01.433 [http-nio-8086-exec-6] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==>  Preparing: select id, title, is_content_empty, creator_id, topic_id, topic_name, is_top, `type`, img_uris, video_uri, visible, create_time, update_time, `status`, content_uuid from t_note where id = ? and status = 1
+2025-08-30 15:10:01.434 [http-nio-8086-exec-6] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - ==> Parameters: 1960629739609653259(Long)
+2025-08-30 15:10:01.449 [http-nio-8086-exec-6] DEBUG c.z.x.n.b.d.mapper.NoteDOMapper.selectByPrimaryKey - <==      Total: 1
+2025-08-30 15:10:01.452 [http-nio-8086-exec-6] WARN  c.z.x.note.biz.exception.GlobalExceptionHandler - /note/update request fail, errorCode: NOTE-20007, errorMessage: 您无法操作该笔记
+2025-08-30 15:10:01.453 [http-nio-8086-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
