@@ -9,6 +9,7 @@ import com.zry.xiaohongshu.user.relation.biz.domain.dataobject.FollowingDO;
 import com.zry.xiaohongshu.user.relation.biz.domain.mapper.FansDOMapper;
 import com.zry.xiaohongshu.user.relation.biz.domain.mapper.FollowingDOMapper;
 import com.zry.xiaohongshu.user.relation.biz.model.dto.FollowUserMqDTO;
+import com.zry.xiaohongshu.user.relation.biz.model.dto.UnfollowUserMqDTO;
 import jakarta.annotation.Resource;
 import org.apache.rocketmq.common.message.Message;
 import com.zry.xiaohongshu.user.relation.biz.constant.MQConstants;
@@ -64,6 +65,40 @@ public class FollowUnfollowConsumer implements RocketMQListener<Message> {
             handleFollowTagMessage(bodyJsonStr);
         } else if (Objects.equals(tags, MQConstants.TAG_UNFOLLOW)) { // 取关
             // TODO
+            handleUnfollowTagMessage(bodyJsonStr);
+        }
+    }
+
+    private void handleUnfollowTagMessage(String bodyJsonStr) {
+        UnfollowUserMqDTO unfollowUserMqDTO = JsonUtils.parseObject(bodyJsonStr, UnfollowUserMqDTO.class);
+        if(Objects.isNull(unfollowUserMqDTO)) return;
+        Long userId = unfollowUserMqDTO.getUserId();
+        Long unfollowUserId = unfollowUserMqDTO.getUnfollowUserId();
+        LocalDateTime createTime = unfollowUserMqDTO.getCreateTime();
+
+        // 编程式提交事务
+        boolean isSuccess = Boolean.TRUE.equals(transactionTemplate.execute(status -> {
+            try {
+                // 取关成功需要删除数据库两条记录
+                // 关注表：一条记录
+                int count = followingDOMapper.deleteByUserIdAndFollowingUserId(userId, unfollowUserId);
+
+                // 粉丝表：一条记录
+                if (count > 0) {
+                    fansDOMapper.deleteByUserIdAndFansUserId(unfollowUserId, userId);
+                }
+                return true;
+            } catch (Exception ex) {
+                status.setRollbackOnly(); // 标记事务为回滚
+                log.error("", ex);
+            }
+            return false;
+        }));
+
+        // 若数据库删除成功，更新 Redis，将自己从被取关用户的 ZSet 粉丝列表删除
+        if(isSuccess){
+            String userFansKey = RedisKeyConstants.buildUserFansKey(unfollowUserId);
+            redisTemplate.opsForZSet().remove(userFansKey,userId);
         }
     }
 

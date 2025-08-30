@@ -5,6 +5,9 @@ public class RedisKeyConstants {
      * 关注列表 KEY 前缀
      */
     private static final String USER_FOLLOWING_KEY_PREFIX = "following:";
+    /**
+     * 粉丝列表 KEY 前缀
+     */
     private static final String USER_FANS_KEY_PREFIX = "fans:";
 
     /**
