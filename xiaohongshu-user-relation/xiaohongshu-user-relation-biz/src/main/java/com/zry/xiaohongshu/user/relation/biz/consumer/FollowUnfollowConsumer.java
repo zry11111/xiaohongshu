@@ -15,6 +15,7 @@ import org.apache.rocketmq.common.message.Message;
 import com.zry.xiaohongshu.user.relation.biz.constant.MQConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.common.message.MessageExt;
+import org.apache.rocketmq.spring.annotation.ConsumeMode;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.springframework.core.io.ClassPathResource;
@@ -33,7 +34,8 @@ import java.util.Objects;
 
 @Component
 @RocketMQMessageListener(consumerGroup = "xiaohongshu_group", // Group 组
-        topic = MQConstants.TOPIC_FOLLOW_OR_UNFOLLOW // 消费的主题 Topic
+        topic = MQConstants.TOPIC_FOLLOW_OR_UNFOLLOW, // 消费的主题 Topic
+        consumeMode = ConsumeMode.ORDERLY // 顺序消费
 )
 @Slf4j
 public class FollowUnfollowConsumer implements RocketMQListener<Message> {
