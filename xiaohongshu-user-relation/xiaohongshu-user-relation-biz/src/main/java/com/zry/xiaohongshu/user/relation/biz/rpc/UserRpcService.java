@@ -3,10 +3,12 @@ package com.zry.xiaohongshu.user.relation.biz.rpc;
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.user.api.UserFeignApi;
 import com.zry.xiaohongshu.user.dto.req.FindUserByIdReqDTO;
+import com.zry.xiaohongshu.user.dto.req.FindUsersByIdsReqDTO;
 import com.zry.xiaohongshu.user.dto.resp.FindUserByIdRspDTO;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Objects;
 
 @Component
@@ -32,6 +34,16 @@ public class UserRpcService {
         }
 
         return response.getData();
+    }
+    public List<FindUserByIdRspDTO> findByIds(List<Long> ids){
+        FindUsersByIdsReqDTO findUsersByIdsReqDTO = new FindUsersByIdsReqDTO();
+        findUsersByIdsReqDTO.setIds(ids);
+        Response<List<FindUserByIdRspDTO>> response = userFeignApi.findByIds(findUsersByIdsReqDTO);
+        if (!response.isSuccess() || Objects.isNull(response.getData())) {
+            return null;
+        }
+        return response.getData();
+
     }
 
 

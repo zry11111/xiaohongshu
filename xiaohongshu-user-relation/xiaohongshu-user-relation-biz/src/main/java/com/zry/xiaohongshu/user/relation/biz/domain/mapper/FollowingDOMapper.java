@@ -20,4 +20,9 @@ public interface FollowingDOMapper {
     List<FollowingDO> selectByUserId(Long userId);
     int deleteByUserIdAndFollowingUserId(@Param("userId") Long userId,
                                          @Param("unfollowUserId") Long unfollowUserId);
+    long selectCountByUserId(Long userId);
+    List<FollowingDO> selectPageListByUserId(@Param("userId") Long userId,
+                                             @Param("offset") long offset,
+                                             @Param("limit") long limit);
+    List<FollowingDO> selectAllByUserId(Long userId);
 }

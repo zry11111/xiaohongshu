@@ -4,6 +4,7 @@ import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.RandomUtil;
 import com.zry.framework.biz.context.holder.LoginUserContextHolder;
 import com.zry.framework.common.exception.BizException;
+import com.zry.framework.common.reponse.PageResponse;
 import com.zry.framework.common.reponse.Response;
 import com.zry.framework.common.util.DateUtils;
 import com.zry.framework.common.util.JsonUtils;
@@ -16,6 +17,8 @@ import com.zry.xiaohongshu.user.relation.biz.enums.LuaResultEnum;
 import com.zry.xiaohongshu.user.relation.biz.enums.ResponseCodeEnum;
 import com.zry.xiaohongshu.user.relation.biz.model.dto.FollowUserMqDTO;
 import com.zry.xiaohongshu.user.relation.biz.model.dto.UnfollowUserMqDTO;
+import com.zry.xiaohongshu.user.relation.biz.model.vo.FindFollowingListReqVO;
+import com.zry.xiaohongshu.user.relation.biz.model.vo.FindFollowingUserRspVO;
 import com.zry.xiaohongshu.user.relation.biz.model.vo.FollowUserReqVO;
 import com.zry.xiaohongshu.user.relation.biz.model.vo.UnfollowUserReqVO;
 import com.zry.xiaohongshu.user.relation.biz.rpc.UserRpcService;
@@ -29,6 +32,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.stereotype.Service;
 import org.springframework.core.io.ClassPathResource;
@@ -38,6 +42,7 @@ import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Service
 @Slf4j
@@ -50,6 +55,8 @@ public class RelationServiceImpl implements RelationService {
     private FollowingDOMapper followingDOMapper;
     @Resource
     private RocketMQTemplate rocketMQTemplate;
+    @Resource(name = "taskExecutor")
+    private ThreadPoolTaskExecutor threadPoolTaskExecutor;
     /**
      * 关注用户
      * @param followUserReqVO
@@ -239,6 +246,104 @@ public class RelationServiceImpl implements RelationService {
         });
         return Response.success();
 
+    }
+
+    @Override
+    public PageResponse<FindFollowingUserRspVO> findFollowingList(FindFollowingListReqVO findFollowingListReqVO) {
+        Long userId = findFollowingListReqVO.getUserId();
+        Integer pageNo = findFollowingListReqVO.getPageNo();
+        String followingRedisKey = RedisKeyConstants.buildUserFollowingKey(userId);
+        Long total = redisTemplate.opsForZSet().zCard(followingRedisKey);
+
+        long limit = 10;
+
+        List<FindFollowingUserRspVO> findFollowingUserRspVOS = null;
+        if(total>0){
+            long page = PageResponse.getTotalPage(total, limit);
+            if(pageNo>page){
+                return PageResponse.success(null,pageNo,total);
+            }
+
+            long offset = PageResponse.getOffset(pageNo, limit);
+
+            Set<Object> followingUserIdsSet = redisTemplate.opsForZSet()
+                    .reverseRangeByScore(followingRedisKey, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, offset, limit);
+
+            if (CollUtil.isNotEmpty(followingUserIdsSet)) {
+                // 提取所有用户 ID 到集合中
+                List<Long> userIds = followingUserIdsSet.stream().map(object -> Long.valueOf(object.toString())).toList();
+
+                // RPC: 批量查询用户信息
+                List<FindUserByIdRspDTO> findUserByIdRspDTOS = userRpcService.findByIds(userIds);
+
+                // 若不为空，DTO 转 VO
+                if (CollUtil.isNotEmpty(findUserByIdRspDTOS)) {
+                    findFollowingUserRspVOS = findUserByIdRspDTOS.stream()
+                            .map(dto -> FindFollowingUserRspVO.builder()
+                                    .userId(dto.getId())
+                                    .avatar(dto.getAvatar())
+                                    .nickname(dto.getNickName())
+                                    .introduction(dto.getIntroduction())
+                                    .build())
+                            .toList();
+                }
+            }
+        } else {
+            // 若 Redis 中没有数据，则从数据库查询
+            long count = followingDOMapper.selectCountByUserId(userId);
+            long totalPage = PageResponse.getTotalPage(count,limit);
+            if(pageNo>totalPage) return PageResponse.success(null,pageNo,count);
+            long offset = PageResponse.getOffset(pageNo, limit);
+            List<FollowingDO> followingDOS = followingDOMapper.selectPageListByUserId(userId, offset, limit);
+            total = count;
+            if(CollUtil.isNotEmpty(followingDOS)){
+                List<Long> userIds = followingDOS.stream().map(FollowingDO::getFollowingUserId).toList();
+                findFollowingUserRspVOS = rpcUserServiceAndDTO2VO(userIds, findFollowingUserRspVOS);
+            }
+            // 异步将关注列表全量同步到 Redis
+            threadPoolTaskExecutor.submit(() -> syncFollowingList2Redis(userId));
+        }
+        // 这里返回部分分页数据
+        return PageResponse.success(findFollowingUserRspVOS, pageNo, total);
+    }
+
+    private void syncFollowingList2Redis(Long userId) {
+        // TODO
+        // 查询全量关注用户列表（1000位用户）
+        List<FollowingDO> followingDOS = followingDOMapper.selectAllByUserId(userId);
+        if (CollUtil.isNotEmpty(followingDOS)) {
+            // 用户关注列表 Redis Key
+            String followingListRedisKey = RedisKeyConstants.buildUserFollowingKey(userId);
+            // 随机过期时间
+            // 保底1天+随机秒数
+            long expireSeconds = 60*60*24 + RandomUtil.randomInt(60*60*24);
+            // 构建 Lua 参数
+            Object[] luaArgs = buildLuaArgs(followingDOS, expireSeconds);
+
+            // 执行 Lua 脚本，批量同步关注关系数据到 Redis 中
+            DefaultRedisScript<Long> script = new DefaultRedisScript<>();
+            script.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/follow_batch_add_and_expire.lua")));
+            script.setResultType(Long.class);
+            redisTemplate.execute(script, Collections.singletonList(followingListRedisKey), luaArgs);
+        }
+    }
+
+    private List<FindFollowingUserRspVO> rpcUserServiceAndDTO2VO(List<Long> userIds, List<FindFollowingUserRspVO> findFollowingUserRspVOS) {
+        // RPC: 批量查询用户信息
+        List<FindUserByIdRspDTO> findUserByIdRspDTOS = userRpcService.findByIds(userIds);
+
+        // 若不为空，DTO 转 VO
+        if (CollUtil.isNotEmpty(findUserByIdRspDTOS)) {
+            findFollowingUserRspVOS = findUserByIdRspDTOS.stream()
+                    .map(dto -> FindFollowingUserRspVO.builder()
+                            .userId(dto.getId())
+                            .avatar(dto.getAvatar())
+                            .nickname(dto.getNickName())
+                            .introduction(dto.getIntroduction())
+                            .build())
+                    .toList();
+        }
+        return findFollowingUserRspVOS;
     }
 
     /**
