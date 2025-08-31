@@ -10,7 +10,10 @@ public class RedisKeyConstants {
      * Hash Field: 粉丝总数
      */
     public static final String FIELD_FANS_TOTAL = "fansTotal";
-
+    /**
+     * Hash Field: 关注总数
+     */
+    public static final String FIELD_FOLLOWING_TOTAL = "followingTotal";
 
     /**
      * 构建用户维度计数 Key
