@@ -15,4 +15,6 @@ public interface MQConstants {
      * 取关标签
      */
     String TAG_UNFOLLOW = "Unfollow";
+    String TOPIC_COUNT_FOLLOWING = "CountFollowingTopic";
+    String TOPIC_COUNT_FANS = "CountFansTopic";
 }
