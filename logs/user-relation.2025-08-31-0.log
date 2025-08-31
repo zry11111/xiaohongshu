@@ -1,0 +1,323 @@
+2025-08-31 15:12:04.187 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-08-31 15:12:04.259 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-08-31 15:12:04.514 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-08-31 15:12:04.516 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [req-serv] nacos-server port:8848
+2025-08-31 15:12:04.516 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [http-client] connect timeout:1000
+2025-08-31 15:12:04.517 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - PER_TASK_CONFIG_SIZE: 3000.0
+2025-08-31 15:12:04.551 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-08-31 15:12:04.551 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-08-31 15:12:04.554 [main] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - null No credential found
+2025-08-31 15:12:04.959 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-08-31 15:12:04.980 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\Rey\nacos\config
+2025-08-31 15:12:04.985 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 2c577e85-2334-459e-8d0e-a9251508a520_config-0
+2025-08-31 15:12:05.008 [main] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$584/0x0000018c2738e1d0
+2025-08-31 15:12:05.009 [main] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$585/0x0000018c2738e5f0
+2025-08-31 15:12:05.010 [main] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2025-08-31 15:12:05.010 [main] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2025-08-31 15:12:05.020 [main] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Try to connect to server on start up, server: {serverIp = '47.236.36.111', server main port = 8848}
+2025-08-31 15:12:05.055 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-31 15:12:06.285 [main] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Success to connect to server [47.236.36.111:8848] on start up, connectionId = 1756624326100_112.94.129.138_1407
+2025-08-31 15:12:06.286 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Notify connected event to listeners.
+2025-08-31 15:12:06.287 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Connected,notify listen context...
+2025-08-31 15:12:06.288 [main] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-08-31 15:12:06.289 [main] INFO  com.alibaba.nacos.common.remote.client - [2c577e85-2334-459e-8d0e-a9251508a520_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$605/0x0000018c274d61c8
+2025-08-31 15:12:06.343 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2025-08-31 15:12:06.431 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohongshu-user-relation] & group[DEFAULT_GROUP]
+2025-08-31 15:12:06.492 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohongshu-user-relation.yaml] & group[DEFAULT_GROUP]
+2025-08-31 15:12:06.573 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2025-08-31 15:12:06.581 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-xiaohongshu-user-relation-dev.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-xiaohongshu-user-relation.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-xiaohongshu-user-relation,DEFAULT_GROUP'}]
+2025-08-31 15:12:06.611 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-08-31 15:12:06.612 [main] INFO  c.z.x.u.r.b.XiaohongshuUserRelationBizApplication - The following 1 profile is active: "dev"
+2025-08-31 15:12:07.444 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-31 15:12:07.447 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-31 15:12:07.475 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-08-31 15:12:07.671 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=bf246b73-5359-3ab2-8cef-e15f856f49ae
+2025-08-31 15:12:07.715 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.zry.xiaohongshu.user.api.UserFeignApi' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.025 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.109 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'createRocketMQMessageConverter' of type [org.apache.rocketmq.spring.support.RocketMQMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.112 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.117 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.118 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$763/0x0000018c276a1a70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.120 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.128 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rocketmq-org.apache.rocketmq.spring.autoconfigure.RocketMQProperties' of type [org.apache.rocketmq.spring.autoconfigure.RocketMQProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.130 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-31 15:12:08.704 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8087 (http)
+2025-08-31 15:12:08.705 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-08-31 15:12:08.723 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-08-31 15:12:08.734 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-31 15:12:08.734 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-08-31 15:12:08.829 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-31 15:12:08.829 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2199 ms
+2025-08-31 15:12:08.950 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-08-31 15:12:09.421 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-08-31 15:12:10.550 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group', namespace='', nameServer='127.0.0.1:9876', topic='FollowUnfollowTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-08-31 15:12:10.551 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:followUnfollowConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_1
+2025-08-31 15:12:10.693 [main] INFO  o.s.cloud.openfeign.FeignClientFactoryBean - For 'xiaohongshu-user' URL not provided. Will try picking an instance via load-balancing.
+2025-08-31 15:12:10.759 [main] INFO  o.a.r.s.autoconfigure.RocketMQAutoConfiguration - a producer (xiaohongshu_group) init on namesrv 127.0.0.1:9876
+2025-08-31 15:12:12.016 [ConsumeMessageThread_xiaohongshu_group_1] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> FollowUnfollowConsumer 消费了消息 {"userId":100,"followUserId":2,"createTime":"2025-08-30 16:12:47"}, tags: Follow
+2025-08-31 15:12:12.016 [ConsumeMessageThread_xiaohongshu_group_2] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> FollowUnfollowConsumer 消费了消息 {"userId":100,"followUserId":2,"createTime":"2025-08-30 16:11:31"}, tags: Follow
+2025-08-31 15:12:12.038 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-31 15:12:12.140 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8087 (http) with context path ''
+2025-08-31 15:12:12.144 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ans.namespace attribute : null
+2025-08-31 15:12:12.145 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+2025-08-31 15:12:12.146 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from namespace attribute :null
+2025-08-31 15:12:12.155 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-08-31 15:12:12.155 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-08-31 15:12:12.160 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 81bb338c-cf0a-4e5b-857f-034ccee195d3
+2025-08-31 15:12:12.163 [main] INFO  com.alibaba.nacos.common.remote.client - [81bb338c-cf0a-4e5b-857f-034ccee195d3] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2025-08-31 15:12:12.163 [main] INFO  com.alibaba.nacos.common.remote.client - [81bb338c-cf0a-4e5b-857f-034ccee195d3] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2025-08-31 15:12:12.163 [main] INFO  com.alibaba.nacos.common.remote.client - [81bb338c-cf0a-4e5b-857f-034ccee195d3] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2025-08-31 15:12:12.164 [main] INFO  com.alibaba.nacos.common.remote.client - [81bb338c-cf0a-4e5b-857f-034ccee195d3] Try to connect to server on start up, server: {serverIp = '47.236.36.111', server main port = 8848}
+2025-08-31 15:12:12.164 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:47.236.36.111 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-08-31 15:12:12.472 [ConsumeMessageThread_xiaohongshu_group_1] ERROR c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - 
+org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+### The error may exist in file [D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-user-relation\xiaohongshu-user-relation-biz\target\classes\mapper\FollowingDOMapper.xml]
+### The error may involve com.zry.xiaohongshu.user.relation.biz.domain.mapper.FollowingDOMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_following (id, user_id, following_user_id,        create_time)     values (?, ?, ?,        ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+; Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:253)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy90.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.insert(Unknown Source)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.lambda$handleFollowTagMessage$1(FollowUnfollowConsumer.java:129)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.handleFollowTagMessage(FollowUnfollowConsumer.java:125)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:67)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:35)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerOrderly.consumeMessage(DefaultRocketMQListenerContainer.java:444)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageOrderlyService$ConsumeRequest.run(ConsumeMessageOrderlyService.java:498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1063)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 20 common frames omitted
+2025-08-31 15:12:12.472 [ConsumeMessageThread_xiaohongshu_group_2] ERROR c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - 
+org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+### The error may exist in file [D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-user-relation\xiaohongshu-user-relation-biz\target\classes\mapper\FollowingDOMapper.xml]
+### The error may involve com.zry.xiaohongshu.user.relation.biz.domain.mapper.FollowingDOMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_following (id, user_id, following_user_id,        create_time)     values (?, ?, ?,        ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+; Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:253)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy90.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.insert(Unknown Source)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.lambda$handleFollowTagMessage$1(FollowUnfollowConsumer.java:129)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.handleFollowTagMessage(FollowUnfollowConsumer.java:125)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:67)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:35)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerOrderly.consumeMessage(DefaultRocketMQListenerContainer.java:444)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageOrderlyService$ConsumeRequest.run(ConsumeMessageOrderlyService.java:498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1063)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 20 common frames omitted
+2025-08-31 15:12:12.496 [ConsumeMessageThread_xiaohongshu_group_1] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> FollowUnfollowConsumer 消费了消息 {"userId":100,"followUserId":2,"createTime":"2025-08-30 16:14:51"}, tags: Follow
+2025-08-31 15:12:12.500 [ConsumeMessageThread_xiaohongshu_group_1] ERROR c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - 
+org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+### The error may exist in file [D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-user-relation\xiaohongshu-user-relation-biz\target\classes\mapper\FollowingDOMapper.xml]
+### The error may involve com.zry.xiaohongshu.user.relation.biz.domain.mapper.FollowingDOMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_following (id, user_id, following_user_id,        create_time)     values (?, ?, ?,        ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+; Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:253)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy90.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.insert(Unknown Source)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.lambda$handleFollowTagMessage$1(FollowUnfollowConsumer.java:129)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.handleFollowTagMessage(FollowUnfollowConsumer.java:125)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:67)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:35)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerOrderly.consumeMessage(DefaultRocketMQListenerContainer.java:444)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageOrderlyService$ConsumeRequest.run(ConsumeMessageOrderlyService.java:498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1063)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 20 common frames omitted
+2025-08-31 15:12:12.503 [ConsumeMessageThread_xiaohongshu_group_1] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> FollowUnfollowConsumer 消费了消息 {"userId":100,"followUserId":2,"createTime":"2025-08-30 16:17:31"}, tags: Follow
+2025-08-31 15:12:12.506 [ConsumeMessageThread_xiaohongshu_group_1] ERROR c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - 
+org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+### The error may exist in file [D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-user-relation\xiaohongshu-user-relation-biz\target\classes\mapper\FollowingDOMapper.xml]
+### The error may involve com.zry.xiaohongshu.user.relation.biz.domain.mapper.FollowingDOMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_following (id, user_id, following_user_id,        create_time)     values (?, ?, ?,        ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+; Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:253)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy90.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.insert(Unknown Source)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.lambda$handleFollowTagMessage$1(FollowUnfollowConsumer.java:129)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.handleFollowTagMessage(FollowUnfollowConsumer.java:125)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:67)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:35)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerOrderly.consumeMessage(DefaultRocketMQListenerContainer.java:444)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageOrderlyService$ConsumeRequest.run(ConsumeMessageOrderlyService.java:498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '100-2' for key 't_following.uk_user_id_following_user_id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1063)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 20 common frames omitted
+2025-08-31 15:12:12.532 [main] INFO  com.alibaba.nacos.common.remote.client - [81bb338c-cf0a-4e5b-857f-034ccee195d3] Success to connect to server [47.236.36.111:8848] on start up, connectionId = 1756624332438_112.94.129.138_1410
+2025-08-31 15:12:12.532 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [81bb338c-cf0a-4e5b-857f-034ccee195d3] Notify connected event to listeners.
+2025-08-31 15:12:12.532 [main] INFO  com.alibaba.nacos.common.remote.client - [81bb338c-cf0a-4e5b-857f-034ccee195d3] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-08-31 15:12:12.533 [main] INFO  com.alibaba.nacos.common.remote.client - [81bb338c-cf0a-4e5b-857f-034ccee195d3] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$605/0x0000018c274d61c8
+2025-08-31 15:12:12.533 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-08-31 15:12:12.534 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohongshu registering service xiaohongshu-user-relation with instance Instance{instanceId='null', ip='10.2.66.3', port=8087, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+2025-08-31 15:12:12.587 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohongshu-user-relation 10.2.66.3:8087 register finished
+2025-08-31 15:12:12.854 [main] INFO  c.z.x.u.r.b.XiaohongshuUserRelationBizApplication - Started XiaohongshuUserRelationBizApplication in 9.584 seconds (process running for 10.433)
+2025-08-31 15:12:12.857 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - nacos.cache.data.init.snapshot = true 
+2025-08-31 15:12:12.859 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohongshu-47.236.36.111_8848_] [subscribe] xiaohongshu-user-relation-dev.yaml+DEFAULT_GROUP+xiaohongshu
+2025-08-31 15:12:12.868 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohongshu-47.236.36.111_8848_] [add-listener] ok, tenant=xiaohongshu, dataId=xiaohongshu-user-relation-dev.yaml, group=DEFAULT_GROUP, cnt=1
+2025-08-31 15:12:12.869 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohongshu-user-relation-dev.yaml, group=DEFAULT_GROUP
+2025-08-31 15:12:12.869 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohongshu-47.236.36.111_8848_] [subscribe] xiaohongshu-user-relation+DEFAULT_GROUP+xiaohongshu
+2025-08-31 15:12:12.869 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohongshu-47.236.36.111_8848_] [add-listener] ok, tenant=xiaohongshu, dataId=xiaohongshu-user-relation, group=DEFAULT_GROUP, cnt=1
+2025-08-31 15:12:12.869 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohongshu-user-relation, group=DEFAULT_GROUP
+2025-08-31 15:12:12.869 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohongshu-47.236.36.111_8848_] [subscribe] xiaohongshu-user-relation.yaml+DEFAULT_GROUP+xiaohongshu
+2025-08-31 15:12:12.869 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohongshu-47.236.36.111_8848_] [add-listener] ok, tenant=xiaohongshu, dataId=xiaohongshu-user-relation.yaml, group=DEFAULT_GROUP, cnt=1
+2025-08-31 15:12:12.869 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohongshu-user-relation.yaml, group=DEFAULT_GROUP

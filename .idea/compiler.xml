@@ -18,6 +18,7 @@
         <module name="xiaohongshu-distributed-id-generator-biz" />
         <module name="xiaohongshu-kv-biz" />
         <module name="xiaohongshu-user-biz" />
+        <module name="xiaohongshu-count-api" />
         <module name="xiaohongshu-user-relation-api" />
         <module name="xiaohongshu-common" />
         <module name="xiaohongshu-gateway" />
@@ -25,6 +26,7 @@
         <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
+        <module name="xiaohongshu-count-biz" />
         <module name="xiaohongshu-user-relation-biz" />
         <module name="xiaohongshu-spring-boot-starter-biz-context" />
         <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
@@ -35,6 +37,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="xiaohashu-count-api" target="17" />
       <module name="xiaohashu-distributed-id-generator-api" target="17" />
       <module name="xiaohashu-distributed-id-generator-biz" target="17" />
       <module name="xiaohashu-kv-api" target="17" />

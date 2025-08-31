@@ -23,6 +23,7 @@
         <module>xiaohongshu-distributed-id-generator</module>
         <module>xiaohongshu-note</module>
         <module>xiaohongshu-user-relation</module>
+        <module>xiaohongshu-count</module>
     </modules>
 
     <properties>
