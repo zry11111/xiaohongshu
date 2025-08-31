@@ -33,7 +33,7 @@ import java.util.Date;
 import java.util.Objects;
 
 @Component
-@RocketMQMessageListener(consumerGroup = "xiaohongshu_group", // Group 组
+@RocketMQMessageListener(consumerGroup = "xiaohongshu_group_"+MQConstants.TOPIC_FOLLOW_OR_UNFOLLOW, // Group 组
         topic = MQConstants.TOPIC_FOLLOW_OR_UNFOLLOW, // 消费的主题 Topic
         consumeMode = ConsumeMode.ORDERLY // 顺序消费
 )

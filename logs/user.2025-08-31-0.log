@@ -57,3 +57,12 @@
 2025-08-31 15:12:32.488 [main] DEBUG c.z.x.u.b.d.m.P.selectAppEnabledList - ==> Parameters: 
 2025-08-31 15:12:32.507 [main] DEBUG c.z.x.u.b.d.m.P.selectAppEnabledList - <==      Total: 2
 2025-08-31 15:12:32.563 [main] INFO  c.z.x.u.biz.runner.PushRolePermissions2RedisRunner - ==> 服务启动，成功同步角色权限数据到 Redis 中...
+2025-08-31 15:17:04.899 [http-nio-8082-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-31 15:17:04.899 [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-31 15:17:04.900 [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-31 15:17:04.909 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-08-31 15:17:05.033 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据手机号查询用户信息], 入参: {"phone":"13068920712"}, 请求类: UserController, 请求方法: findByPhone =================================== 
+2025-08-31 15:17:05.035 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - ==>  Preparing: select id,password from t_user where phone = ?
+2025-08-31 15:17:05.036 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - ==> Parameters: 13068920712(String)
+2025-08-31 15:17:05.044 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - <==      Total: 1
+2025-08-31 15:17:05.050 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据手机号查询用户信息], 耗时: 16ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":100,"password":"$2a$10$iF9icYmcTydaqR9HbnQV9uf1lGxwYoGWvBXoEVrIa9kFiQGZ0X/bS"}} =================================== 

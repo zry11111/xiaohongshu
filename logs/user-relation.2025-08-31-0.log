@@ -321,3 +321,9 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1
 2025-08-31 15:12:12.869 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohongshu-47.236.36.111_8848_] [subscribe] xiaohongshu-user-relation.yaml+DEFAULT_GROUP+xiaohongshu
 2025-08-31 15:12:12.869 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohongshu-47.236.36.111_8848_] [add-listener] ok, tenant=xiaohongshu, dataId=xiaohongshu-user-relation.yaml, group=DEFAULT_GROUP, cnt=1
 2025-08-31 15:12:12.869 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohongshu-user-relation.yaml, group=DEFAULT_GROUP
+2025-08-31 15:17:38.187 [http-nio-8087-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-31 15:17:38.187 [http-nio-8087-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-31 15:17:38.189 [http-nio-8087-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-08-31 15:17:38.198 [http-nio-8087-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-08-31 15:17:38.302 [http-nio-8087-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":27,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-08-31 15:17:38.815 [http-nio-8087-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 514ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
