@@ -3,6 +3,8 @@ package com.zry.xiaohongshu.user.relation.biz.domain.mapper;
 import com.zry.xiaohongshu.user.relation.biz.domain.dataobject.FansDO;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface FansDOMapper {
     int deleteByPrimaryKey(Long id);
 
@@ -17,4 +19,9 @@ public interface FansDOMapper {
     int updateByPrimaryKey(FansDO record);
     int deleteByUserIdAndFansUserId(@Param("userId") Long userId,
                                     @Param("fansUserId") Long fansUserId);
+    long selectCountByUserId(Long userId);
+    List<FansDO> selectPageListByUserId(@Param("userId") Long userId,
+                                        @Param("offset") long offset,
+                                        @Param("limit") long limit);
+    List<FansDO> select5000FansByUserId(Long userId);
 }

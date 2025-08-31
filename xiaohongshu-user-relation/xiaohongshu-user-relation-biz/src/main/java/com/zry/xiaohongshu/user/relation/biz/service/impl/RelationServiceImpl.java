@@ -11,16 +11,15 @@ import com.zry.framework.common.util.JsonUtils;
 import com.zry.xiaohongshu.user.dto.resp.FindUserByIdRspDTO;
 import com.zry.xiaohongshu.user.relation.biz.constant.MQConstants;
 import com.zry.xiaohongshu.user.relation.biz.constant.RedisKeyConstants;
+import com.zry.xiaohongshu.user.relation.biz.domain.dataobject.FansDO;
 import com.zry.xiaohongshu.user.relation.biz.domain.dataobject.FollowingDO;
+import com.zry.xiaohongshu.user.relation.biz.domain.mapper.FansDOMapper;
 import com.zry.xiaohongshu.user.relation.biz.domain.mapper.FollowingDOMapper;
 import com.zry.xiaohongshu.user.relation.biz.enums.LuaResultEnum;
 import com.zry.xiaohongshu.user.relation.biz.enums.ResponseCodeEnum;
 import com.zry.xiaohongshu.user.relation.biz.model.dto.FollowUserMqDTO;
 import com.zry.xiaohongshu.user.relation.biz.model.dto.UnfollowUserMqDTO;
-import com.zry.xiaohongshu.user.relation.biz.model.vo.FindFollowingListReqVO;
-import com.zry.xiaohongshu.user.relation.biz.model.vo.FindFollowingUserRspVO;
-import com.zry.xiaohongshu.user.relation.biz.model.vo.FollowUserReqVO;
-import com.zry.xiaohongshu.user.relation.biz.model.vo.UnfollowUserReqVO;
+import com.zry.xiaohongshu.user.relation.biz.model.vo.*;
 import com.zry.xiaohongshu.user.relation.biz.rpc.UserRpcService;
 import com.zry.xiaohongshu.user.relation.biz.service.RelationService;
 import jakarta.annotation.Resource;
@@ -53,6 +52,8 @@ public class RelationServiceImpl implements RelationService {
     private RedisTemplate<String, Object> redisTemplate;
     @Resource
     private FollowingDOMapper followingDOMapper;
+    @Resource
+    private FansDOMapper fansDOMapper;
     @Resource
     private RocketMQTemplate rocketMQTemplate;
     @Resource(name = "taskExecutor")
@@ -307,8 +308,128 @@ public class RelationServiceImpl implements RelationService {
         return PageResponse.success(findFollowingUserRspVOS, pageNo, total);
     }
 
+    @Override
+    public PageResponse<FindFansUserRspVO> findFansList(FindFansListReqVO findFansListReqVO) {
+        // 想要查询的用户 ID
+        Long userId = findFansListReqVO.getUserId();
+        // 页码
+        Integer pageNo = findFansListReqVO.getPageNo();
+
+        // 先从 Redis 中查询
+        String fansListRedisKey = RedisKeyConstants.buildUserFansKey(userId);
+
+        // 查询目标用户粉丝列表 ZSet 的总大小
+        long total = redisTemplate.opsForZSet().zCard(fansListRedisKey);
+
+        // 返参
+        List<FindFansUserRspVO> findFansUserRspVOS = null;
+
+        // 每页展示 10 条数据
+        long limit = 10;
+
+        if (total > 0) { // 缓存中有数据
+            // 计算一共多少页
+            long totalPage = PageResponse.getTotalPage(total, limit);
+
+            // 请求的页码超出了总页数
+            if (pageNo > totalPage) return PageResponse.success(null, pageNo, total);
+
+            // 准备从 Redis 中查询 ZSet 分页数据
+            // 每页 10 个元素，计算偏移量
+            long offset = PageResponse.getOffset(pageNo, limit);
+
+            // 使用 ZREVRANGEBYSCORE 命令按 score 降序获取元素，同时使用 LIMIT 子句实现分页
+            Set<Object> followingUserIdsSet = redisTemplate.opsForZSet()
+                    .reverseRangeByScore(fansListRedisKey, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, offset, limit);
+
+            if (CollUtil.isNotEmpty(followingUserIdsSet)) {
+                // 提取所有用户 ID 到集合中
+                List<Long> userIds = followingUserIdsSet.stream().map(object -> Long.valueOf(object.toString())).toList();
+
+                // RPC: 批量查询用户信息
+                findFansUserRspVOS = rpcUserServiceAndCountServiceAndDTO2VO(userIds, findFansUserRspVOS);
+            }
+        } else { // 若 Redis 缓存中无数据，则查询数据库
+            // 先查询记录总量
+            total = fansDOMapper.selectCountByUserId(userId);
+
+            // 计算一共多少页
+            long totalPage = PageResponse.getTotalPage(total, limit);
+
+            // 请求的页码超出了总页数（只允许查询前 500 页）
+            if (pageNo > 500 || pageNo > totalPage) return PageResponse.success(null, pageNo, total);
+
+            // 偏移量
+            long offset = PageResponse.getOffset(pageNo, limit);
+
+            // 分页查询
+            List<FansDO> fansDOS = fansDOMapper.selectPageListByUserId(userId, offset, limit);
+
+            // 若记录不为空
+            if (CollUtil.isNotEmpty(fansDOS)) {
+                // 提取所有粉丝用户 ID 到集合中
+                List<Long> userIds = fansDOS.stream().map(FansDO::getFansUserId).toList();
+
+                // RPC: 调用用户服务、计数服务，并将 DTO 转换为 VO
+                findFansUserRspVOS = rpcUserServiceAndCountServiceAndDTO2VO(userIds, findFansUserRspVOS);
+
+                // 异步将粉丝列表同步到 Redis（最多5000条）
+                threadPoolTaskExecutor.submit(() -> syncFansList2Redis(userId));
+            }
+        }
+
+        return PageResponse.success(findFansUserRspVOS, pageNo, total);
+    }
+    private void syncFansList2Redis(Long userId) {
+        // 查询全量粉丝用户列表（5000位用户）
+        List<FansDO> fansDOS = fansDOMapper.select5000FansByUserId(userId);
+        if(CollUtil.isNotEmpty(fansDOS)){
+            String userFansRedisKey = RedisKeyConstants.buildUserFansKey(userId);
+            long expireSeconds = 60*60*24 + RandomUtil.randomInt(60*60*24);
+            Object[] luaArgs = buildFansZSetLuaArgs(fansDOS, expireSeconds);
+            DefaultRedisScript<Long> script = new DefaultRedisScript<>();
+            script.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/follow_batch_add_and_expire.lua")));
+            script.setResultType(Long.class);
+            redisTemplate.execute(script, Collections.singletonList(userFansRedisKey), luaArgs);
+        }
+    }
+    private static Object[] buildFansZSetLuaArgs(List<FansDO> fansDOS, long expireSeconds) {
+        int argsLength = fansDOS.size() * 2 + 1; // 每个粉丝关系有 2 个参数（score 和 value），再加一个过期时间
+        Object[] luaArgs = new Object[argsLength];
+
+        int i = 0;
+        for (FansDO fansDO : fansDOS) {
+            luaArgs[i] = DateUtils.localDateTime2Timestamp(fansDO.getCreateTime()); // 粉丝的关注时间作为 score
+            luaArgs[i + 1] = fansDO.getFansUserId();          // 粉丝的用户 ID 作为 ZSet value
+            i += 2;
+        }
+
+        luaArgs[argsLength - 1] = expireSeconds; // 最后一个参数是 ZSet 的过期时间
+        return luaArgs;
+    }
+    private List<FindFansUserRspVO> rpcUserServiceAndCountServiceAndDTO2VO(List<Long> userIds, List<FindFansUserRspVO> findFansUserRspVOS) {
+        // RPC: 批量查询用户信息
+        List<FindUserByIdRspDTO> findUserByIdRspDTOS = userRpcService.findByIds(userIds);
+
+        // TODO RPC: 批量查询用户的计数数据（笔记总数、粉丝总数）
+
+        // 若不为空，DTO 转 VO
+        if (CollUtil.isNotEmpty(findUserByIdRspDTOS)) {
+            findFansUserRspVOS = findUserByIdRspDTOS.stream()
+                    .map(dto -> FindFansUserRspVO.builder()
+                            .userId(dto.getId())
+                            .avatar(dto.getAvatar())
+                            .nickname(dto.getNickName())
+                            .noteTotal(0L) // TODO: 这块的数据暂无，后续补充
+                            .fansTotal(0L) // TODO: 这块的数据暂无，后续补充
+                            .build())
+                    .toList();
+        }
+        return findFansUserRspVOS;
+    }
+
+
     private void syncFollowingList2Redis(Long userId) {
-        // TODO
         // 查询全量关注用户列表（1000位用户）
         List<FollowingDO> followingDOS = followingDOMapper.selectAllByUserId(userId);
         if (CollUtil.isNotEmpty(followingDOS)) {
