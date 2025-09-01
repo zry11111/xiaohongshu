@@ -1,6 +1,7 @@
 package com.zry.xiaohongshu.count.biz.domain.mapper;
 
 import com.zry.xiaohongshu.count.biz.domain.dataobject.NoteCountDO;
+import org.apache.ibatis.annotations.Param;
 
 public interface NoteCountDOMapper {
     int deleteByPrimaryKey(Long id);
@@ -14,4 +15,5 @@ public interface NoteCountDOMapper {
     int updateByPrimaryKeySelective(NoteCountDO record);
 
     int updateByPrimaryKey(NoteCountDO record);
+    int insertOrUpdateLikeTotalByNoteId(@Param("count") Integer count, @Param("noteId") Long noteId);
 }

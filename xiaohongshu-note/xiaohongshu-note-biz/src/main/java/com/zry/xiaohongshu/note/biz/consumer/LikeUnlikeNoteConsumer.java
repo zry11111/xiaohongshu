@@ -9,9 +9,13 @@ import com.zry.xiaohongshu.note.biz.domain.mapper.NoteLikeDOMapper;
 import com.zry.xiaohongshu.note.biz.model.dto.LikeUnlikeNoteMqDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.rocketmq.client.producer.SendCallback;
+import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
+import org.springframework.messaging.support.MessageBuilder;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -22,6 +26,8 @@ import java.util.Objects;
 public class LikeUnlikeNoteConsumer implements RocketMQListener<Message> {
     @Resource
     private NoteLikeDOMapper noteLikeDOMapper;
+    @Resource
+    private RocketMQTemplate rocketMQTemplate;
     RateLimiter rateLimiter =  RateLimiter.create(5000);
     @Override
     public void onMessage(Message message) {
@@ -69,7 +75,20 @@ public class LikeUnlikeNoteConsumer implements RocketMQListener<Message> {
         // 添加或更新笔记点赞记录
         int count = noteLikeDOMapper.insertOrUpdate(noteLikeDO);
 
-        // TODO: 发送计数 MQ
+        // 发送计数 MQ
+        if(count == 0) return;
+        org.springframework.messaging.Message<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(bodyJsonStr)).build();
+        rocketMQTemplate.asyncSend(MQConstants.TOPIC_COUNT_NOTE_LIKE, message, new SendCallback() {
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("## 点赞计数消息发送成功, noteId: {}, userId: {}", noteId, userId);
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.info("## 点赞计数消息发送失败, noteId: {}, userId: {}, error: {}", noteId, userId, throwable.getMessage());
+            }
+        });
     }
 
     /**
@@ -102,6 +121,19 @@ public class LikeUnlikeNoteConsumer implements RocketMQListener<Message> {
         // 取消点赞：记录更新
         int count = noteLikeDOMapper.update2UnlikeByUserIdAndNoteId(noteLikeDO);
 
-        // TODO: 发送计数 MQ
+        // 发送计数 MQ
+        if(count == 0) return;
+        org.springframework.messaging.Message<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(bodyJsonStr)).build();
+        rocketMQTemplate.asyncSend(MQConstants.TOPIC_COUNT_NOTE_LIKE, message, new SendCallback() {
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("## 点赞计数消息发送成功, noteId: {}, userId: {}", noteId, userId);
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.info("## 点赞计数消息发送失败, noteId: {}, userId: {}, error: {}", noteId, userId, throwable.getMessage());
+            }
+        });
     }
 }
