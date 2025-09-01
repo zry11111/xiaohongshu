@@ -11,4 +11,5 @@ public interface NoteService {
     Response<?> deleteNote(DeleteNoteReqVO deleteNoteReqVO);
     Response<?> visibleOnlyMe(UpdateNoteVisibleOnlyMeReqVO updateNoteVisibleOnlyMeReqVO);
     Response<?> topNote(TopNoteReqVO topNoteReqVO);
+    Response<?> likeNote(LikeNoteReqVO likeNoteReqVO);
 }
