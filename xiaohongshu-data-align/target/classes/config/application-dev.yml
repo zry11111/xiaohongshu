@@ -81,3 +81,4 @@ xxl:
 
 table:
   shards: 3 #日增表分片数
+
