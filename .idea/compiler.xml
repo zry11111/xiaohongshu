@@ -31,6 +31,7 @@
         <module name="xiaohongshu-spring-boot-starter-biz-context" />
         <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
         <module name="xiaohongshu-note-api" />
+        <module name="xiaohongshu-data-align" />
         <module name="xiaohongshu-spring-boot-starter-jackson" />
         <module name="xiaohongshu-oss-api" />
         <module name="xiaohongshu-distributed-id-generator-api" />
@@ -42,6 +43,7 @@
       <module name="xiaohashu-distributed-id-generator-biz" target="17" />
       <module name="xiaohashu-kv-api" target="17" />
       <module name="xiaohashu-kv-biz" target="17" />
+      <module name="xiaohogshu-data-align" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

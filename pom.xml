@@ -24,6 +24,7 @@
         <module>xiaohongshu-note</module>
         <module>xiaohongshu-user-relation</module>
         <module>xiaohongshu-count</module>
+        <module>xiaohongshu-data-align</module>
     </modules>
 
     <properties>
@@ -72,11 +73,19 @@
         <rocketmq.version>2.2.3</rocketmq.version>
 
         <buffertrigger.version>0.2.21</buffertrigger.version>
+
+        <xxl-job.version>2.4.1</xxl-job.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
 
+            <!-- XXL-JOB 分布式定时任务调度 -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
+            </dependency>
             <!-- Rocket MQ -->
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
