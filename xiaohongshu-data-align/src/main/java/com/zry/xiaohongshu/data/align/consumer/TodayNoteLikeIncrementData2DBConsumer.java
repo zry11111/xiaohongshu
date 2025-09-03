@@ -4,7 +4,7 @@ import com.zry.framework.common.util.JsonUtils;
 import com.zry.xiaohongshu.data.align.constant.MQConstants;
 import com.zry.xiaohongshu.data.align.constant.RedisKeyConstants;
 import com.zry.xiaohongshu.data.align.constant.TableConstants;
-import com.zry.xiaohongshu.data.align.domain.mapper.InsertRecordMapper;
+import com.zry.xiaohongshu.data.align.domain.mapper.InsertMapper;
 import com.zry.xiaohongshu.data.align.model.dto.LikeUnlikeNoteMqDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -35,7 +35,7 @@ public class TodayNoteLikeIncrementData2DBConsumer implements RocketMQListener<S
     @Resource
     private TransactionTemplate transactionTemplate;
     @Resource
-    private InsertRecordMapper insertRecordMapper;
+    private InsertMapper insertMapper;
     /**
      * 表总分片数
      */
@@ -84,8 +84,8 @@ public class TodayNoteLikeIncrementData2DBConsumer implements RocketMQListener<S
                     // 将日增量变更数据，分别写入两张表
                     // - t_data_align_note_like_count_temp_日期_分片序号
                     // - t_data_align_user_like_count_temp_日期_分片序号
-                    insertRecordMapper.insert2DataAlignNoteLikeCountTempTable(TableConstants.buildTableNameSuffix(date, noteIdHashKey), noteId);
-                    insertRecordMapper.insert2DataAlignUserLikeCountTempTable(TableConstants.buildTableNameSuffix(date, userIdHashKey), noteCreatorId);
+                    insertMapper.insert2DataAlignNoteLikeCountTempTable(TableConstants.buildTableNameSuffix(date, noteIdHashKey), noteId);
+                    insertMapper.insert2DataAlignUserLikeCountTempTable(TableConstants.buildTableNameSuffix(date, userIdHashKey), noteCreatorId);
 
                     return true;
                 } catch (Exception ex) {
