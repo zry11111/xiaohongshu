@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: xiaohongshu-search
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        namespace: xiaohongshu # Nacos 服务发现的命名空间
+        group: DEFAULT_GROUP # Nacos 服务发现的组
+        server-addr: http://47.236.36.111:8848/

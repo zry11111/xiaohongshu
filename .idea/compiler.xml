@@ -24,6 +24,7 @@
         <module name="xiaohongshu-gateway" />
         <module name="xiaohongshu-note-biz" />
         <module name="xiaohongshu-user-api" />
+        <module name="xiaohongshu-search" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-count-biz" />

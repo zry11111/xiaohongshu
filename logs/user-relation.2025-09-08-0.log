@@ -1,0 +1,14 @@
+2025-09-08 16:50:08.712 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-09-08 16:50:08.776 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-09-08 16:50:09.284 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-09-08 16:50:09.297 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-09-08 16:50:09.298 [main] INFO  c.z.x.search.XiaohongshuSearchApplication - The following 1 profile is active: "dev"
+2025-09-08 16:50:09.819 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=d23234fa-227b-3f00-8b18-33b9a379f00e
+2025-09-08 16:50:10.620 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8087 (http)
+2025-09-08 16:50:10.743 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1431 ms
+2025-09-08 16:50:11.639 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8087 (http) with context path ''
+2025-09-08 16:50:11.648 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-09-08 16:50:11.648 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ans.namespace attribute : null
+2025-09-08 16:50:11.648 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+2025-09-08 16:50:11.649 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from namespace attribute :null
+2025-09-08 16:50:11.660 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
