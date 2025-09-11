@@ -1,0 +1,2 @@
+com.zry.framework.biz.context.config.ContextAutoConfiguration
+com.zry.framework.biz.context.config.FeignContextAutoConfiguration
