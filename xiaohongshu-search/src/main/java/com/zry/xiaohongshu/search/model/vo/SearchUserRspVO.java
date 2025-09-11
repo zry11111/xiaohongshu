@@ -42,5 +42,5 @@ public class SearchUserRspVO {
     /**
      * 粉丝总数
      */
-    private Integer fansTotal;
+    private String fansTotal;
 }
