@@ -12,7 +12,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$PROJECT_DIR$/../../../../maven-repository-new/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$PROJECT_DIR$/../../../../data/maven-repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
         <module name="xiaohongshu-oss-biz" />
         <module name="xiaohongshu-distributed-id-generator-biz" />
@@ -23,8 +23,8 @@
         <module name="xiaohongshu-common" />
         <module name="xiaohongshu-gateway" />
         <module name="xiaohongshu-note-biz" />
-        <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-search" />
+        <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-count-biz" />

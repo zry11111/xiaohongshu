@@ -19,6 +19,10 @@ public class SearchUserRspVO {
      * 昵称
      */
     private String nickname;
+    /**
+     * 昵称高亮
+    */
+    private String highlightNickname;
 
     /**
      * 头像

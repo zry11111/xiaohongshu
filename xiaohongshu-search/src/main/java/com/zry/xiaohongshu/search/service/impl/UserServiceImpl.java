@@ -1,5 +1,6 @@
 package com.zry.xiaohongshu.search.service.impl;
 
+import cn.hutool.core.collection.CollUtil;
 import com.google.common.collect.Lists;
 import com.zry.framework.common.reponse.PageResponse;
 import com.zry.xiaohongshu.search.index.UserIndex;
@@ -17,6 +18,7 @@ import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.sort.FieldSortBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.stereotype.Service;
@@ -31,20 +33,32 @@ public class UserServiceImpl implements UserService {
     private RestHighLevelClient restHighLevelClient;
     @Override
     public PageResponse<SearchUserRspVO> searchUser(SearchUserReqVO searchUserReqVO) {
+
         String keyword = searchUserReqVO.getKeyword();
         Integer pageNo = searchUserReqVO.getPageNo();
+
         SearchRequest searchRequest = new SearchRequest(UserIndex.NAME);
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+
         sourceBuilder.query(QueryBuilders.multiMatchQuery(
                 keyword,UserIndex.FIELD_USER_NICKNAME,UserIndex.FIELD_USER_XIAOHONGSHU_ID));
         FieldSortBuilder sortBuilder = new FieldSortBuilder(UserIndex.FIELD_USER_FANS_TOTAL).order(SortOrder.DESC);
+
         sourceBuilder.sort(sortBuilder);
+
         int PageSize  = 10;
         int from = (pageNo-1)*PageSize;
 
         sourceBuilder.from(from);
         sourceBuilder.size(PageSize);
 
+        HighlightBuilder highlightBuilder = new HighlightBuilder();
+        highlightBuilder.field(UserIndex.FIELD_USER_NICKNAME)
+                        .preTags("<strong>")
+                        .postTags("</strong>");
+
+        sourceBuilder.highlighter(highlightBuilder);
+        // 将构建的查询条件设置到searchRequest中
         searchRequest.source(sourceBuilder);
 
         // 返参 VO 集合
@@ -80,6 +94,11 @@ public class UserServiceImpl implements UserService {
                 Integer noteTotal = (Integer) sourceAsMap.get(UserIndex.FIELD_USER_NOTE_TOTAL);
                 Integer fansTotal = (Integer) sourceAsMap.get(UserIndex.FIELD_USER_FANS_TOTAL);
 
+                String highlightedNickname = null;
+                if (CollUtil.isNotEmpty(hit.getHighlightFields())
+                        && hit.getHighlightFields().containsKey(UserIndex.FIELD_USER_NICKNAME)) {
+                    highlightedNickname = hit.getHighlightFields().get(UserIndex.FIELD_USER_NICKNAME).fragments()[0].string();
+                }
                 // 构建 VO 实体类
                 SearchUserRspVO searchUserRspVO = SearchUserRspVO.builder()
                         .userId(userId)
@@ -88,6 +107,7 @@ public class UserServiceImpl implements UserService {
                         .xiaohongshuId(xiaohashuId)
                         .noteTotal(noteTotal)
                         .fansTotal(fansTotal)
+                        .highlightNickname(highlightedNickname)
                         .build();
                 searchUserRspVOS.add(searchUserRspVO);
             }
