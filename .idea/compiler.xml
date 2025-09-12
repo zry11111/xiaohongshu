@@ -15,28 +15,30 @@
           <entry name="$PROJECT_DIR$/../../../../data/maven-repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
         <module name="xiaohongshu-oss-biz" />
-        <module name="xiaohongshu-distributed-id-generator-biz" />
-        <module name="xiaohongshu-kv-biz" />
-        <module name="xiaohongshu-user-biz" />
-        <module name="xiaohongshu-search-biz" />
         <module name="xiaohongshu-count-api" />
-        <module name="xiaohongshu-user-relation-api" />
         <module name="xiaohongshu-common" />
-        <module name="xiaohongshu-gateway" />
         <module name="xiaohongshu-note-biz" />
         <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-search-api" />
         <module name="xiaohongshu-count-biz" />
-        <module name="xiaohongshu-user-relation-biz" />
+        <module name="xiaohongshu-comment-api" />
         <module name="xiaohongshu-spring-boot-starter-biz-context" />
-        <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
-        <module name="xiaohongshu-note-api" />
         <module name="xiaohongshu-data-align" />
-        <module name="xiaohongshu-spring-boot-starter-jackson" />
+        <module name="xiaohongshu-note-api" />
         <module name="xiaohongshu-oss-api" />
         <module name="xiaohongshu-distributed-id-generator-api" />
+        <module name="xiaohongshu-distributed-id-generator-biz" />
+        <module name="xiaohongshu-kv-biz" />
+        <module name="xiaohongshu-user-biz" />
+        <module name="xiaohongshu-search-biz" />
+        <module name="xiaohongshu-comment-biz" />
+        <module name="xiaohongshu-user-relation-api" />
+        <module name="xiaohongshu-gateway" />
+        <module name="xiaohongshu-user-relation-biz" />
+        <module name="xiaohongshu-spring-boot-starter-biz-operationlog" />
+        <module name="xiaohongshu-spring-boot-starter-jackson" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

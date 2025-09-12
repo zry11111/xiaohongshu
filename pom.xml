@@ -26,6 +26,7 @@
         <module>xiaohongshu-count</module>
         <module>xiaohongshu-data-align</module>
         <module>xiaohongshu-search</module>
+        <module>xiaohongshu-comment</module>
     </modules>
 
     <properties>
