@@ -1,0 +1,27 @@
+package com.zry.xiaohongshu.kv.biz.controller;
+
+import com.zry.framework.biz.operationlog.aspect.ApiOperationLog;
+import com.zry.framework.common.reponse.Response;
+import com.zry.xiaohongshu.kv.biz.service.CommentContentService;
+import com.zry.xiaohongshu.kv.dto.req.BatchAddCommentContentReqDTO;
+import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@Slf4j
+@RequestMapping("/kv")
+public class CommentContentController {
+    @Resource
+    private CommentContentService commentContentService;
+
+    @PostMapping(value = "/comment/content/batchAdd")
+    @ApiOperationLog(description = "批量存储评论内容")
+    public Response<?> batchAddCommentContent(@Validated @RequestBody BatchAddCommentContentReqDTO batchAddCommentContentReqDTO) {
+        return commentContentService.batchAddCommentContent(batchAddCommentContentReqDTO);
+    }
+}
