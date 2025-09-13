@@ -209,4 +209,15 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="selectByCommentIds" resultMap="BaseResultMap" parameterType="list">
+    select
+    id, level, parent_id, user_id
+    from t_comment
+    where id in
+    <foreach collection="commentIds" open="(" separator="," close=")" item="commentId">
+      #{commentId}
+    </foreach>
+  </select>
+
 </mapper>

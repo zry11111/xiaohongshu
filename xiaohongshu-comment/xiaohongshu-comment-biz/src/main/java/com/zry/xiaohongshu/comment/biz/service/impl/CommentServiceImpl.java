@@ -8,6 +8,7 @@ import com.zry.xiaohongshu.comment.biz.constant.MQConstants;
 import com.zry.xiaohongshu.comment.biz.model.dto.PublishCommentMqDTO;
 import com.zry.xiaohongshu.comment.biz.model.vo.PublishCommentReqVO;
 import com.zry.xiaohongshu.comment.biz.retry.SendMqRetryHelper;
+import com.zry.xiaohongshu.comment.biz.rpc.DistributedIdGeneratorRpcService;
 import com.zry.xiaohongshu.comment.biz.service.CommentService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +28,8 @@ public class CommentServiceImpl implements CommentService {
 
     @Resource
     private SendMqRetryHelper sendMqRetryHelper;
+    @Resource
+    private DistributedIdGeneratorRpcService distributedIdGeneratorRpcService;
     @Override
     public Response<?> publishComment(PublishCommentReqVO publishCommentReqVO) {
         // 评论正文
@@ -40,11 +43,13 @@ public class CommentServiceImpl implements CommentService {
 
         //
         Long creatorId = LoginUserContextHolder.getUserId();
+        String commentId = distributedIdGeneratorRpcService.generateCommentId();
         //构建消息体
         PublishCommentMqDTO publishCommentMqDTO = PublishCommentMqDTO.builder()
                 .noteId(publishCommentReqVO.getNoteId())
                 .content(content)
                 .imageUrl(imageUrl)
+                .commentId(Long.valueOf(commentId))
                 .replyCommentId(publishCommentReqVO.getReplyCommentId())
                 .createTime(LocalDateTime.now())
                 .creatorId(creatorId)

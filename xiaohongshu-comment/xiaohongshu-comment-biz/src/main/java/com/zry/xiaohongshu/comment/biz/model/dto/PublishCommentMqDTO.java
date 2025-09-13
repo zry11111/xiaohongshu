@@ -24,6 +24,10 @@ public class PublishCommentMqDTO {
      * 评论图片链接
      */
     private String imageUrl;
+    /**
+     * 评论 ID
+     */
+    private Long commentId;
 
     /**
      * 回复的哪个评论（评论 ID）

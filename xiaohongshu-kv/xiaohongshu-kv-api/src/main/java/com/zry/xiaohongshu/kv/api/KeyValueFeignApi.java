@@ -3,6 +3,7 @@ package com.zry.xiaohongshu.kv.api;
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.kv.constant.ApiConstants;
 import com.zry.xiaohongshu.kv.dto.req.AddNoteContentReqDTO;
+import com.zry.xiaohongshu.kv.dto.req.BatchAddCommentContentReqDTO;
 import com.zry.xiaohongshu.kv.dto.req.DeleteNoteContentReqDTO;
 import com.zry.xiaohongshu.kv.dto.req.FindNoteContentReqDTO;
 import com.zry.xiaohongshu.kv.dto.rsp.FindNoteContentRspDTO;
@@ -20,4 +21,6 @@ public interface KeyValueFeignApi {
     Response<FindNoteContentRspDTO> findNoteContent(@RequestBody FindNoteContentReqDTO findNoteContentReqDTO);
     @PostMapping(value = PREFIX + "/note/content/delete")
     Response<?> deleteNoteContent(@RequestBody DeleteNoteContentReqDTO deleteNoteContentReqDTO);
+    @PostMapping(value = PREFIX + "/comment/content/batchAdd")
+    Response<?> batchAddCommentContent(@RequestBody BatchAddCommentContentReqDTO batchAddCommentContentReqDTO);
 }
