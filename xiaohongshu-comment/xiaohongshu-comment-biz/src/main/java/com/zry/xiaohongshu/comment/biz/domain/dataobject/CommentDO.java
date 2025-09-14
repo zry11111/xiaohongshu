@@ -42,4 +42,5 @@ public class CommentDO {
 
     private LocalDateTime updateTime;
     private Long childCommentTotal;
+    private Long firstReplyCommentId;
 }

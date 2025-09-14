@@ -24,4 +24,7 @@ public interface CommentDOMapper {
     int batchInsert(@Param("comments") List<CommentBO> comments);
     int batchUpdateHeatByCommentIds(@Param("commentIds") List<Long> commentIds,
                                     @Param("commentHeatBOS") List<CommentHeatBO> commentHeatBOS);
+    CommentDO selectEarliestByParentId(Long parentId);
+    int updateFirstReplyCommentIdByPrimaryKey(@Param("firstReplyCommentId") Long firstReplyCommentId,
+                                              @Param("id") Long id);
 }
