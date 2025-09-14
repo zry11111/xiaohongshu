@@ -21,4 +21,5 @@ public interface CommentDOMapper {
 
     List<CommentDO> selectByCommentIds(@Param("commentIds") List<Long> commentIds);
     int batchInsert(@Param("comments") List<CommentBO> comments);
+
 }
