@@ -77,3 +77,7 @@ rocketmq:
   consumer:
     group: xiaohongshu_group
     pull-batch-size: 5 # 每次拉取的最大消息数
+
+logging:
+  level:
+    com.zry.xiaohongshu.comment.biz.domain.mapper: DEBUG # 设置日志级别为 DEBUG
