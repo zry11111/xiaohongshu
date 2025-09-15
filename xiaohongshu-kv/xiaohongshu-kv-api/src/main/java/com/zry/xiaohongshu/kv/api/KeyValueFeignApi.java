@@ -2,14 +2,14 @@ package com.zry.xiaohongshu.kv.api;
 
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.kv.constant.ApiConstants;
-import com.zry.xiaohongshu.kv.dto.req.AddNoteContentReqDTO;
-import com.zry.xiaohongshu.kv.dto.req.BatchAddCommentContentReqDTO;
-import com.zry.xiaohongshu.kv.dto.req.DeleteNoteContentReqDTO;
-import com.zry.xiaohongshu.kv.dto.req.FindNoteContentReqDTO;
+import com.zry.xiaohongshu.kv.dto.req.*;
+import com.zry.xiaohongshu.kv.dto.rsp.FindCommentContentRspDTO;
 import com.zry.xiaohongshu.kv.dto.rsp.FindNoteContentRspDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 @FeignClient(name = ApiConstants.SERVICE_NAME)
 
@@ -23,4 +23,6 @@ public interface KeyValueFeignApi {
     Response<?> deleteNoteContent(@RequestBody DeleteNoteContentReqDTO deleteNoteContentReqDTO);
     @PostMapping(value = PREFIX + "/comment/content/batchAdd")
     Response<?> batchAddCommentContent(@RequestBody BatchAddCommentContentReqDTO batchAddCommentContentReqDTO);
+    @PostMapping(value = PREFIX + "/comment/content/batchFind")
+    Response<List<FindCommentContentRspDTO>> batchFindCommentContent(@RequestBody BatchFindCommentContentReqDTO batchFindCommentContentReqDTO);
 }

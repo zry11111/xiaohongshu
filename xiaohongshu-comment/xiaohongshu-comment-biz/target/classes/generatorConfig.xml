@@ -52,7 +52,14 @@
 <!--               enableSelectByExample="false"-->
 <!--               selectByExampleQueryId="false"/>-->
         <!-- 需要生成的表-实体类 -->
-        <table tableName="t_comment_like" domainObjectName="CommentLikeDO"
+<!--        <table tableName="t_comment_like" domainObjectName="CommentLikeDO"-->
+<!--               enableCountByExample="false"-->
+<!--               enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"-->
+<!--               selectByExampleQueryId="false"/>-->
+        <!-- 需要生成的表-实体类 -->
+        <table tableName="t_note_count" domainObjectName="NoteCountDO"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

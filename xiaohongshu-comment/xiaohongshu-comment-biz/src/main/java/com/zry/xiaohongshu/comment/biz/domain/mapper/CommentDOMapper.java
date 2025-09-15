@@ -27,4 +27,14 @@ public interface CommentDOMapper {
     CommentDO selectEarliestByParentId(Long parentId);
     int updateFirstReplyCommentIdByPrimaryKey(@Param("firstReplyCommentId") Long firstReplyCommentId,
                                               @Param("id") Long id);
+    List<CommentDO> selectPageList(@Param("noteId") Long noteId,
+                                   @Param("offset") long offset,
+                                   @Param("pageSize") long pageSize);
+    List<CommentDO> selectTwoLevelCommentByIds(@Param("commentIds") List<Long> commentIds);
+    /**
+     * 查询热门评论
+     * @param noteId
+     * @return
+     */
+    List<CommentDO> selectHeatComments(Long noteId);
 }

@@ -17,8 +17,8 @@
         <module name="xiaohongshu-oss-biz" />
         <module name="xiaohongshu-count-api" />
         <module name="xiaohongshu-common" />
-        <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-note-biz" />
+        <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-search-api" />
@@ -32,8 +32,8 @@
         <module name="xiaohongshu-distributed-id-generator-biz" />
         <module name="xiaohongshu-kv-biz" />
         <module name="xiaohongshu-user-biz" />
-        <module name="xiaohongshu-search-biz" />
         <module name="xiaohongshu-comment-biz" />
+        <module name="xiaohongshu-search-biz" />
         <module name="xiaohongshu-user-relation-api" />
         <module name="xiaohongshu-gateway" />
         <module name="xiaohongshu-user-relation-biz" />
