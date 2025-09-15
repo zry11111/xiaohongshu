@@ -32,8 +32,8 @@
         <module name="xiaohongshu-distributed-id-generator-biz" />
         <module name="xiaohongshu-kv-biz" />
         <module name="xiaohongshu-user-biz" />
-        <module name="xiaohongshu-comment-biz" />
         <module name="xiaohongshu-search-biz" />
+        <module name="xiaohongshu-comment-biz" />
         <module name="xiaohongshu-user-relation-api" />
         <module name="xiaohongshu-gateway" />
         <module name="xiaohongshu-user-relation-biz" />
