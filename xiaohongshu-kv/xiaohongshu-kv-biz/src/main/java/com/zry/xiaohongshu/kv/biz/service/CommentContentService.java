@@ -2,6 +2,7 @@ package com.zry.xiaohongshu.kv.biz.service;
 
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.kv.dto.req.BatchAddCommentContentReqDTO;
+import com.zry.xiaohongshu.kv.dto.req.BatchFindCommentContentReqDTO;
 
 public interface CommentContentService {
     /**
@@ -10,4 +11,10 @@ public interface CommentContentService {
      * @return
      */
     Response<?> batchAddCommentContent(BatchAddCommentContentReqDTO batchAddCommentContentReqDTO);
+    /**
+     * 批量查询评论内容
+     * @param batchFindCommentContentReqDTO
+     * @return
+     */
+    Response<?> batchFindCommentContent(BatchFindCommentContentReqDTO batchFindCommentContentReqDTO);
 }
