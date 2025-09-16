@@ -8,4 +8,5 @@ public interface CommentService {
     Response<?> publishComment(PublishCommentReqVO publishCommentReqVO);
     PageResponse<FindCommentItemRspVO> findCommentPageList(FindCommentPageListReqVO findCommentPageListReqVO);
     PageResponse<FindChildCommentItemRspVO> findChildCommentPageList(FindChildCommentPageListReqVO findChildCommentPageListReqVO);
+    Response<?> likeComment(LikeCommentReqVO likeCommentReqVO);
 }

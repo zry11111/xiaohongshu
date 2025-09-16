@@ -43,11 +43,16 @@ public class RedisKeyConstants {
      * Hash Field: 点赞总数
      */
     public static final String FIELD_LIKE_TOTAL = "likeTotal";
+    /**
+     * Key 前缀：布隆过滤器 - 用户点赞的评论
+     */
+    private static final String BLOOM_COMMENT_LIKES_KEY_PREFIX = "bloom:comment:likes:";
+    public static String buildBloomCommentLikesKey(Long userId) {
+        return BLOOM_COMMENT_LIKES_KEY_PREFIX + userId;
+    }
 
     /**
      * 构建完整 KEY
-     * @param commentId
-     * @return
      */
     public static String buildHaveFirstReplyCommentKey(Long commentId) {
         return HAVE_FIRST_REPLY_COMMENT_KEY_PREFIX + commentId;
@@ -56,24 +61,18 @@ public class RedisKeyConstants {
 
     /**
      * 构建笔记评论总数完整 KEY
-     * @param noteId
-     * @return
      */
     public static String buildNoteCommentTotalKey(Long noteId) {
         return COUNT_COMMENT_TOTAL_KEY_PREFIX + noteId;
     }
     /**
      * 构建评论分页 ZSET 完整 KEY
-     * @param noteId
-     * @return
      */
     public static String buildCommentListKey(Long noteId) {
         return COMMENT_LIST_KEY_PREFIX + noteId;
     }
     /**
      * 构建评论详情完整 KEY
-     * @param commentId
-     * @return
      */
     public static String buildCommentDetailKey(Object commentId) {
         return COMMENT_DETAIL_KEY_PREFIX + commentId;
