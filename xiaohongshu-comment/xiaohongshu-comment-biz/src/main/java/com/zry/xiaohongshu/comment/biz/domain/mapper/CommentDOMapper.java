@@ -41,4 +41,5 @@ public interface CommentDOMapper {
     List<CommentDO> selectChildPageList(@Param("parentId") Long parentId,
                                         @Param("offset") long offset,
                                         @Param("pageSize") long pageSize);
+    List<CommentDO> selectCommentCountByIds(@Param("commentIds") List<Long> commentIds);
 }
