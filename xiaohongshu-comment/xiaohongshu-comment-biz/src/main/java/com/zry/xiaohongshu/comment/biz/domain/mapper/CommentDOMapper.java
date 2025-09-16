@@ -37,4 +37,8 @@ public interface CommentDOMapper {
      * @return
      */
     List<CommentDO> selectHeatComments(Long noteId);
+    Long selectChildCommentTotalById(Long commentId);
+    List<CommentDO> selectChildPageList(@Param("parentId") Long parentId,
+                                        @Param("offset") long offset,
+                                        @Param("pageSize") long pageSize);
 }
