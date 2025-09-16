@@ -1,6 +1,7 @@
 package com.zry.xiaohongshu.comment.biz.domain.mapper;
 
 import com.zry.xiaohongshu.comment.biz.domain.dataobject.CommentLikeDO;
+import com.zry.xiaohongshu.comment.biz.model.dto.LikeUnlikeCommentMqDTO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -20,4 +21,7 @@ public interface CommentLikeDOMapper {
     int selectCountByUserIdAndCommentId(@Param("userId") Long userId,
                                         @Param("commentId") Long commentId);
     List<CommentLikeDO> selectByUserId(@Param("userId") Long userId);
+    int batchDelete(@Param("unlikes") List<LikeUnlikeCommentMqDTO> unlikes);
+
+    int batchInsert(@Param("likes") List<LikeUnlikeCommentMqDTO> likes);
 }
