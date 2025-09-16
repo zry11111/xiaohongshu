@@ -24,6 +24,10 @@ public class RedisKeyConstants {
      * 评论维度计数 Key 前缀
      */
     private static final String COUNT_COMMENT_KEY_PREFIX = "count:comment:";
+    /**
+     * Key 前缀：二级评论分页 ZSET
+     */
+    private static final String CHILD_COMMENT_LIST_KEY_PREFIX = "comment:childList:";
 
     /**
      * Hash Field 键：评论总数
@@ -81,5 +85,8 @@ public class RedisKeyConstants {
      */
     public static String buildCountCommentKey(Long commentId) {
         return COUNT_COMMENT_KEY_PREFIX + commentId;
+    }
+    public static String buildChildCommentListKey(Long parentId) {
+        return CHILD_COMMENT_LIST_KEY_PREFIX + parentId;
     }
 }
