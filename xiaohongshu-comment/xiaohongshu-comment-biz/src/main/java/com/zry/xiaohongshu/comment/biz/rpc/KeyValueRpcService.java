@@ -5,15 +5,14 @@ import com.google.common.collect.Lists;
 import com.zry.framework.common.constant.DateConstants;
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.comment.biz.model.bo.CommentBO;
+import com.zry.xiaohongshu.comment.biz.model.vo.DeleteCommentReqVO;
 import com.zry.xiaohongshu.kv.api.KeyValueFeignApi;
-import com.zry.xiaohongshu.kv.dto.req.BatchAddCommentContentReqDTO;
-import com.zry.xiaohongshu.kv.dto.req.BatchFindCommentContentReqDTO;
-import com.zry.xiaohongshu.kv.dto.req.CommentContentReqDTO;
-import com.zry.xiaohongshu.kv.dto.req.FindCommentContentReqDTO;
+import com.zry.xiaohongshu.kv.dto.req.*;
 import com.zry.xiaohongshu.kv.dto.rsp.FindCommentContentRspDTO;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
@@ -76,6 +75,19 @@ public class KeyValueRpcService {
         }
 
         return response.getData();
+    }
+    public boolean deleteCommentContent(Long noteId, LocalDateTime createTime,String contentId){
+        DeleteCommentContentReqDTO deleteCommentContentReqDTO = DeleteCommentContentReqDTO.builder()
+                .contentId(contentId)
+                .yearMonth(createTime.format(DateConstants.DATE_FORMAT_Y_M))
+                .noteId(noteId)
+                .build();
+        Response<?> response = keyValueFeignApi.deleteCommentContent(deleteCommentContentReqDTO);
+        if (!response.isSuccess()) {
+            throw new RuntimeException("删除评论内容失败");
+        }
+
+        return true;
     }
 
 }

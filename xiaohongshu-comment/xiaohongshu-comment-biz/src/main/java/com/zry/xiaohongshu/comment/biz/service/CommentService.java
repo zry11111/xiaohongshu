@@ -10,4 +10,5 @@ public interface CommentService {
     PageResponse<FindChildCommentItemRspVO> findChildCommentPageList(FindChildCommentPageListReqVO findChildCommentPageListReqVO);
     Response<?> likeComment(LikeCommentReqVO likeCommentReqVO);
     Response<?> unlikeComment(UnLikeCommentReqVO unLikeCommentReqVO);
+    Response<?> deleteComment(DeleteCommentReqVO deleteCommentReqVO);
 }
