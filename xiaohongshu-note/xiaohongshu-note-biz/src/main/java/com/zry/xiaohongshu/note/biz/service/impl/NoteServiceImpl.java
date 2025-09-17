@@ -639,12 +639,12 @@ public class NoteServiceImpl implements NoteService {
                 if (count > 0) {
                     // 异步初始化布隆过滤器
                     threadPoolTaskExecutor.submit(() ->
-                            batchAddNoteLike2BloomAndExpire(userId, expireSeconds, rbitmapUserNoteLikeListKey));
+                            batchAddNoteLike2RBitmapAndExpire(userId, expireSeconds, rbitmapUserNoteLikeListKey));
                     throw new BizException(ResponseCodeEnum.NOTE_ALREADY_LIKED);
                 }
 
                 // 若目标笔记未被点赞，查询当前用户是否有点赞其他笔记，有则同步初始化布隆过滤器
-                batchAddNoteLike2BloomAndExpire(userId, expireSeconds, rbitmapUserNoteLikeListKey);
+                batchAddNoteLike2RBitmapAndExpire(userId, expireSeconds, rbitmapUserNoteLikeListKey);
 
                 // 若数据库中也没有点赞记录，说明该用户还未点赞过任何笔记
                 // 添加当前点赞笔记 ID 到 Roaring Bitmap 中
@@ -760,13 +760,14 @@ public class NoteServiceImpl implements NoteService {
         Long result = redisTemplate.execute(script, Collections.singletonList(rbitmapUserNoteLikeListKey), noteId);
 
         NoteUnlikeLuaResultEnum noteUnlikeLuaResultEnum = NoteUnlikeLuaResultEnum.valueOf(result);
-        switch (noteUnlikeLuaResultEnum){
-            case NOTE_LIKED -> {
-                // 异步初始化咆哮位图
+        switch (noteUnlikeLuaResultEnum) {
+            // Roaring Bitmap 不存在
+            case NOT_EXIST -> {
+                // 异步初始化 Roaring Bitmap
                 threadPoolTaskExecutor.submit(() -> {
                     // 保底1天+随机秒数
                     long expireSeconds = 60*60*24 + RandomUtil.randomInt(60*60*24);
-                    batchAddNoteLike2BloomAndExpire(userId, expireSeconds, rbitmapUserNoteLikeListKey);
+                    batchAddNoteLike2RBitmapAndExpire(userId, expireSeconds, rbitmapUserNoteLikeListKey);
                 });
 
                 // 从数据库中校验笔记是否被点赞
@@ -775,7 +776,8 @@ public class NoteServiceImpl implements NoteService {
                 // 未点赞，无法取消点赞操作，抛出业务异常
                 if (count == 0) throw new BizException(ResponseCodeEnum.NOTE_NOT_LIKED);
             }
-            case NOT_EXIST -> throw new BizException(ResponseCodeEnum.NOTE_NOT_LIKED);
+            // Roaring Bitmap 校验目标笔记未被点赞
+            case NOTE_NOT_LIKED -> throw new BizException(ResponseCodeEnum.NOTE_NOT_LIKED);
         }
 
         // 3. 删除 ZSET 中已点赞的笔记 ID
@@ -1190,7 +1192,7 @@ public class NoteServiceImpl implements NoteService {
         return findNoteDetailRspVO.getCreatorId();
     }
     //    异步初始化位图
-    private void batchAddNoteLike2BloomAndExpire(Long userId, long expireSeconds, String rbitmapUserNoteLikeListKey) {
+    private void batchAddNoteLike2RBitmapAndExpire(Long userId, long expireSeconds, String rbitmapUserNoteLikeListKey) {
         try {
             // 异步全量同步一下，并设置过期时间
             List<NoteLikeDO> noteLikeDOS = noteLikeDOMapper.selectByUserId(userId);

@@ -579,3 +579,51 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2025-09-17 18:28:28.196 [main] DEBUG c.z.x.u.b.d.m.P.selectAppEnabledList - ==> Parameters: 
 2025-09-17 18:28:28.199 [main] DEBUG c.z.x.u.b.d.m.P.selectAppEnabledList - <==      Total: 2
 2025-09-17 18:28:28.219 [main] INFO  c.z.x.u.biz.runner.PushRolePermissions2RedisRunner - ==> 服务启动，成功同步角色权限数据到 Redis 中...
+2025-09-17 18:30:44.833 [http-nio-8082-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-17 18:30:44.833 [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-17 18:30:44.835 [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-09-17 18:30:44.843 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-17 18:30:44.946 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据手机号查询用户信息], 入参: {"phone":"13068920712"}, 请求类: UserController, 请求方法: findByPhone =================================== 
+2025-09-17 18:30:44.947 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - ==>  Preparing: select id,password from t_user where phone = ?
+2025-09-17 18:30:44.948 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - ==> Parameters: 13068920712(String)
+2025-09-17 18:30:44.961 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.domain.mapper.UserDOMapper.selectByPhone - <==      Total: 1
+2025-09-17 18:30:44.965 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据手机号查询用户信息], 耗时: 20ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":100,"password":"$2a$10$iF9icYmcTydaqR9HbnQV9uf1lGxwYoGWvBXoEVrIa9kFiQGZ0X/bS"}} =================================== 
+2025-09-17 18:31:18.283 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-17 18:31:18.292 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:31:18.297 [http-nio-8082-exec-6] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - ==>  Preparing: select id, xiaohongshu_id, `password`, nickname, avatar, birthday, background_img, phone, sex, `status`, introduction, create_time, update_time, is_deleted from t_user where id = ?
+2025-09-17 18:31:18.299 [http-nio-8082-exec-6] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - ==> Parameters: 101(Long)
+2025-09-17 18:31:18.301 [http-nio-8082-exec-6] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - <==      Total: 0
+2025-09-17 18:31:18.306 [http-nio-8082-exec-6] WARN  c.z.x.user.biz.exception.GlobalExceptionHandler - /user/findById request fail, errorCode: USER-20007, errorMessage: 该用户不存在
+2025-09-17 18:31:21.738 [http-nio-8082-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-09-17 18:31:21.744 [http-nio-8082-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:31:21.754 [http-nio-8082-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 10ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-09-17 18:31:21.755 [http-nio-8082-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-09-17 18:31:23.535 [http-nio-8082-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-09-17 18:31:23.536 [http-nio-8082-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:31:23.539 [http-nio-8082-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-09-17 18:31:23.540 [http-nio-8082-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-09-17 18:31:25.254 [http-nio-8082-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-17 18:31:25.255 [http-nio-8082-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:31:25.258 [http-nio-8082-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-09-17 18:31:26.504 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-09-17 18:31:26.506 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:31:26.509 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-09-17 18:31:26.510 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-09-17 18:31:29.833 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-09-17 18:31:29.834 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:31:29.837 [http-nio-8082-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-09-17 18:31:29.837 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-09-17 18:31:32.761 [http-nio-8082-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-17 18:31:32.763 [http-nio-8082-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:31:32.766 [http-nio-8082-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-09-17 18:34:28.414 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-09-17 18:34:28.415 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:34:28.424 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - ==>  Preparing: select id, xiaohongshu_id, `password`, nickname, avatar, birthday, background_img, phone, sex, `status`, introduction, create_time, update_time, is_deleted from t_user where id = ?
+2025-09-17 18:34:28.430 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - ==> Parameters: 101(Long)
+2025-09-17 18:34:28.432 [http-nio-8082-exec-2] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - <==      Total: 0
+2025-09-17 18:34:28.435 [http-nio-8082-exec-2] WARN  c.z.x.user.biz.exception.GlobalExceptionHandler - /user/findById request fail, errorCode: USER-20007, errorMessage: 该用户不存在
+2025-09-17 18:34:28.438 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-09-17 18:34:32.785 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-09-17 18:34:32.788 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":101}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-17 18:34:32.793 [http-nio-8082-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 6ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-09-17 18:34:32.796 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
