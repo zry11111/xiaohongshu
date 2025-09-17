@@ -20,10 +20,14 @@ public class RedisKeyConstants {
      * 角色对应权限集合
      */
     private static final String ROLE_PERMISSIONS_KEY_PREFIX = "role:permissions:";
+    private static final String USER_PROFILE_KEY_PREFIX = "user:profile:";
     public static String buildRolePermissionsKey(String roleId) {
         return ROLE_PERMISSIONS_KEY_PREFIX + roleId;
     }
     public static String buildUserInfoKey(Long userId) {
         return USER_INFO_KEY_PREFIX + userId;
+    }
+    public static String buildUserProfileKey(Long userId) {
+        return USER_PROFILE_KEY_PREFIX + userId;
     }
 }
