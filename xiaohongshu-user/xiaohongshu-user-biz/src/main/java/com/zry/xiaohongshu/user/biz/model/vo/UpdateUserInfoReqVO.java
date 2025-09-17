@@ -1,5 +1,6 @@
 package com.zry.xiaohongshu.user.biz.model.vo;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +15,8 @@ import java.time.LocalDate;
 @Builder
 public class UpdateUserInfoReqVO {
 
-
+    @NotNull(message = "用户 ID 不能为空")
+    private Long userId;
     private MultipartFile avatar;
     private String nickname;
     private String xiaohongshuId;
