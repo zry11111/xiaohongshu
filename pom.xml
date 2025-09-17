@@ -15,7 +15,6 @@
         <module>xiaohongshu-auth</module>
         <!--    平台基础框架-->
         <module>xiaohongshu-framework</module>
-
         <module>xiaohongshu-gateway</module>
         <module>xiaohongshu-oss</module>
         <module>xiaohongshu-user</module>
@@ -348,6 +347,11 @@
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zry</groupId>
+                <artifactId>xiaohongshu-count-api</artifactId>
+                <version>${revision}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
