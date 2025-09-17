@@ -20,6 +20,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -27,7 +28,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
-
+@Component
 @RocketMQMessageListener(consumerGroup = "xiaohongshu_group_"+ MQConstants.TOPIC_LIKE_OR_UNLIKE,
         topic = MQConstants.TOPIC_LIKE_OR_UNLIKE)
 @Slf4j

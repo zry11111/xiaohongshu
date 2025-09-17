@@ -22,4 +22,5 @@ public interface CommentDOMapper {
      * @return
      */
     int updateChildCommentTotal(@Param("parentId") Long parentId, @Param("count") int count);
+    int updateLikeTotalByCommentId(@Param("commentId") Long commentId, @Param("count") Integer count);
 }
