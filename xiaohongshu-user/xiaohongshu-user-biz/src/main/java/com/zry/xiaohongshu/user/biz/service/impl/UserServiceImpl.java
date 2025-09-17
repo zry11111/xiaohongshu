@@ -478,6 +478,9 @@ public class UserServiceImpl implements UserService {
         if (StringUtils.isNotBlank(userProfileJson)) {
             FindUserProfileRspVO findUserProfileRspVO = JsonUtils.parseObject(userProfileJson, FindUserProfileRspVO.class);
             syncUserProfile2LocalCache(userId, findUserProfileRspVO);
+
+            // 如果是博主本人查看，保证计数的实时性
+            authorGetActualCountData(userId, findUserProfileRspVO);
             return Response.success(findUserProfileRspVO);
         }
 
@@ -496,8 +499,27 @@ public class UserServiceImpl implements UserService {
                 .introduction(userDO.getIntroduction())
                 .build();
         LocalDate birthday = userDO.getBirthday();
-        findUserProfileRspVO.setAge(Objects.isNull(birthday) ? 0 : DateUtils.calculateAge(birthday));
 
+        findUserProfileRspVO.setAge(Objects.isNull(birthday) ? 0 : DateUtils.calculateAge(birthday));
+        //调用计数服务
+        rpcCountServiceAndSetData(userId, findUserProfileRspVO);
+
+        // 异步同步到 Redis 中
+        syncUserProfile2Redis(userProfileRedisKey, findUserProfileRspVO);
+        // 异步同步到本地缓存
+        syncUserProfile2LocalCache(userId, findUserProfileRspVO);
+
+        return Response.success(findUserProfileRspVO);
+    }
+
+    // 如果是博主本人查看，保证计数的实时性
+    private void authorGetActualCountData(Long userId, FindUserProfileRspVO findUserProfileRspVO) {
+        if (Objects.equals(userId, LoginUserContextHolder.getUserId())) { // 如果是博主本人
+            rpcCountServiceAndSetData(userId, findUserProfileRspVO);
+        }
+    }
+
+    private void rpcCountServiceAndSetData(Long userId, FindUserProfileRspVO findUserProfileRspVO) {
         FindUserCountsByIdRspDTO findUserCountsByIdRspDTO = countRpcService.findUserCountById(userId);
 
         if (Objects.nonNull(findUserCountsByIdRspDTO)) {
@@ -514,14 +536,8 @@ public class UserServiceImpl implements UserService {
             findUserProfileRspVO.setLikeTotal(NumberUtils.formatNumberString(likeTotal));
             findUserProfileRspVO.setCollectTotal(NumberUtils.formatNumberString(collectTotal));
         }
-
-        // 异步同步到 Redis 中
-        syncUserProfile2Redis(userProfileRedisKey, findUserProfileRspVO);
-        // 异步同步到本地缓存
-        syncUserProfile2LocalCache(userId, findUserProfileRspVO);
-
-        return Response.success(findUserProfileRspVO);
     }
+
 
     private void syncUserProfile2LocalCache(Long userId, FindUserProfileRspVO findUserProfileRspVO) {
         threadPoolTaskExecutor.submit(() -> {
