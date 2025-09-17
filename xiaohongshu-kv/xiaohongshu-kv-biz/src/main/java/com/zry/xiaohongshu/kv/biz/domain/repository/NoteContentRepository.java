@@ -1,4 +1,4 @@
-package com.zry.xiaohongshu.kv.biz.repository;
+package com.zry.xiaohongshu.kv.biz.domain.repository;
 
 import com.zry.xiaohongshu.kv.biz.domain.dataobject.NoteContentDO;
 import org.springframework.data.cassandra.repository.CassandraRepository;

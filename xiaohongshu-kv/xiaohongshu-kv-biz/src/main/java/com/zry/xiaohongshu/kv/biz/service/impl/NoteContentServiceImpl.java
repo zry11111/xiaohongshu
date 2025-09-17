@@ -4,7 +4,7 @@ import com.zry.framework.common.exception.BizException;
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.kv.biz.domain.dataobject.NoteContentDO;
 import com.zry.xiaohongshu.kv.biz.enums.ResponseCodeEnum;
-import com.zry.xiaohongshu.kv.biz.repository.NoteContentRepository;
+import com.zry.xiaohongshu.kv.biz.domain.repository.NoteContentRepository;
 import com.zry.xiaohongshu.kv.biz.service.NoteContentService;
 import com.zry.xiaohongshu.kv.dto.req.AddNoteContentReqDTO;
 import com.zry.xiaohongshu.kv.dto.req.DeleteNoteContentReqDTO;

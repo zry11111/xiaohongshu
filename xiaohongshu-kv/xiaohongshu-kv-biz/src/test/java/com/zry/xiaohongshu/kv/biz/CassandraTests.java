@@ -1,7 +1,7 @@
 package com.zry.xiaohongshu.kv.biz;
 
 import com.zry.xiaohongshu.kv.biz.domain.dataobject.NoteContentDO;
-import com.zry.xiaohongshu.kv.biz.repository.NoteContentRepository;
+import com.zry.xiaohongshu.kv.biz.domain.repository.NoteContentRepository;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
