@@ -34,6 +34,12 @@ spring:
             - Path=/comment/**
           filters:
             - StripPrefix=1
+        - id: oss
+          uri: lb://xiaohongshu-oss
+          predicates:
+            - Path=/oss/**
+          filters:
+            - StripPrefix=1
   data:
     redis:
       database: 0 # Redis 数据库索引（默认为 0）

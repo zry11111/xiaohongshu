@@ -41,6 +41,7 @@ import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.assertj.core.util.Lists;
 import org.assertj.core.util.Sets;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.*;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
@@ -648,6 +649,13 @@ public class CommentServiceImpl implements CommentService {
         });
 
         return Response.success();
+    }
+
+    //删除本地缓存
+    @Override
+    public void deleteCommentLocalCache(Long commentId) {
+        // 后面会调用remove方法删除本地缓存 invalidate 使无效
+        LOCAL_CACHE.invalidate(commentId);
     }
 
     /**

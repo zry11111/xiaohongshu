@@ -11,4 +11,5 @@ public interface CommentService {
     Response<?> likeComment(LikeCommentReqVO likeCommentReqVO);
     Response<?> unlikeComment(UnLikeCommentReqVO unLikeCommentReqVO);
     Response<?> deleteComment(DeleteCommentReqVO deleteCommentReqVO);
+    void deleteCommentLocalCache(Long commentId);
 }

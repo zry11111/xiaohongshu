@@ -5,4 +5,4 @@ spring:
     active: dev
 
 storage:
-  type: aliyun
+  type: minio

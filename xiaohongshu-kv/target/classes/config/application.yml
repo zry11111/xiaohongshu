@@ -1,8 +1,0 @@
-server:
-  port: 8084
-spring:
-  profiles:
-    active: dev
-logging:
-  level:
-    com.zry.xiaohongshu.kv.biz.domain.mapper: DEBUG # 设置日志级别为 DEBUG

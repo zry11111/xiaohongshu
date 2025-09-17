@@ -104,6 +104,25 @@
     select note_id, create_time from t_note_like
     where user_id = #{userId} and status = 1 order by create_time desc limit #{limit}
   </select>
+  <insert id="insertOrUpdate" parameterType="com.zry.xiaohongshu.note.biz.domain.dataobject.NoteLikeDO">
+    INSERT INTO t_note_like (user_id, note_id, create_time, status)
+    VALUES (#{userId}, #{noteId}, #{createTime}, #{status})
+      ON DUPLICATE KEY UPDATE
+                         create_time = #{createTime}, status = #{status};
+  </insert>
+  <update id="update2UnlikeByUserIdAndNoteId" parameterType="com.zry.xiaohongshu.note.biz.domain.dataobject.NoteLikeDO">
+    update t_note_like set status = #{status}, create_time = #{createTime}
+    where user_id = #{userId} and note_id = #{noteId} and status = 1
+  </update>
 
+  <insert id="batchInsertOrUpdate" parameterType="list">
+    INSERT INTO t_note_like (user_id, note_id, status, create_time)
+    VALUES
+    <foreach item="item" collection="noteLikeDOS" separator=",">
+      (#{item.userId}, #{item.noteId}, #{item.status}, #{item.createTime})
+    </foreach>
+    ON DUPLICATE KEY UPDATE
+    status = VALUES(status)
+  </insert>
 
 </mapper>

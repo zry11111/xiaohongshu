@@ -3,6 +3,8 @@ package com.zry.xiaohongshu.comment.biz.enums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.Objects;
+
 @Getter
 @AllArgsConstructor
 public enum CommentLevelEnum {
@@ -11,7 +13,13 @@ public enum CommentLevelEnum {
     // 二级评论
     TWO(2),
     ;
-
     private final Integer code;
-
+    public static CommentLevelEnum valueOf(Integer code) {
+        for (CommentLevelEnum commentLevelEnum : CommentLevelEnum.values()) {
+            if (Objects.equals(code, commentLevelEnum.getCode())) {
+                return commentLevelEnum;
+            }
+        }
+        return null;
+    }
 }
