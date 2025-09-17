@@ -28,6 +28,10 @@ public class RedisKeyConstants {
      */
     public static final String R_BITMAP_USER_NOTE_LIKE_LIST_KEY = "rbitmap:note:likes:";
     /**
+     * Roaring Bitmap：用户笔记收藏 前缀
+     */
+    public static final String R_BITMAP_USER_NOTE_COLLECT_LIST_KEY = "rbitmap:note:collects:";
+    /**
      * 构建完整的笔记详情 KEY
      * @param noteId
      * @return
@@ -49,5 +53,9 @@ public class RedisKeyConstants {
     }
     public static String buildRBitmapUserNoteLikeListKey(Long userId) {
         return R_BITMAP_USER_NOTE_LIKE_LIST_KEY + userId;
+    }
+
+    public static String buildRBitmapUserNoteCollectListKey(Long userId) {
+        return R_BITMAP_USER_NOTE_COLLECT_LIST_KEY + userId;
     }
 }
