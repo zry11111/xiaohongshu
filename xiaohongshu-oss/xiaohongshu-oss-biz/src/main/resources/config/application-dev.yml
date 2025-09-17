@@ -4,6 +4,9 @@ storage:
     accessKey: zhaorenyi
     secretKey: 12345678
   aliyun-oss:
-    endpoint: http://47.236.36.111:9000
-    accessKey: zhaorenyi
-    secretKey: 12345678
+    # 地域节点
+    endpoint: https://oss-cn-guangzhou.aliyuncs.com
+    # 有访问权限的用户的 access-key-id
+    accessKey: LTAI5tCqthLFthWPqX4agHtL
+    # 有访问权限的用户的 access-key-Secret
+    secretKey: 2Tzr3XIlqyBFOE8XOWIYYX4JiLNtEK
