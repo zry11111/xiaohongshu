@@ -2,8 +2,8 @@ package com.zry.xiaohongshu.count.biz.controller;
 
 import com.zry.framework.biz.operationlog.aspect.ApiOperationLog;
 import com.zry.framework.common.reponse.Response;
-import com.zry.xiaohonghsu.count.dto.FindUserCountsByIdReqDTO;
-import com.zry.xiaohonghsu.count.dto.FindUserCountsByIdRspDTO;
+import com.zry.xiaohongshu.count.dto.FindUserCountsByIdReqDTO;
+import com.zry.xiaohongshu.count.dto.FindUserCountsByIdRspDTO;
 import com.zry.xiaohongshu.count.biz.service.UserCountService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;

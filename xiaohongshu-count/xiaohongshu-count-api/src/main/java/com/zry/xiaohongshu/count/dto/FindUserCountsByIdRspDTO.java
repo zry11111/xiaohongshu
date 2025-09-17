@@ -1,4 +1,4 @@
-package com.zry.xiaohonghsu.count.dto;
+package com.zry.xiaohongshu.count.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

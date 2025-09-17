@@ -1,4 +1,4 @@
-package com.zry.xiaohonghsu.count.dto;
+package com.zry.xiaohongshu.count.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

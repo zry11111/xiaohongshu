@@ -2,7 +2,9 @@ package com.zry.framework.common.util;
 
 import com.zry.framework.common.constant.DateConstants;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.time.ZoneOffset;
 import java.time.temporal.ChronoUnit;
 
@@ -49,6 +51,17 @@ public class DateUtils {
         } else {  // 如果是去年或更早
             return dateTime.format(DateConstants.DATE_FORMAT_Y_M_D);
         }
+    }
+
+    public static int calculateAge(LocalDate birthDate) {
+        // 获取当前日期
+        LocalDate currentDate = LocalDate.now();
+
+        // 计算出生日期到当前日期的 Period 对象
+        Period period = Period.between(birthDate, currentDate);
+
+        // 返回完整的年份（即年龄）
+        return period.getYears();
     }
 
 }

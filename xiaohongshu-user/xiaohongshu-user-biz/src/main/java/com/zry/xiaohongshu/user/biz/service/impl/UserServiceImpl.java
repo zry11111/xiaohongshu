@@ -11,9 +11,11 @@ import com.zry.framework.common.enums.DeletedEnum;
 import com.zry.framework.common.enums.StatusEnum;
 import com.zry.framework.common.exception.BizException;
 import com.zry.framework.common.reponse.Response;
+import com.zry.framework.common.util.DateUtils;
 import com.zry.framework.common.util.JsonUtils;
+import com.zry.framework.common.util.NumberUtils;
 import com.zry.framework.common.util.ParamUtils;
-import com.zry.xiaohongshu.oss.api.FileFeignApi;
+import com.zry.xiaohongshu.count.dto.FindUserCountsByIdRspDTO;
 import com.zry.xiaohongshu.user.biz.constant.RedisKeyConstants;
 import com.zry.xiaohongshu.user.biz.constant.RoleConstants;
 import com.zry.xiaohongshu.user.biz.domain.dataobject.RoleDO;
@@ -24,7 +26,10 @@ import com.zry.xiaohongshu.user.biz.domain.mapper.UserDOMapper;
 import com.zry.xiaohongshu.user.biz.domain.mapper.UserRoleDOMapper;
 import com.zry.xiaohongshu.user.biz.enums.ResponseCodeEnum;
 import com.zry.xiaohongshu.user.biz.enums.SexEnum;
+import com.zry.xiaohongshu.user.biz.model.vo.FindUserProfileReqVO;
+import com.zry.xiaohongshu.user.biz.model.vo.FindUserProfileRspVO;
 import com.zry.xiaohongshu.user.biz.model.vo.UpdateUserInfoReqVO;
+import com.zry.xiaohongshu.user.biz.rpc.CountRpcService;
 import com.zry.xiaohongshu.user.biz.rpc.DistributedIdGeneratorRpcService;
 import com.zry.xiaohongshu.user.biz.rpc.OssRpcService;
 import com.zry.xiaohongshu.user.biz.service.UserService;
@@ -33,10 +38,7 @@ import com.zry.xiaohongshu.user.dto.resp.FindUserByIdRspDTO;
 import com.zry.xiaohongshu.user.dto.resp.FindUserByPhoneRspDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.checkerframework.checker.nullness.qual.Nullable;
-import org.checkerframework.checker.units.qual.K;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -72,6 +74,8 @@ public class UserServiceImpl implements UserService {
     private RedisTemplate<String, Object> redisTemplate;
     @Resource
     private DistributedIdGeneratorRpcService distributedIdGeneratorRpcService;
+    @Resource
+    private CountRpcService countRpcService;
     /**
      * 用户信息本地缓存
      */
@@ -187,8 +191,6 @@ public class UserServiceImpl implements UserService {
         }
 
         // 否则注册新用户
-        // 获取全局自增的小哈书 ID
-//        Long xiaohongshuId = redisTemplate.opsForValue().increment(RedisKeyConstants.XIAOHONGSHU_ID_GENERATOR_KEY);
         String xiaohongshuId = distributedIdGeneratorRpcService.generateId();
         String userIdStr = distributedIdGeneratorRpcService.getUserId();
         Long userId = Long.valueOf(userIdStr);
@@ -397,5 +399,55 @@ public class UserServiceImpl implements UserService {
 
         return Response.success(findUserByIdRspDTOS);
 
+    }
+
+    @Override
+    public Response<FindUserProfileRspVO> findUserProfile(FindUserProfileReqVO findUserProfileReqVO) {
+        // 要查询的用户 ID
+        Long userId = findUserProfileReqVO.getUserId();
+
+        // 若入参中用户 ID 为空，则查询当前登录用户
+        if (Objects.isNull(userId)) {
+            userId = LoginUserContextHolder.getUserId();
+        }
+
+        // 优先查询缓存
+
+        // 查询数据库
+        UserDO userDO = userDOMapper.selectByPrimaryKey(userId);
+        if (Objects.isNull(userDO)) {
+            throw new BizException(ResponseCodeEnum.USER_NOT_FOUND);
+        }
+        // 构建返参 VO
+        FindUserProfileRspVO findUserProfileRspVO = FindUserProfileRspVO.builder()
+                .userId(userDO.getId())
+                .avatar(userDO.getAvatar())
+                .nickname(userDO.getNickname())
+                .xiaohongshuId(userDO.getXiaohongshuId())
+                .sex(userDO.getSex())
+                .introduction(userDO.getIntroduction())
+                .build();
+        LocalDate birthday = userDO.getBirthday();
+        findUserProfileRspVO.setAge(Objects.isNull(birthday) ? 0 : DateUtils.calculateAge(birthday));
+
+        FindUserCountsByIdRspDTO findUserCountsByIdRspDTO = countRpcService.findUserCountById(userId);
+
+        if (Objects.nonNull(findUserCountsByIdRspDTO)) {
+            Long fansTotal = findUserCountsByIdRspDTO.getFansTotal();
+            Long followingTotal = findUserCountsByIdRspDTO.getFollowingTotal();
+            Long likeTotal = findUserCountsByIdRspDTO.getLikeTotal();
+            Long collectTotal = findUserCountsByIdRspDTO.getCollectTotal();
+            Long noteTotal = findUserCountsByIdRspDTO.getNoteTotal();
+
+            findUserProfileRspVO.setFansTotal(NumberUtils.formatNumberString(fansTotal));
+            findUserProfileRspVO.setFollowingTotal(NumberUtils.formatNumberString(followingTotal));
+            findUserProfileRspVO.setLikeAndCollectTotal(NumberUtils.formatNumberString(likeTotal + collectTotal));
+            findUserProfileRspVO.setNoteTotal(NumberUtils.formatNumberString(noteTotal));
+            findUserProfileRspVO.setLikeTotal(NumberUtils.formatNumberString(likeTotal));
+            findUserProfileRspVO.setCollectTotal(NumberUtils.formatNumberString(collectTotal));
+        }
+
+
+        return Response.success(findUserProfileRspVO);
     }
 }
