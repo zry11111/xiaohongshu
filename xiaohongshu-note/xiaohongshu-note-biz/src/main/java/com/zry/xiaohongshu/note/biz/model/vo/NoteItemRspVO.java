@@ -29,4 +29,6 @@ public class NoteItemRspVO {
 
     private String likeTotal;
 
+    private Boolean isLiked;
+
 }

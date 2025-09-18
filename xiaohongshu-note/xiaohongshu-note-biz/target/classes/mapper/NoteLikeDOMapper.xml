@@ -125,4 +125,13 @@
     status = VALUES(status)
   </insert>
 
+  <select id="selectByUserIdAndNoteIds" resultMap="BaseResultMap" parameterType="map">
+    select note_id, user_id from t_note_like
+    where user_id = #{userId} and status = 1
+    and note_id in
+    <foreach collection="noteIds" item="noteId" open="(" separator="," close=")">
+      #{noteId}
+    </foreach>
+  </select>
+
 </mapper>

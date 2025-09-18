@@ -17,8 +17,8 @@
         <module name="xiaohongshu-oss-biz" />
         <module name="xiaohongshu-count-api" />
         <module name="xiaohongshu-common" />
-        <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-note-biz" />
+        <module name="xiaohongshu-user-api" />
         <module name="xiaohongshu-auth" />
         <module name="xiaohongshu-kv-api" />
         <module name="xiaohongshu-search-api" />

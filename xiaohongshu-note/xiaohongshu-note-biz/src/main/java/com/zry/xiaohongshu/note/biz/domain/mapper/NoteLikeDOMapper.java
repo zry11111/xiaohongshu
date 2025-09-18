@@ -24,4 +24,6 @@ public interface NoteLikeDOMapper {
     int insertOrUpdate(NoteLikeDO noteLikeDO);
     int update2UnlikeByUserIdAndNoteId(NoteLikeDO noteLikeDO);
     int batchInsertOrUpdate(@Param("noteLikeDOS") List<NoteLikeDO> noteLikeDOS);
+    List<NoteLikeDO> selectByUserIdAndNoteIds(@Param("userId") Long userId,
+                                              @Param("noteIds") List<Long> noteIds);
 }
