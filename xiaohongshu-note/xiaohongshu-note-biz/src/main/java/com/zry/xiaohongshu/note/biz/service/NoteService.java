@@ -16,4 +16,8 @@ public interface NoteService {
     Response<?> collectNote(CollectNoteReqVO collectNoteReqVO);
     Response<?> unCollectNote(UnCollectNoteReqVO unCollectNoteReqVO);
     Response<FindNoteIsLikedAndCollectedRspVO> isLikedAndCollectedData(FindNoteIsLikedAndCollectedReqVO findNoteIsLikedAndCollectedReqVO);
+    Response<FindPublishedNoteListRspVO> findPublishedNoteList(FindPublishedNoteListReqVO findPublishedNoteListReqVO);
+
 }
+
+

@@ -48,12 +48,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -1048,6 +1046,57 @@ public class NoteServiceImpl implements NoteService {
                 .isLiked(isLiked)
                 .isCollected(isCollected)
                 .build());
+    }
+
+    @Override
+    public Response<FindPublishedNoteListRspVO> findPublishedNoteList(FindPublishedNoteListReqVO findPublishedNoteListReqVO) {
+        // TODO: 优先查询缓存
+        Long userId = findPublishedNoteListReqVO.getUserId();
+        Long cursor = findPublishedNoteListReqVO.getCursor();
+//        RedisKeyConstants.bu
+
+        //缓存无，则查询数据库
+        List<NoteDO> noteDOS = noteDOMapper.selectPublishedNoteListByUserIdAndCursor(userId, cursor);
+        // 返参
+        FindPublishedNoteListRspVO findPublishedNoteListRspVO = null;
+        if (CollUtil.isNotEmpty(noteDOS)) {
+            //查询不为空，将do转为vo
+            List<NoteItemRspVO> noteVOS = noteDOS.stream().map(noteDO -> {
+                String cover = StringUtils.isNotBlank(noteDO.getImgUris()) ?
+                        StringUtils.split(noteDO.getImgUris(), ",")[0] : null;
+                NoteItemRspVO noteItemRspVO = NoteItemRspVO.builder()
+                        .noteId(noteDO.getId())
+                        .type(noteDO.getType())
+                        .creatorId(noteDO.getCreatorId())
+                        .cover(cover)
+                        .videoUri(noteDO.getVideoUri())
+                        .title(noteDO.getTitle())
+                        .build();
+                return noteItemRspVO;
+            }).toList();
+            // 调用用户服务，获取用户头像、昵称
+            //查询任意一条笔记的创建者ID
+            Optional<Long> creatorIdOptional = noteDOS.stream().map(NoteDO::getCreatorId).findAny();
+            FindUserByIdRspDTO findUserByIdRspDTO = userRpcService.findById(creatorIdOptional.get());
+            if (Objects.nonNull(findUserByIdRspDTO)) {
+                // 循环 VO 集合，分别设置头像、昵称
+                noteVOS.forEach(noteItemRspVO -> {
+                    noteItemRspVO.setAvatar(findUserByIdRspDTO.getAvatar());
+                    noteItemRspVO.setNickname(findUserByIdRspDTO.getNickName());
+                });
+            }
+            // TODO: Feign 调用计数服务，批量获取笔记点赞数
+
+            // 过滤出最早发布的笔记 ID，充当下一页的游标
+            Optional<Long> earliestNoteId = noteDOS.stream().map(NoteDO::getId).min(Long::compareTo);
+
+            findPublishedNoteListRspVO = FindPublishedNoteListRspVO.builder()
+                    .notes(noteVOS)
+                    .nextCursor(earliestNoteId.orElse(null))
+                    .build();
+        }
+
+        return Response.success(findPublishedNoteListRspVO);
     }
 
     private boolean checkNoteIsCollected(Long noteId, Long currUserId) {

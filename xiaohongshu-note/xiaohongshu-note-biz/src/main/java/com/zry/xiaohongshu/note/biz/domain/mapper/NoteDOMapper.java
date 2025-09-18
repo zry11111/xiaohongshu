@@ -1,6 +1,9 @@
 package com.zry.xiaohongshu.note.biz.domain.mapper;
 
 import com.zry.xiaohongshu.note.biz.domain.dataobject.NoteDO;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface NoteDOMapper {
     int deleteByPrimaryKey(Long id);
@@ -19,4 +22,7 @@ public interface NoteDOMapper {
     int selectCountByNoteId(Long noteId);
 
     Long selectCreatorIdByNoteId(Long noteId);
+
+    List<NoteDO> selectPublishedNoteListByUserIdAndCursor(@Param("creatorId") Long creatorId,
+                                                          @Param("cursor") Long cursor);
 }
