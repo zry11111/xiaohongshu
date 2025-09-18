@@ -389,3 +389,23 @@ Caused by: org.apache.rocketmq.remoting.exception.RemotingTimeoutException: wait
 2025-09-18 10:38:40.361 [main] INFO  c.z.x.user.biz.XiaohongshuUserBizApplication - Started XiaohongshuUserBizApplication in 10.847 seconds (process running for 11.719)
 2025-09-18 10:38:40.362 [main] INFO  c.z.x.u.biz.runner.PushRolePermissions2RedisRunner - ==> 服务启动，开始同步角色权限数据到 Redis 中...
 2025-09-18 10:38:40.646 [main] WARN  c.z.x.u.biz.runner.PushRolePermissions2RedisRunner - ==> 角色权限数据已经同步至 Redis 中，不再同步...
+2025-09-18 10:40:00.766 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-18 10:40:00.766 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-18 10:40:00.768 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-09-18 10:40:00.775 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:46:30.883 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:46:30.889 [http-nio-8082-exec-2] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 100, userInfo: {"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}
+2025-09-18 10:46:49.387 [http-nio-8082-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:46:49.389 [http-nio-8082-exec-4] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 100, userInfo: {"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}
+2025-09-18 10:46:51.990 [http-nio-8082-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:46:51.991 [http-nio-8082-exec-5] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 100, userInfo: {"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}
+2025-09-18 10:47:13.331 [http-nio-8082-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:47:13.333 [http-nio-8082-exec-6] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 100, userInfo: {"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}
+2025-09-18 10:48:04.586 [http-nio-8082-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:48:04.587 [http-nio-8082-exec-8] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 100, userInfo: {"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}
+2025-09-18 10:55:10.514 [http-nio-8082-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:55:10.515 [http-nio-8082-exec-10] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 100, userInfo: {"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}
+2025-09-18 10:57:33.264 [http-nio-8082-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:57:33.266 [http-nio-8082-exec-3] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 100, userInfo: {"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}
+2025-09-18 10:57:40.187 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:57:40.189 [http-nio-8082-exec-2] INFO  c.z.x.user.biz.service.impl.UserServiceImpl - ==> 从本地缓存中获取用户信息，id: 100, userInfo: {"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}

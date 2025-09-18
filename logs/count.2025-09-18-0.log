@@ -255,3 +255,9 @@
 2025-09-18 10:54:52.964 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohongshu registering service xiaohongshu-count with instance Instance{instanceId='null', ip='10.91.138.46', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
 2025-09-18 10:54:53.025 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohongshu-count 10.91.138.46:8090 register finished
 2025-09-18 10:54:53.299 [main] INFO  c.z.x.count.biz.XiaohongshuCountBizApplication - Started XiaohongshuCountBizApplication in 47.565 seconds (process running for 48.41)
+2025-09-18 10:55:10.577 [http-nio-8090-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-18 10:55:10.577 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-18 10:55:10.578 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-09-18 10:55:10.583 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:57:33.265 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 10:57:40.202 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
