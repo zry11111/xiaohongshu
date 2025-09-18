@@ -98,9 +98,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Response<?> updateUserInfo(UpdateUserInfoReqVO updateUserInfoReqVO) {
-        Long userId = updateUserInfoReqVO.getUserId();
-        Long currUserId = LoginUserContextHolder.getUserId();
-        if(!userId.equals(currUserId)){
+        // 这里修改逻辑
+//        Long userId = updateUserInfoReqVO.getUserId();
+        Long userId = LoginUserContextHolder.getUserId();
+        if(Objects.isNull(userId)){//用户只能修改自己的用户信息
             throw new BizException(ResponseCodeEnum.CANT_UPDATE_OTHER_USER_PROFILE);
         }
         UserDO userDO = new UserDO();

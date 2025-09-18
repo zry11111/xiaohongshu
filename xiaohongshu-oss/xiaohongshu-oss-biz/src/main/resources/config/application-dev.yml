@@ -5,7 +5,7 @@ storage:
     secretKey: 12345678
   aliyun-oss:
     # 地域节点
-    endpoint: https://oss-cn-guangzhou.aliyuncs.com
+    endpoint: oss-cn-guangzhou.aliyuncs.com
     # 有访问权限的用户的 access-key-id
     accessKey: LTAI5tCqthLFthWPqX4agHtL
     # 有访问权限的用户的 access-key-Secret
