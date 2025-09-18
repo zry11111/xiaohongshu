@@ -49,17 +49,19 @@ public class NoteCountServiceImpl implements NoteCountService {
             Integer likeTotal = currCountHash.get(0);
             Integer collectTotal = currCountHash.get(1);
             Integer commentTotal = currCountHash.get(2);
-            if (likeTotal != null && collectTotal != null && commentTotal != null) {
-                FindNoteCountsByIdRspDTO findNoteCountsByIdRspDTO = FindNoteCountsByIdRspDTO.builder()
-                        .noteId(noteId)
-                        .likeTotal(likeTotal.longValue())
-                        .collectTotal(collectTotal.longValue())
-                        .commentTotal(commentTotal.longValue())
-                        .build();
-                findNoteCountsByIdRspDTOS.add(findNoteCountsByIdRspDTO);
-            } else {
+            if (Objects.isNull(likeTotal) || Objects.isNull(collectTotal) || Objects.isNull(commentTotal)) {
                 missNoteIds.add(noteId);
             }
+
+            // 构建 DTO
+            FindNoteCountsByIdRspDTO findNoteCountsByIdRspDTO = FindNoteCountsByIdRspDTO.builder()
+                    .noteId(noteId)
+                    .likeTotal(Objects.nonNull(likeTotal) ? Long.valueOf(likeTotal) : null)
+                    .collectTotal(Objects.nonNull(collectTotal) ? Long.valueOf(collectTotal) : null)
+                    .commentTotal(Objects.nonNull(commentTotal) ? Long.valueOf(commentTotal) : null)
+                    .build();
+
+            findNoteCountsByIdRspDTOS.add(findNoteCountsByIdRspDTO);
         }
         if(CollUtil.isEmpty(missNoteIds)){
             return Response.success(findNoteCountsByIdRspDTOS);
@@ -81,12 +83,14 @@ public class NoteCountServiceImpl implements NoteCountService {
                 Long collectTotal = findNoteCountsByIdRspDTO.getCollectTotal();
                 Long commentTotal = findNoteCountsByIdRspDTO.getCommentTotal();
 
+                NoteCountDO noteCountDO = noteIdAndDOMap.get(noteId);
+
                 if (Objects.isNull(likeTotal))
-                    findNoteCountsByIdRspDTO.setLikeTotal(noteIdAndDOMap.get(noteId).getLikeTotal());
+                    findNoteCountsByIdRspDTO.setLikeTotal(Objects.nonNull(noteCountDO) ? noteCountDO.getLikeTotal() : 0);
                 if (Objects.isNull(collectTotal))
-                    findNoteCountsByIdRspDTO.setCollectTotal(noteIdAndDOMap.get(noteId).getCollectTotal());
+                    findNoteCountsByIdRspDTO.setCollectTotal(Objects.nonNull(noteCountDO) ? noteCountDO.getCollectTotal() : 0);
                 if (Objects.isNull(commentTotal))
-                    findNoteCountsByIdRspDTO.setCommentTotal(noteIdAndDOMap.get(noteId).getCommentTotal());
+                    findNoteCountsByIdRspDTO.setCommentTotal(Objects.nonNull(noteCountDO) ? noteCountDO.getCommentTotal() : 0);
             }
         }
         return Response.success(findNoteCountsByIdRspDTOS);
@@ -118,13 +122,16 @@ public class NoteCountServiceImpl implements NoteCountService {
                     NoteCountDO noteCountDO = noteIdAndDOMap.get(noteId);
 
                     if (Objects.isNull(likeTotal)) {
-                        countMap.put(RedisKeyConstants.FIELD_LIKE_TOTAL, noteCountDO.getLikeTotal());
+                        countMap.put(RedisKeyConstants.FIELD_LIKE_TOTAL,
+                                Objects.nonNull(noteCountDO) ? noteCountDO.getLikeTotal() : 0);
                     }
                     if (Objects.isNull(collectTotal)) {
-                        countMap.put(RedisKeyConstants.FIELD_COLLECT_TOTAL, noteCountDO.getCollectTotal());
+                        countMap.put(RedisKeyConstants.FIELD_COLLECT_TOTAL,
+                                Objects.nonNull(noteCountDO) ? noteCountDO.getCollectTotal() : 0);
                     }
                     if (Objects.isNull(commentTotal)) {
-                        countMap.put(RedisKeyConstants.FIELD_COMMENT_TOTAL, noteCountDO.getCommentTotal());
+                        countMap.put(RedisKeyConstants.FIELD_COMMENT_TOTAL,
+                                Objects.nonNull(noteCountDO) ? noteCountDO.getCommentTotal() : 0);
                     }
 
                     operations.opsForHash().putAll(noteCountHashKey, countMap);
