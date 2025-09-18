@@ -358,3 +358,6 @@ org.springframework.http.converter.HttpMessageNotReadableException: Required req
 2025-09-18 09:30:29.855 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[10.2.66.68:10911] result: true
 2025-09-18 09:30:32.872 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[10.2.66.68:10911] result: true
 2025-09-18 09:30:35.877 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[10.2.66.68:10911] result: true
+2025-09-18 09:30:40.068 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[10.2.66.68:10911] result: true
+2025-09-18 09:30:40.155 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[10.2.66.68:10911] result: true
+2025-09-18 09:30:43.003 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[10.2.66.68:10911] result: true

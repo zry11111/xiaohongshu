@@ -171,3 +171,15 @@ Caused by: org.apache.rocketmq.remoting.exception.RemotingTimeoutException: wait
 2025-09-18 09:26:38.952 [main] INFO  c.z.x.user.biz.XiaohongshuUserBizApplication - Started XiaohongshuUserBizApplication in 13.964 seconds (process running for 14.919)
 2025-09-18 09:26:38.952 [main] INFO  c.z.x.u.biz.runner.PushRolePermissions2RedisRunner - ==> 服务启动，开始同步角色权限数据到 Redis 中...
 2025-09-18 09:26:39.548 [main] WARN  c.z.x.u.biz.runner.PushRolePermissions2RedisRunner - ==> 角色权限数据已经同步至 Redis 中，不再同步...
+2025-09-18 09:29:44.371 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-18 09:29:44.372 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-18 09:29:44.374 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-09-18 09:29:44.390 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 09:29:44.540 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":100}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-18 09:29:44.593 [http-nio-8082-exec-1] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - ==>  Preparing: select id, xiaohongshu_id, `password`, nickname, avatar, birthday, background_img, phone, sex, `status`, introduction, create_time, update_time, is_deleted from t_user where id = ?
+2025-09-18 09:29:44.864 [http-nio-8082-exec-1] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - ==> Parameters: 100(Long)
+2025-09-18 09:29:44.914 [http-nio-8082-exec-1] DEBUG c.z.x.u.b.d.mapper.UserDOMapper.selectByPrimaryKey - <==      Total: 1
+2025-09-18 09:29:44.923 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 384ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}} =================================== 
+2025-09-18 09:30:18.305 [http-nio-8082-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-18 09:30:18.306 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [根据用户 ID 查询用户信息], 入参: {"id":100}, 请求类: UserController, 请求方法: findById =================================== 
+2025-09-18 09:30:18.326 [http-nio-8082-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [根据用户 ID 查询用户信息], 耗时: 18ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}} =================================== 
