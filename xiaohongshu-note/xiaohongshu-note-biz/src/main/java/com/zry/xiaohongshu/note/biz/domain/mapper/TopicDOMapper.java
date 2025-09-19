@@ -2,6 +2,8 @@ package com.zry.xiaohongshu.note.biz.domain.mapper;
 
 import com.zry.xiaohongshu.note.biz.domain.dataobject.TopicDO;
 
+import java.util.List;
+
 public interface TopicDOMapper {
     int deleteByPrimaryKey(Long id);
 
@@ -15,4 +17,5 @@ public interface TopicDOMapper {
 
     int updateByPrimaryKey(TopicDO record);
     String selectNameByPrimaryKey(Long id);
+    List<TopicDO> selectByLikeName(String keyword);
 }
