@@ -247,4 +247,29 @@
     order by create_time desc
     limit #{offset}, #{pageSize}
   </select>
+
+  <select id="selectPageListByCreatorId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_note where visible = 0 and status = 1
+    and creator_id = #{creatorId}
+    order by create_time desc
+    limit #{offset}, #{pageSize}
+  </select>
+
+  <select id="selectTotalCountByCreatorId" resultType="int">
+    select count(*) from t_note
+    where visible = 0 and status = 1 and creator_id = #{creatorId}
+    order by create_time desc
+  </select>
+
+  <select id="selectByNoteIds" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_note
+    where id in
+    <foreach collection="noteIds" item="noteId" open="(" separator="," close=")">
+      #{noteId}
+    </foreach>
+  </select>
 </mapper>

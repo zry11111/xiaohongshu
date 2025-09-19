@@ -31,4 +31,11 @@ public interface NoteDOMapper {
     List<NoteDO> selectPageList(@Param("channelId") Long channelId,
                                 @Param("offset") long offset,
                                 @Param("pageSize") long pageSize);
+    List<NoteDO> selectPageListByCreatorId(@Param("creatorId") Long creatorId,
+                                           @Param("offset") long offset,
+                                           @Param("pageSize") long pageSize);
+
+    int selectTotalCountByCreatorId(Long creatorId);
+
+    List<NoteDO> selectByNoteIds(@Param("noteIds") List<Long> noteIds);
 }

@@ -26,4 +26,10 @@ public interface NoteLikeDOMapper {
     int batchInsertOrUpdate(@Param("noteLikeDOS") List<NoteLikeDO> noteLikeDOS);
     List<NoteLikeDO> selectByUserIdAndNoteIds(@Param("userId") Long userId,
                                               @Param("noteIds") List<Long> noteIds);
+
+    int selectTotalCountByUserId(@Param("userId") Long userId);
+
+    List<Long> selectPageListByUserId(@Param("userId") Long userId,
+                                      @Param("offset") long offset,
+                                      @Param("pageSize") long pageSize);
 }

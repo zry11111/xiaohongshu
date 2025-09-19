@@ -263,3 +263,18 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2025-09-19 11:02:40.942 [main] INFO  c.z.x.user.biz.XiaohongshuUserBizApplication - Started XiaohongshuUserBizApplication in 11.033 seconds (process running for 11.901)
 2025-09-19 11:02:40.943 [main] INFO  c.z.x.u.biz.runner.PushRolePermissions2RedisRunner - ==> 服务启动，开始同步角色权限数据到 Redis 中...
 2025-09-19 11:02:41.246 [main] WARN  c.z.x.u.biz.runner.PushRolePermissions2RedisRunner - ==> 角色权限数据已经同步至 Redis 中，不再同步...
+2025-09-19 11:04:15.875 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-19 11:04:15.875 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-19 11:04:15.877 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-09-19 11:04:15.891 [http-nio-8082-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-19 11:04:16.039 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [批量查询用户信息], 入参: {"ids":[101,100]}, 请求类: UserController, 请求方法: findByIds =================================== 
+2025-09-19 11:04:16.140 [http-nio-8082-exec-1] DEBUG c.z.x.u.biz.domain.mapper.UserDOMapper.selectByIds - ==>  Preparing: select id,nickname,avatar,introduction from t_user where status = 0 and is_deleted = 0 and id in ( ? )
+2025-09-19 11:04:16.418 [http-nio-8082-exec-1] DEBUG c.z.x.u.biz.domain.mapper.UserDOMapper.selectByIds - ==> Parameters: 101(Long)
+2025-09-19 11:04:16.449 [http-nio-8082-exec-1] DEBUG c.z.x.u.biz.domain.mapper.UserDOMapper.selectByIds - <==      Total: 0
+2025-09-19 11:04:16.454 [http-nio-8082-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [批量查询用户信息], 耗时: 416ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}]} =================================== 
+2025-09-19 11:05:36.094 [http-nio-8082-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-09-19 11:05:36.096 [http-nio-8082-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [批量查询用户信息], 入参: {"ids":[101,100]}, 请求类: UserController, 请求方法: findByIds =================================== 
+2025-09-19 11:05:36.100 [http-nio-8082-exec-4] DEBUG c.z.x.u.biz.domain.mapper.UserDOMapper.selectByIds - ==>  Preparing: select id,nickname,avatar,introduction from t_user where status = 0 and is_deleted = 0 and id in ( ? )
+2025-09-19 11:05:36.101 [http-nio-8082-exec-4] DEBUG c.z.x.u.biz.domain.mapper.UserDOMapper.selectByIds - ==> Parameters: 101(Long)
+2025-09-19 11:05:36.102 [http-nio-8082-exec-4] DEBUG c.z.x.u.biz.domain.mapper.UserDOMapper.selectByIds - <==      Total: 0
+2025-09-19 11:05:36.103 [http-nio-8082-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [批量查询用户信息], 耗时: 7ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"id":100,"nickName":"稚生","avatar":"https://my-xiaohongshu-oss.https://oss-cn-guangzhou.aliyuncs.com/e1fcba4b3ba4441db5886a915c1c9b9c.webp","introduction":null}]} =================================== 
