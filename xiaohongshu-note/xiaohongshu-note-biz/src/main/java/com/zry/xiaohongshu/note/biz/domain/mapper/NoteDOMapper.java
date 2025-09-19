@@ -25,4 +25,10 @@ public interface NoteDOMapper {
 
     List<NoteDO> selectPublishedNoteListByUserIdAndCursor(@Param("creatorId") Long creatorId,
                                                           @Param("cursor") Long cursor);
+
+    int selectTotalCount(Long channelId);
+
+    List<NoteDO> selectPageList(@Param("channelId") Long channelId,
+                                @Param("offset") long offset,
+                                @Param("pageSize") long pageSize);
 }

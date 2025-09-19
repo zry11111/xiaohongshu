@@ -41,4 +41,6 @@ public class NoteDO {
     private Integer status;
 
     private String contentUuid;
+
+    private Long channelId;
 }
