@@ -13,12 +13,14 @@ import com.zry.framework.common.reponse.Response;
 import com.zry.framework.common.util.DateUtils;
 import com.zry.framework.common.util.JsonUtils;
 import com.zry.framework.common.util.NumberUtils;
+import com.zry.xiaohongshu.count.dto.FindNoteCountByIdRspDTO;
 import com.zry.xiaohongshu.count.dto.FindNoteCountsByIdRspDTO;
 import com.zry.xiaohongshu.note.biz.constant.MQConstants;
 import com.zry.xiaohongshu.note.biz.constant.RedisKeyConstants;
 import com.zry.xiaohongshu.note.biz.domain.dataobject.NoteCollectionDO;
 import com.zry.xiaohongshu.note.biz.domain.dataobject.NoteDO;
 import com.zry.xiaohongshu.note.biz.domain.dataobject.NoteLikeDO;
+import com.zry.xiaohongshu.note.biz.domain.dataobject.TopicDO;
 import com.zry.xiaohongshu.note.biz.domain.mapper.NoteCollectionDOMapper;
 import com.zry.xiaohongshu.note.biz.domain.mapper.NoteDOMapper;
 import com.zry.xiaohongshu.note.biz.domain.mapper.NoteLikeDOMapper;
@@ -252,9 +254,17 @@ public class NoteServiceImpl implements NoteService {
         String findNoteDetailRspVOStrLocalCache = LOCAL_CACHE.getIfPresent(noteId);
         if (StringUtils.isNotBlank(findNoteDetailRspVOStrLocalCache)) {
             FindNoteDetailRspVO findNoteDetailRspVO = JsonUtils.parseObject(findNoteDetailRspVOStrLocalCache, FindNoteDetailRspVO.class);
+
+            if (Objects.isNull(findNoteDetailRspVO)) {
+                return Response.success(null);
+            }
             log.info("==> 命中了本地缓存；{}", findNoteDetailRspVOStrLocalCache);
             // 可见性校验
             checkNoteVisibleFromVO(userId, findNoteDetailRspVO);
+
+            // 设置笔记计数
+            getAndSetCount(noteId, findNoteDetailRspVO);
+
             return Response.success(findNoteDetailRspVO);
         }
 
@@ -274,9 +284,13 @@ public class NoteServiceImpl implements NoteService {
             // 可见性校验
             checkNoteVisibleFromVO(userId, findNoteDetailRspVO);
 
+            // 设置笔记计数
+            getAndSetCount(noteId, findNoteDetailRspVO);
+
             return Response.success(findNoteDetailRspVO);
         }
 
+        // 若 Redis 缓存中获取不到，则走数据库查询
         // 查询笔记
         NoteDO noteDO = noteDOMapper.selectByPrimaryKey(noteId);
 
@@ -297,9 +311,9 @@ public class NoteServiceImpl implements NoteService {
 
         // 并发查询优化
         // RPC: 调用用户服务
-        Long creatorId = noteDO.getCreatorId();
+        Long creatorId = noteDO.getCreatorId(); // 笔记发布者 ID
         CompletableFuture<FindUserByIdRspDTO> userResultFuture = CompletableFuture
-                .supplyAsync(() -> userRpcService.findById(creatorId),threadPoolTaskExecutor);
+                .supplyAsync(() -> userRpcService.findById(creatorId), threadPoolTaskExecutor);
 
         // RPC: 调用 K-V 存储服务获取内容
         CompletableFuture<String> contentResultFuture = CompletableFuture.completedFuture(null);
@@ -308,13 +322,18 @@ public class NoteServiceImpl implements NoteService {
                     .supplyAsync(() -> keyValueRpcService.findNoteContent(noteDO.getContentUuid()), threadPoolTaskExecutor);
         }
 
+        // RPC: 调用计数服务，获取笔记计数数据
+        CompletableFuture<FindNoteCountByIdRspDTO> countResultFuture = CompletableFuture.supplyAsync(() ->
+                countRpcService.findNoteCountById(noteId), threadPoolTaskExecutor);
+
         CompletableFuture<String> finalContentResultFuture = contentResultFuture;
         CompletableFuture<FindNoteDetailRspVO> resultFuture = CompletableFuture
-                .allOf(userResultFuture, contentResultFuture)
+                .allOf(userResultFuture, contentResultFuture, countResultFuture)
                 .thenApply(s -> {
                     // 获取 Future 返回的结果
                     FindUserByIdRspDTO findUserByIdRspDTO = userResultFuture.join();
                     String content = finalContentResultFuture.join();
+                    FindNoteCountByIdRspDTO findNoteCountByIdRspDTO = countResultFuture.join();
 
                     // 笔记类型
                     Integer noteType = noteDO.getType();
@@ -328,6 +347,22 @@ public class NoteServiceImpl implements NoteService {
                         imgUris = List.of(imgUrisStr.split(","));
                     }
 
+                    // 批量查询话题
+                    String topicIdsStr = noteDO.getTopicIds();
+                    List<FindTopicRspVO> findTopicRspVOS = null;
+                    if (StringUtils.isNotBlank(topicIdsStr)) {
+                        List<Long> topicIds = Arrays.stream(topicIdsStr.split(","))
+                                .map(Long::valueOf)
+                                .toList();
+
+                        List<TopicDO> topicDOS = topicDOMapper.selectByTopicIdIn(topicIds);
+                        findTopicRspVOS = topicDOS.stream().map(topicDO -> FindTopicRspVO.builder()
+                                .id(topicDO.getId())
+                                .name(topicDO.getName())
+                                .build()).toList();
+                    }
+
+
                     // 构建返参 VO 实体类
                     return FindNoteDetailRspVO.builder()
                             .id(noteDO.getId())
@@ -335,14 +370,18 @@ public class NoteServiceImpl implements NoteService {
                             .title(noteDO.getTitle())
                             .content(content)
                             .imgUris(imgUris)
-                            .topicId(noteDO.getTopicId())
-                            .topicName(noteDO.getTopicName())
+                            // .topicId(noteDO.getTopicId())
+                            // .topicName(noteDO.getTopicName())
+                            .topics(findTopicRspVOS)
                             .creatorId(noteDO.getCreatorId())
                             .creatorName(findUserByIdRspDTO.getNickName())
                             .avatar(findUserByIdRspDTO.getAvatar())
                             .videoUri(noteDO.getVideoUri())
-                            .updateTime(noteDO.getUpdateTime())
+                            .updateTime(DateUtils.parse2DateStr(noteDO.getUpdateTime()))
                             .visible(noteDO.getVisible())
+                            .likeTotal(Objects.isNull(findNoteCountByIdRspDTO) ? "0" : NumberUtils.formatNumberString(findNoteCountByIdRspDTO.getLikeTotal()))
+                            .collectTotal(Objects.isNull(findNoteCountByIdRspDTO) ? "0" : NumberUtils.formatNumberString(findNoteCountByIdRspDTO.getCollectTotal()))
+                            .commentTotal(Objects.isNull(findNoteCountByIdRspDTO) ? "0" : NumberUtils.formatNumberString(findNoteCountByIdRspDTO.getCommentTotal()))
                             .build();
 
                 });
@@ -360,6 +399,29 @@ public class NoteServiceImpl implements NoteService {
 
         return Response.success(findNoteDetailRspVO);
     }
+
+    private void getAndSetCount(Long noteId, FindNoteDetailRspVO findNoteDetailRspVO) {
+        String noteCountKey = RedisKeyConstants.buildNoteCountKey(noteId);
+        List<Object> counts = redisTemplate.opsForHash()
+                .multiGet(noteCountKey, Arrays.asList(RedisKeyConstants.FIELD_LIKE_TOTAL,
+                        RedisKeyConstants.FIELD_COLLECT_TOTAL,
+                        RedisKeyConstants.FIELD_COMMENT_TOTAL));
+
+        boolean hasNull = counts.stream().anyMatch(Objects::isNull);
+
+        // 调用计数服务获取
+        if (hasNull) {
+            FindNoteCountByIdRspDTO findNoteCountByIdRspDTO = countRpcService.findNoteCountById(noteId);
+            findNoteDetailRspVO.setLikeTotal(Objects.isNull(findNoteCountByIdRspDTO) ? "0" : NumberUtils.formatNumberString(findNoteCountByIdRspDTO.getLikeTotal()));
+            findNoteDetailRspVO.setCollectTotal(Objects.isNull(findNoteCountByIdRspDTO) ? "0" : NumberUtils.formatNumberString(findNoteCountByIdRspDTO.getCollectTotal()));
+            findNoteDetailRspVO.setCommentTotal(Objects.isNull(findNoteCountByIdRspDTO) ? "0" : NumberUtils.formatNumberString(findNoteCountByIdRspDTO.getCommentTotal()));
+        } else {
+            findNoteDetailRspVO.setLikeTotal(NumberUtils.formatNumberString(Long.parseLong(counts.get(0).toString())));
+            findNoteDetailRspVO.setCollectTotal(NumberUtils.formatNumberString(Long.parseLong(counts.get(1).toString())));
+            findNoteDetailRspVO.setCommentTotal(NumberUtils.formatNumberString(Long.parseLong(counts.get(2).toString())));
+        }
+    }
+
     @Transactional(rollbackFor = Exception.class)
     @Override
     public Response<?> updateNote(UpdateNoteReqVO updateNoteReqVO) {

@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.ZoneOffset;
 import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
 public class DateUtils {
 
@@ -64,4 +65,10 @@ public class DateUtils {
         return period.getYears();
     }
 
+    public static String parse2DateStr(LocalDateTime time) {
+        if (Objects.isNull(time))
+            return null;
+
+        return time.format(DateConstants.DATE_FORMAT_Y_M_D);
+    }
 }

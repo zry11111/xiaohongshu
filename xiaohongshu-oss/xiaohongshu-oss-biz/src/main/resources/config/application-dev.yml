@@ -10,3 +10,9 @@ storage:
     accessKey: LTAI5tCqthLFthWPqX4agHtL
     # 有访问权限的用户的 access-key-Secret
     secretKey: 2Tzr3XIlqyBFOE8XOWIYYX4JiLNtEK
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB      # 单个文件最大大小
+      max-request-size: 100MB  # 整个请求最大大小
+      enabled: true            # 启用文件上传        # 启用文件上传

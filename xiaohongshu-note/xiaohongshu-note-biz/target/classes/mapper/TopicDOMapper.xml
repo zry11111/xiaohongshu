@@ -99,4 +99,12 @@
     select id, name from t_topic
     WHERE name LIKE CONCAT('%',#{keyword}, '%') and is_deleted = 0 limit 50
   </select>
+
+  <select id="selectByTopicIdIn" resultMap="BaseResultMap">
+    select id, name from t_topic
+    where id in
+    <foreach collection="list" item="topicId" open="(" separator="," close=")">
+      #{topicId}
+    </foreach>
+  </select>
 </mapper>

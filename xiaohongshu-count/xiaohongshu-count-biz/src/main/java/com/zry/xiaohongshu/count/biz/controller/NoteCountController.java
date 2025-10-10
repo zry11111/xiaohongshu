@@ -3,6 +3,8 @@ package com.zry.xiaohongshu.count.biz.controller;
 import com.zry.framework.biz.operationlog.aspect.ApiOperationLog;
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.count.biz.service.NoteCountService;
+import com.zry.xiaohongshu.count.dto.FindNoteCountByIdReqDTO;
+import com.zry.xiaohongshu.count.dto.FindNoteCountByIdRspDTO;
 import com.zry.xiaohongshu.count.dto.FindNoteCountsByIdRspDTO;
 import com.zry.xiaohongshu.count.dto.FindNoteCountsByIdsReqDTO;
 import jakarta.annotation.Resource;
@@ -27,6 +29,11 @@ public class NoteCountController {
     @ApiOperationLog(description = "批量获取笔记计数数据")
     public Response<List<FindNoteCountsByIdRspDTO>> findNotesCountData(@Validated @RequestBody FindNoteCountsByIdsReqDTO findNoteCountsByIdsReqDTO) {
         return noteCountService.findNotesCountData(findNoteCountsByIdsReqDTO);
+    }
+    @PostMapping(value = "/note/data")
+    @ApiOperationLog(description = "获取笔记计数数据")
+    public Response<FindNoteCountByIdRspDTO> findNoteCountData(@Validated @RequestBody FindNoteCountByIdReqDTO findNoteCountByIdReqDTO) {
+        return noteCountService.findNoteCountData(findNoteCountByIdReqDTO);
     }
 
 }

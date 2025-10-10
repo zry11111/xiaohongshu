@@ -2,10 +2,7 @@ package com.zry.xiaohongshu.count.api;
 
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.count.constant.ApiConstants;
-import com.zry.xiaohongshu.count.dto.FindNoteCountsByIdRspDTO;
-import com.zry.xiaohongshu.count.dto.FindNoteCountsByIdsReqDTO;
-import com.zry.xiaohongshu.count.dto.FindUserCountsByIdReqDTO;
-import com.zry.xiaohongshu.count.dto.FindUserCountsByIdRspDTO;
+import com.zry.xiaohongshu.count.dto.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,4 +18,6 @@ public interface CountFeignApi {
     Response<FindUserCountsByIdRspDTO> findUserCount(@RequestBody FindUserCountsByIdReqDTO findUserCountsByIdReqDTO);
     @PostMapping(value = PREFIX + "/notes/data")
     Response<List<FindNoteCountsByIdRspDTO>> findNotesCount(@RequestBody FindNoteCountsByIdsReqDTO findNoteCountsByIdsReqDTO);
+    @PostMapping(value = PREFIX + "/note/data")
+    Response<FindNoteCountByIdRspDTO> findNoteCount(@RequestBody FindNoteCountByIdReqDTO findNoteCountByIdReqDTO);
 }

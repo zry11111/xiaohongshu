@@ -24,9 +24,10 @@ public class FindNoteDetailRspVO {
 
     private List<String> imgUris;
 
-    private Long topicId;
-
-    private String topicName;
+    /**
+     * 话题集合
+     */
+    List<FindTopicRspVO> topics;
 
     private Long creatorId;
 
@@ -39,11 +40,14 @@ public class FindNoteDetailRspVO {
     /**
      * 编辑时间
      */
-    private LocalDateTime updateTime;
+    private String updateTime;
 
     /**
      * 是否可见
      */
     private Integer visible;
 
+    private String likeTotal;
+    private String collectTotal;
+    private String commentTotal;
 }

@@ -43,4 +43,6 @@ public class NoteDO {
     private String contentUuid;
 
     private Long channelId;
+
+    private String topicIds;
 }

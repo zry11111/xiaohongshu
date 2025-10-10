@@ -113,6 +113,10 @@ public class ProfileServiceImpl implements ProfileService {
             }
         }
 
+        noteDOS = noteDOS.stream()
+                .filter(Objects::nonNull)
+                .toList();
+
         if (CollUtil.isNotEmpty(noteDOS)) {
             List<Long> creatorIds = noteDOS.stream().map(NoteDO::getCreatorId).toList();
 

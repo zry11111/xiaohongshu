@@ -115,5 +115,9 @@
     </foreach>
   </select>
 
+  <select id="selectByNoteId" resultMap="BaseResultMap">
+    select note_id, like_total, collect_total, comment_total
+    from t_note_count where note_id = #{noteId}
+  </select>
 
 </mapper>

@@ -18,4 +18,6 @@ public interface TopicDOMapper {
     int updateByPrimaryKey(TopicDO record);
     String selectNameByPrimaryKey(Long id);
     List<TopicDO> selectByLikeName(String keyword);
+
+    List<TopicDO> selectByTopicIdIn(List<Long> topicIds);
 }

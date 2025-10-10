@@ -33,6 +33,26 @@ public class RedisKeyConstants {
     public static final String R_BITMAP_USER_NOTE_COLLECT_LIST_KEY = "rbitmap:note:collects:";
     private static final String PUBLISHED_NOTE_LIST_KEY = "note:published:list:";
     /**
+     * 笔记计数 KEY 前缀
+     */
+    public static final String NOTE_COUNT_KEY = "count:note:";
+
+    /**
+     * Hash Field: 点赞总数
+     */
+    public static final String FIELD_LIKE_TOTAL = "likeTotal";
+
+    /**
+     * Hash Field: 收藏总数
+     */
+    public static final String FIELD_COLLECT_TOTAL = "collectTotal";
+
+    /**
+     * Hash Field: 评论总数
+     */
+    public static final String FIELD_COMMENT_TOTAL = "commentTotal";
+
+    /**
      * 构建完整的笔记详情 KEY
      * @param noteId
      * @return
@@ -63,4 +83,7 @@ public class RedisKeyConstants {
         return PUBLISHED_NOTE_LIST_KEY + userId;
     }
 
+    public static String buildNoteCountKey(Long noteId) {
+        return NOTE_COUNT_KEY + noteId;
+    }
 }

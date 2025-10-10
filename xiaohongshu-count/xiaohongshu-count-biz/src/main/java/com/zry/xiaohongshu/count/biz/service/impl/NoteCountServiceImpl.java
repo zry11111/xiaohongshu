@@ -8,6 +8,8 @@ import com.zry.xiaohongshu.count.biz.constant.RedisKeyConstants;
 import com.zry.xiaohongshu.count.biz.domain.dataobject.NoteCountDO;
 import com.zry.xiaohongshu.count.biz.domain.mapper.NoteCountDOMapper;
 import com.zry.xiaohongshu.count.biz.service.NoteCountService;
+import com.zry.xiaohongshu.count.dto.FindNoteCountByIdReqDTO;
+import com.zry.xiaohongshu.count.dto.FindNoteCountByIdRspDTO;
 import com.zry.xiaohongshu.count.dto.FindNoteCountsByIdRspDTO;
 import com.zry.xiaohongshu.count.dto.FindNoteCountsByIdsReqDTO;
 import jakarta.annotation.Resource;
@@ -94,6 +96,30 @@ public class NoteCountServiceImpl implements NoteCountService {
             }
         }
         return Response.success(findNoteCountsByIdRspDTOS);
+    }
+
+    @Override
+    public Response<FindNoteCountByIdRspDTO> findNoteCountData(FindNoteCountByIdReqDTO findNoteCountByIdReqDTO) {
+        Long noteId = findNoteCountByIdReqDTO.getNoteId();
+
+        // TODO: 后续需要添加缓存
+
+        NoteCountDO noteCountDO = noteCountDOMapper.selectByNoteId(noteId);
+
+        FindNoteCountByIdRspDTO findNoteCountByIdRspDTO = FindNoteCountByIdRspDTO.builder()
+                .noteId(noteId)
+                .collectTotal(0L)
+                .commentTotal(0L)
+                .likeTotal(0L)
+                .build();
+
+        if (Objects.nonNull(noteCountDO)) {
+            findNoteCountByIdRspDTO.setCollectTotal(noteCountDO.getCollectTotal());
+            findNoteCountByIdRspDTO.setCommentTotal(noteCountDO.getCommentTotal());
+            findNoteCountByIdRspDTO.setLikeTotal(noteCountDO.getLikeTotal());
+        }
+
+        return Response.success(findNoteCountByIdRspDTO);
     }
 
     private void syncNoteHash2Redis(List<FindNoteCountsByIdRspDTO> findNoteCountsByIdRspDTOS, Map<Long, NoteCountDO> noteIdAndDOMap) {

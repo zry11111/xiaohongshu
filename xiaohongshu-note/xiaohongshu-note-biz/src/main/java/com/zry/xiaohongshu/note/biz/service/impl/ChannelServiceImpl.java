@@ -27,11 +27,11 @@ public class ChannelServiceImpl implements ChannelService {
         List<FindChannelRspVO> channelRspVOS = Lists.newArrayList();
 
         // 默认添加一个 “全部” 分类
-         FindChannelRspVO allChannel = FindChannelRspVO.builder()
-                 .id(0L)
-                 .name("全部")
-                 .build();
-         channelRspVOS.add(allChannel);
+//         FindChannelRspVO allChannel = FindChannelRspVO.builder()
+//                 .id(0L)
+//                 .name("全部")
+//                 .build();
+//         channelRspVOS.add(allChannel);
 
         if (CollUtil.isNotEmpty(channelDOS)) {
             CollUtil.addAll(channelRspVOS, channelDOS.stream()

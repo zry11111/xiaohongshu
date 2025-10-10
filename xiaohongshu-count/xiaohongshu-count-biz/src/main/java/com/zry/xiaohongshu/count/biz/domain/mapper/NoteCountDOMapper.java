@@ -21,4 +21,6 @@ public interface NoteCountDOMapper {
     int insertOrUpdateCollectTotalByNoteId(@Param("count") Integer count, @Param("noteId") Long noteId);
     int insertOrUpdateCommentTotalByNoteId(@Param("count") int count, @Param("noteId") Long noteId);
     List<NoteCountDO> selectByNoteIds(@Param("noteIds") List<Long> noteIds);
+
+    NoteCountDO selectByNoteId(Long noteId);
 }
