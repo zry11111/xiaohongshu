@@ -45,3 +45,38 @@
 2025-10-14 11:12:56.520 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohongshu registering service xiaohongshu-kv with instance Instance{instanceId='null', ip='10.2.66.18', port=8084, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
 2025-10-14 11:12:56.546 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohongshu-kv 10.2.66.18:8084 register finished
 2025-10-14 11:12:56.839 [main] INFO  c.z.xiaohongshu.kv.biz.XiaohongshuKVBizApplication - Started XiaohongshuKVBizApplication in 10.925 seconds (process running for 11.977)
+2025-10-14 11:50:36.849 [http-nio-8084-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-14 11:50:36.869 [http-nio-8084-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-14 11:50:36.960 [http-nio-8084-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 90 ms
+2025-10-14 11:53:51.655 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [427f3289-ccc0-4aec-b08e-f456a463508b] Server healthy check fail, currentConnection = 1760411576296_112.94.129.49_1840
+2025-10-14 11:53:51.658 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [427f3289-ccc0-4aec-b08e-f456a463508b] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2025-10-14 11:53:51.664 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:8.134.88.169 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-10-14 11:53:54.687 [com.alibaba.nacos.client.remote.worker] ERROR c.a.nacos.common.remote.client.grpc.GrpcClient - Server check fail, please check server 8.134.88.169 ,port 9848 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 7 milliseconds, 406400 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@1bc51140[status=PENDING, info=[GrpcFuture{clientCall=PendingCall{realCall=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@d4a0061, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2ad6ca7e, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@31014bea}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:218)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:329)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:502)
+	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:343)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-14 11:53:54.810 [com.alibaba.nacos.client.remote.worker] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:8.134.88.169 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-10-14 11:53:55.063 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [427f3289-ccc0-4aec-b08e-f456a463508b] Success to connect a server [8.134.88.169:8848], connectionId = 1760414034861_112.94.129.49_1067
+2025-10-14 11:53:55.063 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [427f3289-ccc0-4aec-b08e-f456a463508b] Abandon prev connection, server is 8.134.88.169:8848, connectionId is 1760411576296_112.94.129.49_1840
+2025-10-14 11:53:55.063 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1760411576296_112.94.129.49_1840
+2025-10-14 11:53:55.066 [nacos-grpc-client-executor-8.134.88.169-524] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1760411576296_112.94.129.49_1840]Ignore error event,isRunning:true,isAbandon=true
+2025-10-14 11:53:55.067 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [427f3289-ccc0-4aec-b08e-f456a463508b] Notify disconnected event to listeners
+2025-10-14 11:53:55.067 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - Grpc connection disconnect, mark to redo
+2025-10-14 11:53:55.069 [com.alibaba.nacos.client.remote.worker] WARN  com.alibaba.nacos.client.naming - mark to redo completed
+2025-10-14 11:53:55.069 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [427f3289-ccc0-4aec-b08e-f456a463508b] Notify connected event to listeners.
+2025-10-14 11:53:55.069 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-10-14 11:53:55.575 [com.alibaba.nacos.client.naming.grpc.redo.0] INFO  com.alibaba.nacos.client.naming - Redo instance operation REGISTER for DEFAULT_GROUP@@xiaohongshu-kv
+2025-10-14 12:34:14.816 [http-nio-8084-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [批量存储评论内容], 入参: {"comments":[{"noteId":1977206438811955287,"yearMonth":"2025-10","contentId":"5cf10cca-1582-44d8-8b80-afdd5b7d7ed1","content":"11"}]}, 请求类: CommentContentController, 请求方法: batchAddCommentContent =================================== 
+2025-10-14 12:34:15.319 [http-nio-8084-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [批量存储评论内容], 耗时: 519ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-10-14 12:34:45.281 [http-nio-8084-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [批量查询评论内容], 入参: {"noteId":1977206438811955287,"commentContentKeys":[{"yearMonth":"2025-10","contentId":"5cf10cca-1582-44d8-8b80-afdd5b7d7ed1"}]}, 请求类: CommentContentController, 请求方法: batchFindCommentContent =================================== 
+2025-10-14 12:34:45.653 [http-nio-8084-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [批量查询评论内容], 耗时: 370ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"contentId":"5cf10cca-1582-44d8-8b80-afdd5b7d7ed1","content":"11"}]} =================================== 
+2025-10-14 14:24:48.597 [http-nio-8084-exec-1] WARN  c.z.x.kv.biz.exception.GlobalExceptionHandler - /kv/comment/content/batchFind request error, errorCode: KV-10001, errorMessage: commentContentKeys 评论内容 Key 集合, 当前值: '[]'; 

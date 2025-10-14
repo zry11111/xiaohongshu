@@ -315,7 +315,8 @@ public class CommentServiceImpl implements CommentService {
         }
         List<FindChildCommentItemRspVO> childCommentRspVOS = Lists.newArrayList();
 
-        long offset = PageResponse.getOffset(pageNo, pageSize) + 1;
+        // 标准计算方式
+        long offset = (pageNo - 1) * pageSize;
 
         // 子评论分页缓存使用 ZSET + STRING 实现
         // 构建子评论 ZSET Key
@@ -1039,8 +1040,8 @@ public class CommentServiceImpl implements CommentService {
 
                     setUserInfo(commentIdAndDOMap, userIdAndDTOMap, firstReplyCommentUserId, firstReplyCommentRspVO);
 
-                    // 用户信息
-                    oneLevelCommentRspVO.setFirstReplyComment(firstReplyCommentRspVO);
+                    // 带上最早回复评论
+                    oneLevelCommentRspVO.setChildComments(Collections.singletonList(firstReplyCommentRspVO));
                     // 笔记内容
                     setCommentContent(commentUuidAndContentMap, firstReplyCommentDO, firstReplyCommentRspVO);
                 }
@@ -1100,9 +1101,10 @@ public class CommentServiceImpl implements CommentService {
         commentRspVOS.forEach(commentRspVO -> {
             Long oneLevelCommentId = commentRspVO.getCommentId();
             notExpiredCommentIds.add(oneLevelCommentId);
-            FindCommentItemRspVO firstCommentVO = commentRspVO.getFirstReplyComment();
-            if (Objects.nonNull(firstCommentVO)) {
-                notExpiredCommentIds.add(firstCommentVO.getCommentId());
+            List<FindCommentItemRspVO> childComments = commentRspVO.getChildComments();
+            if (CollUtil.isNotEmpty(childComments)) {
+                childComments.forEach(childCommentRspVO ->
+                        notExpiredCommentIds.add(childCommentRspVO.getCommentId()));
             }
         });
 
@@ -1129,14 +1131,16 @@ public class CommentServiceImpl implements CommentService {
                 commentRspVO.setChildCommentTotal(childCommentTotal);
                 commentRspVO.setLikeTotal(likeTotal);
                 // 最初回复的二级评论
-                FindCommentItemRspVO firstCommentVO = commentRspVO.getFirstReplyComment();
-                if (Objects.nonNull(firstCommentVO)) {
-                    Long firstCommentId = firstCommentVO.getCommentId();
-                    Map<Object, Object> firstCommentHash = commentIdAndCountMap.get(firstCommentId);
-                    if (CollUtil.isNotEmpty(firstCommentHash)) {
-                        Long firstCommentLikeTotal = Long.valueOf(firstCommentHash.get(RedisKeyConstants.FIELD_LIKE_TOTAL).toString());
-                        firstCommentVO.setLikeTotal(firstCommentLikeTotal);
-                    }
+                List<FindCommentItemRspVO> childComments = commentRspVO.getChildComments();
+                if (CollUtil.isNotEmpty(childComments)) {
+                    childComments.forEach(childCommentRspVO -> {
+                        Long firstCommentId = childCommentRspVO.getCommentId();
+                        Map<Object, Object> firstCommentHash = commentIdAndCountMap.get(firstCommentId);
+                        if (CollUtil.isNotEmpty(firstCommentHash)) {
+                            Long firstCommentLikeTotal = Long.valueOf(firstCommentHash.get(RedisKeyConstants.FIELD_LIKE_TOTAL).toString());
+                            childCommentRspVO.setLikeTotal(firstCommentLikeTotal);
+                        }
+                    });
                 }
             }
         }

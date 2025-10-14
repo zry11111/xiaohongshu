@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -59,7 +61,7 @@ public class FindCommentItemRspVO {
     /**
      * 最早回复的评论
      */
-    private FindCommentItemRspVO firstReplyComment;
+    private List<FindCommentItemRspVO> childComments;
     /**
      * 热度值
      */

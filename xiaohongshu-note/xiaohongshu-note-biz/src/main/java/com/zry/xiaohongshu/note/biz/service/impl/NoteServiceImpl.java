@@ -421,8 +421,6 @@ public class NoteServiceImpl implements NoteService {
                             .title(noteDO.getTitle())
                             .content(content)
                             .imgUris(imgUris)
-                            // .topicId(noteDO.getTopicId())
-                            // .topicName(noteDO.getTopicName())
                             .topics(findTopicRspVOS)
                             .creatorId(noteDO.getCreatorId())
                             .creatorName(findUserByIdRspDTO.getNickName())

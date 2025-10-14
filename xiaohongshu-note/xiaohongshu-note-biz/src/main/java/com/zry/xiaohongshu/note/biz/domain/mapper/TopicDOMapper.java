@@ -1,6 +1,7 @@
 package com.zry.xiaohongshu.note.biz.domain.mapper;
 
 import com.zry.xiaohongshu.note.biz.domain.dataobject.TopicDO;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -23,5 +24,5 @@ public interface TopicDOMapper {
 
     TopicDO selectByTopicName(String topicName);
 
-    void batchInsert(List<TopicDO> newTopics);
+    void batchInsert(@Param("newTopics") List<TopicDO> newTopics);
 }

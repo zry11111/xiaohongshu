@@ -3,7 +3,7 @@
 <mapper namespace="com.zry.xiaohongshu.search.biz.domain.mapper.SelectMapper">
 
     <select id="selectEsNoteIndexData" resultType="map" parameterType="map">
-        select n.id, n.title, n.topic_name as topic, n.type,
+        select n.id, n.title, n.type,
         SUBSTRING_INDEX(n.img_uris, ',', 1) AS cover, n.video_uri,
         DATE_FORMAT(n.create_time, '%Y-%m-%d %H:%i:%s') AS create_time,
         DATE_FORMAT(n.update_time, '%Y-%m-%d %H:%i:%s') AS update_time,
