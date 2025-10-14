@@ -3,6 +3,7 @@ package com.zry.xiaohongshu.oss.biz.factory;
 import com.zry.xiaohongshu.oss.biz.strategy.FileStrategy;
 import com.zry.xiaohongshu.oss.biz.strategy.impl.AliyunOSSFileStrategy;
 import com.zry.xiaohongshu.oss.biz.strategy.impl.MinioFileStrategy;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @RefreshScope
+@Slf4j
 public class FileStrategyFactory {
 
     @Value("${storage.type}")

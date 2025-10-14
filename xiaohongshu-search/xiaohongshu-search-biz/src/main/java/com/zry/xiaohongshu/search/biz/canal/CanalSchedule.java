@@ -86,14 +86,16 @@ public class CanalSchedule implements Runnable {
                 CanalEntry.RowChange rowChange = CanalEntry.RowChange.parseFrom(entry.getStoreValue());
                 // 遍历所有行数据（RowData）
                 for (CanalEntry.RowData rowData : rowChange.getRowDatasList()) {
-                    // 获取行中所有列的最新值（AfterColumns）
-                    List<CanalEntry.Column> columns = rowData.getAfterColumnsList();
-
-                    // 将列数据解析为 Map，方便后续处理
+                    List<CanalEntry.Column> columns;
+                    if (eventType == CanalEntry.EventType.DELETE) {
+                        // 删除事件，使用 BeforeColumnsList
+                        columns = rowData.getBeforeColumnsList();
+                    } else {
+                        // 插入或更新事件，使用 AfterColumnsList
+                        columns = rowData.getAfterColumnsList();
+                    }
                     Map<String, Object> columnMap = parseColumns2Map(columns);
-
                     log.info("EventType: {}, Database: {}, Table: {}, Columns: {}", eventType, database, tableName, columnMap);
-                    // 处理事件
                     processEvent(columnMap, tableName, eventType);
                 }
             }
@@ -125,6 +127,7 @@ public class CanalSchedule implements Runnable {
      * @param eventType
      */
     private void handleNoteEvent(Map<String, Object> columnMap, CanalEntry.EventType eventType) throws Exception {
+        log.info("处理笔记表事件: {}, {}", eventType, columnMap);
         // 获取笔记 ID
         Long noteId = Long.parseLong(columnMap.get("id").toString());
 
@@ -198,9 +201,11 @@ public class CanalSchedule implements Runnable {
             indexRequest.id((String.valueOf(recordMap.get(NoteIndex.FIELD_NOTE_ID))));
             // 设置文档的内容，使用查询结果的记录数据
             indexRequest.source(recordMap);
+            log.info("索引内容：{}",recordMap);
             // 将数据写入 Elasticsearch 索引
             restHighLevelClient.index(indexRequest, RequestOptions.DEFAULT);
         }
+        log.info("同步笔记索引成功，noteId: {}", noteId);
     }
     private void syncUserIndex(Long userId) throws Exception {
         // 同步用户索引

@@ -2,6 +2,7 @@ package com.zry.xiaohongshu.note.biz.service.impl;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.RandomUtil;
+import com.alibaba.nacos.shaded.com.google.common.collect.Sets;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.google.common.base.Preconditions;
@@ -146,16 +147,11 @@ public class NoteServiceImpl implements NoteService {
             }
         }
 
-        // 话题
-        Long topicId = publishNoteReqVO.getTopicId();
-        String topicName = null;
-        if (Objects.nonNull(topicId)) {
-            // 获取话题名称
-            topicName = topicDOMapper.selectNameByPrimaryKey(topicId);
-        }
-
         // 发布者用户 ID
         Long creatorId = LoginUserContextHolder.getUserId();
+
+        // 话题处理
+        String topicIds = handleTopics(publishNoteReqVO.getTopics());
 
         // 构建笔记 DO 对象
         NoteDO noteDO = NoteDO.builder()
@@ -164,8 +160,6 @@ public class NoteServiceImpl implements NoteService {
                 .creatorId(creatorId)
                 .imgUris(imgUris)
                 .title(publishNoteReqVO.getTitle())
-                .topicId(publishNoteReqVO.getTopicId())
-                .topicName(topicName)
                 .type(type)
                 .visible(NoteVisibleEnum.PUBLIC.getCode())
                 .createTime(LocalDateTime.now())
@@ -174,6 +168,8 @@ public class NoteServiceImpl implements NoteService {
                 .isTop(Boolean.FALSE)
                 .videoUri(videoUri)
                 .contentUuid(contentUuid)
+                .channelId(publishNoteReqVO.getChannelId())
+                .topicIds(topicIds)
                 .build();
 
         // 发布新的笔记时候要删除主页笔记列表的缓存
@@ -218,6 +214,61 @@ public class NoteServiceImpl implements NoteService {
         });
 
         return Response.success();
+    }
+
+    private String handleTopics(List<Object> topicInputs) {
+        if (CollUtil.isEmpty(topicInputs)) return null;
+
+        // 1. 分离已存在话题（ID）和新话题（名称）
+        List<Long> existingTopicIds = Lists.newArrayList();
+        List<String> newTopicNames = Lists.newArrayList();
+
+        topicInputs.forEach(input -> {
+            if (input instanceof Number) {
+                // 已存在话题 ID
+                existingTopicIds.add(Long.valueOf(String.valueOf(input)));
+            } else if (input instanceof String) {
+                // 新话题名称
+                newTopicNames.add((String) input);
+            }
+        });
+
+        // 2. 查询现有话题信息 - 批量查询
+        Set<Long> existingTopicIdsSet = Sets.newHashSet();
+        if (CollUtil.isNotEmpty(existingTopicIds)) {
+            List<TopicDO> existingTopicDOS = topicDOMapper.selectByTopicIdIn(existingTopicIds);
+            existingTopicIdsSet = existingTopicDOS.stream()
+                    .map(TopicDO::getId)
+                    .collect(Collectors.toSet());
+        }
+
+
+        // 3. 处理新标签
+        List<TopicDO> newTopics = Lists.newArrayList();
+        for (String topicName : newTopicNames) {
+            TopicDO existingTopic = topicDOMapper.selectByTopicName(topicName);
+            if (Objects.isNull(existingTopic)) {
+                // 话题不存在，插入新话题
+                newTopics.add(TopicDO.builder().name(topicName).build());
+            } else {
+                // 话题已经存在，加入现有话题 ID 列表
+                existingTopicIdsSet.add(existingTopic.getId());
+            }
+        }
+
+        // 4. 批量保存新话题（如果有）
+        if (CollUtil.isNotEmpty(newTopics)) {
+            topicDOMapper.batchInsert(newTopics);
+        }
+
+        // 5. 获取所有话题的 ID（已存在和新插入的）
+        List<Long> allTopicIds = new ArrayList<>(existingTopicIdsSet);
+        if (CollUtil.isNotEmpty(newTopics)) {
+            newTopics.forEach(newTopic -> allTopicIds.add(newTopic.getId()));
+        }
+
+        // 6. 将所有的话题 ID 以逗号拼接
+        return StringUtils.join(allTopicIds, ",");
     }
 
     private void sendDelayDeleteRedisPublishedNoteListCacheMQ(Long userId) {

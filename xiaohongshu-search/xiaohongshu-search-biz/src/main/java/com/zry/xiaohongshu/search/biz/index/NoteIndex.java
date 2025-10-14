@@ -11,11 +11,14 @@ public class NoteIndex {
      * 笔记ID
      */
     public static final String FIELD_NOTE_ID = "id";
+    public static final String FIELD_TYPE = "type";
 
     /**
      * 封面
      */
     public static final String FIELD_NOTE_COVER = "cover";
+    public static final String FIELD_NOTE_CREATOR_ID = "creator_id";
+
 
     /**
      * 头像
@@ -30,12 +33,12 @@ public class NoteIndex {
     /**
      * 发布者昵称
      */
-    public static final String FIELD_NOTE_NICKNAME = "nickname";
+    public static final String FIELD_NOTE_NICKNAME = "creator_nickname";
 
     /**
      * 发布者头像
      */
-    public static final String FIELD_NOTE_AVATAR = "avatar";
+    public static final String FIELD_NOTE_AVATAR = "creator_avatar";
 
     /**
      * 笔记类型

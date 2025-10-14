@@ -9,4 +9,4 @@ spring:
         enabled: true
         namespace: xiaohongshu # Nacos 服务发现的命名空间
         group: DEFAULT_GROUP # Nacos 服务发现的组
-        server-addr: http://47.236.36.111:8848/
+        server-addr: http://8.134.88.169:8848/

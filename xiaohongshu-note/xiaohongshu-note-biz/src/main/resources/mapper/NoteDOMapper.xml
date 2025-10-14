@@ -38,12 +38,12 @@
       creator_id, topic_id, topic_name, 
       is_top, `type`, img_uris, video_uri, 
       visible, create_time, update_time, 
-      `status`, content_uuid)
+      `status`, content_uuid,channel_id)
     values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{isContentEmpty,jdbcType=BIT}, 
       #{creatorId,jdbcType=BIGINT}, #{topicId,jdbcType=BIGINT}, #{topicName,jdbcType=VARCHAR}, 
       #{isTop,jdbcType=BIT}, #{type,jdbcType=TINYINT}, #{imgUris,jdbcType=VARCHAR}, #{videoUri,jdbcType=VARCHAR}, 
       #{visible,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{status,jdbcType=TINYINT}, #{contentUuid,jdbcType=VARCHAR})
+      #{status,jdbcType=TINYINT}, #{contentUuid,jdbcType=VARCHAR},#{channelId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.zry.xiaohongshu.note.biz.domain.dataobject.NoteDO">
     insert into t_note

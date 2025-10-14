@@ -16,7 +16,9 @@ public class SearchNoteRspVO {
     /**
      * 笔记ID
      */
-    private Long noteId;
+    private String id;
+
+    private Integer type;
 
     /**
      * 封面
@@ -42,6 +44,8 @@ public class SearchNoteRspVO {
      * 发布者昵称
      */
     private String nickname;
+
+    private Long creatorId;
 
     /**
      * 最后一次编辑时间

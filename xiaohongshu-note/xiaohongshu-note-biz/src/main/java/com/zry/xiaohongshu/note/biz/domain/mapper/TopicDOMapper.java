@@ -20,4 +20,8 @@ public interface TopicDOMapper {
     List<TopicDO> selectByLikeName(String keyword);
 
     List<TopicDO> selectByTopicIdIn(List<Long> topicIds);
+
+    TopicDO selectByTopicName(String topicName);
+
+    void batchInsert(List<TopicDO> newTopics);
 }
