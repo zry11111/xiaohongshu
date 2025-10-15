@@ -1,5 +1,6 @@
 package com.zry.xiaohongshu.data.align.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,6 +22,7 @@ public class CollectUnCollectNoteMqDTO {
      * 0: 取消收藏， 1：收藏
      */
     private Integer type;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 
     private LocalDateTime createTime;
 

@@ -9,7 +9,7 @@ public enum LikeUnlikeCommentTypeEnum {
     // 点赞
     LIKE(1),
     // 取消点赞
-    UNLIKE(0),
+    UNLIKE(2),
     ;
 
     private final Integer code;

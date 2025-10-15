@@ -233,13 +233,14 @@ public class CommentServiceImpl implements CommentService {
                 List<Long> expiredCommentIds = Lists.newArrayList();
                 for (int i = 0; i < commentsJsonList.size(); i++) {
                     String commentJson = (String) commentsJsonList.get(i);
+                    Long commentId = Long.valueOf(localCacheExpiredCommentIds.get(i).toString());
                     if (Objects.nonNull(commentJson)) {
                         // 缓存中存在的评论 Json，直接转换为 VO 添加到返参集合中
                         FindCommentItemRspVO commentRspVO = JsonUtils.parseObject(commentJson, FindCommentItemRspVO.class);
                         commentItemRspVOS.add(commentRspVO);
                     } else {
                         // 评论失效，添加到失效评论列表
-                        expiredCommentIds.add(Long.valueOf(commentIdList.get(i).toString()));
+                        expiredCommentIds.add(commentId);
                     }
                 }
 
@@ -1125,9 +1126,10 @@ public class CommentServiceImpl implements CommentService {
             // 设置一级评论的子评论总数、点赞数
             Map<Object, Object> hash = commentIdAndCountMap.get(commentId);
             if (CollUtil.isNotEmpty(hash)) {
-                Object likeTotalObj = hash.get(RedisKeyConstants.FIELD_CHILD_COMMENT_TOTAL);
-                Long childCommentTotal = Objects.isNull(likeTotalObj) ? 0 : Long.parseLong(likeTotalObj.toString());
-                Long likeTotal = Long.valueOf(hash.get(RedisKeyConstants.FIELD_LIKE_TOTAL).toString());
+                Object childCommentTotalObj = hash.get(RedisKeyConstants.FIELD_CHILD_COMMENT_TOTAL);
+                Long childCommentTotal = Objects.isNull(childCommentTotalObj) ? 0 : Long.parseLong(childCommentTotalObj.toString());
+                Object likeTotalObj = hash.get(RedisKeyConstants.FIELD_LIKE_TOTAL);
+                Long likeTotal = Objects.isNull(likeTotalObj) ? 0 : Long.parseLong(likeTotalObj.toString());
                 commentRspVO.setChildCommentTotal(childCommentTotal);
                 commentRspVO.setLikeTotal(likeTotal);
                 // 最初回复的二级评论
