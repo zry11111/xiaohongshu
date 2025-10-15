@@ -8185,3 +8185,117 @@ java.lang.NullPointerException: Cannot invoke "com.zry.xiaohongshu.comment.biz.d
 2025-10-15 17:36:47.559 [http-nio-8093-exec-4] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
 2025-10-15 17:36:47.561 [http-nio-8093-exec-4] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
 2025-10-15 17:36:47.565 [http-nio-8093-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:17:58.058 [http-nio-8093-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:17:58.069 [http-nio-8093-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978012132934971457,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 18:17:58.093 [http-nio-8093-exec-6] DEBUG c.z.x.c.b.d.mapper.CommentDOMapper.selectPageList - ==>  Preparing: select id, user_id, content_uuid, is_content_empty, image_url, like_total, is_top, create_time, first_reply_comment_id, child_comment_total,heat from t_comment where note_id = ? and level = 1 order by heat desc limit ?, ?
+2025-10-15 18:17:58.096 [http-nio-8093-exec-6] DEBUG c.z.x.c.b.d.mapper.CommentDOMapper.selectPageList - ==> Parameters: 1978012132934971457(Long), 0(Long), 10(Long)
+2025-10-15 18:17:58.099 [NoteExecutor-7] DEBUG c.z.x.c.b.d.m.CommentDOMapper.selectHeatComments - ==>  Preparing: select id, heat from t_comment where note_id = ? and level = 1 order by heat desc limit 500
+2025-10-15 18:17:58.100 [NoteExecutor-7] DEBUG c.z.x.c.b.d.m.CommentDOMapper.selectHeatComments - ==> Parameters: 1978012132934971457(Long)
+2025-10-15 18:17:58.105 [http-nio-8093-exec-6] DEBUG c.z.x.c.b.d.mapper.CommentDOMapper.selectPageList - <==      Total: 1
+2025-10-15 18:17:58.105 [NoteExecutor-7] DEBUG c.z.x.c.b.d.m.CommentDOMapper.selectHeatComments - <==      Total: 1
+2025-10-15 18:17:58.109 [http-nio-8093-exec-6] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 18:17:58.684 [http-nio-8093-exec-6] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 18:17:58.691 [http-nio-8093-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [评论分页查询], 耗时: 622ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"commentId":10019,"userId":100,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/f07b19cfe1d54def80d0c488c6f8ef0f.jpg","nickname":"稚生","content":"11","imageUrl":"","createTime":"昨天 17:56","likeTotal":0,"childCommentTotal":0,"childComments":null,"heat":0.0}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 18:17:58.697 [http-nio-8093-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:41:49.278 [http-nio-8093-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:41:49.360 [http-nio-8093-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978390108688121903,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 18:41:49.408 [http-nio-8093-exec-9] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 18:41:49.418 [http-nio-8093-exec-9] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978390108688121903(Long)
+2025-10-15 18:41:49.422 [http-nio-8093-exec-9] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 18:41:49.433 [http-nio-8093-exec-9] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 18:41:49.447 [http-nio-8093-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:41:51.798 [http-nio-8093-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:41:51.799 [http-nio-8093-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978024632262881367,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 18:41:51.858 [http-nio-8093-exec-8] DEBUG c.z.x.c.b.d.m.C.selectCommentCountByIds - ==>  Preparing: select id, child_comment_total, like_total, level from t_comment where id in ( ? , ? , ? , ? , ? )
+2025-10-15 18:41:51.859 [http-nio-8093-exec-8] DEBUG c.z.x.c.b.d.m.C.selectCommentCountByIds - ==> Parameters: 10074(Long), 12026(Long), 12017(Long), 12018(Long), 12027(Long)
+2025-10-15 18:41:51.864 [http-nio-8093-exec-8] DEBUG c.z.x.c.b.d.m.C.selectCommentCountByIds - <==      Total: 5
+2025-10-15 18:41:51.865 [http-nio-8093-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [评论分页查询], 耗时: 66ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"commentId":10074,"userId":101,"avatar":"https://my-xiaohongshu-oss.oss-cn-guangzhou.aliyuncs.com/c1412997b38e47c782d9a5d909024792.jpg","nickname":"姜磊","content":"测试举报评论弹窗","imageUrl":"","createTime":"15小时前","likeTotal":0,"childCommentTotal":3,"childComments":null,"heat":0.9},{"commentId":12025,"userId":100,"avatar":"https://my-xiaohongshu-oss.oss-cn-guangzhou.aliyuncs.com/ca709c5d72304bedbcf9ee14e4a3bcb2.jpg","nickname":"稚生","content":"测试","imageUrl":"","createTime":"1小时前","likeTotal":0,"childCommentTotal":1,"childComments":[{"commentId":12026,"userId":100,"avatar":"https://my-xiaohongshu-oss.oss-cn-guangzhou.aliyuncs.com/ca709c5d72304bedbcf9ee14e4a3bcb2.jpg","nickname":"稚生","content":"2级回复","imageUrl":"","createTime":"1小时前","likeTotal":0,"childCommentTotal":null,"childComments":null,"heat":0.0}],"heat":0.3},{"commentId":12020,"userId":100,"avatar":"https://my-xiaohongshu-oss.oss-cn-guangzhou.aliyuncs.com/ca709c5d72304bedbcf9ee14e4a3bcb2.jpg","nickname":"稚生","content":"3","imageUrl":"","createTime":"3小时前","likeTotal":0,"childCommentTotal":1,"childComments":[{"commentId":12022,"userId":100,"avatar":"https://my-xiaohongshu-oss.oss-cn-guangzhou.aliyuncs.com/ca709c5d72304bedbcf9ee14e4a3bcb2.jpg","nickname":"稚生","content":"3","imageUrl":"","createTime":"3小时前","likeTotal":0,"childCommentTotal":null,"childComments":null,"heat":0.0}],"heat":0.3},{"commentId":12017,"userId":100,"avatar":"https://my-xiaohongshu-oss.oss-cn-guangzhou.aliyuncs.com/ca709c5d72304bedbcf9ee14e4a3bcb2.jpg","nickname":"稚生","content":"测试3","imageUrl":"","createTime":"3小时前","likeTotal":0,"childCommentTotal":1,"childComments":[{"commentId":12018,"userId":100,"avatar":"https://my-xiaohongshu-oss.oss-cn-guangzhou.aliyuncs.com/ca709c5d72304bedbcf9ee14e4a3bcb2.jpg","nickname":"稚生","content":"测试2级回复","imageUrl":"","createTime":"3小时前","likeTotal":0,"childCommentTotal":null,"childComments":null,"heat":0.0}],"heat":0.3},{"commentId":12027,"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","content":"好看啊","imageUrl":"","createTime":"27分钟前","likeTotal":0,"childCommentTotal":0,"childComments":null,"heat":0.0}],"pageNo":1,"totalCount":15,"pageSize":10,"totalPage":2} =================================== 
+2025-10-15 18:41:51.869 [http-nio-8093-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:48:31.127 [http-nio-8093-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:48:31.133 [http-nio-8093-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978412653927759930,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 18:48:31.145 [http-nio-8093-exec-1] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 18:48:31.149 [http-nio-8093-exec-1] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978412653927759930(Long)
+2025-10-15 18:48:31.154 [http-nio-8093-exec-1] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 18:48:31.155 [http-nio-8093-exec-1] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 18:48:31.157 [http-nio-8093-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:48:55.563 [http-nio-8093-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:48:55.564 [http-nio-8093-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978389492318371906,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 18:48:55.567 [http-nio-8093-exec-2] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 18:48:55.568 [http-nio-8093-exec-2] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978389492318371906(Long)
+2025-10-15 18:48:55.571 [http-nio-8093-exec-2] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 1
+2025-10-15 18:48:55.572 [http-nio-8093-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [评论分页查询], 耗时: 7ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 18:48:55.573 [http-nio-8093-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:49:59.267 [http-nio-8093-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:49:59.269 [http-nio-8093-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978386250737942528,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 18:49:59.272 [http-nio-8093-exec-4] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 18:49:59.272 [http-nio-8093-exec-4] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978386250737942528(Long)
+2025-10-15 18:49:59.272 [http-nio-8093-exec-4] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 18:49:59.274 [http-nio-8093-exec-4] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 18:49:59.275 [http-nio-8093-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:50:00.986 [http-nio-8093-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:50:00.987 [http-nio-8093-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978412653927759930,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 18:50:00.989 [http-nio-8093-exec-5] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 18:50:00.990 [http-nio-8093-exec-5] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978412653927759930(Long)
+2025-10-15 18:50:00.992 [http-nio-8093-exec-5] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 18:50:00.992 [http-nio-8093-exec-5] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 18:50:00.992 [http-nio-8093-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:50:02.483 [http-nio-8093-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:50:02.484 [http-nio-8093-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978389492318371906,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 18:50:02.485 [http-nio-8093-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [评论分页查询], 耗时: 1ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 18:50:02.487 [http-nio-8093-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 21:55:04.722 [http-nio-8093-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 21:55:04.734 [http-nio-8093-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978412653927759930,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 21:55:04.754 [http-nio-8093-exec-9] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 21:55:04.757 [http-nio-8093-exec-9] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978412653927759930(Long)
+2025-10-15 21:55:04.761 [http-nio-8093-exec-9] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 21:55:04.763 [http-nio-8093-exec-9] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 21:55:04.766 [http-nio-8093-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 21:55:09.661 [http-nio-8093-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 21:55:09.664 [http-nio-8093-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978390108688121903,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 21:55:09.668 [http-nio-8093-exec-8] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 21:55:09.668 [http-nio-8093-exec-8] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978390108688121903(Long)
+2025-10-15 21:55:09.670 [http-nio-8093-exec-8] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 21:55:09.671 [http-nio-8093-exec-8] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 21:55:09.673 [http-nio-8093-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 21:55:19.706 [http-nio-8093-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 21:55:19.708 [http-nio-8093-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978386978009284654,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 21:55:19.709 [http-nio-8093-exec-10] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 21:55:19.710 [http-nio-8093-exec-10] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978386978009284654(Long)
+2025-10-15 21:55:19.711 [http-nio-8093-exec-10] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 21:55:19.712 [http-nio-8093-exec-10] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 21:55:19.713 [http-nio-8093-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 21:55:23.365 [http-nio-8093-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 21:55:23.367 [http-nio-8093-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978386978009284654,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 21:55:23.369 [http-nio-8093-exec-1] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 21:55:23.370 [http-nio-8093-exec-1] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978386978009284654(Long)
+2025-10-15 21:55:23.371 [http-nio-8093-exec-1] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 21:55:23.372 [http-nio-8093-exec-1] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 21:55:23.373 [http-nio-8093-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 21:56:46.028 [http-nio-8093-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 21:56:46.029 [http-nio-8093-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978390108688121903,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 21:56:46.032 [http-nio-8093-exec-3] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 21:56:46.033 [http-nio-8093-exec-3] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978390108688121903(Long)
+2025-10-15 21:56:46.035 [http-nio-8093-exec-3] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 21:56:46.036 [http-nio-8093-exec-3] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 21:56:46.037 [http-nio-8093-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 21:56:48.577 [http-nio-8093-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 21:56:48.579 [http-nio-8093-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978390108688121903,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 21:56:48.580 [http-nio-8093-exec-4] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 21:56:48.580 [http-nio-8093-exec-4] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978390108688121903(Long)
+2025-10-15 21:56:48.581 [http-nio-8093-exec-4] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 21:56:48.582 [http-nio-8093-exec-4] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 21:56:48.583 [http-nio-8093-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 22:01:01.610 [http-nio-8093-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 22:01:01.621 [http-nio-8093-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978390108688121903,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 22:01:01.633 [http-nio-8093-exec-6] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 22:01:01.635 [http-nio-8093-exec-6] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978390108688121903(Long)
+2025-10-15 22:01:01.638 [http-nio-8093-exec-6] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 22:01:01.640 [http-nio-8093-exec-6] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 22:01:01.643 [http-nio-8093-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 22:01:10.830 [http-nio-8093-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 22:01:10.831 [http-nio-8093-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [评论分页查询], 入参: {"noteId":1978386978009284654,"pageNo":1}, 请求类: CommentController, 请求方法: findCommentPageList =================================== 
+2025-10-15 22:01:10.835 [http-nio-8093-exec-7] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==>  Preparing: select comment_total from t_note_count where note_id = ?
+2025-10-15 22:01:10.836 [http-nio-8093-exec-7] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - ==> Parameters: 1978386978009284654(Long)
+2025-10-15 22:01:10.837 [http-nio-8093-exec-7] DEBUG c.z.x.c.b.d.m.N.selectCommentTotalByNoteId - <==      Total: 0
+2025-10-15 22:01:10.838 [http-nio-8093-exec-7] WARN  c.z.x.comment.biz.exception.GlobalExceptionHandler - /comment/list request fail, errorCode: COMMENT-20001, errorMessage: 此评论不存在
+2025-10-15 22:01:10.840 [http-nio-8093-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
