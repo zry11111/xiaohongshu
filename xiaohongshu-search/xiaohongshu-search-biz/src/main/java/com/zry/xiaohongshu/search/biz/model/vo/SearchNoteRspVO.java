@@ -24,6 +24,10 @@ public class SearchNoteRspVO {
      * 封面
      */
     private String cover;
+    /**
+     * 视频链接
+     */
+    private String videoUri;
 
     /**
      * 标题

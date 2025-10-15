@@ -212,6 +212,7 @@ public class NoteServiceImpl implements NoteService {
                 Long noteId = (Long) sourceAsMap.get(NoteIndex.FIELD_NOTE_ID);
                 Integer noteType = (Integer) sourceAsMap.get(NoteIndex.FIELD_TYPE);
                 String cover = (String) sourceAsMap.get(NoteIndex.FIELD_NOTE_COVER);
+                String videoUri = (String) sourceAsMap.get(NoteIndex.FIELD_NOTE_VIDEO_URI);
                 Number creatorId = (Number) sourceAsMap.get(NoteIndex.FIELD_NOTE_CREATOR_ID);
                 String title = (String) sourceAsMap.get(NoteIndex.FIELD_NOTE_TITLE);
                 String avatar = (String) sourceAsMap.get(NoteIndex.FIELD_NOTE_AVATAR);
@@ -237,6 +238,7 @@ public class NoteServiceImpl implements NoteService {
                         .type(noteType)
                         .creatorId(creatorId.longValue())
                         .cover(cover)
+                        .videoUri(videoUri)
                         .title(title)
                         .highlightTitle(highlightedTitle)
                         .avatar(avatar)
