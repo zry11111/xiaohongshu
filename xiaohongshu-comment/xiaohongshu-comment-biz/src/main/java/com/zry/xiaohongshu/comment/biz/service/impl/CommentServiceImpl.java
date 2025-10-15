@@ -586,10 +586,13 @@ public class CommentServiceImpl implements CommentService {
                 // 删除评论元数据
                 commentDOMapper.deleteByPrimaryKey(commentId);
 
+                // 判断评论内容是否为空
                 // 删除评论内容
-                keyValueRpcService.deleteCommentContent(commentDO.getNoteId(),
-                        commentDO.getCreateTime(),
-                        commentDO.getContentUuid());
+                if(StringUtils.isNotBlank(commentDO.getContentUuid())){
+                    keyValueRpcService.deleteCommentContent(commentDO.getNoteId(),
+                            commentDO.getCreateTime(),
+                            commentDO.getContentUuid());
+                }
 
                 return null;
             } catch (Exception ex) {

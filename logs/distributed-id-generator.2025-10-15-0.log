@@ -315,3 +315,7 @@ org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = 
 2025-10-15 09:49:39.114 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760492979111] time[3] tag[updateCacheFromDb]
 2025-10-15 09:50:39.117 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
 2025-10-15 09:50:39.121 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493039117] time[4] tag[updateCacheFromDb]
+2025-10-15 09:51:39.127 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-10-15 09:51:39.132 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493099127] time[4] tag[updateCacheFromDb]
+2025-10-15 09:52:39.142 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-10-15 09:52:39.146 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493159142] time[3] tag[updateCacheFromDb]
