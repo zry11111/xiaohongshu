@@ -41,7 +41,7 @@ public class CommentDO {
     private Integer isTop;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
-
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
     private Long childCommentTotal;
     private Long firstReplyCommentId;

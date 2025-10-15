@@ -118,6 +118,11 @@ public class DeleteCommentConsumer implements RocketMQListener<String> {
         // 若是最早的发布的二级评论被删除，需要更新一级评论的 first_reply_comment_id
         // 查询一级评论
         CommentDO oneLevelCommentDO = commentDOMapper.selectByPrimaryKey(parentCommentId);
+        // TODO
+        if (Objects.isNull(oneLevelCommentDO)) {
+            log.error("==> 【删除二级评论】查询一级评论失败，一级评论 ID: {}", parentCommentId);
+            return;
+        }
         Long firstReplyCommentId = oneLevelCommentDO.getFirstReplyCommentId();
 
         // 若删除的是最早回复的二级评论

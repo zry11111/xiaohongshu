@@ -261,7 +261,7 @@ public class CommentServiceImpl implements CommentService {
                     .collect(Collectors.toList());
 
             // 异步将评论详情，同步到本地缓存
-            syncCommentDetail2LocalCache(commentItemRspVOS);
+            syncCommentDetail2LocalCache(commentItemRspVOS);//返回
 
             return PageResponse.success(commentItemRspVOS, pageNo, count, pageSize);
         }

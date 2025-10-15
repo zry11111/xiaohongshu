@@ -13,8 +13,11 @@ import com.zry.xiaohongshu.comment.biz.enums.CommentLevelEnum;
 import com.zry.xiaohongshu.comment.biz.model.dto.CountPublishCommentMqDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.rocketmq.client.producer.SendCallback;
+import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -36,6 +39,8 @@ public class OneLevelCommentFirstReplyCommentIdUpdateConsumer implements RocketM
     private RedisTemplate<String, Object> redisTemplate;
     @Resource
     private CommentDOMapper commentDOMapper;
+    @Resource
+    private RocketMQTemplate rocketMQTemplate;
     @Resource(name = "taskExecutor")
     private ThreadPoolTaskExecutor threadPoolTaskExecutor;
     private BufferTrigger<String> bufferTrigger = BufferTrigger.<String>batchBlocking()
@@ -143,6 +148,24 @@ public class OneLevelCommentFirstReplyCommentIdUpdateConsumer implements RocketM
         // 使用 RedisTemplate 的管道模式，允许在一个操作中批量发送多个命令，防止频繁操作 Redis
         redisTemplate.executePipelined((RedisCallback<?>) (connection) -> {
             needSyncCommentIds.forEach(needSyncCommentId -> {
+
+                // TODO: 更新一级评论详情中的最早回复评论数据（暂时直接删除缓存）
+                String commentDetailKey = RedisKeyConstants.buildCommentDetailKey(needSyncCommentId);
+                redisTemplate.delete(commentDetailKey);
+
+                // 删除本地缓存
+                rocketMQTemplate.asyncSend(MQConstants.TOPIC_DELETE_COMMENT_LOCAL_CACHE, needSyncCommentId, new SendCallback() {
+                    @Override
+                    public void onSuccess(SendResult sendResult) {
+                        log.info("==> 【删除评论详情本地缓存】MQ 发送成功，SendResult: {}", sendResult);
+                    }
+
+                    @Override
+                    public void onException(Throwable throwable) {
+                        log.error("==> 【删除评论详情本地缓存】MQ 发送异常: ", throwable);
+                    }
+                });
+
                 // 构建 Redis Key
                 String key = RedisKeyConstants.buildHaveFirstReplyCommentKey(needSyncCommentId);
 

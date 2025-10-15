@@ -319,3 +319,15 @@ org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = 
 2025-10-15 09:51:39.132 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493099127] time[4] tag[updateCacheFromDb]
 2025-10-15 09:52:39.142 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
 2025-10-15 09:52:39.146 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493159142] time[3] tag[updateCacheFromDb]
+2025-10-15 09:53:39.156 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-10-15 09:53:39.162 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493219156] time[5] tag[updateCacheFromDb]
+2025-10-15 09:54:39.167 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-10-15 09:54:39.170 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493279167] time[3] tag[updateCacheFromDb]
+2025-10-15 09:55:39.178 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-10-15 09:55:39.181 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493339178] time[2] tag[updateCacheFromDb]
+2025-10-15 09:56:39.188 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-10-15 09:56:39.196 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493399188] time[7] tag[updateCacheFromDb]
+2025-10-15 09:57:39.198 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-10-15 09:57:39.202 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493459198] time[4] tag[updateCacheFromDb]
+2025-10-15 09:58:39.205 [check-idCache-thread] INFO  c.z.x.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-10-15 09:58:39.209 [check-idCache-thread] INFO  org.perf4j.TimingLogger - start[1760493519206] time[2] tag[updateCacheFromDb]
