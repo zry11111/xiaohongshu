@@ -1,0 +1,219 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3548), pid=32888, tid=32356
+#
+# JRE version:  (17.0.12+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286, mixed mode, emulated-client, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:D:\Program Files\JetBrains\IntelliJ IDEA 2023.2.2\lib\idea_rt.jar=54983:D:\Program Files\JetBrains\IntelliJ IDEA 2023.2.2\bin -Dfile.encoding=UTF-8 com.zry.xiaohongshu.kv.biz.XiaohongshuKVBizApplication
+
+Host: 12th Gen Intel(R) Core(TM) i5-12500H, 16 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.5074)
+Time: Thu Oct 16 16:49:35 2025  Windows 11 , 64 bit Build 26100 (10.0.26100.5074) elapsed time: 1.150475 seconds (0d 0h 0m 1s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000022036c47ee0):  JavaThread "Unknown thread" [_thread_in_vm, id=32356, stack(0x00000066ddb00000,0x00000066ddc00000)]
+
+Stack: [0x00000066ddb00000,0x00000066ddc00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67a04a]
+V  [jvm.dll+0x7da4ed]
+V  [jvm.dll+0x7dbe33]
+V  [jvm.dll+0x7dc4a3]
+V  [jvm.dll+0x24508f]
+V  [jvm.dll+0x677089]
+V  [jvm.dll+0x66bd32]
+V  [jvm.dll+0x301fa6]
+V  [jvm.dll+0x309546]
+V  [jvm.dll+0x359d2e]
+V  [jvm.dll+0x359f5f]
+V  [jvm.dll+0x2d9078]
+V  [jvm.dll+0x2d9fe4]
+V  [jvm.dll+0x7aca21]
+V  [jvm.dll+0x367591]
+V  [jvm.dll+0x78b999]
+V  [jvm.dll+0x3ec83f]
+V  [jvm.dll+0x3ee471]
+C  [jli.dll+0x5297]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0x8d9c]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff88d497a18, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000022036cb5dd0 GCTaskThread "GC Thread#0" [stack: 0x00000066ddc00000,0x00000066ddd00000] [id=32892]
+  0x0000022036cc74c0 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000066ddd00000,0x00000066dde00000] [id=22488]
+  0x0000022036cc7de0 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000066dde00000,0x00000066ddf00000] [id=32960]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff88ccc9b67]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000022036c45bc0] Heap_lock - owner thread: 0x0000022036c47ee0
+
+Heap address: 0x0000000704400000, size: 4028 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000704400000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff88d0b3859]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.014 Loaded shared library D:\Program Files\Java\jdk-17.0.12\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff649d70000 - 0x00007ff649d80000 	D:\Program Files\Java\jdk-17.0.12\bin\java.exe
+0x00007ff8f8b00000 - 0x00007ff8f8d69000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8f89f0000 - 0x00007ff8f8ab9000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8f62c0000 - 0x00007ff8f66b3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8f6780000 - 0x00007ff8f68cb000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff8dab60000 - 0x00007ff8dab7b000 	D:\Program Files\Java\jdk-17.0.12\bin\VCRUNTIME140.dll
+0x00007ff8d5310000 - 0x00007ff8d5329000 	D:\Program Files\Java\jdk-17.0.12\bin\jli.dll
+0x00007ff8f8930000 - 0x00007ff8f89e4000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8f87b0000 - 0x00007ff8f8859000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff8f8420000 - 0x00007ff8f84c6000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8f68d0000 - 0x00007ff8f69e8000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8f7cc0000 - 0x00007ff8f7e84000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8f6290000 - 0x00007ff8f62b7000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8f86c0000 - 0x00007ff8f86eb000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8dc760000 - 0x00007ff8dc9f3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.5074_none_3e0d6f78e32fd63f\COMCTL32.dll
+0x00007ff8f6160000 - 0x00007ff8f628d000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8f60b0000 - 0x00007ff8f6153000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff8edcb0000 - 0x00007ff8edcbb000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8f8860000 - 0x00007ff8f888f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8ea5d0000 - 0x00007ff8ea5dc000 	D:\Program Files\Java\jdk-17.0.12\bin\vcruntime140_1.dll
+0x00007ff8b9840000 - 0x00007ff8b98ce000 	D:\Program Files\Java\jdk-17.0.12\bin\msvcp140.dll
+0x00007ff88c9e0000 - 0x00007ff88d5c0000 	D:\Program Files\Java\jdk-17.0.12\bin\server\jvm.dll
+0x00007ff8f6d90000 - 0x00007ff8f6d98000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff8f20f0000 - 0x00007ff8f2125000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8db8f0000 - 0x00007ff8db8fa000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff8f6f20000 - 0x00007ff8f6f94000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8f4a50000 - 0x00007ff8f4a6b000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff8d6310000 - 0x00007ff8d631a000 	D:\Program Files\Java\jdk-17.0.12\bin\jimage.dll
+0x00007ff8f3220000 - 0x00007ff8f3462000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff8f7770000 - 0x00007ff8f7aeb000 	C:\WINDOWS\System32\combase.dll
+0x00007ff8f8550000 - 0x00007ff8f8627000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff8ddea0000 - 0x00007ff8ddedd000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff8f6010000 - 0x00007ff8f60a9000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff8cebc0000 - 0x00007ff8cebce000 	D:\Program Files\Java\jdk-17.0.12\bin\instrument.dll
+0x00007ff8c8e00000 - 0x00007ff8c8e25000 	D:\Program Files\Java\jdk-17.0.12\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\Program Files\Java\jdk-17.0.12\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.5074_none_3e0d6f78e32fd63f;D:\Program Files\Java\jdk-17.0.12\bin\server
+
+VM Arguments:
+jvm_args: -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:D:\Program Files\JetBrains\IntelliJ IDEA 2023.2.2\lib\idea_rt.jar=54983:D:\Program Files\JetBrains\IntelliJ IDEA 2023.2.2\bin -Dfile.encoding=UTF-8 
+java_command: com.zry.xiaohongshu.kv.biz.XiaohongshuKVBizApplication
+java_class_path (initial): D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-kv\xiaohongshu-kv-biz\target\classes;D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-framework\xiaohongshu-common\target\classes;D:\data\maven-repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;D:\data\maven-repository\org\hibernate\validator\hibernate-validator\8.0.0.Final\hibernate-validator-8.0.0.Final.jar;D:\data\maven-repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;D:\data\maven-repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;D:\data\maven-repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;D:\data\maven-repository\com\fasterxml\jackson\core\jackson-databind\2.16.1\jackson-databind-2.16.1.jar;D:\data\maven-repository\com\fasterxml\jackson\core\jackson-annotations\2.14.1\jackson-annotations-2.14.1.jar;D:\data\maven-repository\com\fasterxml\jackson\core\jackson-core\2.16.1\jackson-core-2.16.1.jar;D:\data\maven-repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.14.1\jackson-datatype-jsr310-2.14.1.jar;D:\data\maven-repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;D:\data\maven-repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;D:\data\maven-repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;D:\data\maven-repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;D:\data\maven-repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;D:\data\maven-repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;D:\data\maven-repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;D:\data\maven-repository\cn\hutool\hutool-all\5.8.26\hutool-all-5.8.26.jar;D:\data\maven-repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;D:\data\m
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4223664128                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 0                                      {pd product} {ergonomic}
+     bool ProfileInterpreter                       = false                                  {pd product} {command line}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4223664128                             {manageable} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=D:\Program Files\Java\jdk-1.8
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\graalvm-ce-java17-22.3.0\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\BaiduNetdiskDownload\runtime\win64;D:\BaiduNetdiskDownload\bin;D:\BaiduNetdiskDownload\polyspace\bin;C:\Users\Rey\mingw64\bin\;%MYSQL_HOME%\bin;C:\Program Files\Azure Data Studio\bin;D:\Program Files\MySQL\MySQL Server 8.0\bin;D:\Program Files\apache-tomcat-10.1.7\bin;D:\Program Files\nodejs\;D:\Server\maven\apache-maven-3.9.4\bin;D:\Program Files\Redis-x64-3.2.100;D:\Program Files\elasticsearch-7.17.16-windows-x86_64\elasticsearch-7.17.16\bin;D:\Program Files\elasticsearch-7.17.16-windows-x86_64\elasticsearch-7.17.16\jdk\bin;D:\Program Files\Git\cmd;D:\Program Files (x86)\NetSarang\Xshell 8\;D:\Program Files\NetSarang\Xftp 8\;D:\software\hadoop-3.1.3\bin;c:\Users\Rey\AppData\Local\Programs\cursor\resources\app\bin;D:\Program Files\Java\jdk-1.8\bin;D:\subject\Third_2\andoirdDev\soft\gradle-8.13-bin\gradle-8.13\bin;D:\software\lua-5.4.2_Win64_bin;D:\Program Files\python\Python38\Scripts;D:\Program Files\Python\Python38\;D:\Program Files (x86)\Tencent\微信web开发者工具\dll;D:\Program Files\apache-jmeter-5.6.3\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\subject\JAVA\apache-cassandra-4.0.18\bin;C:\Program Files\Docker\Docker\resources\bin;D:\Program Files\cursor\resources\app\bin;D:\Program Files\Python\Python38\Scripts\;D:\Program Files\Python\Python38\;C:\Users\Rey\AppData\Local\Microsoft\WindowsApps;C:\Users\Rey\.dotnet\tools;C:\Users\Rey\mingw64\bin;C:\Program Files\Azure Data Studio\bin;D:\softw
+USERNAME=Rey
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.5074)
+OS uptime: 0 days 5:28 hours
+Hyper-V role detected
+
+CPU: total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 154 stepping 3 microcode 0x41b, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv
+
+Memory: 4k page, system-wide physical 16108M (1206M free)
+TotalPageFile size 31468M (AvailPageFile size 21M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 66M, peak: 318M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286) for windows-amd64 JRE (17.0.12+8-LTS-286), built on Jun  5 2024 06:46:59 by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.

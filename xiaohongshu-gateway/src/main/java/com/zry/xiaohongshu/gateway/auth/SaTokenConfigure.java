@@ -35,7 +35,7 @@ public class SaTokenConfigure {
                             .notMatch("/search/search/note") // 笔记搜索
                             .check(r -> StpUtil.checkLogin()) // 校验是否登录
                     ;
-                    SaRouter.match("/auth/logout",r->StpUtil.checkPermission("app:note:publish"));
+//                    SaRouter.match("/auth/logout",r->StpUtil.checkPermission("app:note:publish"));
                     // 权限认证 -- 不同模块, 校验不同权限
                     // SaRouter.match("/user/**", r -> StpUtil.checkPermission("user"));
                     // SaRouter.match("/admin/**", r -> StpUtil.checkPermission("admin"));

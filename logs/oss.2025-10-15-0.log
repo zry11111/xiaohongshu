@@ -97,3 +97,156 @@
 2025-10-15 09:42:12.938 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohongshu-8.134.88.169_8848] [subscribe] xiaohongshu-oss-dev.yaml+DEFAULT_GROUP+xiaohongshu
 2025-10-15 09:42:12.938 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohongshu-8.134.88.169_8848] [add-listener] ok, tenant=xiaohongshu, dataId=xiaohongshu-oss-dev.yaml, group=DEFAULT_GROUP, cnt=1
 2025-10-15 09:42:12.938 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohongshu-oss-dev.yaml, group=DEFAULT_GROUP
+2025-10-15 16:05:29.629 [http-nio-8083-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-15 16:05:29.661 [http-nio-8083-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-15 16:05:29.714 [http-nio-8083-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 53 ms
+2025-10-15 16:05:29.746 [http-nio-8083-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 16:05:29.981 [http-nio-8083-exec-1] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 16:05:29.984 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 16:05:30.007 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 7c9d24ce9d6c4e9b883e3b6381e3c030.webp
+2025-10-15 16:05:30.883 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/7c9d24ce9d6c4e9b883e3b6381e3c030.webp
+2025-10-15 16:05:30.942 [http-nio-8083-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 16:09:04.420 [http-nio-8083-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 16:09:04.427 [http-nio-8083-exec-6] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 16:09:04.427 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 16:09:04.427 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 1d3885ba0f5a4179ba7570b277ac414f.jpg
+2025-10-15 16:09:04.494 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/1d3885ba0f5a4179ba7570b277ac414f.jpg
+2025-10-15 16:09:04.496 [http-nio-8083-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 16:18:39.038 [http-nio-8083-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 16:18:39.065 [http-nio-8083-exec-7] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 16:18:39.067 [http-nio-8083-exec-7] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 16:18:39.068 [http-nio-8083-exec-7] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: ed55f67d9d7344dc9ba70d6871599f0b.webp
+2025-10-15 16:18:39.158 [http-nio-8083-exec-7] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/ed55f67d9d7344dc9ba70d6871599f0b.webp
+2025-10-15 16:18:39.172 [http-nio-8083-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 16:21:59.711 [http-nio-8083-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 16:21:59.721 [http-nio-8083-exec-5] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 16:21:59.722 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 16:21:59.722 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 531549c5493d4df0a54d8949d9bf0332.webp
+2025-10-15 16:21:59.761 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp
+2025-10-15 16:21:59.767 [http-nio-8083-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 16:22:30.235 [http-nio-8083-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 16:22:30.242 [http-nio-8083-exec-3] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 16:22:30.243 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 16:22:30.243 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: f07b19cfe1d54def80d0c488c6f8ef0f.jpg
+2025-10-15 16:22:30.318 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/f07b19cfe1d54def80d0c488c6f8ef0f.jpg
+2025-10-15 16:22:30.321 [http-nio-8083-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 17:00:51.623 [http-nio-8083-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 104
+2025-10-15 17:00:51.670 [http-nio-8083-exec-10] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 104
+2025-10-15 17:00:51.674 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 17:00:51.676 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: b66c04ab4c76479fbc55bcf97227faef.jpg
+2025-10-15 17:00:51.761 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/b66c04ab4c76479fbc55bcf97227faef.jpg
+2025-10-15 17:00:51.782 [http-nio-8083-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 104
+2025-10-15 17:04:36.385 [http-nio-8083-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 104
+2025-10-15 17:04:36.414 [http-nio-8083-exec-9] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 104
+2025-10-15 17:04:36.416 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 17:04:36.417 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 492981a7bbd445cfbad933dddfd0dec7.jpg
+2025-10-15 17:04:36.515 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/492981a7bbd445cfbad933dddfd0dec7.jpg
+2025-10-15 17:04:36.522 [http-nio-8083-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 104
+2025-10-15 17:15:22.685 [http-nio-8083-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 104
+2025-10-15 17:15:22.742 [http-nio-8083-exec-1] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 104
+2025-10-15 17:15:22.744 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 17:15:22.745 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 4b7b638e6109415dac36001218fdccfe.mp4
+2025-10-15 17:15:22.943 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/4b7b638e6109415dac36001218fdccfe.mp4
+2025-10-15 17:15:22.957 [http-nio-8083-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 104
+2025-10-15 17:17:54.690 [http-nio-8083-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 104
+2025-10-15 17:17:54.709 [http-nio-8083-exec-6] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 104
+2025-10-15 17:17:54.710 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 17:17:54.710 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 9a809ef7dd1242a58699f8bbf27fd54d.mp4
+2025-10-15 17:17:54.861 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/9a809ef7dd1242a58699f8bbf27fd54d.mp4
+2025-10-15 17:17:54.864 [http-nio-8083-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 104
+2025-10-15 18:47:04.334 [http-nio-8083-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:47:04.373 [http-nio-8083-exec-5] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 18:47:04.374 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 18:47:04.376 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 4b117930adc34ea7ba08ac0099e38ba7.JPG
+2025-10-15 18:47:04.583 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/4b117930adc34ea7ba08ac0099e38ba7.JPG
+2025-10-15 18:47:04.660 [http-nio-8083-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:47:27.522 [http-nio-8083-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:47:27.528 [http-nio-8083-exec-3] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 18:47:27.528 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 18:47:27.529 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 89bc136ff7f94d2c877e65ef0a7ac6bf.JPG
+2025-10-15 18:47:27.640 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/89bc136ff7f94d2c877e65ef0a7ac6bf.JPG
+2025-10-15 18:47:27.643 [http-nio-8083-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:47:45.943 [http-nio-8083-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:47:45.950 [http-nio-8083-exec-10] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 18:47:45.950 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 18:47:45.951 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 5f2393f1c2e048e3b91f9738181870ba.JPG
+2025-10-15 18:47:46.033 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/5f2393f1c2e048e3b91f9738181870ba.JPG
+2025-10-15 18:47:46.038 [http-nio-8083-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:48:01.104 [http-nio-8083-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:48:01.110 [http-nio-8083-exec-4] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 18:48:01.110 [http-nio-8083-exec-4] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 18:48:01.111 [http-nio-8083-exec-4] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 3a69f216f318477499269bfa4abe7375.JPG
+2025-10-15 18:48:01.189 [http-nio-8083-exec-4] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/3a69f216f318477499269bfa4abe7375.JPG
+2025-10-15 18:48:01.191 [http-nio-8083-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:48:24.080 [http-nio-8083-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:48:24.091 [http-nio-8083-exec-9] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 100
+2025-10-15 18:48:24.091 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 18:48:24.091 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 338436125b10424a9bfe77b1aed29aea.JPG
+2025-10-15 18:48:24.200 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/338436125b10424a9bfe77b1aed29aea.JPG
+2025-10-15 18:48:24.204 [http-nio-8083-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 22:04:12.509 [http-nio-8083-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:04:12.566 [http-nio-8083-exec-1] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:04:12.571 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:04:12.575 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 10385964a1644cfeb4091a9bac0def85.png
+2025-10-15 22:04:12.694 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/10385964a1644cfeb4091a9bac0def85.png
+2025-10-15 22:04:12.797 [http-nio-8083-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:04:13.050 [http-nio-8083-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:04:13.061 [http-nio-8083-exec-2] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:04:13.101 [http-nio-8083-exec-2] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:04:13.101 [http-nio-8083-exec-2] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 934264344f96467cbc4f25c37dcbae62.png
+2025-10-15 22:04:13.165 [http-nio-8083-exec-2] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/934264344f96467cbc4f25c37dcbae62.png
+2025-10-15 22:04:13.212 [http-nio-8083-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:04:13.395 [http-nio-8083-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:04:13.407 [http-nio-8083-exec-6] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:04:13.413 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:04:13.414 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: defc65f70cb94836996438152af42d65.png
+2025-10-15 22:04:13.451 [http-nio-8083-exec-6] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/defc65f70cb94836996438152af42d65.png
+2025-10-15 22:04:13.459 [http-nio-8083-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:07:14.020 [http-nio-8083-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:07:14.035 [http-nio-8083-exec-5] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:07:14.036 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:07:14.037 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: cd66817579cb4f05b8f7c95aaddeb3e5.jpg
+2025-10-15 22:07:14.179 [http-nio-8083-exec-5] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/cd66817579cb4f05b8f7c95aaddeb3e5.jpg
+2025-10-15 22:07:14.182 [http-nio-8083-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:07:14.606 [http-nio-8083-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:07:14.616 [http-nio-8083-exec-3] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:07:14.616 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:07:14.616 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 1834491b8327437f888216064b7519de.jpg
+2025-10-15 22:07:14.692 [http-nio-8083-exec-3] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/1834491b8327437f888216064b7519de.jpg
+2025-10-15 22:07:14.697 [http-nio-8083-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:07:15.057 [http-nio-8083-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:07:15.068 [http-nio-8083-exec-10] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:07:15.068 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:07:15.069 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 425f9f0970254eec8dcd5e3a8dc82350.png
+2025-10-15 22:07:15.141 [http-nio-8083-exec-10] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/425f9f0970254eec8dcd5e3a8dc82350.png
+2025-10-15 22:07:15.144 [http-nio-8083-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:07:15.543 [http-nio-8083-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:07:15.552 [http-nio-8083-exec-4] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:07:15.552 [http-nio-8083-exec-4] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:07:15.553 [http-nio-8083-exec-4] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 3a6ef660af2d4751a6986b0d4b66771e.png
+2025-10-15 22:07:15.625 [http-nio-8083-exec-4] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/3a6ef660af2d4751a6986b0d4b66771e.png
+2025-10-15 22:07:15.628 [http-nio-8083-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:07:29.429 [http-nio-8083-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:07:29.444 [http-nio-8083-exec-9] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:07:29.444 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:07:29.445 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: f0c2ae119d344332bb44f313448f3eb2.jpg
+2025-10-15 22:07:29.578 [http-nio-8083-exec-9] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/f0c2ae119d344332bb44f313448f3eb2.jpg
+2025-10-15 22:07:29.583 [http-nio-8083-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:07:29.867 [http-nio-8083-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:07:29.879 [http-nio-8083-exec-8] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:07:29.880 [http-nio-8083-exec-8] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:07:29.880 [http-nio-8083-exec-8] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 4be7dcce680d4b7f9e28cddc87919d6f.jpg
+2025-10-15 22:07:29.973 [http-nio-8083-exec-8] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/4be7dcce680d4b7f9e28cddc87919d6f.jpg
+2025-10-15 22:07:29.976 [http-nio-8083-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:07:30.179 [http-nio-8083-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:07:30.190 [http-nio-8083-exec-1] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:07:30.191 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:07:30.191 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: bbe4d8ddbef84529b5eb118a8ce53488.jpeg
+2025-10-15 22:07:30.272 [http-nio-8083-exec-1] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/bbe4d8ddbef84529b5eb118a8ce53488.jpeg
+2025-10-15 22:07:30.276 [http-nio-8083-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103
+2025-10-15 22:07:30.503 [http-nio-8083-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 103
+2025-10-15 22:07:30.515 [http-nio-8083-exec-2] INFO  c.z.xiaohongshu.oss.biz.controller.FileController - ==> 用户： 103
+2025-10-15 22:07:30.515 [http-nio-8083-exec-2] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ## 上传文件至 Minio ...
+2025-10-15 22:07:30.516 [http-nio-8083-exec-2] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 开始上传文件至 Minio, ObjectName: 28183e5d4b364b10966fa82f60ff32c2.jpg
+2025-10-15 22:07:30.610 [http-nio-8083-exec-2] INFO  c.z.x.oss.biz.strategy.impl.MinioFileStrategy - ==> 上传文件至 Minio 成功，访问路径: http://8.134.88.169:9000/my-xiaohongshu-oss/28183e5d4b364b10966fa82f60ff32c2.jpg
+2025-10-15 22:07:30.613 [http-nio-8083-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 103

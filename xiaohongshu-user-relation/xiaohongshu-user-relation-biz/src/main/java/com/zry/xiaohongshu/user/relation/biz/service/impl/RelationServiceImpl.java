@@ -74,7 +74,7 @@ public class RelationServiceImpl implements RelationService {
             throw new BizException(ResponseCodeEnum.CANT_FOLLOW_YOUR_SELF);
         }
 
-        // TODO: 校验关注的用户是否存在
+        // 校验关注的用户是否存在
         FindUserByIdRspDTO findUserByIdRspDTO = userRpcService.findById(followUserId);
 
         if (Objects.isNull(findUserByIdRspDTO)) {
@@ -380,6 +380,21 @@ public class RelationServiceImpl implements RelationService {
 
         return PageResponse.success(findFansUserRspVOS, pageNo, total);
     }
+
+    @Override
+    public Response<Boolean> findIsFollowed(Long userId) {
+        // TODO 后续再来管一致性问题
+        // 获取当前用户id
+        Long currUserId = LoginUserContextHolder.getUserId();
+        String followingRedisKey = RedisKeyConstants.buildUserFollowingKey(currUserId);
+        // 查询redis zset中是否含有该数据
+        Double score = redisTemplate.opsForZSet().score(followingRedisKey, userId);
+        if(Objects.nonNull(score)){
+            return Response.success(true);
+        }
+        return Response.success(false);
+    }
+
     private void syncFansList2Redis(Long userId) {
         // 查询全量粉丝用户列表（5000位用户）
         List<FansDO> fansDOS = fansDOMapper.select5000FansByUserId(userId);

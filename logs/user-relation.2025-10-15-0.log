@@ -136,3 +136,281 @@
 2025-10-15 09:42:36.592 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohongshu-8.134.88.169_8848_] [subscribe] xiaohongshu-user-relation.yaml+DEFAULT_GROUP+xiaohongshu
 2025-10-15 09:42:36.592 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohongshu-8.134.88.169_8848_] [add-listener] ok, tenant=xiaohongshu, dataId=xiaohongshu-user-relation.yaml, group=DEFAULT_GROUP, cnt=1
 2025-10-15 09:42:36.592 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohongshu-user-relation.yaml, group=DEFAULT_GROUP
+2025-10-15 16:27:04.120 [http-nio-8901-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-15 16:27:04.139 [http-nio-8901-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-15 16:27:04.232 [http-nio-8901-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 92 ms
+2025-10-15 16:27:04.304 [http-nio-8901-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 104
+2025-10-15 16:27:04.304 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: null
+2025-10-15 16:27:04.885 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":104}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 16:27:04.885 [http-nio-8901-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":104}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 16:27:04.898 [http-nio-8901-exec-2] WARN  c.z.x.u.r.biz.exception.GlobalExceptionHandler - /relation/follow request fail, errorCode: RELATION-20001, errorMessage: 无法关注自己
+2025-10-15 16:27:04.948 [http-nio-8901-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 104
+2025-10-15 16:27:05.219 [http-nio-8901-exec-1] INFO  com.alibaba.nacos.client.naming - [SUBSCRIBE-SERVICE] service:xiaohongshu-user, group:DEFAULT_GROUP, clusters: 
+2025-10-15 16:27:05.270 [http-nio-8901-exec-1] INFO  com.alibaba.nacos.client.naming - init new ips(1) service: DEFAULT_GROUP@@xiaohongshu-user -> [{"ip":"10.2.66.30","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-user","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2025-10-15 16:27:05.274 [http-nio-8901-exec-1] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: DEFAULT_GROUP@@xiaohongshu-user -> [{"ip":"10.2.66.30","port":8082,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@xiaohongshu-user","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2025-10-15 16:27:05.793 [nacos-grpc-client-executor-8.134.88.169-4890] INFO  com.alibaba.nacos.common.remote.client - [04370aeb-3dfc-489d-b934-d485d9932b5c] Receive server push request, request = NotifySubscriberRequest, requestId = 1602
+2025-10-15 16:27:05.794 [nacos-grpc-client-executor-8.134.88.169-4890] INFO  com.alibaba.nacos.common.remote.client - [04370aeb-3dfc-489d-b934-d485d9932b5c] Ack server push request, request = NotifySubscriberRequest, requestId = 1602
+2025-10-15 16:27:07.307 [http-nio-8901-exec-1] INFO  c.z.x.u.r.biz.service.impl.RelationServiceImpl - ==> 开始发送关注操作 MQ, 消息体: FollowUserMqDTO(userId=null, followUserId=104, createTime=2025-10-15T16:27:05.453742600)
+2025-10-15 16:27:07.328 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [关注用户], 耗时: 2457ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-10-15 16:27:07.415 [NettyClientPublicExecutor_1] INFO  c.z.x.u.r.biz.service.impl.RelationServiceImpl - ==> MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4BA0C4FC0000, offsetMsgId=0A02421E00002A9F0000000000FB1F4B, messageQueue=MessageQueue [topic=FollowUnfollowTopic, brokerName=broker-a, queueId=3], queueOffset=7507]
+2025-10-15 16:27:07.425 [ConsumeMessageThread_xiaohongshu_group_FollowUnfollowTopic_1] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> FollowUnfollowConsumer 消费了消息 {"userId":null,"followUserId":104,"createTime":"2025-10-15 16:27:05"}, tags: Follow
+2025-10-15 16:27:07.855 [ConsumeMessageThread_xiaohongshu_group_FollowUnfollowTopic_1] ERROR c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - 
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+### The error may exist in file [D:\subject\JAVA\SpringCloud\xiaohongshu\xiaohongshu-user-relation\xiaohongshu-user-relation-biz\target\classes\mapper\FollowingDOMapper.xml]
+### The error may involve com.zry.xiaohongshu.user.relation.biz.domain.mapper.FollowingDOMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_following (id, user_id, following_user_id,        create_time)     values (?, ?, ?,        ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+; Column 'user_id' cannot be null
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:95)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy90.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy91.insert(Unknown Source)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.lambda$handleFollowTagMessage$1(FollowUnfollowConsumer.java:141)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.handleFollowTagMessage(FollowUnfollowConsumer.java:137)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:71)
+	at com.zry.xiaohongshu.user.relation.biz.consumer.FollowUnfollowConsumer.onMessage(FollowUnfollowConsumer.java:37)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerOrderly.consumeMessage(DefaultRocketMQListenerContainer.java:444)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageOrderlyService$ConsumeRequest.run(ConsumeMessageOrderlyService.java:498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'user_id' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1063)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 20 common frames omitted
+2025-10-15 18:50:04.016 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:50:04.144 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":104}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 18:50:04.199 [http-nio-8901-exec-5] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 18:50:04.504 [http-nio-8901-exec-5] INFO  c.z.x.u.r.biz.service.impl.RelationServiceImpl - ==> 开始发送关注操作 MQ, 消息体: FollowUserMqDTO(userId=100, followUserId=104, createTime=2025-10-15T18:50:04.302602100)
+2025-10-15 18:50:04.512 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [关注用户], 耗时: 378ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-10-15 18:50:04.526 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:50:04.534 [NettyClientPublicExecutor_2] INFO  c.z.x.u.r.biz.service.impl.RelationServiceImpl - ==> MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4C23A5620001, offsetMsgId=0A02421E00002A9F0000000000FB5B5B, messageQueue=MessageQueue [topic=FollowUnfollowTopic, brokerName=broker-a, queueId=1], queueOffset=7501]
+2025-10-15 18:50:04.545 [ConsumeMessageThread_xiaohongshu_group_FollowUnfollowTopic_2] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> FollowUnfollowConsumer 消费了消息 {"userId":100,"followUserId":104,"createTime":"2025-10-15 18:50:04"}, tags: Follow
+2025-10-15 18:50:04.771 [NettyClientPublicExecutor_3] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> 【计数服务：粉丝数】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4C23A65A0003, offsetMsgId=0A02421E00002A9F0000000000FB5CF0, messageQueue=MessageQueue [topic=CountFansTopic, brokerName=broker-a, queueId=1], queueOffset=2403]
+2025-10-15 18:50:04.771 [NettyClientPublicExecutor_4] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> 【计数服务：关注数】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4C23A6570002, offsetMsgId=0A02421E00002A9F0000000000FB5E5A, messageQueue=MessageQueue [topic=CountFollowingTopic, brokerName=broker-a, queueId=1], queueOffset=0]
+2025-10-15 18:50:11.059 [http-nio-8901-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:50:11.063 [http-nio-8901-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":104}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 18:50:11.065 [http-nio-8901-exec-6] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 18:50:11.126 [http-nio-8901-exec-6] WARN  c.z.x.u.r.biz.exception.GlobalExceptionHandler - /relation/follow request fail, errorCode: RELATION-20004, errorMessage: 您已经关注了该用户
+2025-10-15 18:50:11.127 [http-nio-8901-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 18:50:14.451 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 18:50:14.453 [http-nio-8901-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":104}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 18:50:14.454 [http-nio-8901-exec-7] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 18:50:14.476 [http-nio-8901-exec-7] WARN  c.z.x.u.r.biz.exception.GlobalExceptionHandler - /relation/follow request fail, errorCode: RELATION-20004, errorMessage: 您已经关注了该用户
+2025-10-15 18:50:14.477 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:04:56.217 [http-nio-8901-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:04:56.849 [http-nio-8901-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:04:57.666 [http-nio-8901-exec-9] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:04:57.772 [http-nio-8901-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 924ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:04:57.794 [http-nio-8901-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:05:14.377 [http-nio-8901-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:05:14.380 [http-nio-8901-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:05:14.387 [http-nio-8901-exec-10] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:05:14.405 [http-nio-8901-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 26ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:05:14.406 [http-nio-8901-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:05:16.280 [http-nio-8901-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:05:16.296 [http-nio-8901-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:05:16.435 [http-nio-8901-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 139ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:05:16.437 [http-nio-8901-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:05:16.783 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:05:16.785 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:05:16.790 [http-nio-8901-exec-1] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:05:16.810 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 25ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:05:16.811 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:05:58.979 [http-nio-8901-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:05:58.981 [http-nio-8901-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:05:58.996 [http-nio-8901-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 6ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:05:58.998 [http-nio-8901-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:05:59.465 [http-nio-8901-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:05:59.469 [http-nio-8901-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:05:59.475 [http-nio-8901-exec-4] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:05:59.485 [http-nio-8901-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 16ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:05:59.488 [http-nio-8901-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:00.226 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:00.227 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:00.232 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 5ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:00.233 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:00.586 [http-nio-8901-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:00.587 [http-nio-8901-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:00.593 [http-nio-8901-exec-6] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:00.611 [http-nio-8901-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 24ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:00.618 [http-nio-8901-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:30.796 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:30.798 [http-nio-8901-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:30.804 [http-nio-8901-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 6ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:30.805 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:31.594 [http-nio-8901-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:31.596 [http-nio-8901-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:31.601 [http-nio-8901-exec-8] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:31.612 [http-nio-8901-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 15ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:31.612 [http-nio-8901-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:32.257 [http-nio-8901-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:32.260 [http-nio-8901-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:32.264 [http-nio-8901-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:32.265 [http-nio-8901-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:32.728 [http-nio-8901-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:32.730 [http-nio-8901-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:32.735 [http-nio-8901-exec-10] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:32.759 [http-nio-8901-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 30ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:32.760 [http-nio-8901-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:34.363 [http-nio-8901-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:34.364 [http-nio-8901-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:34.368 [http-nio-8901-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:34.369 [http-nio-8901-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:34.751 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:34.753 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:34.759 [http-nio-8901-exec-1] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:34.779 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 26ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:34.786 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:35.213 [http-nio-8901-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:35.216 [http-nio-8901-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:35.220 [http-nio-8901-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 5ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:35.224 [http-nio-8901-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:35.724 [http-nio-8901-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:35.725 [http-nio-8901-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:35.729 [http-nio-8901-exec-4] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:35.748 [http-nio-8901-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 23ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:35.749 [http-nio-8901-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:36.384 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:36.387 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:36.392 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 6ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:36.394 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:36.803 [http-nio-8901-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:36.805 [http-nio-8901-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:36.809 [http-nio-8901-exec-6] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:36.828 [http-nio-8901-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 23ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:36.829 [http-nio-8901-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:37.268 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:37.270 [http-nio-8901-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:37.274 [http-nio-8901-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:37.276 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:37.694 [http-nio-8901-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:37.695 [http-nio-8901-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:37.699 [http-nio-8901-exec-8] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:37.709 [http-nio-8901-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 14ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:37.709 [http-nio-8901-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:38.357 [http-nio-8901-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:38.359 [http-nio-8901-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:38.363 [http-nio-8901-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:38.365 [http-nio-8901-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:38.849 [http-nio-8901-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:38.850 [http-nio-8901-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:38.857 [http-nio-8901-exec-10] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:38.886 [http-nio-8901-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 36ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:38.887 [http-nio-8901-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:50.702 [http-nio-8901-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:50.704 [http-nio-8901-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:50.708 [http-nio-8901-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:50.710 [http-nio-8901-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:51.357 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:51.359 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:51.363 [http-nio-8901-exec-1] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:51.379 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 20ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:51.380 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:51.798 [http-nio-8901-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:51.800 [http-nio-8901-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:51.804 [http-nio-8901-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:51.805 [http-nio-8901-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:52.246 [http-nio-8901-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:52.248 [http-nio-8901-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:52.252 [http-nio-8901-exec-4] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:52.275 [http-nio-8901-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 27ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:52.277 [http-nio-8901-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:54.173 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:54.174 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:54.179 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:54.180 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:54.645 [http-nio-8901-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:54.657 [http-nio-8901-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:54.662 [http-nio-8901-exec-6] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:54.680 [http-nio-8901-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 23ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:54.682 [http-nio-8901-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:56.130 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:56.131 [http-nio-8901-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户粉丝列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFansList =================================== 
+2025-10-15 23:06:56.137 [http-nio-8901-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户粉丝列表], 耗时: 6ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null,"pageNo":1,"totalCount":0,"pageSize":10,"totalPage":0} =================================== 
+2025-10-15 23:06:56.139 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:06:57.408 [http-nio-8901-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:06:57.413 [http-nio-8901-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:06:57.418 [http-nio-8901-exec-8] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:06:57.427 [http-nio-8901-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 15ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":1,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:06:57.428 [http-nio-8901-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:07:33.726 [http-nio-8901-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:07:33.728 [http-nio-8901-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":103}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 23:07:33.730 [http-nio-8901-exec-9] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:07:33.765 [http-nio-8901-exec-9] INFO  c.z.x.u.r.biz.service.impl.RelationServiceImpl - ==> 开始发送关注操作 MQ, 消息体: FollowUserMqDTO(userId=100, followUserId=103, createTime=2025-10-15T23:07:33.741203600)
+2025-10-15 23:07:33.772 [http-nio-8901-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [关注用户], 耗时: 44ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-10-15 23:07:33.776 [http-nio-8901-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:07:33.846 [NettyClientPublicExecutor_5] INFO  c.z.x.u.r.biz.service.impl.RelationServiceImpl - ==> MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4D0F620F0004, offsetMsgId=0A02421E00002A9F0000000000FB6C13, messageQueue=MessageQueue [topic=FollowUnfollowTopic, brokerName=broker-a, queueId=1], queueOffset=7502]
+2025-10-15 23:07:33.855 [ConsumeMessageThread_xiaohongshu_group_FollowUnfollowTopic_3] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> FollowUnfollowConsumer 消费了消息 {"userId":100,"followUserId":103,"createTime":"2025-10-15 23:07:33"}, tags: Follow
+2025-10-15 23:07:33.923 [NettyClientPublicExecutor_7] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> 【计数服务：粉丝数】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4D0F62970006, offsetMsgId=0A02421E00002A9F0000000000FB6F17, messageQueue=MessageQueue [topic=CountFansTopic, brokerName=broker-a, queueId=0], queueOffset=2396]
+2025-10-15 23:07:33.923 [NettyClientPublicExecutor_6] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> 【计数服务：关注数】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4D0F62970005, offsetMsgId=0A02421E00002A9F0000000000FB6DA8, messageQueue=MessageQueue [topic=CountFollowingTopic, brokerName=broker-a, queueId=0], queueOffset=1]
+2025-10-15 23:07:36.634 [http-nio-8901-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:07:36.637 [http-nio-8901-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:07:36.643 [http-nio-8901-exec-10] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:07:36.658 [http-nio-8901-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 21ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":103,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/ed55f67d9d7344dc9ba70d6871599f0b.webp","nickname":"想不出名儿来","introduction":null},{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":2,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:07:36.661 [http-nio-8901-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:55:41.349 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:55:41.527 [http-nio-8901-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":103}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 23:55:41.584 [http-nio-8901-exec-1] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:55:41.997 [http-nio-8901-exec-1] WARN  c.z.x.u.r.biz.exception.GlobalExceptionHandler - /relation/follow request fail, errorCode: RELATION-20004, errorMessage: 您已经关注了该用户
+2025-10-15 23:55:42.020 [http-nio-8901-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:55:53.213 [http-nio-8901-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:55:53.216 [http-nio-8901-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":104}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 23:55:53.243 [http-nio-8901-exec-3] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:55:53.286 [http-nio-8901-exec-3] WARN  c.z.x.u.r.biz.exception.GlobalExceptionHandler - /relation/follow request fail, errorCode: RELATION-20004, errorMessage: 您已经关注了该用户
+2025-10-15 23:55:53.287 [http-nio-8901-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:55:56.721 [http-nio-8901-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:55:56.728 [http-nio-8901-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [查询用户关注列表], 入参: {"userId":100,"pageNo":1}, 请求类: RelationController, 请求方法: findFollowingList =================================== 
+2025-10-15 23:55:56.743 [http-nio-8901-exec-4] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:55:56.760 [http-nio-8901-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [查询用户关注列表], 耗时: 33ms, 出参: {"success":true,"message":null,"errorCode":null,"data":[{"userId":103,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/ed55f67d9d7344dc9ba70d6871599f0b.webp","nickname":"想不出名儿来","introduction":null},{"userId":104,"avatar":"http://8.134.88.169:9000/my-xiaohongshu-oss/531549c5493d4df0a54d8949d9bf0332.webp","nickname":"果鸭鸭","introduction":"没啥特别的，就是喜欢记录生活🤪"}],"pageNo":1,"totalCount":2,"pageSize":10,"totalPage":1} =================================== 
+2025-10-15 23:55:56.763 [http-nio-8901-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:56:43.030 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:56:43.036 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":101}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 23:56:43.039 [http-nio-8901-exec-5] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:56:43.070 [http-nio-8901-exec-5] INFO  c.z.x.u.r.biz.service.impl.RelationServiceImpl - ==> 开始发送关注操作 MQ, 消息体: FollowUserMqDTO(userId=100, followUserId=101, createTime=2025-10-15T23:56:43.060878400)
+2025-10-15 23:56:43.083 [http-nio-8901-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [关注用户], 耗时: 47ms, 出参: {"success":true,"message":null,"errorCode":null,"data":null} =================================== 
+2025-10-15 23:56:43.089 [http-nio-8901-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-15 23:56:43.159 [NettyClientPublicExecutor_8] INFO  c.z.x.u.r.biz.service.impl.RelationServiceImpl - ==> MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4D3C62CE0007, offsetMsgId=0A02421E00002A9F0000000000FB7969, messageQueue=MessageQueue [topic=FollowUnfollowTopic, brokerName=broker-a, queueId=1], queueOffset=7503]
+2025-10-15 23:56:43.171 [ConsumeMessageThread_xiaohongshu_group_FollowUnfollowTopic_4] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> FollowUnfollowConsumer 消费了消息 {"userId":100,"followUserId":101,"createTime":"2025-10-15 23:56:43"}, tags: Follow
+2025-10-15 23:56:43.340 [NettyClientPublicExecutor_9] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> 【计数服务：关注数】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4D3C63C10008, offsetMsgId=0A02421E00002A9F0000000000FB7AFE, messageQueue=MessageQueue [topic=CountFollowingTopic, brokerName=broker-a, queueId=0], queueOffset=2]
+2025-10-15 23:56:43.341 [NettyClientPublicExecutor_10] INFO  c.z.x.u.r.biz.consumer.FollowUnfollowConsumer - ==> 【计数服务：粉丝数】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000164A463947C6B4D3C63C10009, offsetMsgId=0A02421E00002A9F0000000000FB7C6D, messageQueue=MessageQueue [topic=CountFansTopic, brokerName=broker-a, queueId=2], queueOffset=2399]
+2025-10-15 23:58:15.968 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-15 23:58:15.970 [http-nio-8901-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [关注用户], 入参: {"followUserId":101}, 请求类: RelationController, 请求方法: follow =================================== 
+2025-10-15 23:58:15.971 [http-nio-8901-exec-7] INFO  c.z.f.b.c.interceptor.FeignRequestInterceptor - ==> feign请求设置请求头 userId: 100
+2025-10-15 23:58:16.034 [http-nio-8901-exec-7] WARN  c.z.x.u.r.biz.exception.GlobalExceptionHandler - /relation/follow request fail, errorCode: RELATION-20004, errorMessage: 您已经关注了该用户
+2025-10-15 23:58:16.035 [http-nio-8901-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100

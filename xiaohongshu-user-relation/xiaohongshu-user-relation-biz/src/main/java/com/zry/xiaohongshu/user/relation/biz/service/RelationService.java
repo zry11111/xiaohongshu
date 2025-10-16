@@ -9,4 +9,6 @@ public interface RelationService {
     Response<?> unfollow(UnfollowUserReqVO unfollowUserReqVO);
     PageResponse<FindFollowingUserRspVO> findFollowingList(FindFollowingListReqVO findFollowingListReqVO);
     PageResponse<FindFansUserRspVO> findFansList(FindFansListReqVO findFansListReqVO);
+
+    Response<Boolean> findIsFollowed(Long userId);
 }

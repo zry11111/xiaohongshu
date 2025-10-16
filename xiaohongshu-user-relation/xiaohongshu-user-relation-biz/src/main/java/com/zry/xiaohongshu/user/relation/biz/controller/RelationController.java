@@ -8,10 +8,7 @@ import com.zry.xiaohongshu.user.relation.biz.service.RelationService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/relation")
@@ -41,6 +38,10 @@ public class RelationController {
     public PageResponse<FindFansUserRspVO> findFansList(@Validated @RequestBody FindFansListReqVO findFansListReqVO) {
         return relationService.findFansList(findFansListReqVO);
     }
-
-
+    //添加一个判断是否关注的接口
+    @PostMapping("/isFollowed")
+    @ApiOperationLog(description = "判断是否关注某用户")
+    public Response<Boolean> isFollowed(@Validated @RequestParam Long userId) {
+        return relationService.findIsFollowed(userId);
+    }
 }

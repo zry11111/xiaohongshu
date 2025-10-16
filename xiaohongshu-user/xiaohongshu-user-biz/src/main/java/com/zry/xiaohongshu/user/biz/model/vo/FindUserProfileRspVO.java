@@ -24,5 +24,5 @@ public class FindUserProfileRspVO {
     private String noteTotal;
     private String likeTotal;
     private String collectTotal;
-
+    private Boolean isFollowed;
 }
