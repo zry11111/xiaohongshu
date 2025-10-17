@@ -11,7 +11,7 @@ import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RocketMQMessageListener(consumerGroup = "xiaohongshu_group_"+ MQConstants.TOPIC_DELETE_COMMENT
+@RocketMQMessageListener(consumerGroup = "xiaohongshu_group_"+ MQConstants.TOPIC_DELETE_COMMENT_LOCAL_CACHE
                     ,topic = MQConstants.TOPIC_DELETE_COMMENT_LOCAL_CACHE
                     ,messageModel = MessageModel.BROADCASTING)//广播模式
 @Slf4j

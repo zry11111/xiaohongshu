@@ -6,6 +6,10 @@ public interface MQConstants {
      */
     String TOPIC_PUBLISH_COMMENT = "PublishCommentTopic";
     /**
+     * Topic: 删除评论
+     */
+    String TOPIC_DELETE_COMMENT = "DeleteCommentTopic";
+    /**
      * Topic: 笔记评论总数计数
      */
     String TOPIC_COUNT_NOTE_COMMENT = "CountNoteCommentTopic";
@@ -30,9 +34,4 @@ public interface MQConstants {
      * Topic: 删除本地缓存 —— 评论详情
      */
     String TOPIC_DELETE_COMMENT_LOCAL_CACHE = "DeleteCommentDetailLocalCacheTopic";
-
-    /**
-     * Topic: 删除评论
-     */
-    String TOPIC_DELETE_COMMENT = "DeleteCommentTopic";
 }

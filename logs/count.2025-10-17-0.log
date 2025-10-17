@@ -69,3 +69,752 @@
 2025-10-17 00:03:50.277 [Thread-23] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
 2025-10-17 00:03:50.277 [Thread-23] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
 2025-10-17 00:03:50.278 [Thread-26] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-10-17 11:08:09.928 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:08:09.984 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:08:10.575 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:08:10.589 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:08:10.590 [main] INFO  c.z.x.count.biz.XiaohongshuCountBizApplication - The following 1 profile is active: "dev"
+2025-10-17 11:08:11.250 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-17 11:08:11.253 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-17 11:08:11.280 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2025-10-17 11:08:11.518 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=6ef523ff-def0-3e8c-a273-b01fb3d743e1
+2025-10-17 11:08:11.684 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:08:11.737 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'createRocketMQMessageConverter' of type [org.apache.rocketmq.spring.support.RocketMQMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:08:11.739 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:08:11.744 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:08:11.745 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$722/0x00000176014dc780] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:08:11.746 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:08:11.753 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rocketmq-org.apache.rocketmq.spring.autoconfigure.RocketMQProperties' of type [org.apache.rocketmq.spring.autoconfigure.RocketMQProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:08:11.755 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:08:11.991 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2025-10-17 11:08:11.993 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-10-17 11:08:11.998 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-10-17 11:08:12.010 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-17 11:08:12.010 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-10-17 11:08:12.110 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-17 11:08:12.112 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1506 ms
+2025-10-17 11:08:12.204 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-10-17 11:08:12.543 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-10-17 11:08:16.165 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountCommentLike2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountCommentLike2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:16.166 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countCommentLike2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_1
+2025-10-17 11:08:16.438 [main] INFO  o.a.r.s.autoconfigure.RocketMQAutoConfiguration - a producer (xiaohongshu_group) init on namesrv 127.0.0.1:9876
+2025-10-17 11:08:19.546 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_count_CommentLikeUnlikeTopic', namespace='', nameServer='127.0.0.1:9876', topic='CommentLikeUnlikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:19.547 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countCommentLikeConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_2
+2025-10-17 11:08:22.619 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFans2DBTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFans2DBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:22.619 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFans2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_3
+2025-10-17 11:08:25.684 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFansTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFansTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:25.685 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFansConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_4
+2025-10-17 11:08:28.770 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFollowing2DBTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFollowing2DBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:28.770 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowing2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_5
+2025-10-17 11:08:31.836 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFollowingTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFollowingTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:31.836 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowingConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_6
+2025-10-17 11:08:34.899 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_child_comment_totalCountNoteCommentTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCommentTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:34.899 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteChildCommentConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_7
+2025-10-17 11:08:37.969 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCollect2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCollect2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:37.969 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCollect2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_8
+2025-10-17 11:08:41.038 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCollectTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCollectTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:41.038 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCollectConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_9
+2025-10-17 11:08:44.098 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCommentTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCommentTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:44.099 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCommentConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_10
+2025-10-17 11:08:47.169 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteLike2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteLike2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:47.169 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteLike2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_11
+2025-10-17 11:08:50.235 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_LikeUnlikeTopic', namespace='', nameServer='127.0.0.1:9876', topic='LikeUnlikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:50.235 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteLikeConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_12
+2025-10-17 11:08:53.310 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_NoteOperateTopic', namespace='', nameServer='127.0.0.1:9876', topic='NoteOperateTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:08:53.310 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNotePublishConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_13
+2025-10-17 11:08:54.394 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-17 11:08:54.504 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2025-10-17 11:08:54.510 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:08:54.512 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ans.namespace attribute : null
+2025-10-17 11:08:54.512 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+2025-10-17 11:08:54.513 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from namespace attribute :null
+2025-10-17 11:08:54.538 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [req-serv] nacos-server port:8848
+2025-10-17 11:08:54.538 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [http-client] connect timeout:1000
+2025-10-17 11:08:54.539 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - PER_TASK_CONFIG_SIZE: 3000.0
+2025-10-17 11:08:54.542 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-10-17 11:08:54.543 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-10-17 11:08:54.545 [main] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - null No credential found
+2025-10-17 11:08:54.554 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of cf5e44ab-bbb2-4e59-8d8a-a8d1785af019
+2025-10-17 11:08:54.574 [main] INFO  com.alibaba.nacos.common.remote.client - [cf5e44ab-bbb2-4e59-8d8a-a8d1785af019] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2025-10-17 11:08:54.575 [main] INFO  com.alibaba.nacos.common.remote.client - [cf5e44ab-bbb2-4e59-8d8a-a8d1785af019] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2025-10-17 11:08:54.575 [main] INFO  com.alibaba.nacos.common.remote.client - [cf5e44ab-bbb2-4e59-8d8a-a8d1785af019] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2025-10-17 11:08:54.578 [main] INFO  com.alibaba.nacos.common.remote.client - [cf5e44ab-bbb2-4e59-8d8a-a8d1785af019] Try to connect to server on start up, server: {serverIp = '8.134.88.169', server main port = 8848}
+2025-10-17 11:08:54.604 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:8.134.88.169 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-10-17 11:08:55.563 [main] INFO  com.alibaba.nacos.common.remote.client - [cf5e44ab-bbb2-4e59-8d8a-a8d1785af019] Success to connect to server [8.134.88.169:8848] on start up, connectionId = 1760670535030_112.94.129.49_1349
+2025-10-17 11:08:55.564 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [cf5e44ab-bbb2-4e59-8d8a-a8d1785af019] Notify connected event to listeners.
+2025-10-17 11:08:55.564 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-10-17 11:08:55.565 [main] INFO  com.alibaba.nacos.common.remote.client - [cf5e44ab-bbb2-4e59-8d8a-a8d1785af019] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-10-17 11:08:55.565 [main] INFO  com.alibaba.nacos.common.remote.client - [cf5e44ab-bbb2-4e59-8d8a-a8d1785af019] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1253/0x000001760195e360
+2025-10-17 11:08:55.567 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohongshu registering service xiaohongshu-count with instance Instance{instanceId='null', ip='10.2.66.25', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+2025-10-17 11:08:55.590 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohongshu-count 10.2.66.25:8090 register finished
+2025-10-17 11:08:55.825 [main] INFO  c.z.x.count.biz.XiaohongshuCountBizApplication - Started XiaohongshuCountBizApplication in 46.725 seconds (process running for 47.748)
+2025-10-17 11:53:27.386 [http-nio-8090-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-17 11:53:27.393 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-17 11:53:27.427 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 32 ms
+2025-10-17 11:53:27.437 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:53:27.437 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:53:27.442 [http-nio-8090-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: com.zry.framework.biz.context.holder.LoginUserContextHolder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at com.zry.framework.biz.context.filter.HeaderUserId2ContextFilter.doFilterInternal(HeaderUserId2ContextFilter.java:31)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-17 11:53:27.442 [http-nio-8090-exec-3] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: com.zry.framework.biz.context.holder.LoginUserContextHolder
+	at com.zry.framework.biz.context.filter.HeaderUserId2ContextFilter.doFilterInternal(HeaderUserId2ContextFilter.java:31)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-17 11:53:29.027 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:53:29.027 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:53:29.027 [http-nio-8090-exec-4] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: com.zry.framework.biz.context.holder.LoginUserContextHolder
+	at com.zry.framework.biz.context.filter.HeaderUserId2ContextFilter.doFilterInternal(HeaderUserId2ContextFilter.java:31)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-17 11:53:29.027 [http-nio-8090-exec-10] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.ClassNotFoundException: com.zry.framework.biz.context.holder.LoginUserContextHolder
+	at com.zry.framework.biz.context.filter.HeaderUserId2ContextFilter.doFilterInternal(HeaderUserId2ContextFilter.java:31)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at com.alibaba.druid.support.jakarta.WebStatFilter.doFilter(WebStatFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-10-17 11:53:43.861 [Thread-23] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-10-17 11:53:43.861 [Thread-26] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-10-17 11:53:43.861 [Thread-23] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-10-17 11:53:43.862 [Thread-26] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-10-17 11:53:44.001 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-10-17 11:53:44.002 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] xiaohongshu deregistering service xiaohongshu-count with instance: Instance{instanceId='null', ip='10.2.66.25', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2025-10-17 11:53:44.011 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-10-17 11:53:44.012 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2025-10-17 11:53:44.014 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown rpc client, set status to shutdown
+2025-10-17 11:53:44.014 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@b14b60f[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2025-10-17 11:53:44.014 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1760670535030_112.94.129.49_1349
+2025-10-17 11:53:44.019 [nacos-grpc-client-executor-8.134.88.169-553] WARN  c.a.nacos.common.remote.client.grpc.GrpcClient - [1760670535030_112.94.129.49_1349]Ignore error event,isRunning:false,isAbandon=false
+2025-10-17 11:53:44.021 [SpringApplicationShutdownHook] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@5036917f[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 554]
+2025-10-17 11:53:44.021 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@1d757b00[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 896]
+2025-10-17 11:53:44.021 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - [null] CredentialWatcher is stopped
+2025-10-17 11:53:44.022 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialService - [null] CredentialService is freed
+2025-10-17 11:53:44.022 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2025-10-17 11:53:44.023 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_NoteOperateTopic', namespace='', nameServer='127.0.0.1:9876', topic='NoteOperateTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_LikeUnlikeTopic', namespace='', nameServer='127.0.0.1:9876', topic='LikeUnlikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteLike2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteLike2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCommentTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCommentTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCollectTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCollectTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCollect2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCollect2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_child_comment_totalCountNoteCommentTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCommentTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFollowingTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFollowingTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFollowing2DBTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFollowing2DBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFansTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFansTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFans2DBTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFans2DBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.024 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_count_CommentLikeUnlikeTopic', namespace='', nameServer='127.0.0.1:9876', topic='CommentLikeUnlikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.053 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountCommentLike2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountCommentLike2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:53:44.054 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-10-17 11:53:44.055 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-10-17 11:53:56.987 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:53:57.059 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:53:57.616 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:53:57.632 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:53:57.633 [main] INFO  c.z.x.count.biz.XiaohongshuCountBizApplication - The following 1 profile is active: "dev"
+2025-10-17 11:53:58.383 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-10-17 11:53:58.387 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-10-17 11:53:58.419 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2025-10-17 11:53:58.693 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=998a0c8b-0835-3617-b765-04d211cdd71c
+2025-10-17 11:53:59.005 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:53:59.077 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'createRocketMQMessageConverter' of type [org.apache.rocketmq.spring.support.RocketMQMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:53:59.082 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:53:59.088 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:53:59.090 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$724/0x0000010d2751aca8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:53:59.092 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:53:59.102 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rocketmq-org.apache.rocketmq.spring.autoconfigure.RocketMQProperties' of type [org.apache.rocketmq.spring.autoconfigure.RocketMQProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:53:59.103 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-17 11:53:59.396 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+2025-10-17 11:53:59.397 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [2.0.3] using APR version [1.7.2].
+2025-10-17 11:53:59.400 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.8 7 Feb 2023]
+2025-10-17 11:53:59.412 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-17 11:53:59.412 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-10-17 11:53:59.542 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-17 11:53:59.543 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1889 ms
+2025-10-17 11:53:59.661 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-10-17 11:54:00.090 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-10-17 11:54:01.049 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountCommentLike2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountCommentLike2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:01.050 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countCommentLike2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_1
+2025-10-17 11:54:01.568 [main] INFO  o.a.r.s.autoconfigure.RocketMQAutoConfiguration - a producer (xiaohongshu_group) init on namesrv 127.0.0.1:9876
+2025-10-17 11:54:01.686 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_count_CommentLikeUnlikeTopic', namespace='', nameServer='127.0.0.1:9876', topic='CommentLikeUnlikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:01.686 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countCommentLikeConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_2
+2025-10-17 11:54:01.777 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFans2DBTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFans2DBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:01.778 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFans2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_3
+2025-10-17 11:54:01.875 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFansTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFansTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:01.875 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFansConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_4
+2025-10-17 11:54:01.966 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFollowing2DBTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFollowing2DBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:01.966 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowing2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_5
+2025-10-17 11:54:02.055 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountFollowingTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountFollowingTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:02.055 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowingConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_6
+2025-10-17 11:54:02.144 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_child_comment_totalCountNoteCommentTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCommentTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:02.144 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteChildCommentConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_7
+2025-10-17 11:54:02.253 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCollect2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCollect2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:02.253 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCollect2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_8
+2025-10-17 11:54:02.336 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCollectTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCollectTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:02.336 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCollectConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_9
+2025-10-17 11:54:02.412 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteCommentTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteCommentTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:02.412 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCommentConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_10
+2025-10-17 11:54:02.489 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_CountNoteLike2DBTTopic', namespace='', nameServer='127.0.0.1:9876', topic='CountNoteLike2DBTTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:02.489 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteLike2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_11
+2025-10-17 11:54:02.573 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_LikeUnlikeTopic', namespace='', nameServer='127.0.0.1:9876', topic='LikeUnlikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:02.573 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteLikeConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_12
+2025-10-17 11:54:02.654 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohongshu_group_NoteOperateTopic', namespace='', nameServer='127.0.0.1:9876', topic='NoteOperateTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-10-17 11:54:02.655 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNotePublishConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_13
+2025-10-17 11:54:04.387 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-17 11:54:04.541 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+2025-10-17 11:54:04.556 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-10-17 11:54:04.556 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ans.namespace attribute : null
+2025-10-17 11:54:04.557 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+2025-10-17 11:54:04.558 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from namespace attribute :null
+2025-10-17 11:54:04.603 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [req-serv] nacos-server port:8848
+2025-10-17 11:54:04.603 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [http-client] connect timeout:1000
+2025-10-17 11:54:04.604 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - PER_TASK_CONFIG_SIZE: 3000.0
+2025-10-17 11:54:04.610 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-10-17 11:54:04.610 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-10-17 11:54:04.613 [main] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - null No credential found
+2025-10-17 11:54:04.629 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 7747ed23-9317-4f74-b8bd-65e270e0ea6d
+2025-10-17 11:54:04.670 [main] INFO  com.alibaba.nacos.common.remote.client - [7747ed23-9317-4f74-b8bd-65e270e0ea6d] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2025-10-17 11:54:04.670 [main] INFO  com.alibaba.nacos.common.remote.client - [7747ed23-9317-4f74-b8bd-65e270e0ea6d] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2025-10-17 11:54:04.671 [main] INFO  com.alibaba.nacos.common.remote.client - [7747ed23-9317-4f74-b8bd-65e270e0ea6d] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2025-10-17 11:54:04.676 [main] INFO  com.alibaba.nacos.common.remote.client - [7747ed23-9317-4f74-b8bd-65e270e0ea6d] Try to connect to server on start up, server: {serverIp = '8.134.88.169', server main port = 8848}
+2025-10-17 11:54:04.721 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:8.134.88.169 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-10-17 11:54:06.265 [main] INFO  com.alibaba.nacos.common.remote.client - [7747ed23-9317-4f74-b8bd-65e270e0ea6d] Success to connect to server [8.134.88.169:8848] on start up, connectionId = 1760673245668_112.94.129.49_1035
+2025-10-17 11:54:06.266 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [7747ed23-9317-4f74-b8bd-65e270e0ea6d] Notify connected event to listeners.
+2025-10-17 11:54:06.266 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-10-17 11:54:06.266 [main] INFO  com.alibaba.nacos.common.remote.client - [7747ed23-9317-4f74-b8bd-65e270e0ea6d] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-10-17 11:54:06.266 [main] INFO  com.alibaba.nacos.common.remote.client - [7747ed23-9317-4f74-b8bd-65e270e0ea6d] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1251/0x0000010d279a4c68
+2025-10-17 11:54:06.268 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohongshu registering service xiaohongshu-count with instance Instance{instanceId='null', ip='10.2.66.25', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+2025-10-17 11:54:06.295 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohongshu-count 10.2.66.25:8090 register finished
+2025-10-17 11:54:06.640 [main] INFO  c.z.x.count.biz.XiaohongshuCountBizApplication - Started XiaohongshuCountBizApplication in 10.54 seconds (process running for 11.477)
+2025-10-17 11:55:06.274 [http-nio-8090-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-17 11:55:06.274 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-17 11:55:06.275 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-10-17 11:55:06.281 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:55:06.281 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:55:06.391 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 11:55:06.391 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 11:55:06.937 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 544ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 11:55:06.937 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 544ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 11:55:06.958 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:55:06.958 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:55:07.292 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:55:07.294 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:55:07.294 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 11:55:07.295 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 11:55:07.297 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 11:55:07.297 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 11:55:07.298 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:55:07.298 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:59:26.446 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:59:26.446 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:59:26.448 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 11:59:26.448 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 11:59:26.450 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 11:59:26.450 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 11:59:26.452 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:59:26.452 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:59:28.754 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:59:28.755 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 11:59:28.757 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 11:59:28.758 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:59:28.758 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:59:28.759 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 11:59:28.762 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 11:59:28.763 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:59:34.359 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:59:34.364 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978823606712434691}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 11:59:34.371 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 5ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978823606712434691,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 11:59:34.372 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:59:36.280 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:59:36.280 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386250737942528}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 11:59:36.282 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386250737942528,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 11:59:36.283 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 11:59:38.669 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 11:59:38.670 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 11:59:38.672 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 11:59:38.673 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:04:47.672 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:04:47.679 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:04:47.684 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 5ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:04:47.686 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:04:54.633 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:04:54.634 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:04:54.637 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:04:54.638 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:05:49.688 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:05:49.689 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978024632262881367}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:05:49.692 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978024632262881367,"likeTotal":0,"collectTotal":0,"commentTotal":15}} =================================== 
+2025-10-17 12:05:49.693 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:06:18.694 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:06:18.695 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978024632262881367}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:06:18.698 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978024632262881367,"likeTotal":0,"collectTotal":0,"commentTotal":15}} =================================== 
+2025-10-17 12:06:18.699 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:06:56.097 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:06:56.099 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":104}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:06:56.099 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:06:56.102 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":104}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:06:56.109 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 7ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":104,"fansTotal":1,"followingTotal":0,"noteTotal":4,"likeTotal":1,"collectTotal":0}} =================================== 
+2025-10-17 12:06:56.109 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 8ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":104,"fansTotal":1,"followingTotal":0,"noteTotal":4,"likeTotal":1,"collectTotal":0}} =================================== 
+2025-10-17 12:06:56.110 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:06:56.110 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:08:00.213 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:08:00.214 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:08:00.218 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 12:08:00.220 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:08:12.463 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:08:12.465 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978024632262881367}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:08:12.473 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 8ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978024632262881367,"likeTotal":0,"collectTotal":0,"commentTotal":15}} =================================== 
+2025-10-17 12:08:12.476 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:10:03.976 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:10:03.978 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:10:03.980 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 12:10:03.982 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:10:07.381 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:10:07.383 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:10:07.387 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 5ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:10:07.389 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:11:58.446 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:11:58.449 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978389492318371906}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:11:58.452 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978389492318371906,"likeTotal":1,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:11:58.453 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:11:59.757 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:11:59.758 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:11:59.761 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:11:59.763 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:12:19.447 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:12:19.448 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386250737942528}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:12:19.451 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386250737942528,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:12:19.453 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:12:20.947 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:12:20.949 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:12:20.952 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:12:20.954 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:15:22.860 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:15:22.867 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:15:22.871 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:15:22.873 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:17:16.941 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:17:16.944 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:17:16.946 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:17:16.948 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:18:16.162 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:18:16.164 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:18:16.167 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:18:16.168 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:19:33.486 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:19:33.487 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:19:33.490 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:19:33.492 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:19:36.531 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:19:36.531 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:19:36.535 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:19:36.536 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:20:03.321 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:20:03.324 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:20:03.331 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 8ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:20:03.332 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:20:13.121 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:20:13.125 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978390108688121903}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:20:13.128 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978390108688121903,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:20:13.131 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:20:19.050 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:20:19.052 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386978009284654}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:20:19.054 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386978009284654,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:20:19.055 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:20:20.768 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:20:20.769 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:20:20.772 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:20:20.773 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:21:17.245 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:21:17.246 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386250737942528}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:21:17.249 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386250737942528,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:21:17.250 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:21:18.297 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:21:18.298 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:21:18.300 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:21:18.302 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:21:37.581 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:21:37.582 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386978009284654}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:21:37.585 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386978009284654,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:21:37.586 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:21:38.940 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:21:38.941 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386250737942528}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:21:38.943 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386250737942528,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:21:38.944 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:21:39.832 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:21:39.833 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:21:39.836 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:21:39.837 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:22:31.197 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:22:31.198 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:22:31.201 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:22:31.204 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:22:38.732 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:22:38.733 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978389492318371906}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:22:38.736 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978389492318371906,"likeTotal":1,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:22:38.737 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:22:39.617 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:22:39.618 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:22:39.620 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:22:39.621 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:22:42.511 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:22:42.511 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:22:42.516 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:22:42.517 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:23:01.299 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:23:01.299 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:23:01.300 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":105}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:23:01.300 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":105}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:23:01.304 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":105,"fansTotal":1,"followingTotal":1,"noteTotal":3,"likeTotal":0,"collectTotal":0}} =================================== 
+2025-10-17 12:23:01.306 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:23:01.306 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 6ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":105,"fansTotal":1,"followingTotal":1,"noteTotal":3,"likeTotal":0,"collectTotal":0}} =================================== 
+2025-10-17 12:23:01.307 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:24:29.092 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:24:29.094 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:24:29.096 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 12:24:29.097 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:24:29.103 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:24:29.104 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:24:29.106 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 12:24:29.107 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:24:34.969 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:24:34.971 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:24:34.972 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:24:34.972 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取用户计数数据], 入参: {"userId":100}, 请求类: UserCountController, 请求方法: findUserCountData =================================== 
+2025-10-17 12:24:34.973 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 12:24:34.973 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取用户计数数据], 耗时: 1ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"userId":100,"fansTotal":0,"followingTotal":4,"noteTotal":13,"likeTotal":2,"collectTotal":0}} =================================== 
+2025-10-17 12:24:34.974 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:24:34.974 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:24:36.821 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:24:36.821 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978823111465795601}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:24:36.826 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 5ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978823111465795601,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:24:36.827 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:24:46.438 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:24:46.439 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978389492318371906}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:24:46.444 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 5ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978389492318371906,"likeTotal":1,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:24:46.446 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:24:52.706 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:24:52.707 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386978009284654}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:24:52.710 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386978009284654,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:24:52.713 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:24:54.267 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:24:54.269 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386978009284654}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:24:54.271 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 1ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386978009284654,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 12:24:54.272 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 12:25:01.178 [ConsumeMessageThread_xiaohongshu_group_CountFansTopic_1] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ## 消费到了 MQ 【计数: 粉丝数】, {"userId":100,"targetUserId":104,"type":0}...
+2025-10-17 12:25:01.178 [ConsumeMessageThread_xiaohongshu_group_CountFollowingTopic_1] INFO  c.z.x.count.biz.consumer.CountFollowingConsumer - ## 消费到了 MQ 【计数: 关注数】, {"userId":100,"targetUserId":104,"type":0}...
+2025-10-17 12:25:01.241 [NettyClientPublicExecutor_1] INFO  c.z.x.count.biz.consumer.CountFollowingConsumer - ==> 【计数服务：关注数入库】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000107A063947C6B550FD62E0000, offsetMsgId=0A02421900002A9F0000000000FCDAD8, messageQueue=MessageQueue [topic=CountFollowing2DBTopic, brokerName=broker-a, queueId=0], queueOffset=14]
+2025-10-17 12:25:01.244 [ConsumeMessageThread_xiaohongshu_group_CountFollowing2DBTopic_1] INFO  c.z.x.count.biz.consumer.CountFollowing2DBConsumer - ## 消费到了 MQ 【计数: 关注数入库】, {"userId":100,"targetUserId":104,"type":0}...
+2025-10-17 12:25:02.208 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 聚合消息, size: 1
+2025-10-17 12:25:02.213 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 聚合消息, ["{\"userId\":100,\"targetUserId\":104,\"type\":0}"]
+2025-10-17 12:25:02.218 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ## 聚合后的计数数据: {"104":-1}
+2025-10-17 12:25:02.230 [NettyClientPublicExecutor_2] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 【计数服务：粉丝数入库】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000107A063947C6B550FDA130001, offsetMsgId=0A02421900002A9F0000000000FCDC4A, messageQueue=MessageQueue [topic=CountFans2DBTopic, brokerName=broker-a, queueId=3], queueOffset=12]
+2025-10-17 12:25:02.232 [ConsumeMessageThread_xiaohongshu_group_CountFans2DBTopic_1] INFO  c.z.x.count.biz.consumer.CountFans2DBConsumer - ## 消费到了 MQ 【计数: 粉丝数入库】, {"104":-1}...
+2025-10-17 12:25:48.830 [ConsumeMessageThread_xiaohongshu_group_CountFansTopic_2] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ## 消费到了 MQ 【计数: 粉丝数】, {"userId":100,"targetUserId":104,"type":1}...
+2025-10-17 12:25:48.830 [ConsumeMessageThread_xiaohongshu_group_CountFollowingTopic_2] INFO  c.z.x.count.biz.consumer.CountFollowingConsumer - ## 消费到了 MQ 【计数: 关注数】, {"userId":100,"targetUserId":104,"type":1}...
+2025-10-17 12:25:48.840 [NettyClientPublicExecutor_3] INFO  c.z.x.count.biz.consumer.CountFollowingConsumer - ==> 【计数服务：关注数入库】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000107A063947C6B551090220002, offsetMsgId=0A02421900002A9F0000000000FCE205, messageQueue=MessageQueue [topic=CountFollowing2DBTopic, brokerName=broker-a, queueId=3], queueOffset=13]
+2025-10-17 12:25:48.842 [ConsumeMessageThread_xiaohongshu_group_CountFollowing2DBTopic_2] INFO  c.z.x.count.biz.consumer.CountFollowing2DBConsumer - ## 消费到了 MQ 【计数: 关注数入库】, {"userId":100,"targetUserId":104,"type":1}...
+2025-10-17 12:25:49.274 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 聚合消息, size: 1
+2025-10-17 12:25:49.274 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 聚合消息, ["{\"userId\":100,\"targetUserId\":104,\"type\":1}"]
+2025-10-17 12:25:49.275 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ## 聚合后的计数数据: {"104":1}
+2025-10-17 12:25:49.282 [NettyClientPublicExecutor_4] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 【计数服务：粉丝数入库】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000107A063947C6B551091DF0003, offsetMsgId=0A02421900002A9F0000000000FCE377, messageQueue=MessageQueue [topic=CountFans2DBTopic, brokerName=broker-a, queueId=2], queueOffset=9]
+2025-10-17 12:25:49.286 [ConsumeMessageThread_xiaohongshu_group_CountFans2DBTopic_2] INFO  c.z.x.count.biz.consumer.CountFans2DBConsumer - ## 消费到了 MQ 【计数: 粉丝数入库】, {"104":1}...
+2025-10-17 12:33:11.470 [ConsumeMessageThread_xiaohongshu_group_CountFollowingTopic_3] INFO  c.z.x.count.biz.consumer.CountFollowingConsumer - ## 消费到了 MQ 【计数: 关注数】, {"userId":100,"targetUserId":104,"type":0}...
+2025-10-17 12:33:11.471 [ConsumeMessageThread_xiaohongshu_group_CountFansTopic_3] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ## 消费到了 MQ 【计数: 粉丝数】, {"userId":100,"targetUserId":104,"type":0}...
+2025-10-17 12:33:11.476 [NettyClientPublicExecutor_5] INFO  c.z.x.count.biz.consumer.CountFollowingConsumer - ==> 【计数服务：关注数入库】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000107A063947C6B551751320004, offsetMsgId=0A02421900002A9F0000000000FCE935, messageQueue=MessageQueue [topic=CountFollowing2DBTopic, brokerName=broker-a, queueId=3], queueOffset=14]
+2025-10-17 12:33:11.479 [ConsumeMessageThread_xiaohongshu_group_CountFollowing2DBTopic_3] INFO  c.z.x.count.biz.consumer.CountFollowing2DBConsumer - ## 消费到了 MQ 【计数: 关注数入库】, {"userId":100,"targetUserId":104,"type":0}...
+2025-10-17 12:33:11.646 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 聚合消息, size: 1
+2025-10-17 12:33:11.646 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 聚合消息, ["{\"userId\":100,\"targetUserId\":104,\"type\":0}"]
+2025-10-17 12:33:11.646 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ## 聚合后的计数数据: {"104":-1}
+2025-10-17 12:33:11.653 [NettyClientPublicExecutor_6] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 【计数服务：粉丝数入库】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000107A063947C6B551751E30005, offsetMsgId=0A02421900002A9F0000000000FCEAA7, messageQueue=MessageQueue [topic=CountFans2DBTopic, brokerName=broker-a, queueId=1], queueOffset=6]
+2025-10-17 12:33:11.656 [ConsumeMessageThread_xiaohongshu_group_CountFans2DBTopic_3] INFO  c.z.x.count.biz.consumer.CountFans2DBConsumer - ## 消费到了 MQ 【计数: 粉丝数入库】, {"104":-1}...
+2025-10-17 12:34:11.770 [ConsumeMessageThread_xiaohongshu_group_CountFollowingTopic_4] INFO  c.z.x.count.biz.consumer.CountFollowingConsumer - ## 消费到了 MQ 【计数: 关注数】, {"userId":100,"targetUserId":104,"type":1}...
+2025-10-17 12:34:11.770 [ConsumeMessageThread_xiaohongshu_group_CountFansTopic_4] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ## 消费到了 MQ 【计数: 粉丝数】, {"userId":100,"targetUserId":104,"type":1}...
+2025-10-17 12:34:11.776 [NettyClientPublicExecutor_7] INFO  c.z.x.count.biz.consumer.CountFollowingConsumer - ==> 【计数服务：关注数入库】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000107A063947C6B55183CBD0006, offsetMsgId=0A02421900002A9F0000000000FCF062, messageQueue=MessageQueue [topic=CountFollowing2DBTopic, brokerName=broker-a, queueId=3], queueOffset=15]
+2025-10-17 12:34:11.778 [ConsumeMessageThread_xiaohongshu_group_CountFollowing2DBTopic_4] INFO  c.z.x.count.biz.consumer.CountFollowing2DBConsumer - ## 消费到了 MQ 【计数: 关注数入库】, {"userId":100,"targetUserId":104,"type":1}...
+2025-10-17 12:34:12.703 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 聚合消息, size: 1
+2025-10-17 12:34:12.703 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 聚合消息, ["{\"userId\":100,\"targetUserId\":104,\"type\":1}"]
+2025-10-17 12:34:12.704 [pool-batch-consume-blocking-queue-thread-0] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ## 聚合后的计数数据: {"104":1}
+2025-10-17 12:34:12.716 [NettyClientPublicExecutor_8] INFO  c.z.x.count.biz.consumer.CountFansConsumer - ==> 【计数服务：粉丝数入库】MQ 发送成功，SendResult: SendResult [sendStatus=SEND_OK, msgId=7F00000107A063947C6B551840690007, offsetMsgId=0A02421900002A9F0000000000FCF1D4, messageQueue=MessageQueue [topic=CountFans2DBTopic, brokerName=broker-a, queueId=1], queueOffset=7]
+2025-10-17 12:34:12.719 [ConsumeMessageThread_xiaohongshu_group_CountFans2DBTopic_4] INFO  c.z.x.count.biz.consumer.CountFans2DBConsumer - ## 消费到了 MQ 【计数: 粉丝数入库】, {"104":1}...
+2025-10-17 12:34:18.273 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 12:34:18.277 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 12:34:18.280 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 12:34:18.282 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:31:31.073 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:31:31.181 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:31:31.296 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 117ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 23:31:31.313 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:31:39.920 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:31:39.922 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:31:39.925 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":11}} =================================== 
+2025-10-17 23:31:39.926 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:32:10.589 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:32:10.590 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:32:10.593 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":11}} =================================== 
+2025-10-17 23:32:10.595 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:32:12.644 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:32:12.645 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:32:12.647 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":11}} =================================== 
+2025-10-17 23:32:12.648 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:32:32.942 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:32:32.945 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:32:32.948 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 23:32:32.950 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:32:39.992 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:32:39.994 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977209490918895715}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:32:39.997 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977209490918895715,"likeTotal":1,"collectTotal":0,"commentTotal":14}} =================================== 
+2025-10-17 23:32:39.997 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:33:02.076 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:33:02.078 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:33:02.080 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":11}} =================================== 
+2025-10-17 23:33:02.081 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:34:48.591 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:34:48.594 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:34:48.598 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":11}} =================================== 
+2025-10-17 23:34:48.599 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:34:52.569 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:34:52.570 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:34:52.573 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":11}} =================================== 
+2025-10-17 23:34:52.577 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:48:26.563 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:48:26.571 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:48:26.575 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":8}} =================================== 
+2025-10-17 23:48:26.578 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:48:38.271 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:48:38.274 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:48:38.277 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":7}} =================================== 
+2025-10-17 23:48:38.278 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:48:42.871 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:48:42.873 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:48:42.876 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":7}} =================================== 
+2025-10-17 23:48:42.878 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:49:16.754 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:49:16.757 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978012132934971457}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:49:16.759 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978012132934971457,"likeTotal":0,"collectTotal":0,"commentTotal":1}} =================================== 
+2025-10-17 23:49:16.760 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:49:19.119 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:49:19.122 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:49:19.127 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 5ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 23:49:19.128 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:49:36.415 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:49:36.416 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:49:36.419 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 23:49:36.419 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:49:42.918 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:49:42.920 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:49:42.922 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 23:49:42.924 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:50:47.578 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:50:47.579 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:50:47.582 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 23:50:47.584 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:50:58.825 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:50:58.826 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:50:58.828 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":5}} =================================== 
+2025-10-17 23:50:58.829 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:51:59.020 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:51:59.021 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386250737942528}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:51:59.025 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386250737942528,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 23:51:59.027 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:52:02.616 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:52:02.617 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1978386978009284654}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:52:02.619 [http-nio-8090-exec-10] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1978386978009284654,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 23:52:02.619 [http-nio-8090-exec-10] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:52:04.567 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:52:04.568 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:52:04.571 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":4}} =================================== 
+2025-10-17 23:52:04.573 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:52:44.753 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:52:44.754 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977209490918895715}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:52:44.758 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977209490918895715,"likeTotal":1,"collectTotal":0,"commentTotal":14}} =================================== 
+2025-10-17 23:52:44.759 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:52:48.535 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:52:48.537 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:52:48.540 [http-nio-8090-exec-3] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":7}} =================================== 
+2025-10-17 23:52:48.540 [http-nio-8090-exec-3] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:52:51.464 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:52:51.465 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:52:51.468 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":4}} =================================== 
+2025-10-17 23:52:51.468 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:54:41.223 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:54:41.227 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:54:41.230 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 23:54:41.232 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:54:43.730 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:54:43.732 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977209490918895715}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:54:43.735 [http-nio-8090-exec-5] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977209490918895715,"likeTotal":1,"collectTotal":0,"commentTotal":14}} =================================== 
+2025-10-17 23:54:43.737 [http-nio-8090-exec-5] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:54:51.287 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:54:51.288 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977209490918895715}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:54:51.290 [http-nio-8090-exec-8] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977209490918895715,"likeTotal":1,"collectTotal":0,"commentTotal":13}} =================================== 
+2025-10-17 23:54:51.292 [http-nio-8090-exec-8] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:55:05.412 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:55:05.413 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977209490918895715}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:55:05.416 [http-nio-8090-exec-7] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977209490918895715,"likeTotal":1,"collectTotal":0,"commentTotal":13}} =================================== 
+2025-10-17 23:55:05.417 [http-nio-8090-exec-7] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:57:26.223 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:57:26.226 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:57:26.230 [http-nio-8090-exec-2] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 4ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":7}} =================================== 
+2025-10-17 23:57:26.232 [http-nio-8090-exec-2] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:57:28.339 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:57:28.340 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:57:28.343 [http-nio-8090-exec-1] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 23:57:28.344 [http-nio-8090-exec-1] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:59:35.084 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:59:35.085 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:59:35.088 [http-nio-8090-exec-6] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 3ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 23:59:35.089 [http-nio-8090-exec-6] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:59:37.113 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:59:37.125 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977210311236677641}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:59:37.126 [http-nio-8090-exec-4] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977210311236677641,"likeTotal":0,"collectTotal":0,"commentTotal":7}} =================================== 
+2025-10-17 23:59:37.129 [http-nio-8090-exec-4] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
+2025-10-17 23:59:38.898 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ## HeaderUserId2ContextFilter, 用户 ID: 100
+2025-10-17 23:59:38.899 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求开始: [获取笔记计数数据], 入参: {"noteId":1977992974486761529}, 请求类: NoteCountController, 请求方法: findNoteCountData =================================== 
+2025-10-17 23:59:38.901 [http-nio-8090-exec-9] INFO  c.z.f.b.operationlog.aspect.ApiOperationLogAspect - ====== 请求结束: [获取笔记计数数据], 耗时: 2ms, 出参: {"success":true,"message":null,"errorCode":null,"data":{"noteId":1977992974486761529,"likeTotal":0,"collectTotal":0,"commentTotal":0}} =================================== 
+2025-10-17 23:59:38.903 [http-nio-8090-exec-9] INFO  c.z.f.b.context.filter.HeaderUserId2ContextFilter - ===== 删除 ThreadLocal， userId: 100
