@@ -297,6 +297,12 @@
                 <version>${revision}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.zry</groupId>
+                <artifactId>xiaohongshu-user-relation-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <!-- 快手 Buffer Trigger -->
             <dependency>
                 <groupId>com.github.phantomthief</groupId>

@@ -5,6 +5,7 @@ import com.zry.framework.common.reponse.PageResponse;
 import com.zry.framework.common.reponse.Response;
 import com.zry.xiaohongshu.user.relation.biz.model.vo.*;
 import com.zry.xiaohongshu.user.relation.biz.service.RelationService;
+import com.zry.xiaohongshu.user.relation.dto.req.FollowUserReqDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
@@ -41,7 +42,7 @@ public class RelationController {
     //添加一个判断是否关注的接口
     @PostMapping("/isFollowed")
     @ApiOperationLog(description = "判断是否关注某用户")
-    public Response<Boolean> isFollowed(@Validated @RequestParam Long userId) {
-        return relationService.findIsFollowed(userId);
+    public Response<Boolean> isFollowed(@Validated @RequestBody FollowUserReqDTO followUserReqDTO) {
+        return relationService.findIsFollowed(followUserReqDTO.getFollowUserId());
     }
 }
