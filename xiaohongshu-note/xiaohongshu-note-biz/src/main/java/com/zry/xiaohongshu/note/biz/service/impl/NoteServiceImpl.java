@@ -682,9 +682,13 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public Response<?> visibleOnlyMe(UpdateNoteVisibleOnlyMeReqVO updateNoteVisibleOnlyMeReqVO) {
-        Long noteId = updateNoteVisibleOnlyMeReqVO.getId();
+    public Response<?> updateVisible(UpdateNoteVisibleReqVO updateNoteVisibleReqVO) {
+        Long noteId = updateNoteVisibleReqVO.getId();
+        Integer visible = updateNoteVisibleReqVO.getVisible();
 
+        if(visible!=0 || visible!=1){
+            throw new BizException(ResponseCodeEnum.NOTE_VISIBLE_PARAM_ERROR);
+        }
         NoteDO selectNoteDO = noteDOMapper.selectByPrimaryKey(noteId);
         if(Objects.isNull(selectNoteDO)){
             throw new BizException(ResponseCodeEnum.NOTE_NOT_FOUND);
@@ -697,10 +701,10 @@ public class NoteServiceImpl implements NoteService {
 
         NoteDO noteDO = NoteDO.builder()
                 .id(noteId)
-                .visible(NoteVisibleEnum.PRIVATE.getCode())
+                .visible(visible)
                 .updateTime(LocalDateTime.now())
                 .build();
-        int count = noteDOMapper.updateVisibleOnlyMe(noteDO);
+        int count = noteDOMapper.updateVisible(noteDO);
         if(count==0){
             throw new BizException(ResponseCodeEnum.NOTE_CANT_VISIBLE_ONLY_ME);
         }
@@ -1200,6 +1204,7 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public Response<FindPublishedNoteListRspVO> findPublishedNoteList(FindPublishedNoteListReqVO findPublishedNoteListReqVO) {
         Long userId = findPublishedNoteListReqVO.getUserId();
+        Integer type = findPublishedNoteListReqVO.getType();
         Long cursor = findPublishedNoteListReqVO.getCursor();
         // 返参 VO
         FindPublishedNoteListRspVO findPublishedNoteListRspVO = null;

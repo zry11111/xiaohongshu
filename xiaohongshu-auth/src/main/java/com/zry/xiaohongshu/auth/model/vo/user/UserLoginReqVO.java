@@ -18,6 +18,6 @@ public class UserLoginReqVO {
     private String phone;
     private String code;
     private String password;
-    @NotNull(message = "验证码不能为空")
+    @NotNull(message = "验证方式不能为空")
     private Integer type;
 }

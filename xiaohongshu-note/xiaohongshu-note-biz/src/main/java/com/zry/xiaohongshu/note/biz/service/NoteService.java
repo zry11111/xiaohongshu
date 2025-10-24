@@ -9,7 +9,7 @@ public interface NoteService {
     Response<?> updateNote(UpdateNoteReqVO updateNoteReqVO);
     void deleteNoteLocalCache(Long noteId);
     Response<?> deleteNote(DeleteNoteReqVO deleteNoteReqVO);
-    Response<?> visibleOnlyMe(UpdateNoteVisibleOnlyMeReqVO updateNoteVisibleOnlyMeReqVO);
+    Response<?> updateVisible(UpdateNoteVisibleReqVO updateNoteVisibleReqVO);
     Response<?> topNote(TopNoteReqVO topNoteReqVO);
     Response<?> likeNote(LikeNoteReqVO likeNoteReqVO);
     Response<?> unlikeNote(UnlikeNoteReqVO unlikeNoteReqVO);

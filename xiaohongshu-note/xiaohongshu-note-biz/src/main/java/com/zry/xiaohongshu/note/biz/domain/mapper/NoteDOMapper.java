@@ -17,7 +17,7 @@ public interface NoteDOMapper {
     int updateByPrimaryKeySelective(NoteDO record);
 
     int updateByPrimaryKey(NoteDO record);
-    int updateVisibleOnlyMe(NoteDO noteDO);
+    int updateVisible(NoteDO noteDO);
     int updateIsTop(NoteDO noteDO);
     int selectCountByNoteId(Long noteId);
 
