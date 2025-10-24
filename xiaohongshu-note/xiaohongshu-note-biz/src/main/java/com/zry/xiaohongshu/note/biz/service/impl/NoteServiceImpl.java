@@ -686,7 +686,7 @@ public class NoteServiceImpl implements NoteService {
         Long noteId = updateNoteVisibleReqVO.getId();
         Integer visible = updateNoteVisibleReqVO.getVisible();
 
-        if(visible!=0 || visible!=1){
+        if(visible!=0 && visible!=1){
             throw new BizException(ResponseCodeEnum.NOTE_VISIBLE_PARAM_ERROR);
         }
         NoteDO selectNoteDO = noteDOMapper.selectByPrimaryKey(noteId);
@@ -1204,7 +1204,7 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public Response<FindPublishedNoteListRspVO> findPublishedNoteList(FindPublishedNoteListReqVO findPublishedNoteListReqVO) {
         Long userId = findPublishedNoteListReqVO.getUserId();
-        Integer type = findPublishedNoteListReqVO.getType();
+//        Integer type = findPublishedNoteListReqVO.getType();
         Long cursor = findPublishedNoteListReqVO.getCursor();
         // 返参 VO
         FindPublishedNoteListRspVO findPublishedNoteListRspVO = null;
@@ -1225,7 +1225,7 @@ public class NoteServiceImpl implements NoteService {
                     List<NoteItemRspVO> sortedList = noteItemRspVOS.stream().sorted(Comparator.comparing(NoteItemRspVO::getNoteId).reversed()).toList();
 
                     // 过滤出最早发布的笔记 ID，充当下一页的游标
-                    Optional<Long> earliestNoteId = noteItemRspVOS.stream().map(NoteItemRspVO::getNoteId).min(Long::compareTo);
+                    Optional<String> earliestNoteId = noteItemRspVOS.stream().map(NoteItemRspVO::getNoteId).min(String::compareTo);
 
                     //如果是博主本人，应该调用计数服务，获取最新的计数数据
                     getAndSetLatestLikeTotalIfAuthor(userId, sortedList);
@@ -1252,7 +1252,7 @@ public class NoteServiceImpl implements NoteService {
                 String cover = StringUtils.isNotBlank(noteDO.getImgUris()) ?
                         StringUtils.split(noteDO.getImgUris(), ",")[0] : null;
                 NoteItemRspVO noteItemRspVO = NoteItemRspVO.builder()
-                        .noteId(noteDO.getId())
+                        .noteId(String.valueOf(noteDO.getId()))
                         .type(noteDO.getType())
                         .creatorId(noteDO.getCreatorId())
                         .cover(cover)
@@ -1299,7 +1299,7 @@ public class NoteServiceImpl implements NoteService {
                 log.error("## 并发调用错误: ", e);
             }
             // 过滤出最早发布的笔记 ID，充当下一页的游标
-            Optional<Long> earliestNoteId = noteDOS.stream().map(NoteDO::getId).min(Long::compareTo);
+            Optional<String> earliestNoteId = noteDOS.stream().map(noteDO -> String.valueOf(noteDO.getId())).min(String::compareTo);
 
             findPublishedNoteListRspVO = FindPublishedNoteListRspVO.builder()
                     .notes(noteVOS)
@@ -1320,7 +1320,7 @@ public class NoteServiceImpl implements NoteService {
         // 用户已登录，才有必要获取点赞状态
         if (Objects.nonNull(loginUserId)) {
 
-            List<Long> noteIds = noteItemRspVOS.stream().map(NoteItemRspVO::getNoteId).toList();
+            List<Long> noteIds = noteItemRspVOS.stream().map(noteItemRspVO -> Long.parseLong(noteItemRspVO.getNoteId())).toList();
 
             String rbitmapUserNoteLikeListKey = RedisKeyConstants.buildRBitmapUserNoteLikeListKey(loginUserId);
 
@@ -1337,11 +1337,11 @@ public class NoteServiceImpl implements NoteService {
                 // 数据库查询,只查询已点赞的笔记ID
                 List<NoteLikeDO> noteLikeDOS = noteLikeDOMapper.selectByUserIdAndNoteIds(loginUserId, noteIds);
                 if(CollUtil.isEmpty(noteLikeDOS)) return;
-                Map<Long, NoteLikeDO> noteIsLikeMap = noteLikeDOS.stream()
-                        .collect(Collectors.toMap(NoteLikeDO::getNoteId, noteLikeDO -> noteLikeDO));
+                Map<String, NoteLikeDO> noteIsLikeMap = noteLikeDOS.stream()
+                        .collect(Collectors.toMap(noteLikeDO -> String.valueOf(noteLikeDO.getNoteId()), noteLikeDO -> noteLikeDO));
                 //循环vo集合，设置是否点赞
                 noteItemRspVOS.forEach(noteItemRspVO -> {
-                    Long noteId = noteItemRspVO.getNoteId();
+                    String noteId = noteItemRspVO.getNoteId();
                     NoteLikeDO noteLikeDO = noteIsLikeMap.get(noteId);
                     //前面查询的是已点赞的笔记ID，如果能查到，说明该笔记已点赞
                     if(Objects.nonNull(noteLikeDO)){
@@ -1366,7 +1366,7 @@ public class NoteServiceImpl implements NoteService {
 
             // 循环 VO 集合，设置是否点赞
             noteItemRspVOS.forEach(noteItemRspVO -> {
-                Long currNoteId = noteItemRspVO.getNoteId();
+                Long currNoteId = Long.parseLong(noteItemRspVO.getNoteId());
                 noteItemRspVO.setIsLiked(likedMap.get(currNoteId));
             });
         }
@@ -1377,7 +1377,7 @@ public class NoteServiceImpl implements NoteService {
         Long loginUserId = LoginUserContextHolder.getUserId();
         // 用户已登录，并且查询的是自己
         if (Objects.nonNull(loginUserId) && Objects.equals(loginUserId, userId)) {
-            List<Long> noteIds = sortedList.stream().map(NoteItemRspVO::getNoteId).toList();
+            List<Long> noteIds = sortedList.stream().map(noteItemRspVO -> Long.parseLong(noteItemRspVO.getNoteId())).toList();
             List<FindNoteCountsByIdRspDTO> findNoteCountsByIdRspDTOS = countRpcService.findByNoteIds(noteIds);
 
             // 设置笔记的点赞量
@@ -1396,8 +1396,8 @@ public class NoteServiceImpl implements NoteService {
 
             // 循环设置 VO 集合，设置每篇笔记的点赞量
             noteItemRspVOS.forEach(noteItemRspVO -> {
-                Long currNoteId = noteItemRspVO.getNoteId();
-                FindNoteCountsByIdRspDTO findNoteCountsByIdRspDTO = noteIdAndDTOMap.get(currNoteId);
+                String currNoteId = noteItemRspVO.getNoteId();
+                FindNoteCountsByIdRspDTO findNoteCountsByIdRspDTO = noteIdAndDTOMap.get(Long.parseLong(currNoteId));
                 noteItemRspVO.setLikeTotal((Objects.nonNull(findNoteCountsByIdRspDTO) && Objects.nonNull(findNoteCountsByIdRspDTO.getLikeTotal())) ?
                         NumberUtils.formatNumberString(findNoteCountsByIdRspDTO.getLikeTotal()) : "0");
             });

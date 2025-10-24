@@ -15,6 +15,6 @@ public class FindPublishedNoteListRspVO {
 
     private List<NoteItemRspVO> notes;
     // 将每次查询的最后一个笔记 ID 作为下一次查询的游标
-    private Long nextCursor;
+    private String nextCursor;
 
 }

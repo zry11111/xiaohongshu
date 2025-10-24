@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class NoteItemRspVO {
 
-    private Long noteId;
+    private String noteId;
 
     private Integer type;
 

@@ -3,6 +3,7 @@ package com.zry.xiaohongshu.note.biz.service.impl;
 import cn.hutool.core.collection.CollUtil;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.zry.framework.biz.context.holder.LoginUserContextHolder;
 import com.zry.framework.common.reponse.PageResponse;
 import com.zry.xiaohongshu.note.biz.domain.dataobject.NoteCountDO;
 import com.zry.xiaohongshu.note.biz.domain.dataobject.NoteDO;
@@ -11,6 +12,7 @@ import com.zry.xiaohongshu.note.biz.domain.mapper.NoteCountDOMapper;
 import com.zry.xiaohongshu.note.biz.domain.mapper.NoteDOMapper;
 import com.zry.xiaohongshu.note.biz.domain.mapper.NoteLikeDOMapper;
 import com.zry.xiaohongshu.note.biz.enums.NoteTypeEnum;
+import com.zry.xiaohongshu.note.biz.enums.NoteVisibleEnum;
 import com.zry.xiaohongshu.note.biz.enums.ProfileNoteTypeEnum;
 import com.zry.xiaohongshu.note.biz.model.vo.FindProfileNotePageListReqVO;
 import com.zry.xiaohongshu.note.biz.model.vo.FindProfileNoteRspVO;
@@ -52,6 +54,14 @@ public class ProfileServiceImpl implements ProfileService {
         Integer queryType = findProfileNotePageListReqVO.getType();
         Integer pageNo = findProfileNotePageListReqVO.getPageNo();
         Long userId = findProfileNotePageListReqVO.getUserId();
+        //应该在这里加个判断，判断查看主页信息的是否为博主本人，如果不是，则过滤掉不可见的笔记，比如仅自己可见的笔记
+        Long currUserId = LoginUserContextHolder.getUserId();
+        Integer visible = NoteVisibleEnum.PUBLIC.getCode();
+        if(Objects.equals(currUserId, userId)) {
+            //是本人查看自己的主页
+            //设置visible为null，表示查询所有笔记
+            visible = null;
+        }
 
         // 每页展示的数据量
         long pageSize = 10;
@@ -73,7 +83,7 @@ public class ProfileServiceImpl implements ProfileService {
                 PageResponse<FindProfileNoteRspVO> checkResponse = checkCountAndPageNo(count, pageNo, pageSize);
                 if (Objects.nonNull(checkResponse)) return checkResponse;
 
-                noteDOS = noteDOMapper.selectPageListByCreatorId(userId, offset, pageSize);
+                noteDOS = noteDOMapper.selectPageListByCreatorId(userId,visible,offset, pageSize);
             }
             case COLLECTED -> { // 查询用户收藏的笔记
                 count = noteCollectionDOMapper.selectTotalCountByUserId(userId);

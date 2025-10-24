@@ -32,6 +32,7 @@ public interface NoteDOMapper {
                                 @Param("offset") long offset,
                                 @Param("pageSize") long pageSize);
     List<NoteDO> selectPageListByCreatorId(@Param("creatorId") Long creatorId,
+                                           @Param("visible") Integer visible,
                                            @Param("offset") long offset,
                                            @Param("pageSize") long pageSize);
 

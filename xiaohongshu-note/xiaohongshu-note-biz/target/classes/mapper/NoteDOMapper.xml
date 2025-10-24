@@ -223,7 +223,7 @@
     select id, title, creator_id, is_top, type, img_uris, video_uri from t_note
     where creator_id = #{creatorId} and visible = 0 and status = 1
     <if test="cursor != null">
-      <![CDATA[ and id < #{cursor} ]]>
+      <![CDATA[ and id > #{cursor} ]]>
     </if>
     order by id desc
     limit 20
@@ -250,8 +250,11 @@
   <select id="selectPageListByCreatorId" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from t_note where visible = 0 and status = 1
+    from t_note where status = 1
     and creator_id = #{creatorId}
+    <if test="visible != null">
+      and visible = #{visible}
+    </if>
     order by create_time desc
     limit #{offset}, #{pageSize}
   </select>

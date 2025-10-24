@@ -39,7 +39,7 @@ public class NoteController {
         return noteService.deleteNote(deleteNoteReqVO);
     }
     @PostMapping(value = "/visible/update")
-    @ApiOperationLog(description = "笔记仅对自己可见")
+    @ApiOperationLog(description = "笔记可见性修改")
     public Response<?> visibleOnlyMe(@Validated @RequestBody UpdateNoteVisibleReqVO updateNoteVisibleReqVO) {
         return noteService.updateVisible(updateNoteVisibleReqVO);
     }
@@ -74,7 +74,7 @@ public class NoteController {
         return noteService.isLikedAndCollectedData(findNoteIsLikedAndCollectedReqVO);
     }
     @PostMapping(value = "/published/list")
-    @ApiOperationLog(description = "用户笔记管理- 已发布、审核、未通过笔记列表")
+    @ApiOperationLog(description = "个人主页-查询已发布笔记列表")
     public Response<FindPublishedNoteListRspVO> findPublishedNoteList(@Validated @RequestBody FindPublishedNoteListReqVO findPublishedNoteListReqVO) {
         return noteService.findPublishedNoteList(findPublishedNoteListReqVO);
     }
