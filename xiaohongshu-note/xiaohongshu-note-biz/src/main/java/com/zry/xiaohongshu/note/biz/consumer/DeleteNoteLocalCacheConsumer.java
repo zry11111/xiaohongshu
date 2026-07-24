@@ -24,5 +24,4 @@ public class DeleteNoteLocalCacheConsumer implements RocketMQListener<String> {
         log.info("## 消费者消费成功, noteId: {}", noteId);
         noteService.deleteNoteLocalCache(noteId);
     }
-
 }

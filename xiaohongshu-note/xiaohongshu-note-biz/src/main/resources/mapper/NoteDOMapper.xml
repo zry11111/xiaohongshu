@@ -156,9 +156,6 @@
       <if test="topicIds != null">
         topic_ids = #{topicIds,jdbcType=VARCHAR},
       </if>
-      <if test="topicName != null">
-        topic_name = #{topicName,jdbcType=VARCHAR},
-      </if>
       <if test="isTop != null">
         is_top = #{isTop,jdbcType=BIT},
       </if>
@@ -194,11 +191,11 @@
     set title = #{title,jdbcType=VARCHAR},
         is_content_empty = #{isContentEmpty,jdbcType=BIT},
         topic_ids = #{topicIds,jdbcType=VARCHAR},
-        topic_name = #{topicName,jdbcType=VARCHAR},
         `type` = #{type,jdbcType=TINYINT},
         img_uris = #{imgUris,jdbcType=VARCHAR},
         video_uri = #{videoUri,jdbcType=VARCHAR},
-        update_time = #{updateTime,jdbcType=TIMESTAMP}
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+        channel_id = #{channelId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateVisible" parameterType="com.zry.xiaohongshu.note.biz.domain.dataobject.NoteDO">
@@ -220,8 +217,11 @@
     select creator_id from t_note where id = #{noteId} and status = 1
   </select>
   <select id="selectPublishedNoteListByUserIdAndCursor" resultMap="BaseResultMap">
-    select id, title, creator_id, is_top, type, img_uris, video_uri from t_note
-    where creator_id = #{creatorId} and visible = 0 and status = 1
+    select id, title, creator_id, is_top, type, img_uris, video_uri,create_time,status,is_top,visible from t_note
+    where creator_id = #{creatorId} and status != 2
+    <if test="status !=null">
+      and status = #{status}
+    </if>
     <if test="cursor != null">
       <![CDATA[ and id > #{cursor} ]]>
     </if>
@@ -261,7 +261,10 @@
 
   <select id="selectTotalCountByCreatorId" resultType="int">
     select count(*) from t_note
-    where visible = 0 and status = 1 and creator_id = #{creatorId}
+    where status = 1 and creator_id = #{creatorId}
+    <if test="visible != null">
+      and visible = #{visible}
+    </if>
     order by create_time desc
   </select>
 

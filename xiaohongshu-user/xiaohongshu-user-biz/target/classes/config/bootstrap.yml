@@ -9,4 +9,4 @@ spring:
         enabled: true
         group: DEFAULT_GROUP
         namespace: xiaohongshu
-        server-addr: http://8.134.88.169:8848/
+        server-addr: http://127.0.0.1:8848/

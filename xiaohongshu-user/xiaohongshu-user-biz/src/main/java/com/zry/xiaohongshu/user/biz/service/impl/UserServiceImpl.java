@@ -132,11 +132,10 @@ public class UserServiceImpl implements UserService {
             needUpdate = true;
         }
 
-        // 小哈书号
-        String xiaohashuId = updateUserInfoReqVO.getXiaohongshuId();
-        if (StringUtils.isNotBlank(xiaohashuId)) {
-            Preconditions.checkArgument(ParamUtils.checkXiaohongshuId(xiaohashuId), ResponseCodeEnum.XIAOHONGSHU_ID_VALID_FAIL.getErrorMessage());
-            userDO.setXiaohongshuId(xiaohashuId);
+        String xiaohongshuId = updateUserInfoReqVO.getXiaohongshuId();
+        if (StringUtils.isNotBlank(xiaohongshuId)) {
+            Preconditions.checkArgument(ParamUtils.checkXiaohongshuId(xiaohongshuId), ResponseCodeEnum.XIAOHONGSHU_ID_VALID_FAIL.getErrorMessage());
+            userDO.setXiaohongshuId(xiaohongshuId);
             needUpdate = true;
         }
 
@@ -248,7 +247,7 @@ public class UserServiceImpl implements UserService {
         UserDO userDO = UserDO.builder()
                 .id(userId)
                 .phone(phone)
-                .xiaohongshuId(xiaohongshuId) // 自动生成小红书号 ID
+                .xiaohongshuId(xiaohongshuId) // 自动生成ID
                 .nickname("小红薯" + xiaohongshuId) // 自动生成昵称, 如：小红薯10000
                 .status(StatusEnum.ENABLED.getValue()) // 状态为启用
                 .createTime(LocalDateTime.now())

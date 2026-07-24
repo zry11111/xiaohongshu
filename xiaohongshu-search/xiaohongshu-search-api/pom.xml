@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.zry</groupId>
         <artifactId>xiaohongshu-search</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>xiaohongshu-search-api</artifactId>

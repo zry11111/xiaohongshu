@@ -24,6 +24,7 @@ public interface NoteDOMapper {
     Long selectCreatorIdByNoteId(Long noteId);
 
     List<NoteDO> selectPublishedNoteListByUserIdAndCursor(@Param("creatorId") Long creatorId,
+                                                          @Param("status") Integer status,
                                                           @Param("cursor") Long cursor);
 
     int selectTotalCount(Long channelId);
@@ -36,7 +37,8 @@ public interface NoteDOMapper {
                                            @Param("offset") long offset,
                                            @Param("pageSize") long pageSize);
 
-    int selectTotalCountByCreatorId(Long creatorId);
+    int selectTotalCountByCreatorId(@Param("creatorId")Long creatorId,
+                                    @Param("visible") Integer visible);
 
     List<NoteDO> selectByNoteIds(@Param("noteIds") List<Long> noteIds);
 }

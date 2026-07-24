@@ -17,7 +17,6 @@ public class FileStrategyFactory {
 
     @Value("${storage.type}")
     private String strategyType;
-
     @RefreshScope
     @Bean
     public FileStrategy getFileStrategy() {
@@ -26,7 +25,6 @@ public class FileStrategyFactory {
         } else if (StringUtils.equals(strategyType, "aliyun")) {
             return new AliyunOSSFileStrategy();
         }
-
         throw new IllegalArgumentException("不可用的存储类型");
     }
 

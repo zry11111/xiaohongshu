@@ -20,9 +20,9 @@ public class NoteDO {
 
     private Long creatorId;
 
-    private Long topicId;
-
-    private String topicName;
+//    private Long topicId;
+//
+//    private String topicName;
 
     private Boolean isTop;
 

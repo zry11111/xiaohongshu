@@ -5,6 +5,8 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.zry.framework.biz.context.holder.LoginUserContextHolder;
 import com.zry.framework.common.reponse.PageResponse;
+import com.zry.framework.common.reponse.Response;
+import com.zry.xiaohongshu.note.biz.constant.RedisKeyConstants;
 import com.zry.xiaohongshu.note.biz.domain.dataobject.NoteCountDO;
 import com.zry.xiaohongshu.note.biz.domain.dataobject.NoteDO;
 import com.zry.xiaohongshu.note.biz.domain.mapper.NoteCollectionDOMapper;
@@ -16,12 +18,16 @@ import com.zry.xiaohongshu.note.biz.enums.NoteVisibleEnum;
 import com.zry.xiaohongshu.note.biz.enums.ProfileNoteTypeEnum;
 import com.zry.xiaohongshu.note.biz.model.vo.FindProfileNotePageListReqVO;
 import com.zry.xiaohongshu.note.biz.model.vo.FindProfileNoteRspVO;
+import com.zry.xiaohongshu.note.biz.model.vo.FindPublishedNoteListReqVO;
+import com.zry.xiaohongshu.note.biz.model.vo.FindPublishedNoteListRspVO;
 import com.zry.xiaohongshu.note.biz.rpc.UserRpcService;
+import com.zry.xiaohongshu.note.biz.service.NoteService;
 import com.zry.xiaohongshu.note.biz.service.ProfileService;
 import com.zry.xiaohongshu.user.dto.resp.FindUserByIdRspDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -48,6 +54,10 @@ public class ProfileServiceImpl implements ProfileService {
     private NoteCollectionDOMapper noteCollectionDOMapper;
     @Resource
     private NoteLikeDOMapper noteLikeDOMapper;
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
+    @Resource
+    private NoteService noteService;
 
     @Override
     public PageResponse<FindProfileNoteRspVO> findNoteList(FindProfileNotePageListReqVO findProfileNotePageListReqVO) {
@@ -75,8 +85,7 @@ public class ProfileServiceImpl implements ProfileService {
         int count = 0;
         switch (profileNoteTypeEnum) {
             case ALL -> { // 查询所有笔记
-                count = noteDOMapper.selectTotalCountByCreatorId(userId);
-
+                count = noteDOMapper.selectTotalCountByCreatorId(userId,visible);
                 // 计算分页查询的偏移量 offset
                 long offset = PageResponse.getOffset(pageNo, pageSize);
 
@@ -104,6 +113,7 @@ public class ProfileServiceImpl implements ProfileService {
                 }
             }
             case LIKED -> { // 查询用户点赞的笔记
+
                 count = noteLikeDOMapper.selectTotalCountByUserId(userId);
 
                 // 计算分页查询的偏移量 offset

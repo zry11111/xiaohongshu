@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,7 +15,7 @@ public class NoteItemRspVO {
 
     private String noteId;
 
-    private Integer type;
+//    private Integer type;
 
     private String cover;
 
@@ -21,14 +23,20 @@ public class NoteItemRspVO {
 
     private String title;
 
-    private Long creatorId;
+//    private Long creatorId;
 
-    private String nickname;
+//    private String nickname;
 
-    private String avatar;
+//    private String avatar;
 
     private String likeTotal;
+    private String collectTotal;
+    private String commentTotal;
 
-    private Boolean isLiked;
+//    private Boolean isLiked;
+    private LocalDateTime createTime;
+    private Integer status;
+    private Boolean isTop;
+    private Integer visible;
 
 }

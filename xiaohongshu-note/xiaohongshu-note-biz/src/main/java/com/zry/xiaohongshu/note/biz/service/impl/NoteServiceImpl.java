@@ -525,15 +525,8 @@ public class NoteServiceImpl implements NoteService {
                 break;
         }
 
-        // 话题
-        Long topicId = updateNoteReqVO.getTopicId();
-        String topicName = null;
-        if (Objects.nonNull(topicId)) {
-            topicName = topicDOMapper.selectNameByPrimaryKey(topicId);
-
-            // 判断一下提交的话题, 是否是真实存在的
-            if (StringUtils.isBlank(topicName)) throw new BizException(ResponseCodeEnum.TOPIC_NOT_FOUND);
-        }
+        // 话题处理
+        String topicIds = handleTopics(updateNoteReqVO.getTopics());
 
         //更新前删除缓存
         String noteDetailRedisKey = RedisKeyConstants.buildNoteDetailKey(noteId);
@@ -547,11 +540,11 @@ public class NoteServiceImpl implements NoteService {
                 .isContentEmpty(StringUtils.isBlank(content))
                 .imgUris(imgUris)
                 .title(updateNoteReqVO.getTitle())
-                .topicId(updateNoteReqVO.getTopicId())
-                .topicName(topicName)
+                .topicIds(topicIds)
                 .type(type)
                 .updateTime(LocalDateTime.now())
                 .videoUri(videoUri)
+                .channelId(updateNoteReqVO.getChannelId())
                 .build();
 
         noteDOMapper.updateByPrimaryKey(noteDO);
@@ -559,7 +552,6 @@ public class NoteServiceImpl implements NoteService {
         sendDelayDeleteRedisNoteCacheMQ(Arrays.asList(noteId, userId));
 
         // 删除本地缓存
-//        LOCAL_CACHE.invalidate(noteId);
         // 同步发送广播模式 MQ，将所有实例中的本地缓存都删除掉
         rocketMQTemplate.syncSend(MQConstants.TOPIC_DELETE_NOTE_LOCAL_CACHE, noteId);
         log.info("====> MQ：删除笔记本地缓存发送成功...");
@@ -649,6 +641,8 @@ public class NoteServiceImpl implements NoteService {
                 .updateTime(LocalDateTime.now())
                 .build();
 
+        log.info("==> 开始删除笔记，noteId: {}, userId: {}", noteId, userId);
+
         noteDOMapper.updateByPrimaryKeySelective(noteDO);
 
         // 延迟双删
@@ -712,6 +706,10 @@ public class NoteServiceImpl implements NoteService {
         String noteDetailRedisKey = RedisKeyConstants.buildNoteDetailKey(noteId);
         redisTemplate.delete(noteDetailRedisKey);
 
+        // TODO
+        String publishedNoteListKey = RedisKeyConstants.buildPublishedNoteListKey(userId);
+        redisTemplate.delete(publishedNoteListKey);
+
         //同步广播，将所有的本地缓存删除
         rocketMQTemplate.syncSend(MQConstants.TOPIC_DELETE_NOTE_LOCAL_CACHE, noteId);
         return Response.success();
@@ -744,6 +742,9 @@ public class NoteServiceImpl implements NoteService {
         // 删除 Redis 缓存
         String noteDetailRedisKey = RedisKeyConstants.buildNoteDetailKey(noteId);
         redisTemplate.delete(noteDetailRedisKey);
+        //TODO 后面要自己再改一下
+        String publishedNoteListKey = RedisKeyConstants.buildPublishedNoteListKey(currUserId);
+        redisTemplate.delete(publishedNoteListKey);
 
         // 同步发送广播模式 MQ，将所有实例中的本地缓存都删除掉
         rocketMQTemplate.syncSend(MQConstants.TOPIC_DELETE_NOTE_LOCAL_CACHE, noteId);
@@ -778,7 +779,7 @@ public class NoteServiceImpl implements NoteService {
         String userNoteLikeZSetKey = RedisKeyConstants.buildUserNoteLikeZSetKey(userId);
 
         switch (noteLikeLuaResultEnum) {
-            // Redis 中布隆过滤器不存在
+            // Redis 中咆哮位图不存在
             case NOT_EXIST -> {
                 // 从数据库中校验笔记是否被点赞，并异步初始化布隆过滤器，设置过期时间
                 int count = noteLikeDOMapper.selectCountByUserIdAndNoteId(userId, noteId);
@@ -1204,7 +1205,7 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public Response<FindPublishedNoteListRspVO> findPublishedNoteList(FindPublishedNoteListReqVO findPublishedNoteListReqVO) {
         Long userId = findPublishedNoteListReqVO.getUserId();
-//        Integer type = findPublishedNoteListReqVO.getType();
+        Integer status = findPublishedNoteListReqVO.getStatus();
         Long cursor = findPublishedNoteListReqVO.getCursor();
         // 返参 VO
         FindPublishedNoteListRspVO findPublishedNoteListRspVO = null;
@@ -1229,8 +1230,8 @@ public class NoteServiceImpl implements NoteService {
 
                     //如果是博主本人，应该调用计数服务，获取最新的计数数据
                     getAndSetLatestLikeTotalIfAuthor(userId, sortedList);
-                    // 批量获取笔记的点赞状态
-                    batchGetAndSetNoteIsLiked(sortedList);
+                    // 批量获取笔记的点赞状态 这里该做管理接口不需要获取
+                    // batchGetAndSetNoteIsLiked(sortedList);
 
                     findPublishedNoteListRspVO = FindPublishedNoteListRspVO.builder()
                             .notes(sortedList)
@@ -1244,7 +1245,7 @@ public class NoteServiceImpl implements NoteService {
         }
 
         //缓存无，则查询数据库
-        List<NoteDO> noteDOS = noteDOMapper.selectPublishedNoteListByUserIdAndCursor(userId, cursor);
+        List<NoteDO> noteDOS = noteDOMapper.selectPublishedNoteListByUserIdAndCursor(userId, status, cursor);
         // 返参
         if (CollUtil.isNotEmpty(noteDOS)) {
             //查询不为空，将do转为vo
@@ -1253,21 +1254,25 @@ public class NoteServiceImpl implements NoteService {
                         StringUtils.split(noteDO.getImgUris(), ",")[0] : null;
                 NoteItemRspVO noteItemRspVO = NoteItemRspVO.builder()
                         .noteId(String.valueOf(noteDO.getId()))
-                        .type(noteDO.getType())
-                        .creatorId(noteDO.getCreatorId())
+//                        .type(noteDO.getType())
+//                        .creatorId(noteDO.getCreatorId())
                         .cover(cover)
                         .videoUri(noteDO.getVideoUri())
                         .title(noteDO.getTitle())
-                        .isLiked(false) // 默认未点赞
+//                        .isLiked(false) // 默认未点赞
+                        .createTime(noteDO.getCreateTime())
+                        .visible(noteDO.getVisible())
+                        .isTop(noteDO.getIsTop())
+                        .status(noteDO.getStatus())
                         .build();
                 return noteItemRspVO;
             }).toList();
             // Feign 调用用户服务，获取博主的用户头像、昵称
-            CompletableFuture<FindUserByIdRspDTO> userFuture = CompletableFuture
-                    .supplyAsync(() -> {
-                        Optional<Long> creatorIdOptional = noteDOS.stream().map(NoteDO::getCreatorId).findAny();
-                        return userRpcService.findById(creatorIdOptional.get());
-                    }, threadPoolTaskExecutor);
+//            CompletableFuture<FindUserByIdRspDTO> userFuture = CompletableFuture
+//                    .supplyAsync(() -> {
+//                        Optional<Long> creatorIdOptional = noteDOS.stream().map(NoteDO::getCreatorId).findAny();
+//                        return userRpcService.findById(creatorIdOptional.get());
+//                    }, threadPoolTaskExecutor);
 
             // Feign 调用计数服务，批量获取笔记点赞数
             CompletableFuture<List<FindNoteCountsByIdRspDTO>> noteCountFuture = CompletableFuture
@@ -1275,26 +1280,25 @@ public class NoteServiceImpl implements NoteService {
                         List<Long> noteIds = noteDOS.stream().map(NoteDO::getId).toList();
                         return countRpcService.findByNoteIds(noteIds);
                     }, threadPoolTaskExecutor);
-
             // 等待所有任务完成，并合并结果
-            CompletableFuture.allOf(userFuture, noteCountFuture).join();
+//            CompletableFuture.allOf(userFuture, noteCountFuture).join();
 
             try {
                 // 获取 Future 返回结果
-                FindUserByIdRspDTO findUserByIdRspDTO = userFuture.get();
+//                FindUserByIdRspDTO findUserByIdRspDTO = userFuture.get();
                 List<FindNoteCountsByIdRspDTO> findNoteCountsByIdRspDTOS = noteCountFuture.get();
 
-                if (Objects.nonNull(findUserByIdRspDTO)) {
-                    // 循环 VO 集合，分别设置头像、昵称
-                    noteVOS.forEach(noteItemRspVO -> {
-                        noteItemRspVO.setAvatar(findUserByIdRspDTO.getAvatar());
-                        noteItemRspVO.setNickname(findUserByIdRspDTO.getNickName());
-                    });
-                }
+//                if (Objects.nonNull(findUserByIdRspDTO)) {
+//                    // 循环 VO 集合，分别设置头像、昵称
+//                    noteVOS.forEach(noteItemRspVO -> {
+//                        noteItemRspVO.setAvatar(findUserByIdRspDTO.getAvatar());
+//                        noteItemRspVO.setNickname(findUserByIdRspDTO.getNickName());
+//                    });
+//                }
 
-                // 设置每篇笔记的点赞量
-                setVOListLikeTotal(noteVOS, findNoteCountsByIdRspDTOS);
-                batchGetAndSetNoteIsLiked(noteVOS);
+                // 设置每篇笔记的点赞量 评论量 收藏量
+                setVOListCountTotal(noteVOS, findNoteCountsByIdRspDTOS);
+//                batchGetAndSetNoteIsLiked(noteVOS);
             } catch (Exception e) {
                 log.error("## 并发调用错误: ", e);
             }
@@ -1345,7 +1349,7 @@ public class NoteServiceImpl implements NoteService {
                     NoteLikeDO noteLikeDO = noteIsLikeMap.get(noteId);
                     //前面查询的是已点赞的笔记ID，如果能查到，说明该笔记已点赞
                     if(Objects.nonNull(noteLikeDO)){
-                        noteItemRspVO.setIsLiked(true);
+//                        noteItemRspVO.setIsLiked(true);
                     }
                 });
                 threadPoolTaskExecutor.submit(() -> {
@@ -1367,7 +1371,7 @@ public class NoteServiceImpl implements NoteService {
             // 循环 VO 集合，设置是否点赞
             noteItemRspVOS.forEach(noteItemRspVO -> {
                 Long currNoteId = Long.parseLong(noteItemRspVO.getNoteId());
-                noteItemRspVO.setIsLiked(likedMap.get(currNoteId));
+//                noteItemRspVO.setIsLiked(likedMap.get(currNoteId));
             });
         }
     }
@@ -1381,25 +1385,35 @@ public class NoteServiceImpl implements NoteService {
             List<FindNoteCountsByIdRspDTO> findNoteCountsByIdRspDTOS = countRpcService.findByNoteIds(noteIds);
 
             // 设置笔记的点赞量
-            setVOListLikeTotal(sortedList, findNoteCountsByIdRspDTOS);
+            setVOListCountTotal(sortedList, findNoteCountsByIdRspDTOS);
         }
     }
 
     /**
      *  设置每篇笔记的点赞量
      *  */
-    private static void setVOListLikeTotal(List<NoteItemRspVO> noteItemRspVOS, List<FindNoteCountsByIdRspDTO> findNoteCountsByIdRspDTOS) {
+    private static void setVOListCountTotal(List<NoteItemRspVO> noteItemRspVOS, List<FindNoteCountsByIdRspDTO> findNoteCountsByIdRspDTOS) {
         if (CollUtil.isNotEmpty(findNoteCountsByIdRspDTOS)) {
             // DTO 集合转 Map
             Map<Long, FindNoteCountsByIdRspDTO> noteIdAndDTOMap = findNoteCountsByIdRspDTOS.stream()
                     .collect(Collectors.toMap(FindNoteCountsByIdRspDTO::getNoteId, dto -> dto));
 
-            // 循环设置 VO 集合，设置每篇笔记的点赞量
+            // 循环设置 VO 集合，设置每篇笔记的点赞、收藏、评论
             noteItemRspVOS.forEach(noteItemRspVO -> {
                 String currNoteId = noteItemRspVO.getNoteId();
                 FindNoteCountsByIdRspDTO findNoteCountsByIdRspDTO = noteIdAndDTOMap.get(Long.parseLong(currNoteId));
-                noteItemRspVO.setLikeTotal((Objects.nonNull(findNoteCountsByIdRspDTO) && Objects.nonNull(findNoteCountsByIdRspDTO.getLikeTotal())) ?
-                        NumberUtils.formatNumberString(findNoteCountsByIdRspDTO.getLikeTotal()) : "0");
+                if (findNoteCountsByIdRspDTO == null) {
+                    noteItemRspVO.setLikeTotal("0");
+                    noteItemRspVO.setCollectTotal("0");
+                    noteItemRspVO.setCommentTotal("0");
+                } else {
+                    noteItemRspVO.setLikeTotal(findNoteCountsByIdRspDTO.getLikeTotal() != null ?
+                            NumberUtils.formatNumberString(findNoteCountsByIdRspDTO.getLikeTotal()) : "0");
+                    noteItemRspVO.setCollectTotal(findNoteCountsByIdRspDTO.getCollectTotal() != null ?
+                            NumberUtils.formatNumberString(findNoteCountsByIdRspDTO.getCollectTotal()) : "0");
+                    noteItemRspVO.setCommentTotal(findNoteCountsByIdRspDTO.getCommentTotal() != null ?
+                            NumberUtils.formatNumberString(findNoteCountsByIdRspDTO.getCommentTotal()) : "0");
+                }
             });
         }
     }
