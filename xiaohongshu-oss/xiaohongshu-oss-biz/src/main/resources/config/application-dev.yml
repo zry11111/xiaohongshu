@@ -1,15 +1,15 @@
 storage:
   minio:
-    endpoint: http://8.134.88.169:9000
+    endpoint: 
     accessKey: admin
     secretKey: password123
   aliyun-oss:
     # 地域节点
     endpoint: oss-cn-guangzhou.aliyuncs.com
     # 有访问权限的用户的 access-key-id
-    accessKey: LTAI5tCqthLFthWPqX4agHtL
+    accessKey: 
     # 有访问权限的用户的 access-key-Secret
-    secretKey: 2Tzr3XIlqyBFOE8XOWIYYX4JiLNtEK
+    secretKey: 
 spring:
   servlet:
     multipart:
